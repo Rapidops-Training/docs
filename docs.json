@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#9333EA",
     "light": "#9333EA",
-    "dark": "#15803D"
+    "dark": "#EE1082"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -71,9 +71,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://www.salesmate.io/ai-agent/",
+          "icon": "globe"
         },
         {
           "anchor": "Community",
