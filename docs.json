@@ -4,7 +4,7 @@
   "name": "Skara - AI Agent",
   "colors": {
     "primary": "#9333EA",
-    "light": "#EE1082",
+    "light": "#9333EA",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
@@ -89,14 +89,14 @@
     }
   },
   "logo": {
-    "light": "/logo/light.jpg",
-    "dark": "/logo/dark.jpg"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@salesmate.io"
       }
     ],
     "primary": {
