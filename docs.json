@@ -3,8 +3,8 @@
   "theme": "mint",
   "name": "Skara - AI Agent",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
+    "primary": "#CB20A2",
+    "light": "#EE1082",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
