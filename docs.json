@@ -19,7 +19,9 @@
               "index",
               "quickstart",
               "development",
-              "HowToCreateAIPilot"
+              "Articles/HowToCreateAIPilot",
+              "Articles/ViewTeammatesAvailability.mdx",
+              "Articles/Bulkoperationsforchatconversations.mdx"
             ]
           },
           {
