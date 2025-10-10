@@ -1,0 +1,211 @@
+---
+title: "WhatsApp by Twilio Installation"
+description: "Set up WhatsApp Business messaging through Twilio integration with Salesmate Chat"
+icon: "whatsapp"
+---
+
+## Overview
+
+Twilio's integration with WhatsApp enables businesses to leverage the popular messaging platform for communication. Salesmate now provides a platform to connect WhatsApp via Twilio for chat communication.
+
+<Note>
+**Note:**
+
+- You must be registered to the **Twilio Paid Account** with **WhatsApp Senders** to Use WhatsApp Via Twilio. [Click here](https://www.twilio.com/docs/whatsapp/self-sign-up) to learn more about **Twilio WhatsApp Self-Sign-Up**.
+- This integration is a part of the Salesmate Chat which requires the [Chat License](https://support.salesmate.io/hc/en-us/articles/360059697531-Salesmate-Chats-Licenses-and-Cost)
+
+</Note>
+
+## Prerequisites
+
+Before setting up WhatsApp by Twilio integration, ensure you have:
+
+- **Twilio Paid Account** with WhatsApp Senders access
+- **WhatsApp Business Account** approved by Twilio
+- **Active Chat License** in Salesmate
+- **Twilio Account SID and Auth Token**
+- **WhatsApp number approved** by Twilio
+
+<Warning>
+  You must be registered to the **Twilio Paid Account** with **WhatsApp
+  Senders** to use WhatsApp via Twilio. This integration is part of Salesmate
+  Chat which requires the [Chat
+  License](https://support.salesmate.io/hc/en-us/articles/360059697531-Salesmate-Chats-Licenses-and-Cost).
+</Warning>
+
+## Installation Steps
+
+<Steps>
+  <Step title="Access Salesmate Channel Settings">
+    1. Navigate to the **Conversations Icon** from the left menu bar
+    2. Select **Chats**
+    3. Click **Chat Settings** from the bottom left corner
+    <img src="https://support.salesmate.io/hc/article_attachments/30702910005017" alt="Salesmate chat settings navigation" />
+    4. Head to the **Channels** Option
+    5. Click on the "**Add New Channel**"
+    <img src="https://support.salesmate.io/hc/article_attachments/25832764376089" alt="Add New Channel" />
+
+  </Step>
+
+  <Step title="Select WhatsApp by Twilio">
+    1. A popup will open up with available channel options
+    2. Click the **Install** button for **WhatsApp by Twilio**
+
+    <img src="https://support.salesmate.io/hc/article_attachments/25796446573465" alt="WhatsApp Twilio channel selection" />
+
+  </Step>
+
+  <Step title="Connect Your Twilio Account">
+    1. Click on **Connect**
+    <img src="https://support.salesmate.io/hc/article_attachments/25796731841561" alt="Twilio connection configuration" />
+    2. Provide the following information to allow Salesmate to connect with Twilio:
+       - **Account SID**: Account SID details from your Twilio Account
+       - **Auth Token**: Auth Token from your Twilio Account
+       - **WhatsApp Number**: A number approved by Twilio
+    3. Once done, click on **Next**
+
+    <img src="https://support.salesmate.io/hc/article_attachments/25792039744537" alt="Twilio connection configuration" />
+
+  </Step>
+
+  <Step title="Configure Webhook Settings">
+    1. You will be directed to the **Configure** screen
+    2. Copy the Webhook URL provided
+    3. Paste it to the appropriate Twilio fields
+    4. Click on **Next**
+
+    <img src="https://support.salesmate.io/hc/article_attachments/30705039723929" alt="Webhook configuration" />
+
+  </Step>
+
+  <Step title="Set Channel Access">
+    1. You will be redirected to the **Channel Access** screen
+    2. Choose one of the following options:
+       - **Invite Everyone to Chat**: Allows everyone with a chat license to respond to conversations
+      <img src="https://support.salesmate.io/hc/article_attachments/25793237589529" alt="Invite Everyone to Chat" />
+
+       - **Invite Selected Users**: Allows only selected users with a chat license to respond
+      <img src="https://support.salesmate.io/hc/article_attachments/25793253027609" alt="Invite Selected Users" />
+    3. Configure your preferred access settings
+    4. Click on **Finish** to complete the setup
+
+    <img src="https://support.salesmate.io/hc/article_attachments/25793237600921" alt="Channel access configuration" />
+
+  </Step>
+</Steps>
+
+## How WhatsApp Messages Appear in Salesmate
+
+Once the number is successfully connected, you will be able to receive and manage incoming chats from the connected WhatsApp numbers directly within Salesmate.
+
+<img
+  src="https://support.salesmate.io/hc/article_attachments/30705743980441"
+  alt="WhatsApp messages in Salesmate interface"
+/>
+
+## Channel Management
+
+### **Access Control Options**
+
+<AccordionGroup>
+  <Accordion title="Invite Everyone to Chat">
+    This option allows everyone with a chat license to respond to the channel's conversations. Ideal for teams where multiple members need access to WhatsApp communications.
+  </Accordion>
+
+  <Accordion title="Invite Selected Users">
+    This option allows only selected users with a chat license to respond to the channel's conversations. Perfect for maintaining controlled access to customer communications.
+  </Accordion>
+</AccordionGroup>
+
+## Uninstalling WhatsApp by Twilio
+
+If you need to remove the WhatsApp by Twilio integration:
+
+<Steps>
+  <Step title="Navigate to Channel Settings">
+    1. Navigate to the **Conversations Icon** from the left menu bar
+    2. Select **Chats**
+    3. Click **Chat Settings** from the bottom left corner
+    4. Head to the **Channels** Option
+  </Step>
+
+  <Step title="Remove the Channel">
+    1. Select **WhatsApp by Twilio** from your channels list
+    2. Click on the three dots available at the corner right
+    3. Select **Uninstall**
+    4. **Confirm** removing the Channel and click on **Uninstall**
+
+    <img src="https://support.salesmate.io/hc/article_attachments/25874195931417" alt="Uninstall WhatsApp Twilio channel" />
+
+  </Step>
+</Steps>
+
+<Warning>
+  Uninstalling the channel will permanently remove all WhatsApp integration
+  settings. Make sure to backup any important configuration details before
+  proceeding.
+</Warning>
+
+## Troubleshooting
+
+### **Common Issues**
+
+<AccordionGroup>
+  <Accordion title="Connection Issues">
+    **Possible solutions:** - Verify your Twilio Account SID and Auth Token are
+    correct - Ensure your WhatsApp number is properly approved by Twilio - Check
+    that your Twilio account has sufficient credits - Verify webhook URLs are
+    correctly configured
+  </Accordion>
+
+{" "}
+
+<Accordion title="Messages Not Appearing">
+  **Check these items:** - Ensure the WhatsApp number is active and approved -
+  Verify webhook configuration in Twilio console - Check Salesmate chat license
+  is active - Confirm team members have proper channel access
+</Accordion>
+
+  <Accordion title="Authentication Errors">
+    **Troubleshooting steps:** - Double-check Account SID format and accuracy -
+    Verify Auth Token hasn't expired or been regenerated - Ensure Twilio account
+    has WhatsApp API access - Contact Twilio support if credentials are verified
+    but still failing
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<Tip>
+  **Regular Monitoring**: Keep track of your Twilio account credits and WhatsApp
+  message limits to ensure uninterrupted service.
+</Tip>
+
+### **Optimization Tips**
+
+1. **Team Training**: Ensure team members understand WhatsApp business communication guidelines
+2. **Response Time**: Maintain quick response times to enhance customer satisfaction
+3. **Message Templates**: Use consistent messaging for professional communication
+4. **Access Management**: Regularly review and update team access permissions
+5. **Backup Configuration**: Keep a record of your integration settings for easy restoration
+
+## Next Steps
+
+After successfully setting up WhatsApp by Twilio:
+
+<CardGroup cols={2}>
+  <Card
+    title="WhatsApp Message Templates"
+    icon="template"
+    href="/unified-inbox/sections/whatsapp-message-templates/create-template"
+  >
+    Learn to create and manage WhatsApp message templates
+  </Card>
+  <Card
+    title="Chat Management"
+    icon="comments"
+    href="/unified-inbox/sections/chat-management/overview"
+  >
+    Explore advanced chat management features
+  </Card>
+</CardGroup>

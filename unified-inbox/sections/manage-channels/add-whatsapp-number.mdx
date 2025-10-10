@@ -1,0 +1,83 @@
+---
+title: "How to Add New Number to the WhatsApp Channel"
+description: "Install WhatsApp Channel for Chat Communication for real-time messaging. You can also add more than one number for communication."
+icon: "phone-plus"
+---
+
+## Prerequisites
+
+Before adding a new WhatsApp number, ensure you have:
+
+- **Existing WhatsApp channel** already configured in Salesmate
+- **New phone number** verified and ready for WhatsApp Business use
+- **WhatsApp Business API access** for the new number
+- **Admin permissions** in your Salesmate account
+
+<Note>
+  Each WhatsApp Business number requires separate verification and approval from
+  Meta. The process can take 1-3 business days.
+</Note>
+
+## Adding New Number Steps
+
+<Steps>
+  <Step title="Add a New Number to the WhatsApp Channel">
+    1. Navigate to the **Conversations Icon** from the left menu bar
+    2. Select **Chats**
+    3. Click **Chat Settings** from the bottom left corner
+
+    <img src="https://support.salesmate.io/hc/article_attachments/25972318821145" alt="WhatsApp number add" />
+    4. Head to the **Channels** Option
+    5. You will see the list of channels here that are installed
+    6. You can Add a New Number for the Installed WhatsApp Channel
+        - [Add a New Number for WhatsApp by Twilio](#adding-new-number-steps)
+        - [Add a New Number for WhatsApp by Vonage](#adding-new-number-steps)
+
+  </Step>
+
+  <Step title="Add a New Number for WhatsApp by Twilio">
+    1. Click on the three dots and select Add New Number option
+    2. Here, add the following details,
+        - **Account SID**: Account SID details will be obtained from your Twilio Account
+        - **Auth Token**: Auth Token will be obtained from your Twilio Account
+        - **WhatsApp Number**: A number approved by Twilio
+    3. Once done, click on **Next**
+    4. Now you would need to copy the Webhook URL and paste it to Twilio Fields
+    5. Click on **Finish**
+
+  </Step>
+
+  <Step title="Add a New Number for WhatsApp by Vonage">
+    1. Click on the three dots and select Add New Number option
+    2. Here, add the following details,
+        - **API Key**: API Key details will be obtained from your Vonage Account
+        - **API Secret**: API Secret will be obtained from your Vonage Account
+        - **WhatsApp Number**:As soon as you enter the API key and the API secret, the system will automatically show the list of registered numbers, from which you can select the number
+        - **Upload Private Key**:  You need to download the private key from Vonage and upload it here to move further
+    3. Once done, click on **Next**
+    4. Now you would need to copy the Webhook URL and paste it to Vonage Fields
+    5. Click on **Finish**
+
+  </Step>
+</Steps>
+
+## Next Steps
+
+After successfully adding a new WhatsApp number:
+
+<CardGroup cols={2}>
+  <Card
+    title="Manage Channel Access"
+    icon="users"
+    href="/unified-inbox/sections/manage-channels/channel-access"
+  >
+    Configure team access and permissions for the new number
+  </Card>
+  <Card
+    title="Create WhatsApp Templates"
+    icon="template"
+    href="/unified-inbox/sections/whatsapp-message-templates/create-template"
+  >
+    Set up message templates for the new number
+  </Card>
+</CardGroup>

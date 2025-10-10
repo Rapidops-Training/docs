@@ -1,0 +1,251 @@
+---
+title: "How to Create WhatsApp Template"
+description: "Learn how to create professional WhatsApp message templates for business communication"
+icon: "plus-square"
+---
+
+## Overview
+
+WhatsApp message templates are pre-approved message formats that businesses can use to initiate conversations with customers. These templates must be approved by Meta before use and are essential for sending business-initiated messages outside the 24-hour customer service window.
+
+## Prerequisites
+
+Before creating WhatsApp templates, ensure you have:
+
+- **Active WhatsApp Business API** account
+- **Unified Inbox subscription** with WhatsApp integration
+- **Business verification** completed with Meta
+- **Template creation permissions** in your Salesmate account
+- **Understanding of WhatsApp template policies**
+
+<Warning>
+  All WhatsApp templates must comply with Meta's policies and require approval
+  before use. The approval process typically takes 24-48 hours.
+</Warning>
+
+## Template Categories
+
+### **Template Types**
+
+<CardGroup cols={2}>
+  <Card title="Marketing" icon="megaphone">
+    **Promotional messages:** - Product announcements - Special offers - Event
+    invitations - Newsletter updates
+  </Card>
+  <Card title="Utility" icon="tools">
+    **Transactional messages:** - Order confirmations - Shipping updates -
+    Account notifications - Appointment reminders
+  </Card>
+</CardGroup>
+
+## Creating a Template
+
+<Steps>
+  <Step title="Access Template Manager">
+    1. Navigate to **Conversation Inbox** from the left menu bar
+    2. Click on **Chats** in the inbox interface
+    3. Head over to **Inbox Settings** at the bottom
+
+    <img src="https://support.salesmate.io/hc/article_attachments/51106174066329" alt="WhatsApp template manager interface" />
+
+  </Step>
+
+  <Step title="Navigate to WhatsApp Channel">
+    1. Click on **Channels** in the settings menu
+    2. Go to **Connected Channels** section
+    3. Click on your preferred **WhatsApp channel** from the list
+
+    <img src="https://support.salesmate.io/hc/article_attachments/29751596734745" alt="WhatsApp channel selection" />
+
+  </Step>
+
+  <Step title="Access Template Creation">
+    1. **Select the phone number** you wish to create the template for
+    2. **Click on the three dots** (action menu) next to the number
+    3. **Select "Manage Template"** option from the dropdown
+
+    <img src="https://support.salesmate.io/hc/article_attachments/30190953152281" alt="Template management access" />
+    4. You will be directed to the **templates screen** for this number
+    5. **Click on "Create Template"** option to start creating a new template
+    6. The **template creation form** will open with configuration options
+
+  </Step>
+
+  <Step title="Configure Template Details">
+    1. **Template Name**: Provide a unique, descriptive name for your template
+    2. **Category**: Choose a category that best describes your message template
+        - **Marketing**: Select this option to send promotions or information about your products, services, or business.
+        - **Utility**: Send messages about an existing order or account.
+    3. **Language**: Choose languages for your message template that you want to add as translation.
+    4. **Header** Add a title or choose the type of media that you will use for the header. If you select the variable within the Header you would need to provide the Sample Variable Value. You can select from the following options.
+        - **None**: Selected By default
+        - **Text**: Enter the text for your template
+        - **Media**: You can add an Image, Video or a Document
+    <img src="https://support.salesmate.io/hc/article_attachments/30391820497177" alt="Template basic details configuration" />
+    5. **Body**: Add the text for your message here in the language you have selected.
+    6. **Footer**: Add the line that should appear at the bottom of your Template
+    7. **Buttons**: You can add buttons to your template. You can select from the following options.
+        - **None**: No buttons included.
+        - **Quick Reply**: Predefined response options for customers to choose from.
+        - **Call to Action**: Buttons prompting customers to take specific actions, such as clicking a link or making a purchase.
+     <img src="https://support.salesmate.io/hc/article_attachments/30391820520729" alt="Template basic details configuration" />
+    8. **Preview**: As you configure the message template options, you'll see a real-time preview of the message template displayed in a WhatsApp chat window on the right side of the screen.
+    9. Hit the **Save** button to save the template message with your current changes for the selected languages.
+    10. Once done click on **Save and Submit**
+    11. Once your template is approved, you will gain access to use it.
+    <img src="https://support.salesmate.io/hc/article_attachments/30392802540697" alt="Template basic details configuration" />
+  </Step>
+</Steps>
+
+<Note>
+  **Note:** The supported Images, Videos and Document by Twilio and Vonage
+  **Image** - **For Twilio**: JPG, JPEG, PNG - **For Vonage**: JPG, JPEG, PNG
+  **Video** - **For Twilio**: MP4 (with H.264 video codec and AAC audio) - **For
+  Vonage**: Video/mp4 **Document** - **For Twilio/Vonage**: Application/pdf
+  **File Size Limit** - The maximum file size template is 16MB. - The maximum
+  size for an image is 5 MB
+</Note>
+
+## Template Components
+
+### **Header Configuration**
+
+<AccordionGroup>
+  <Accordion title="Header Options">
+    **Choose from these header types:**
+    - **None**: No header (selected by default)
+    - **Text**: Simple text header with optional variables
+    - **Media**: Image, video, or document attachment
+    
+    **For variable headers**: Provide sample variable values for approval
+  </Accordion>
+
+  <Accordion title="Media Requirements">
+    **Supported file formats:**
+    - **Images**: JPG, JPEG, PNG (max 5MB)
+    - **Videos**: MP4 with H.264 codec and AAC audio (max 16MB)
+    - **Documents**: PDF format (max 16MB)
+    
+    **Provider-specific support:**
+    - **Twilio**: All formats supported
+    - **Vonage**: All formats supported with same specifications
+  </Accordion>
+</AccordionGroup>
+
+### **Body and Footer**
+
+- **Body Text**: Add your main message content in the selected language
+- **Footer**: Optional text that appears at the bottom of your template
+- **Variables**: Use `{{1}}`, `{{2}}`, etc. for dynamic content
+- **Character Limits**: Follow WhatsApp's character restrictions
+
+### **Button Configuration**
+
+<CardGroup cols={3}>
+  <Card title="None" icon="ban">
+    **No buttons:** - Simple text-only template - Clean, minimal design - Best
+    for informational messages
+  </Card>
+  <Card title="Quick Reply" icon="reply">
+    **Predefined responses:** - Up to 3 quick reply buttons - Customer can
+    select options - Ideal for surveys or choices
+  </Card>
+  <Card title="Call to Action" icon="external-link">
+    **Action buttons:** - Website links - Phone number calls - Specific actions
+    - Drive customer engagement
+  </Card>
+</CardGroup>
+
+## Template Creation Process
+
+### **Configuration Steps**
+
+1. **Fill in template details** (name, category, language)
+2. **Configure header** (text, media, or none)
+3. **Write body content** with variables if needed
+4. **Add footer text** (optional)
+5. **Set up buttons** (quick reply or call-to-action)
+6. **Preview template** in real-time on the right side
+7. **Save changes** to store your progress
+8. **Submit for approval** to Meta
+
+### **Preview and Submission**
+
+<Tip>
+  **Real-time Preview**: As you configure options, you'll see a live preview of
+  your template in a WhatsApp chat window on the right side of the screen.
+</Tip>
+
+- **Preview Updates**: Changes reflect immediately in the preview
+- **Save Progress**: Use "Save" to store changes without submitting
+- **Final Submission**: Click "Save and Submit" to send for Meta approval
+- **Approval Wait**: Templates typically get approved within 24-48 hours
+
+## Best Practices
+
+### **Template Design Guidelines**
+
+1. **Clear Purpose**: Ensure your template serves a specific business need
+2. **Concise Content**: Keep messages brief and to the point
+3. **Professional Tone**: Maintain a professional, friendly voice
+4. **Variable Usage**: Use variables strategically for personalization
+5. **Compliance**: Follow WhatsApp's business policies strictly
+
+### **Approval Tips**
+
+- **Accurate Category**: Choose the correct template category
+- **Realistic Examples**: Provide meaningful variable examples
+- **Policy Compliance**: Ensure content follows WhatsApp guidelines
+- **Clear Value**: Templates should provide clear value to recipients
+- **Professional Language**: Use proper grammar and spelling
+
+## Troubleshooting
+
+### **Common Issues**
+
+<AccordionGroup>
+  <Accordion title="Template Rejection">
+    **Common rejection reasons:**
+    - Incorrect category selection
+    - Policy violations in content
+    - Poor variable examples
+    - Misleading or unclear messaging
+  </Accordion>
+  
+  <Accordion title="Media Upload Problems">
+    **Troubleshooting steps:**
+    - Check file size limits (5MB for images, 16MB for videos/documents)
+    - Verify file format compatibility
+    - Ensure media content is relevant to message
+    - Try uploading different file formats
+  </Accordion>
+  
+  <Accordion title="Variable Configuration Issues">
+    **Check these items:**
+    - Variable syntax uses double braces `{{1}}`
+    - Sample values are realistic and appropriate
+    - Variable count doesn't exceed limits
+    - Variables match the template content context
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+After creating your WhatsApp template:
+
+<CardGroup cols={2}>
+  <Card
+    title="Configure Variables"
+    icon="gear"
+    href="/unified-inbox/sections/whatsapp-message-templates/configure-variables"
+  >
+    Set up dynamic variables to personalize your templates
+  </Card>
+  <Card
+    title="Send Template Messages"
+    icon="paper-plane"
+    href="/unified-inbox/sections/whatsapp-message-templates/send-template"
+  >
+    Learn how to send messages using your approved templates
+  </Card>
+</CardGroup>

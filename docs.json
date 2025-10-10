@@ -25,11 +25,43 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Unified Inbox",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "unified-inbox/introduction",
+              "unified-inbox/activation",
+              {
+                "group": "Channel Installation",
+                "pages": [
+                  "unified-inbox/sections/channels-installation/salesmate-chats",
+                  "unified-inbox/sections/channels-installation/facebook-messenger",
+                  "unified-inbox/sections/channels-installation/instagram-messenger",
+                  "unified-inbox/sections/channels-installation/whatsapp-twilio",
+                  "unified-inbox/sections/channels-installation/whatsapp-vonage"
+                ]
+              },
+              {
+                "group": "Manage Channels",
+                "pages": [
+                  "unified-inbox/sections/manage-channels/add-whatsapp-number",
+                  "unified-inbox/sections/manage-channels/channel-access"
+                ]
+              },
+              {
+                "group": "WhatsApp Message Templates",
+                "pages": [
+                  "unified-inbox/sections/whatsapp-message-templates/create-template",
+                  "unified-inbox/sections/whatsapp-message-templates/send-template",
+                  "unified-inbox/sections/whatsapp-message-templates/edit-template",
+                  "unified-inbox/sections/whatsapp-message-templates/template-variables",
+                  "unified-inbox/sections/whatsapp-message-templates/template-categories",
+                  "unified-inbox/sections/whatsapp-message-templates/delete-template"
+                ]
+              }
             ]
+          },
+          {
+            "group": "Customization",
+            "pages": ["essentials/settings", "essentials/navigation"]
           },
           {
             "group": "Writing content",
@@ -55,9 +87,7 @@
         "groups": [
           {
             "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           },
           {
             "group": "Endpoint examples",
@@ -110,15 +140,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
