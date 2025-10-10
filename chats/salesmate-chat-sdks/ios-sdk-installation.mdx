@@ -1,0 +1,133 @@
+---
+title: "iOS SDK - Installation"
+description: "Install Salesmate Chat SDK to communicate with your Customer on your iOS app. The SalesmateChat for iOS library supports iOS 13+ and requires Xcode 13..."
+---
+
+Install Salesmate Chat SDK to communicate with your Customer on your iOS app. The SalesmateChat for iOS library supports iOS 13+ and requires Xcode 13 to build.  
+[Click here to learn about navigation to iOS - Installation](https://support.salesmate.io/hc/en-us/articles/7972525508633).
+
+**Topics Covered:**
+
+*   [Install Salesmate Chat](https://support.salesmate.io/hc/en-us/articles/9811587156889-iOS-SDK-Installation#temp:C:SEaa23c3fb818d0499593caf6d2d)
+*   [Update Info.plist](https://support.salesmate.io/hc/en-us/articles/9811587156889-iOS-SDK-Installation#temp:C:SEac7ff897d86524819842806708)
+*   [Initialize Salesmate Chat](https://support.salesmate.io/hc/en-us/articles/9811587156889-iOS-SDK-Installation#temp:C:SEace7985a1f8a54ab28194a0811)
+*   [Login a User](https://support.salesmate.io/hc/en-us/articles/9811587156889-iOS-SDK-Installation#temp:C:SEa0ca3437f6d3c4c7bac661be0c)
+*   [Log Out](https://support.salesmate.io/hc/en-us/articles/9811587156889-iOS-SDK-Installation#temp:C:SEac32475cf1423408caeb973f1f)
+
+### Install Salesmate Chat
+
+#### **CocoaPods**
+
+Cocoapods 1.10 is required to install Salesmate Chat SDK.  
+Add Salesmate Chat SDK to your Podfile and run `pod install`
+
+```
+target 
+```
+
+#### **Swift Package Manager**
+
+Add as following Swift Package Repository in Xcode and follow the instructions to add Salesmate Chat SDK as a Swift Package. 
+
+https://github.com/salesmate/salesmate-chat-ios
+
+![Screenshot_2022-08-09_at_3-2.jpeg](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-09 at 3-2.jpeg)
+
+#### **Install Salesmate Chat SDK manually**
+
+*   [Download SalesmateChat for iOS and extract the zip.](https://github.com/salesmate/SalesmateChat-iOS/archive/refs/heads/main.zip)
+
+![Screenshot_2022-08-04_at_2.30.40_PM.png](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-04 at 2.30.40 PM.png)
+
+*   Drag `SalesmateChatSDK.xcframework` into your project. Make sure "Copy items if needed" is selected and click Finish.
+
+![Screenshot_2022-08-02_at_5.56.55_PM.png](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-02 at 5.56.55 PM.png)
+
+*   In the target settings for your app, set the `SalesmateChatSDK.xcframework` to “Embed & Sign”. This can be found in the “Frameworks, Libraries, and Embedded Content” section of the “General” tab.
+
+![Screenshot_2022-08-02_at_5.47.23_PM.png](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-02 at 5.47.23 PM.png)
+
+### Update Info.plist
+
+Photo Library usage:  
+With the exception of apps that only support iOS 14+, when installing Salesmate Chat SDK, you'll need to make sure that you have a **NSPhotoLibraryUsageDescription** entry in your **Info.plist**.  
+  
+For apps that support iOS 13, this is required by Apple to access the photo library. It is necessary when installing Salesmate Chat SDK due to the image upload functionality. Users will only be prompted for photo library permission when they tap the image upload button.  
+  
+
+### Initialize SalesmateChat
+
+First, you'll need to get your Salesmate Chat SDK **App key, Workspace Id** and **Tenant Id**. To find these, just select the 'iOS Tab' option in your Salesmate CRM Messenger Settings Installation section.  
+  
+
+![](./iOS SDK - Installation – Salesmate_files/mceclip0.png)
+
+Then initialize Salesmate Chat SDK by importing `SalesmateChatSDK` and adding the following to your application delegate:  
+  
+**Objective-C**
+
+  
+`@import` `SalesmateChatSDK``;   `  
+`-` `(``BOOL``)``application``:(``UIApplication` `*)``application didFinishLaunchingWithOptions``:(``NSDictionary` `*)``launchOptions` `{`  
+      
+    `Configuration` `*``config` `=` `[[``Configuration` `alloc``]` `initWithWorkspaceID``:@``"<Your iOS Workspace Id>"` `appKey``:@``"<Your iOS App Key>"` `tenantID``:@``"<Your iOS tenantID>"` `environment``:` `2``];`  
+    `[``SalesmateChat` `setSalesmateChatWithConfiguration``:` `config``];`  
+`}`
+
+**Note**:- For environments, 0 for Dev, 1 for Staging, and 2 for Production.  
+  
+**Swift**
+
+  
+`import` `SalesmateChatSDK`  
+  
+`func application``(``_ application``:` `UIApplication``,` `didFinishLaunchingWithOptions launchOptions``:` `[``UIApplication``.``LaunchOptionsKey``:` `Any``]?)` `->` `Bool` `{`  
+  
+`l`et config = Configuration(workspaceID: "<Your iOS Workspace Id>",appKey: "<Your iOS App Key>",tenantID: "<Your iOS tenantID>")  
+SalesmateChat.setSalesmateChat(configuration: config)  
+`}`
+
+### Login a User
+
+You’ll now need to log in to your users before communicating with them and tracking their activity in your app.
+
+**Login to your users (to talk to them and see their activity)**
+
+*   Depending on your app type, you can log in to users. Here are the instructions :  
+    Here we will create a user with basic user detail in Salesmate Messenger.
+*   If you have an app with logged-in (identified) users only (like Facebook, Instagram or Slack) follow these instructions:
+*   You’ll also need to log in to your user anywhere they sign in. Just call:  
+      
+    
+
+  
+`let` `email` `=` `"user's email address"`  
+`let` `firstName` `=` `"user's first name"`  
+`let` `lastName` `=` `"user's last name"`  
+`let` `userId` `=` `"user's user id"` `// Unique id recommended`  
+  
+SalesmateChat.loginWith(userId: userId, email: email, firstName: firstName, lastName: lastName, completion: { (success, error) in  
+if error == nil {  
+// Login successfully  
+} else {  
+// Login error  
+}  
+})
+
+### Log Out
+
+When users want to log out of your app, simply call:  
+  
+**Objective-C**
+
+// This clears the SalesmateChat SDK's cache of your user's data  
+`-` `(``void``)``logout` `{`  
+    `[``SalesmateChat` `logout``];`  
+`}`
+
+**Swift**
+
+// This clears the SalesmateChat SDK's cache of your user's data  
+func logout() {  
+    SalesmateChat.logout()  
+}

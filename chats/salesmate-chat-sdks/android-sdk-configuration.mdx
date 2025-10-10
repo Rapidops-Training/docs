@@ -1,0 +1,62 @@
+---
+title: "Android SDK - Configuration"
+description: "Track who your users are and what they do in your mobile app and Customize the Salesmate Chat Messenger. Here’s how to configure Salesmate Chat for An..."
+---
+
+Track who your users are and what they do in your mobile app and Customize the Salesmate Chat Messenger. Here’s how to configure Salesmate Chat for Android:
+
+*   [Update your User](https://support.salesmate.io/hc/en-us/articles/9809670603417#temp:C:fXD3d73c6d6acc3889756de6d1f6)
+*   [Submit an Event](https://support.salesmate.io/hc/en-us/articles/9809670603417#temp:C:fXD262cb5986570bf1fab4adc1c1)
+*   [Create a Custom Launcher](https://support.salesmate.io/hc/en-us/articles/9809670603417#temp:C:fXD1e0758ecd41c6e1680022700a)
+
+### Update your User
+
+*   When you call a login method we create a user with his basic detail, after if you want to change his basic detail then you can use update user functionality as per below code snippet:
+
+  
+`// Prepare a user's detail object`  
+`val userDetail` `=` `UserDetails``.``create``()`  
+  
+`val email` `=` `"user's email address"`  
+`val firstName` `=` `"user's first name"`  
+`val lastName` `=` `"user's last name"`  
+`val userId` `=` `"user's user id"` `// Unique id recommended`  
+`userDetail``.``withEmail``(``email``)`  
+          `.``withFirstName``(``firstName``)`  
+          `.``withLastName``(``lastName``)`  
+  
+SalesmateChatSDK.getInstance().update(userId, userDetail, object : UpdateListener {  
+override fun onUpdate() {  
+// Update successfully  
+}  
+  
+override fun onError(salesmateException: SalesmateException) {  
+// Error on update  
+}  
+})
+
+### Submit an Event
+
+*   You can log events in Salesmate Chat that record what users do in your app and when they do it. For example, you could record the item a user ordered from your mobile app, and when they ordered it.
+
+  
+`// Prepare a record event object`  
+  
+val data = _hashMapOf_<String, String>()  
+data\["orderId"\] = "order id"  
+data\["productId"\] = "product id"  
+  
+val eventName = "order\_detail"  
+SalesmateChatSDK.getInstance().recordEvent(eventName, data)
+
+### Create a Custom Launcher
+
+*   However, if you’d like Messenger to open from another location in your mobile app, you can create a custom launcher. This allows you to specify a button, link, or element that opens Messenger. For example, you can trigger the launcher to open when a customer clicks on your ‘Ask for support’ button.
+
+![Screenshot from 2022-08-09 12-24-01.png](./Android SDK - Configuration – Salesmate_files/Screenshot from 2022-08-09 12-24-01.png)
+
+*   If you have a custom launcher, you can call:
+
+  
+`// To launch messenger`  
+SalesmateChatSDK.getInstance().startMessenger()
