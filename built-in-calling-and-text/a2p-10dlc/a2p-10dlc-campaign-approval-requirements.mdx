@@ -1,0 +1,367 @@
+---
+title: "A2P 10DLC Campaign Approval Requirements"
+description: "On January 26, 2023, a new A2P 10DLC Campaign vetting process came into effect. For details on the change, [see this article](https://support.salesmat..."
+---
+
+On January 26, 2023, a new A2P 10DLC Campaign vetting process came into effect. For details on the change, [see this article](https://support.salesmate.io/knowledge/articles/22495716354073/en-us?brand_id=1467849). This change is relevant to customers using long code numbers to send messages to the United States under the A2P 10DLC framework. This change does not apply to Toll-Free messaging.
+
+Effective January 26, 2023, newly registered A2P Campaigns are subject to a manual vetting process. T**o help ensure your Campaigns are approved in this vetting process, please follow these best practices when submitting new Campaigns.**
+
+**Campaign Field**
+
+**Description**
+
+**Requirements**
+
+Message Flow
+
+The primary purpose of the Message Flow (or Call to Action) and required disclosures is to ensure the end user consents to receive text messages and understands the nature of the program. The Message Flow must be accessible by a 3rd party reviewer so it can be verified.
+
+*   Program or product description
+*   Telephone number(s) from which messaging will originate
+*   Identity of the organization or individual being represented in the initial message
+*   Clear and conspicuous language about opt-in and any associated fees or charges
+*   Other applicable terms and conditions (e.g., how to opt out, customer care contact information, and any applicable privacy policy)
+
+Explain if the Call to Action is behind a login, not yet published publicly, is verbal, on paper. Provide a screenshot of the Call to Action in such cases. Host the screenshot on a publicly accessible website (like OneDrive or Google Drive) and provide the URL in this field.
+
+Campaign Description
+
+Provide a clear and comprehensive overview of the campaign's objectives and interactions the end-user would experience after opting in.
+
+If the Campaign pertains to Loan Arrangement or Direct Lending, specify such so that Twilio A2P Ops can update your Campaign to reflect.
+
+Terms and Conditions
+
+Provide publicly accessible terms of service
+
+*   Boilerplate terms of service that cover minimum requirements from the carriers can be found in our support article.
+
+Opt-in Message Confirmation
+
+Required for all Opt-in methods
+
+*   A confirmation message must be delivered immediately after the Consumer opts into the program.
+*   Message must contain
+    *   Program or product description
+    *   Customer care contact information
+    *   Opt-out instructions
+    *   Product Quantity or recurring messages program disclosure
+    *   “Message and data rates may apply” disclosure
+
+Sample Messages
+
+Provide message examples highlighting the use case
+
+*   Identify message sender (brand)
+*   Indicate templated fields with brackets
+*   Include opt-out language to at least 1 sample message
+
+### Forbidden use cases will result in Campaign rejection
+
+*   Make sure your A2P Campaign does not involve [prohibited content](https://support.salesmate.io/hc/en-us/articles/22668967053209-Forbidden-Message-Categories-in-the-US-and-Canada-Short-Code-Toll-Free-and-Long-Code) such as cannabis, hate speech, etc., and that your use case is compliant with the [Salesmate Messaging Policy.](https://support.salesmate.io/hc/en-us/articles/360044649672-Salesmate-Messaging-Policy)
+
+### Ensure data accuracy and consistency.
+
+*   Make sure you submit Campaign registrations with accurate and consistent data:
+
+**Best Practice**
+
+**Examples**
+
+Consistency in **brand, website**, and **sample messages**
+
+If your brand name is **Acme**, your website is **www.acme.com**, but your sample messages say, “Here’s your one-time passcode for logging into **www.contoso.com**,” your campaign will be **rejected**.
+
+Consistency in **sample messages** and **use cases**
+
+If you register a **marketing** campaign but sample messages say, “Here’s your **one-time passcode**: 123456”, your campaign will be rejected.
+
+Consistency in **email domain** and **company name**
+
+Your campaign will be rejected if you register a brand as LeadConnector Inc but provide an email address with the gmail domain names.
+
+\*Note that this check **only applies to large, well-known corporations that should have dedicated email domains**
+
+Make sure you submit **real, working websites**.
+
+Indicating that your customers opt-in to your messages via the website, but providing a website address that does not work, will lead to campaign rejection.
+
+Make sure the brand you register is the **actual brand that you’re sending messages for**
+
+If ISV customers register a brand with your company’s information (e.g., a company that **provides the tech for dental offices**) but end up sending messages for your customers (e.g., **individual dentist practices**), your campaign will be rejected.
+
+Make sure you create **as few duplicative brands and campaigns as possible**
+
+Excessive brands with the **same EIN and excessive campaigns** with the same campaign attributes may be seen as **high-risk** and may result in campaign rejection
+
+If you wish to send templated messages, please **indicate the templated fields in sample messages with brackets** to help reviewers better identify which parts are templated.
+
+For example, please write, “Dental check due for **\[Mary Doe\]**, Visit **\[www.contoso.com\]** to schedule an appointment or call **\[123-456-7890\]**”
+
+### Ensure your use case involves consumer consent before sending messages
+
+*   Make sure you collect consumer consent appropriately. Please refer to the [CTIA guidelines](https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) for detailed instructions and best practices on handling consumer consent.
+
+**Best Practice**
+
+**Examples**
+
+Make sure consumer opt-in is collected appropriately
+
+If you indicate you collect opt-in via text messages, but your sample messages say, “**Hi, is this the owner of 123 Oak Street? I’d like to discuss how I can help you sell your property**”, it is clear that you **have not collected appropriate consent** before sending messages and your campaign will be rejected.
+
+Make sure **opt-in language** is available on your website if you indicated in the “message flow” field that a consumer opts into your campaign on your company website.
+
+If your brand Acme uses its website, www.acme.com, to collect phone numbers but your website does not contain opt-in language such as “**By providing your phone number, you agree to receive text messages from ACME. Message and data rates may apply. Message frequency varies.**”, your campaign will be rejected.
+
+We recommend having **opt-out language** in at least one of your sample messages.
+
+For example, please add language such as “**Please reply STOP to opt-out**” in one of your sample messages.
+
+<Note>
+
+
+**Note:** The ecosystem constantly improves the vetting criteria as it comes across additional violations. Please do not consider the best practices listed above as a “catch-all” and guarantee approval as long as you follow them all; instead, consider them as a baseline that illustrates the general direction of compliant, high-quality messaging that the ecosystem is moving towards.
+
+
+</Note>
+
+### Opt-In
+
+*   Campaigns require a proper opt-in method which ensures that end-users provide consent to receive text messages. Verbal opt-in is the most difficult method to verify however, is acceptable as long enough details are provided that a 3rd party reviewer can verify.
+
+**Opt-In Method**
+
+**Example**
+
+Verbal
+
+Salesmate IVR: "As part of our service we can send you automated monthly text alerts regarding Salesmate account payment activity. We will send two messages per month. Message and data rates may apply, depending on your mobile phone service plan. At any time you can get more help by replying HELP to these texts, or you can opt-out completely by replying STOP. Mobile Terms of Service are available at http://twil.io/terms and our Privacy Statement can be found at https://twil.io/privacy. Please reply with 'yes' or 'no' to indicate if you would like this service".
+
+Salesmate Customer: "Yes please"
+
+Salesmate IVR: "Great! We will send you a text message to confirm your enrollment here shortly."
+
+Web Form
+
+An embedded form on the end business’s website prompts end-users to enter their mobile handset phone number and opt into the texting campaign. Note checkbox should be selectable by the end-user for opting in.
+
+If the web opt-in is behind a login or not yet published, host a screenshot on a publicly accessible website (like OneDrive or Google Drive) and provide the URL in the Message Flow Field.
+
+Paper Form
+
+An in-store visitor completes a physical form that collects their phone number and their consent to subscribe to your texting campaign.
+
+Host a screenshot of the paper form on a publicly accessible website (like OneDrive or Google Drive) and provide the URL in the Message Flow Field.
+
+Via Text
+
+Host a screenshot of the campaign collateral on a publicly accessible website (like OneDrive or Google Drive) and provide the URL in the Message Flow Field.
+
+Mobile QR Code
+
+A QR code that links to an online form that prompts end-users to enter their mobile handset phone number and opt into the texting campaign. QR code can direct the mobile handset to their messaging application with a templated opt-in message or can lead to a web form as outlined above.
+
+If the QR code leads to an online form that is behind a login or not yet published, host a screenshot of the form on a publicly accessible website (like OneDrive or Google Drive) and provide the URL in the Message Flow Field.
+
+### Campaign registration recommendations
+
+*   Campaign registrations should meet each of the following descriptions for each field.
+
+#### **Campaign Type**
+
+*   Please choose the use case that best represents your campaign. For more information, please refer to the details provided [here](https://support.salesmate.io/knowledge/articles/22591695054105/en-us?brand_id=1467849).
+
+**Successful Example**
+
+**Failed Example**
+
+2FA use case is selected for any authentication or account verification such as OTP.
+
+Higher Education is selected for any authentication or account verification such as OTP.
+
+  
+**Why is this rejected?** If the use case does not match the intended use, the campaign will be rejected.
+
+#### **Campaign Description**
+
+*   The description should be thorough and provide an explanation of the campaign’s objective or purpose. The provided description needs to answer who the sender is, who the recipient is, and why messages are being sent to the intended recipient.
+
+**Successful Example**
+
+**Failed Example**
+
+**“Messages are sent by Acme to its existing customers. OTP Messages for MFA challenges for logging into the online portal to make changes to a user profile for security purposes.**
+
+**Customers confirm with an SMS when profile changes are made.”**
+
+**“Blank”**
+
+**Why is this rejected?** No information is provided for the campaign's purpose.
+
+“This campaign sends messages to customers”
+
+**Why is this rejected?** It does not provide information on who is sending and receiving messages and why messages are being sent.
+
+#### **Message flow/Call-to-Action**
+
+The message flow/call-to-actions needs to provide clear and conspicuous details on how an end customer consents to receive messages and understands the purpose of the message.
+
+Call-to-Action should contain the following information:
+
+*   The program or product description
+*   Telephone number(s) from which messaging will originate
+*   Identify the organization or individual being represented in the initial message
+*   Clear and conspicuous language about opt-in and any associated fees or charges
+*   Other applicable terms and conditions (e.g., how to opt out, customer care contact information, and any applicable privacy policy)
+
+Opt-in needs to apply per campaign, should be not transferable or assignable, and can not be obscured in terms and conditions (especially terms related to other services). If multiple opt-in methods can be used for the same campaign, please list them all.
+
+Campaign reviewers need to be able to verify the details provided in this field. Provide evidence such as a hosted link to screenshot or document for opt-in that occurs behind a gated login or on a paper form.
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**Message Flow:** **“Customers provide opt-in specifically when enrolling into our website or in person by requesting SMS capabilities within the store. Opt-in during website is a self-service process and occurs at acme.com/signup”**
+
+Website Opt-in Language: “By submitting, you authorize ACME to send text messages with offers and other information. Message/data rates apply. Consent is not a condition of purchase. \[Link to terms and conditions\].”
+
+**“Customers sign up”**
+
+**Why is this rejected?**  
+Where and how the customer provides opt-in is unclear.
+
+#### **Sample message**
+
+*   Sample messages should reflect actual messages to be sent under the campaign and indicate templated fields with brackets. Ensure consistency with the use case and campaign description.
+*   Sample messages should identify who is sending the message (brand name). Ensure that at least one sample message includes your business name.
+
+Include opt-out language to at least 1 sample message.
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**“ACME 2FA Notice: Here is your one-time password: 1234**
+
+**Call \[phone number\] to report if this request was not made by you.”**
+
+**“You have an upcoming appointment”**
+
+**Why is this rejected?**
+
+If opt-out is not provided, the campaign will be rejected.
+
+#### **Opt-in Keywords**
+
+*   Please provide all keywords that allow users to opt-in to receive campaign messages.
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**“START, OPTIN, UNSTOP, IN”**
+
+**"Blank”**
+
+**Why is this rejected?**
+
+Message flow indicates customers can opt-in through text but if no opt-in keywords are provided, the campaign will be rejected.
+
+#### **Opt-in Confirmation Message**
+
+A campaign must provide customers with an opt-in confirmation message. This is required for all recurring campaigns, regardless of the opt-in method. [CTIA Messaging Principles and Best Practices.](https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
+
+The opt-in confirmation message should include:
+
+*   Program (brand) name or product description
+*   Customer care contact information (HELP command instructions)
+*   Opt-out instructions
+*   Disclosure that the messages are recurring and the frequency of the messaging
+*   A “Message and data rates may apply” disclosure
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**“You have successfully opted in for messages from ACME for account notifications. Message and data rates may apply. Reply Help for additional support. Reply STOP to unsubscribe.”**
+
+**“You opted in for messages”**
+
+**Why is this rejected?**
+
+Opt-in message does not contain any information on the brand and no information on the opt-out process, the campaign will be rejected.
+
+#### **Opt-out Keywords**
+
+*   Please provide all keywords that allow end users to stop receiving messaging from this campaign.
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**“STOP, UNSUBSCRIBE, END, QUIT, HALT”**
+
+**“Blank”**
+
+**Why is this rejected?**
+
+Salesmate default Opt-out handling is disabled. As such, opt-outs must be handled via Salesmate Advanced Opt-Out or by your application. Specify the keywords you have configured for Opt-out handling.
+
+#### **Opt-out Confirmation Message**
+
+*   When end users send opt-out keywords, the response messages need to include acknowledgment of the opt-out request, brand name, and confirmation that no further messages will be sent.
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**"You have successfully been unsubscribed from Acme Corporation. You will not receive any more messages from this number."**
+
+“Opt-out successful. You will not receive any more messages from us.”
+
+**Why is this rejected?** 
+
+If the opt-out message does not include the brand, the campaign will be rejected.
+
+#### **Help Keywords**
+
+*   Please provide all keywords that allow end users to receive more information about this campaign
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**“HELP, ISSUE, FIX, RESOLVE, INQUIRY”**
+
+**“Blank”**
+
+**Why is this rejected?**
+
+Salesmate Default HELP keyword handling is disabled on the associated account. Customer must provide the keywords they have configured in Salesmate Advanced Opt-out or their own application.
+
+#### **Help Message**
+
+*   When end users send help, the response message needs to include a brand name, phone number, or email address.
+
+**Successful Example  
+**
+
+**Failed Example**
+
+**"Acme Corporation: Please visit www.acmecorporation.com to get support. To opt-out, reply STOP."**
+
+**“Blank”**
+
+**Why is this rejected?**
+
+Salesmate Default HELP keyword handling is disabled on the associated account. Customer must provide the HELP messages that are sent in response to HELP keywords they have configured in Salesmate Advanced Opt-out or their own application.

@@ -383,6 +383,149 @@
             ]
           },
           {
+            "group": "Built In Calling and Text",
+            "pages": [
+              {
+                "group": "Voice Overview",
+                "pages": [
+                  "built-in-calling-and-text/voice-overview/introduction-to-salesmate-calling",
+                  "built-in-calling-and-text/voice-overview/how-do-you-enable-the-calling-app",
+                  "built-in-calling-and-text/voice-overview/how-do-you-add-purchase-phone-numbers",
+                  "built-in-calling-and-text/voice-overview/calling-basic-operations-make-receive-calls",
+                  "built-in-calling-and-text/voice-overview/how-to-add-call-logs",
+                  "built-in-calling-and-text/voice-overview/voicemail-drop",
+                  "built-in-calling-and-text/voice-overview/documents-required-for-calling-activation",
+                  "built-in-calling-and-text/voice-overview/what-are-the-call-recording-laws",
+                  "built-in-calling-and-text/voice-overview/getting-calls-from-these-strange-numbers",
+                  "built-in-calling-and-text/voice-overview/salesmate-supported-international-phone-number-availability-and-their-capabilities",
+                  "built-in-calling-and-text/voice-overview/know-your-customer-kyc-in-the-united-kingdom"
+                ]
+              },
+              {
+                "group": "Setting up Salesmate Voice & Text",
+                "pages": [
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-do-you-assign-phone-numbers-to-the-teammates",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-can-i-change-my-phone-number-settings",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-do-you-set-your-phones-availability-status-device-settings",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-to-reassign-numbers-or-forward-calls-when-an-employee-goes-on-vacation",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/manage-number-of-rings",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-to-make-calls-using-your-own-number-call-masking",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-to-transfer-calls-in-salesmate",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-do-you-enable-call-recording",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-where-can-i-see-my-recorded-calls",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-can-i-stop-receiving-or-block-incoming-phone-calls",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-do-you-addupdate-contact-on-or-after-a-call",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-do-you-create-an-activity-after-or-during-a-call",
+                  "built-in-calling-and-text/setting-up-salesmate-voice-text/how-do-you-disable-remove-the-calling-app"
+                ]
+              },
+              {
+                "group": "Calling Rates / Charges",
+                "pages": [
+                  "built-in-calling-and-text/calling-rates-charges/built-in-calling-pricing-demystified",
+                  "built-in-calling-and-text/calling-rates-charges/how-do-you-purchase-recharge-phone-credits",
+                  "built-in-calling-and-text/calling-rates-charges/how-do-you-check-the-cost-of-your-phone-calls",
+                  "built-in-calling-and-text/calling-rates-charges/why-salesmate-doesnt-provide-unlimited-calling"
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "pages": [
+                  "built-in-calling-and-text/troubleshooting/cant-hear-sound-for-calls",
+                  "built-in-calling-and-text/troubleshooting/troubleshoot-calling",
+                  "built-in-calling-and-text/troubleshooting/network-speed-test",
+                  "built-in-calling-and-text/troubleshooting/basic-network-sanity",
+                  "built-in-calling-and-text/troubleshooting/twilio-network-test",
+                  "built-in-calling-and-text/troubleshooting/ips-and-ports-to-be-whitelisted-in-case-of-firewall-restrictions",
+                  "built-in-calling-and-text/troubleshooting/the-caller-ids-of-the-incoming-calls-i-receive-are-incorrect-why-is-that",
+                  "built-in-calling-and-text/troubleshooting/why-do-some-sms-recipients-see-a-sender-id-that-is-not-my-salesmate-number"
+                ]
+              },
+              {
+                "group": "Texts / SMS",
+                "pages": [
+                  "built-in-calling-and-text/texts-sms/introduction-to-salesmate-text-messaging",
+                  "built-in-calling-and-text/texts-sms/how-do-you-enable-salesmate-text-messaging",
+                  "built-in-calling-and-text/texts-sms/salesmate-messaging-policy",
+                  "built-in-calling-and-text/texts-sms/sms-rates",
+                  "built-in-calling-and-text/texts-sms/how-much-does-it-cost-to-send-a-message-with-more-than-160-characters",
+                  "built-in-calling-and-text/texts-sms/a2p-10dlc-sms-campaign-registration",
+                  "built-in-calling-and-text/texts-sms/schedule-text-messages",
+                  "built-in-calling-and-text/texts-sms/text-messaging-templates",
+                  "built-in-calling-and-text/texts-sms/sending-text-to-a-number",
+                  "built-in-calling-and-text/texts-sms/receiving-text-messages",
+                  "built-in-calling-and-text/texts-sms/text-conversation-view",
+                  "built-in-calling-and-text/texts-sms/send-bulk-text-messages",
+                  "built-in-calling-and-text/texts-sms/sms-character-limit",
+                  "built-in-calling-and-text/texts-sms/opt-in-and-opt-out-of-text-messages",
+                  "built-in-calling-and-text/texts-sms/text-messaging-service"
+                ]
+              },
+              {
+                "group": "A2P 10DLC",
+                "pages": [
+                  "built-in-calling-and-text/a2p-10dlc/what-is-a2p-10dlc",
+                  "built-in-calling-and-text/a2p-10dlc/how-do-i-register-to-use-a2p-10dlc-messaging",
+                  "built-in-calling-and-text/a2p-10dlc/a2p-10dlc-sole-proprietor-brands-faq",
+                  "built-in-calling-and-text/a2p-10dlc/special-use-cases-for-a2p-10dlc",
+                  "built-in-calling-and-text/a2p-10dlc/what-pricing-and-fees-are-associated-with-the-a2p-10dlc-service",
+                  "built-in-calling-and-text/a2p-10dlc/comparison-between-starter-low-volume-standard-and-standard-registration-for-a2p-10dlc",
+                  "built-in-calling-and-text/a2p-10dlc/message-throughput-mps-and-trust-scores-for-a2p-10dlc-in-the-us",
+                  "built-in-calling-and-text/a2p-10dlc/a2p-10dlc-brand-approval-best-practices",
+                  "built-in-calling-and-text/a2p-10dlc/can-i-edit-or-delete-an-a2p-brand-or-campaign-use-case",
+                  "built-in-calling-and-text/a2p-10dlc/a2p-10dlc-campaign-approval-requirements",
+                  "built-in-calling-and-text/a2p-10dlc/list-of-campaign-use-case-types-for-a2p-10dlc-registration",
+                  "built-in-calling-and-text/a2p-10dlc/us-carrier-penalties-for-non-compliant-messaging",
+                  "built-in-calling-and-text/a2p-10dlc/a2p-10dlc-campaign-vetting-faq",
+                  "built-in-calling-and-text/a2p-10dlc/forbidden-message-categories-in-the-us-and-canada-short-code-toll-free-and-long-code",
+                  "built-in-calling-and-text/a2p-10dlc/why-was-my-a2p-10dlc-campaign-registration-rejected",
+                  "built-in-calling-and-text/a2p-10dlc/a2p-10dlc-faq",
+                  "built-in-calling-and-text/a2p-10dlc/toll-free-number-registration-for-salesmate-uscanada"
+                ]
+              },
+              {
+                "group": "Legal",
+                "pages": [
+                  "built-in-calling-and-text/legal/salesmate-messaging-policy",
+                  "built-in-calling-and-text/legal/acceptable-use-policy"
+                ]
+              },
+              {
+                "group": "Change/Update Notifications",
+                "pages": [
+                  "built-in-calling-and-text/changeupdate-notifications/sms-messages-to-malaysia-containing-phone-numbers-and-urls-will-be-blocked"
+                ]
+              },
+              {
+                "group": "Built-in Calling or Texting integrations",
+                "pages": [
+                  "built-in-calling-and-text/built-in-calling-or-texting-integrations/built-in-calling-using-ringcentral-integration",
+                  "built-in-calling-and-text/built-in-calling-or-texting-integrations/justcall-calling-texting-voip-integration",
+                  "built-in-calling-and-text/built-in-calling-or-texting-integrations/built-in-calling-texting-using-dialpad-integration",
+                  "built-in-calling-and-text/built-in-calling-or-texting-integrations/send-text-message-via-dialpad",
+                  "built-in-calling-and-text/built-in-calling-or-texting-integrations/calling-via-dialpad"
+                ]
+              },
+              {
+                "group": "FAQs",
+                "pages": [
+                  "built-in-calling-and-text/faqs/accepted-content-types-for-multi-media-messaging-mms-support",
+                  "built-in-calling-and-text/faqs/how-can-i-send-out-messages-via-whatsapp-to-the-number",
+                  "built-in-calling-and-text/faqs/how-can-i-make-calls-using-google-voice",
+                  "built-in-calling-and-text/faqs/port-an-existing-number",
+                  "built-in-calling-and-text/faqs/why-was-my-port-request-rejected",
+                  "built-in-calling-and-text/faqs/best-practices-calling-from-salesmate-crm",
+                  "built-in-calling-and-text/faqs/formatting-international-phone-numbers",
+                  "built-in-calling-and-text/faqs/click-to-call-make-calls-from-salesmate",
+                  "built-in-calling-and-text/faqs/calling-limitations-to-china",
+                  "built-in-calling-and-text/faqs/china-sms-template-pre-approval-requests",
+                  "built-in-calling-and-text/faqs/calling-faqs",
+                  "built-in-calling-and-text/faqs/why-is-my-number-shown-as-spam-likely-or-spam-risk-or-scam-likely"
+                ]
+              }
+            ]
+          },
+          {
             "group": "Customization",
             "pages": ["essentials/settings", "essentials/navigation"]
           },
