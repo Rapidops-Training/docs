@@ -5,15 +5,17 @@ description: "Now you can know even more about your customers like, what pages t
 
 ### Know about your customer's navigation and activity with the custom events.
 
-Now you can know even more about your customers like, what pages they are visiting, what products they’re interested in, what activity they’re performing on your web or mobile app.  
+Now you can know even more about your customers like, what pages they are visiting, what products they’re interested in, what activity they’re performing on your web or mobile app.
 
 You just need to submit an event using the **trackEvent** method. This will associate the event with the currently logged-in user and send it to Salesmate.
 
-var data = {  
-Email:'ronaldo.cristiano@example.com',  
-Name:'Ronaldo Cristiano'  
-};  
-SALESMATE.trackEvent('CustomEventName', data);
+```javascript
+const data = {
+  Email: "ronaldo.cristiano@example.com",
+  Name: "Ronaldo Cristiano",
+};
+SALESMATE.trackEvent("CustomEventName", data);
+```
 
 Once you send this data to Salesmate, the data will be displayed in the **Recent Events** widget corresponding to the logged-in user’s conversation.
 

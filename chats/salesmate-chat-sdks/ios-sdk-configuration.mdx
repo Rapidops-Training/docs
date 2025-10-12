@@ -15,16 +15,19 @@ Track who your users are and what they do in your mobile app and customize the S
 
 let email = "user's email address"  
 let firstName = "user's first name"  
-let lastName = "user's last name"  
+let lastName = "user's last name"
+
+```swift
 let userId = "user's user id" // Unique id recommended
 
-SalesmateChat.update(userId: userId, email: email, firstName: firstName, lastName: lastName, completion: { (success, error) in  
- if error == nil {  
- // Update successfully  
- } else {  
- // `U`pdate error  
-}  
+SalesmateChat.update(userId: userId, email: email, firstName: firstName, lastName: lastName, completion: { (success, error) in
+ if error == nil {
+ // Update successfully
+ } else {
+ // Update error
+}
 })
+```
 
 ### Submit an Event
 
@@ -32,14 +35,16 @@ SalesmateChat.update(userId: userId, email: email, firstName: firstName, lastNam
 
 **Objective-C**
 
-\[SalesmateChat logEventWithEventName: @"contact_item" withData:@{  
- @"created_date": @1260016272,  
- @"contact_id": @"011",  
- @"contact_detail": @{  
- @"first_name": @"John",  
- @"last_name": @"Smith"  
- }  
- }\];
+```objc
+[SalesmateChat logEventWithEventName: @"contact_item" withData:@{
+ @"created_date": @1260016272,
+ @"contact_id": @"011",
+ @"contact_detail": @{
+ @"first_name": @"John",
+ @"last_name": @"Smith"
+ }
+ }];
+```
 
 **Swift**
 
@@ -58,10 +63,16 @@ SalesmateChat.logEventWith(eventName: "contact_item", withData: \[
 
 **Objective-C**
 
-- (**IBAction**)presentMessenger:(**id**)sender { [SalesmateChat presentMessengerFrom: **self**];
-  }
+```objc
+- (IBAction)presentMessenger:(id)sender {
+    [SalesmateChat presentMessengerFrom: self];
+}
+```
 
 **Swift**
 
-**@IBAction** **func** presentMessenger(\_ sender: UIButton) { SalesmateChat.presentMessenger(from: **self**)  
+```swift
+@IBAction func presentMessenger(_ sender: UIButton) {
+    SalesmateChat.presentMessenger(from: self)
 }
+```

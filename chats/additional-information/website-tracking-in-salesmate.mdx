@@ -24,50 +24,57 @@ Website Tracking in Salesmate allows you to monitor the behaviour of visitors on
 
 #### Email Campaigns you’ve sent
 
-<script>  
-<?php If(isset($_GET['email'])){ ?>
-window.addEventListener('SALESMATE_READY', function() {
-SALESMATE.login({
-user_id: "<?php echo $_GET['email'] ?>",
-email: "<?php echo $_GET['email'] ?>",
-first_name: "<?php echo $_GET['fname'] ?>",
-last_name: "<?php echo $_GET['lname'] ?>",
-});  
-});  
-  
-<?php } ?>  
+```html
+<script>
+  <?php If(isset($_GET['email'])){ ?>
+  window.addEventListener('SALESMATE_READY', function() {
+  SALESMATE.login({
+  user_id: "<?php echo $_GET['email'] ?>",
+  email: "<?php echo $_GET['email'] ?>",
+  first_name: "<?php echo $_GET['fname'] ?>",
+  last_name: "<?php echo $_GET['lname'] ?>",
+  });
+  });
+
+  <?php } ?>
 </script>
+```
 
 #### Web Form Submissions
 
-<script>  
-window.addEventListener("SM_FORM_SUBMITTED", function (e) {
-SALESMATE.login({
-user_id: e.detail.formData["Contact.email"],
-email: e.detail.formData["Contact.email"],
-first_name: e.detail.formData["Contact.firstName"],
-last_name: e.detail.formData["Contact.lastName"],
-});   
-});  
+```html
+<script>
+  window.addEventListener("SM_FORM_SUBMITTED", function (e) {
+    SALESMATE.login({
+      user_id: e.detail.formData["Contact.email"],
+      email: e.detail.formData["Contact.email"],
+      first_name: e.detail.formData["Contact.firstName"],
+      last_name: e.detail.formData["Contact.lastName"],
+    });
+  });
 </script>
+```
 
 #### Meeting Scheduler Form Submissions
 
-<script>  
-window.addEventListener("SM_MEETING_SUBMITTED", function (e) {
-SALESMATE.login({
-user_id: e.detail.formData["Contact.email"],
-email: e.detail.formData["Contact.email"],
-first_name: e.detail.formData["Contact.firstName"],
-last_name: e.detail.formData["Contact.lastName"],
-});   
-});  
+```html
+<script>
+  window.addEventListener("SM_MEETING_SUBMITTED", function (e) {
+    SALESMATE.login({
+      user_id: e.detail.formData["Contact.email"],
+      email: e.detail.formData["Contact.email"],
+      first_name: e.detail.formData["Contact.firstName"],
+      last_name: e.detail.formData["Contact.lastName"],
+    });
+  });
 </script>
+```
 
 #### Gravity Form Submissions
 
-function ti_custom_javascript() {  
-if(isset($\_GET['email'])) {
+```php
+function ti_custom_javascript() {
+if(isset($_GET['email'])) {
 ?>
 
 <script type="text/javascript">
@@ -77,14 +84,12 @@ user_id: "<?php echo $_GET['email'] ?>",
 email: "<?php echo $_GET['email'] ?>",
 first_name: "<?php echo $_GET['fname'] ?>",
 last_name: "<?php echo $_GET['lname'] ?>",
-});  
-});  
+});
+});
 </script>
 
-<?php  
-}  
-}  
-add\_action('wp\_head', 'ti\_custom\_javascript');
-
-
-
+<?php
+}
+}
+add_action('wp_head', 'ti_custom_javascript');
+```

@@ -151,21 +151,26 @@ You can also refer to the installation process for WordPress below:
 
 For example, on your customer's login page action, call this method when the login button is clicked.
 
-SALESMATE.login({  
-user_id: '<< user id | string | We recommend to pass user's email id to generate unique key >>',  
-email: '<< email | string | pass a valid email address >>',  
-first_name: '<< first name of contact | string >>',  
-last_name: '<< last name of contact | string >>',  
+```javascript
+SALESMATE.login({
+  user_id:
+    "/* user id | string | We recommend to pass user's email id to generate unique key */",
+  email: "/* email | string | pass a valid email address */",
+  first_name: "/* first name of contact | string */",
+  last_name: "/* last name of contact | string */",
 });
+```
 
 #### **Example:**
 
-SALESMATE.login({  
-user_id: 'john.doe@example.com',  
-email: 'john.doe@example.com',  
-first_name: 'John',  
-last_name: 'Doe',  
+```javascript
+SALESMATE.login({
+  user_id: "john.doe@example.com",
+  email: "john.doe@example.com",
+  first_name: "John",
+  last_name: "Doe",
 });
+```
 
 This is how you can capture the contact details of the visitor without bothering them. You can then plan any [Automation Journeys](https://support.salesmate.io/hc/en-us/articles/360057066552) or enroll them in [Sequences.](https://support.salesmate.io/hc/en-us/articles/360033759131)
 
