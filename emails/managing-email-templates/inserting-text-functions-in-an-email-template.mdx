@@ -1,0 +1,52 @@
+---
+title: "Inserting Text Functions in an Email Template"
+description: "You can insert text functions in the Email Template to append, prepend, uppercase, downcase, concat, and remove texts from a particular field."
+---
+
+You can insert text functions in the Email Template to append, prepend, uppercase, downcase, concat, and remove texts from a particular field.
+
+Topics covered:
+
+- [Append](https://support.salesmate.io/hc/en-us/articles/360054932551-Inserting-Text-Functions-in-an-Email-Template#h_01H25SSGRXW31GPYA2589H6Q4T)
+
+- [Prepend](https://support.salesmate.io/hc/en-us/articles/360054932551-Inserting-Text-Functions-in-an-Email-Template#h_01H25SST5QHM09RA3BJ41D2D0X)
+
+- [Uppercase](https://support.salesmate.io/hc/en-us/articles/360054932551-Inserting-Text-Functions-in-an-Email-Template#h_01H25ST3MMSTXV3Z60DDTZ4ZM4)
+
+- [Downcase](https://support.salesmate.io/hc/en-us/articles/360054932551-Inserting-Text-Functions-in-an-Email-Template#h_01H25STBF0Z5QW1X90VSS6PMDX)
+
+### Append
+
+This function appends the text mentioned by you along with the value of the field.**Input:** Append Example : `{{Contact.name | append:", Hope you are doing well!"}}`
+
+![Screenshot](./Inserting Text Functions in an Email Template – Salesmate_files/Screenshot 2023-06-05 at 3.29.44 PM.png)**Output:**Append Example: `{Lina Westminster, Hope you are doing well!}`
+
+![Screenshot](./Inserting Text Functions in an Email Template – Salesmate_files/Screenshot 2023-06-05 at 3.31.02 PM.png)
+
+### Prepend
+
+This function prepends the text mentioned by you along with the value of the field.**Input:**Prepend Example : `{{Contact.name | prepend : "Hello"}}`
+
+![Screenshot](./Inserting Text Functions in an Email Template – Salesmate_files/Screenshot 2023-06-05 at 3.34.31 PM.png)**Output:**Prepend Example: Hello Lina Westminster
+
+![Screenshot](./Inserting Text Functions in an Email Template – Salesmate_files/Screenshot 2023-06-05 at 3.40.28 PM.png)
+
+### Uppercase
+
+This function converts each character of the word in uppercase.
+
+Note:  It has no effect on strings that are already all uppercase.**Input:**Uppercase : `{{"Contact.name" | upcase}}`
+
+![](./Inserting Text Functions in an Email Template – Salesmate_files/mceclip4.png)**Output:**Uppercase: ABIE HANBY
+
+![](./Inserting Text Functions in an Email Template – Salesmate_files/mceclip3.png)
+
+### Downcase
+
+This function converts each character of the word in lowercase.
+
+Note:  It has no effect on words that are already all lowercase.**Input:**LowerCase: `{{"Contact.name" | downcase}}`
+
+![](./Inserting Text Functions in an Email Template – Salesmate_files/mceclip0.png)**Output:**LowerCase: abie hanby
+
+![](./Inserting Text Functions in an Email Template – Salesmate_files/mceclip1.png)

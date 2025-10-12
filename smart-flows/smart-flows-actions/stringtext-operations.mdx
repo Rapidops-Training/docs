@@ -1,0 +1,156 @@
+---
+title: "String/Text Operations"
+description: "The**String/Text Operations**are the operations that can be used on the**Sting or Tex**t field that you have selected under the [**Data Operation**](h..."
+---
+
+The**String/Text Operations**are the operations that can be used on the**Sting or Tex**t field that you have selected under the [**Data Operation**](https://support.salesmate.io/hc/en-us/articles/41100082012825-Data-Operations) action. This will allow you to transform and manipulate text-based data efficiently. These operations help in formatting, extracting, and modifying text values to ensure consistency and accuracy in CRM records.
+
+
+### Available String/Text Operations
+
+
+***Capitalize the First Letter:**Capitalize the first letter of the text while converting the rest to lowercase.
+    *   Use Case: Standardizing lead names for personalized emails.
+        ***Input:**jason evans
+
+        ***Output:**Jason evans
+
+
+
+***Convert to Lowercase:**Converts all characters in the text to lowercase.
+    *   Use Case: Normalizing email domains for deduplication.
+        ***Input:**John.Smith@SalesMate.IO
+
+        ***Output:**[john.smith@salesmate.io](mailto:john.smith@salesmate.io)
+
+
+
+***Convert to Uppercase:**Changes all characters in the text to uppercase.
+    *   Use Case: Emphasizing company names in reports.
+
+        ***Input:**acme corp
+
+        ***Output:**ACME CORP
+
+
+
+***Convert to Title Case:**Capitalizes the first letter of each word while converting all other letters to lowercase.
+    *   Use Case: Displaying properly formatted contact names.
+
+        ***Input:**jane cooper-smith
+
+        ***Output**: Jane Cooper-Smith
+
+
+
+***Pluralize the Text:**Converts a singular noun into its plural form.
+    *   Use Case: Generating dynamic messages or labels in Smart Views.
+
+        ***Input:**contact
+
+        ***Output:**contacts
+
+
+
+***Remove Characters:**Removes specified characters from a given text.
+    *   Use Case: Cleaning phone numbers or importing data.
+        ***Input:**+1 (234) 567-8900
+
+        ***Characters to remove:**()+-
+
+        ***Output:**12345678900
+
+
+
+***Escape and URL Encode:**Converts a string into a URL-encoded format.
+    *   Use Case: Embedding contact names in dynamic redirect URLs.
+        ***Input:**john joe
+        ***Output:**john%20doe
+
+
+***HTML to Text:**Removes all HTML tags from a text field.
+    *   Use Case: Stripping formatting from imported descriptions.
+
+        ***Input**: <p><b>High-priority</b> lead from <a href="#">web form</a></p>
+
+        ***Output**: High-priority lead from web form
+
+
+
+***Replace Characters:**Finds and replaces specific characters or words in a text.
+    *   Use Case: Fixing incorrect values in imported lead records.
+
+        ***Input:**lead\_source:webform
+
+        ***Replace:**webform
+
+        ***With:**Website Form
+
+        ***Output:**lead\_source:Website Form
+
+
+
+***Trim Leading and Trailing Whitespace:**Removes extra spaces from the beginning and end of a text.
+    *   Use Case: Cleaning user-entered data in contact fields.
+
+        ***Input:**" important message "
+
+        ***Output:**"important message"
+
+
+
+***Split the Data:**Splits a text into multiple parts based on a delimiter.
+    *   Use case: Fetch the year from the date
+        ***Input:**2025/05/22
+
+        ***Split by:**/
+
+        ***Output (Text at first position):**2025
+
+
+
+***Extract Email Address:**Find and extract the first email address from a text field.
+    *   Use Case: Pulling email from web form comments.
+
+        ***Input:**Client email is sales@diamondguy.com
+
+        ***Output:**[sales@diamondguy.com](mailto:sales@diamondguy.com)
+
+
+
+***Extract Number:**Finds and extracts the first numerical value from a text field.
+    *   Use Case: Extracting budget amount from a form field.
+
+        ***Input:**Estimated budget is $5000
+
+        ***Output:**5000
+
+
+
+***Extract Phone Number:**Finds and extracts a phone number from a text field.
+    *   Use Case: Extracting phone from inquiry notes.
+
+        ***Input:**Call back at (555) 888-1234 ASAP
+
+        ***Output:**(555) 888-1234
+
+
+
+***Extract URL:**Finds and extracts a web URL from a text field.
+    *   Use Case: Getting a lead’s website URL from notes.
+
+        ***Input:**Their portfolio is hosted at https://portfolio.salesmate.io
+
+        ***Output:**[https://portfolio.salesmate.io](https://portfolio.salesmate.io/)
+
+
+
+***Extract Domain:**This will extract the domain from the field that you have selected.
+    *   Use Case: Segmenting contacts by business domain.
+
+        ***Input:**sarah.connor@sales.com
+
+        ***Output:**sales.com
+
+
+By using**String/Text Operations**in Salesmate Smart Flow, you can efficiently format, extract, and transform text-based data to maintain consistency and enhance workflow automation. These operations help businesses keep CRM records well-structured and optimized for seamless processing.

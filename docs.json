@@ -20,8 +20,8 @@
               "quickstart",
               "development",
               "articles/HowToCreateAIPilot",
-              "articles/ViewTeammatesAvailability.mdx",
-              "articles/Bulkoperationsforchatconversations.mdx"
+              "articles/ViewTeammatesAvailability",
+              "articles/Bulkoperationsforchatconversations"
             ]
           },
           {
@@ -496,6 +496,7 @@
                   "built-in-calling-and-text/changeupdate-notifications/sms-messages-to-malaysia-containing-phone-numbers-and-urls-will-be-blocked"
                 ]
               },
+
               {
                 "group": "Built-in Calling or Texting integrations",
                 "pages": [
@@ -523,6 +524,448 @@
                   "built-in-calling-and-text/faqs/why-is-my-number-shown-as-spam-likely-or-spam-risk-or-scam-likely"
                 ]
               }
+            ]
+          },
+          {
+            "group": "Emails",
+            "pages": [
+              {
+                "group": "Personal Inbox",
+                "pages": [
+                  "emails/personal-inbox/full-email-sync",
+                  "emails/personal-inbox/setting-up-smtp-and-bcc-in-salesmate",
+                  "emails/personal-inbox/configuring-gmail-group-account-in-salesmate",
+                  "emails/personal-inbox/sign-in-using-app-passwords-gmail-smtp",
+                  "emails/personal-inbox/email-preferences-privacy-and-sharing"
+                ]
+              },
+              {
+                "group": "Sales Inbox",
+                "pages": [
+                  "emails/sales-inbox/how-do-i-set-up-my-email-signature-in-salesmate",
+                  "emails/sales-inbox/email-media-manager",
+                  "emails/sales-inbox/how-to-sendschedule-bulk-emails-to-my-leads-contacts",
+                  "emails/sales-inbox/how-can-i-setup-daily-digest-email",
+                  "emails/sales-inbox/set-activity-reminders-from-email",
+                  "emails/sales-inbox/chrome-extension-for-salesmate"
+                ]
+              },
+              {
+                "group": "Team Inbox",
+                "pages": [
+                  "emails/team-inbox/setting-up-your-team-inbox",
+                  "emails/team-inbox/working-with-team-inbox",
+                  "emails/team-inbox/filter-emails-in-team-inbox"
+                ]
+              },
+              {
+                "group": "Email Delivery",
+                "pages": [
+                  "emails/email-delivery/how-to-re-authorize-your-email-account",
+                  "emails/email-delivery/lead-parsing-via-email",
+                  "emails/email-delivery/how-to-create-a-dkim-record-for-your-domains",
+                  "emails/email-delivery/how-to-create-a-dkim-for-your-godaddy-domains",
+                  "emails/email-delivery/dkim-verification-failure-possible-reasons",
+                  "emails/email-delivery/customize-your-link-tracking-and-email-tracking-urls",
+                  "emails/email-delivery/how-does-email-open-click-tracking-and-unsubscribe-work",
+                  "emails/email-delivery/setting-up-ssl-for-click-tracking"
+                ]
+              },
+              {
+                "group": "Managing Email Templates",
+                "pages": [
+                  "emails/managing-email-templates/how-to-create-email-templates",
+                  "emails/managing-email-templates/how-to-create-email-templates-with-attributes",
+                  "emails/managing-email-templates/inserting-dynamic-attributes-in-email-templates",
+                  "emails/managing-email-templates/spintax-email",
+                  "emails/managing-email-templates/inserting-text-functions-in-an-email-template",
+                  "emails/managing-email-templates/how-to-add-todays-date-in-an-email-template",
+                  "emails/managing-email-templates/inserting-numeric-operators-in-email-template-using-liquid-js",
+                  "emails/managing-email-templates/managing-email-content-properties"
+                ]
+              },
+              {
+                "group": "FAQ's",
+                "pages": [
+                  "emails/faqs/filter-contacts-by-email-usage",
+                  "emails/faqs/how-to-add-custom-greetings-in-the-email-template",
+                  "emails/faqs/email-best-practices",
+                  "emails/faqs/how-do-i-setup-my-alias-email-account-in-salesmate",
+                  "emails/faqs/how-to-set-a-default-email-signature-for-your-connected-emails",
+                  "emails/faqs/how-do-i-connect-incoming-emails-to-contacts",
+                  "emails/faqs/how-do-i-connect-incoming-emails-to-deals",
+                  "emails/faqs/why-my-emails-show-up-under-the-wrong-deal",
+                  "emails/faqs/how-to-embed-video-in-email",
+                  "emails/faqs/how-to-use-unsubscribe-link-in-email-templates",
+                  "emails/faqs/how-to-overcome-an-authorization-with-gmail-failed-error",
+                  "emails/faqs/can-i-attach-files-to-email-templates-so-i-dont-have-to-add-it-every-time-i-send-one",
+                  "emails/faqs/use-amazon-simple-email-service-ses-to-send-emails",
+                  "emails/faqs/use-sendgrid-smtp-to-send-emails",
+                  "emails/faqs/email-integration-tracking-email-conversations-signature-and-sharing-policy",
+                  "emails/faqs/why-email-tracking-doesnt-always-work",
+                  "emails/faqs/how-are-emails-threaded-in-salesmate"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Meeting Scheduler",
+            "pages": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "meeting-scheduler/overview/meeting-scheduler",
+                  "meeting-scheduler/overview/types-of-meeting-scheduler",
+                  "meeting-scheduler/overview/meeting-scheduler-pricing-and-packaging"
+                ]
+              },
+              {
+                "group": "Create and Manage",
+                "pages": [
+                  "meeting-scheduler/create-and-manage/customize-meeting-greetings",
+                  "meeting-scheduler/create-and-manage/create-a-personal-meeting-scheduler-link",
+                  "meeting-scheduler/create-and-manage/create-a-team-meeting-scheduler-link",
+                  "meeting-scheduler/create-and-manage/create-a-round-robin-meeting-scheduler-link",
+                  "meeting-scheduler/create-and-manage/create-a-group-meeting-scheduler-link",
+                  "meeting-scheduler/create-and-manage/invite-questions-for-the-meeting-scheduler",
+                  "meeting-scheduler/create-and-manage/manage-email-notifications-for-meeting-scheduler",
+                  "meeting-scheduler/create-and-manage/clone-meeting-scheduler",
+                  "meeting-scheduler/create-and-manage/delete-meeting-scheduler",
+                  "meeting-scheduler/create-and-manage/change-ownership-of-meeting-scheduler",
+                  "meeting-scheduler/create-and-manage/enable-or-disable-meeting-scheduler"
+                ]
+              },
+              {
+                "group": "Availability",
+                "pages": [
+                  "meeting-scheduler/availability/manage-global-availability",
+                  "meeting-scheduler/availability/custom-availability",
+                  "meeting-scheduler/availability/choose-additional-calendars-to-avoid-double-booking",
+                  "meeting-scheduler/availability/understand-different-availability-options-for-a-meeting-scheduler"
+                ]
+              },
+              {
+                "group": "Embed and Sharing",
+                "pages": [
+                  "meeting-scheduler/embed-and-sharing/share-meeting-scheduler-link",
+                  "meeting-scheduler/embed-and-sharing/share-your-availability-over-email-for-meeting-scheduler",
+                  "meeting-scheduler/embed-and-sharing/embed-meeting-scheduler-to-your-website",
+                  "meeting-scheduler/embed-and-sharing/advanced-embed-options-for-meeting-scheduler",
+                  "meeting-scheduler/embed-and-sharing/meeting-scheduler-js-api-methods"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Email Campaign",
+            "pages": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "email-campaign/overview/what-is-campaign-management",
+                  "email-campaign/overview/email-campaign-plans-pricing",
+                  "email-campaign/overview/email-campaign-roles-permissions",
+                  "email-campaign/overview/marketing-contacts-usage"
+                ]
+              },
+              {
+                "group": "Organizing Email Campaigns",
+                "pages": [
+                  "email-campaign/organizing-email-campaigns/email-campaign-consent",
+                  "email-campaign/organizing-email-campaigns/email-campaign-subscription-types",
+                  "email-campaign/organizing-email-campaigns/view-email-subscriptions",
+                  "email-campaign/organizing-email-campaigns/how-to-set-up-a-new-subscription-type-in-different-languages",
+                  "email-campaign/organizing-email-campaigns/email-marketing-footer"
+                ]
+              },
+              {
+                "group": "Capture Consent",
+                "pages": [
+                  "email-campaign/capture-consent/webform-consent",
+                  "email-campaign/capture-consent/how-to-import-communication-consents"
+                ]
+              },
+              {
+                "group": "Configuring Email Campaign",
+                "pages": [
+                  "email-campaign/configuring-email-campaign/variables-in-universal-layouts-and-blocks",
+                  "email-campaign/configuring-email-campaign/getting-started-with-email-campaigns",
+                  "email-campaign/configuring-email-campaign/how-to-create-campaign-templates",
+                  "email-campaign/configuring-email-campaign/universal-layouts-for-email-campaign-templates",
+                  "email-campaign/configuring-email-campaign/universal-blocks",
+                  "email-campaign/configuring-email-campaign/how-to-use-campaign-ab-testing",
+                  "email-campaign/configuring-email-campaign/managing-email-campaign",
+                  "email-campaign/configuring-email-campaign/how-to-use-journey-emails",
+                  "email-campaign/configuring-email-campaign/managing-journey-emails",
+                  "email-campaign/configuring-email-campaign/sending-transactional-emails-using-journey-emails"
+                ]
+              },
+              {
+                "group": "Campaign Insights",
+                "pages": [
+                  "email-campaign/campaign-insights/email-campaign-performance-insights",
+                  "email-campaign/campaign-insights/email-overview",
+                  "email-campaign/campaign-insights/email-performance-over-time",
+                  "email-campaign/campaign-insights/email-opened-over-time",
+                  "email-campaign/campaign-insights/open-tracking-by-top-locations",
+                  "email-campaign/campaign-insights/ab-test-results",
+                  "email-campaign/campaign-insights/how-to-get-the-content-insights",
+                  "email-campaign/campaign-insights/how-to-get-recipient-insights",
+                  "email-campaign/campaign-insights/journey-email-insights"
+                ]
+              },
+
+              {
+                "group": "Email Campaign FAQs",
+                "pages": [
+                  "email-campaign/email-campaign-faqs/email-campaign-faqs",
+                  "email-campaign/email-campaign-faqs/filter-contacts-based-on-email-campaign"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Snippet Management",
+            "pages": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "snippet-management/overview/introduction-to-snippet-management",
+                  "snippet-management/overview/snippet-roles-permissions"
+                ]
+              },
+              {
+                "group": "Managing Snippets",
+                "pages": [
+                  "snippet-management/managing-snippets/how-to-create-snippets",
+                  "snippet-management/managing-snippets/how-to-edit-or-delete-snippets",
+                  "snippet-management/managing-snippets/snippet-listing",
+                  "snippet-management/managing-snippets/snippet-detail-view",
+                  "snippet-management/managing-snippets/how-to-archive-or-unarchive-snippets",
+                  "snippet-management/managing-snippets/organize-snippet-folders",
+                  "snippet-management/managing-snippets/how-to-use-snippets"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Smart Flows",
+            "pages": [
+              {
+                "group": "Smart Flow Overview",
+                "pages": [
+                  "smart-flows/smart-flow-overview/introduction-to-smart-flow",
+                  "smart-flows/smart-flow-overview/smart-flows-plans-pricing",
+                  "smart-flows/smart-flow-overview/what-are-smart-flow-credits-and-how-it-is-consumed"
+                ]
+              },
+              {
+                "group": "Managing Smart Flows",
+                "pages": [
+                  "smart-flows/managing-smart-flows/how-to-create-new-smart-flow",
+                  "smart-flows/managing-smart-flows/smart-flow-global-variables",
+                  "smart-flows/managing-smart-flows/how-to-create-smart-flow-variables",
+                  "smart-flows/managing-smart-flows/working-with-trigger-based-smart-flows",
+                  "smart-flows/managing-smart-flows/working-with-sub-flows",
+                  "smart-flows/managing-smart-flows/working-with-manual-flows",
+                  "smart-flows/managing-smart-flows/flow-enrollment-condition",
+                  "smart-flows/managing-smart-flows/flow-listing",
+                  "smart-flows/managing-smart-flows/how-to-change-the-flow-trigger",
+                  "smart-flows/managing-smart-flows/how-to-pause-resume-the-flow",
+                  "smart-flows/managing-smart-flows/how-to-lock-unlock-the-flow",
+                  "smart-flows/managing-smart-flows/how-to-delete-the-flow"
+                ]
+              },
+              {
+                "group": "Flow Templates",
+                "pages": [
+                  "smart-flows/flow-templates/custom-activity-reminders-using-smart-flow",
+                  "smart-flows/flow-templates/automating-a-delighted-nps-survey-using-smart-flow",
+                  "smart-flows/flow-templates/personalized-birthday-wishes",
+                  "smart-flows/flow-templates/send-an-email-after-first-purchase",
+                  "smart-flows/flow-templates/nps-survey-for-customers-90-days",
+                  "smart-flows/flow-templates/sales-demo-follow-up-and-next-steps",
+                  "smart-flows/flow-templates/lead-conversion-follow-up-emails",
+                  "smart-flows/flow-templates/deal-stage-progress-notification",
+                  "smart-flows/flow-templates/send-lost-deals-to-external-app",
+                  "smart-flows/flow-templates/re-connect-with-inactive-deals",
+                  "smart-flows/flow-templates/get-notification-on-rotten-deals",
+                  "smart-flows/flow-templates/streamline-follow-ups-with-smart-flow",
+                  "smart-flows/flow-templates/third-party-texting-integration",
+                  "smart-flows/flow-templates/enroll-prospects-to-sequence",
+                  "smart-flows/flow-templates/lost-deal-status-notification",
+                  "smart-flows/flow-templates/automated-ticket-assignment-flow",
+                  "smart-flows/flow-templates/customer-win-back-journey",
+                  "smart-flows/flow-templates/custom-meeting-confirmation",
+                  "smart-flows/flow-templates/collect-the-feedback-after-the-demo",
+                  "smart-flows/flow-templates/renewal-reminders-using-text-messages",
+                  "smart-flows/flow-templates/real-estate-automated-property-assignment-to-agents",
+                  "smart-flows/flow-templates/personalized-messaging-based-on-page-visit",
+                  "smart-flows/flow-templates/optimize-engagement-discover-your-best-day-to-connect",
+                  "smart-flows/flow-templates/event-cancellation-reschedule",
+                  "smart-flows/flow-templates/new-user-welcome-flow",
+                  "smart-flows/flow-templates/booking-confirmation",
+                  "smart-flows/flow-templates/14-days-saas-trial",
+                  "smart-flows/flow-templates/offer-assistance-after-help-portal-visit",
+                  "smart-flows/flow-templates/generate-review-after-nps-survey",
+                  "smart-flows/flow-templates/email-based-activity-re-engagement"
+                ]
+              },
+              {
+                "group": "Smart Flows Triggers",
+                "pages": [
+                  "smart-flows/smart-flows-triggers/email-received-trigger",
+                  "smart-flows/smart-flows-triggers/smart-flow-triggers",
+                  "smart-flows/smart-flows-triggers/record-created",
+                  "smart-flows/smart-flows-triggers/record-updated",
+                  "smart-flows/smart-flows-triggers/record-created-or-updated",
+                  "smart-flows/smart-flows-triggers/record-deleted",
+                  "smart-flows/smart-flows-triggers/tag-added",
+                  "smart-flows/smart-flows-triggers/tag-removed",
+                  "smart-flows/smart-flows-triggers/deal-stage-match",
+                  "smart-flows/smart-flows-triggers/deal-status-match",
+                  "smart-flows/smart-flows-triggers/activity-completed",
+                  "smart-flows/smart-flows-triggers/added-to-list",
+                  "smart-flows/smart-flows-triggers/removed-from-list",
+                  "smart-flows/smart-flows-triggers/smart-segment",
+                  "smart-flows/smart-flows-triggers/note-added",
+                  "smart-flows/smart-flows-triggers/file-uploaded",
+                  "smart-flows/smart-flows-triggers/date-match",
+                  "smart-flows/smart-flows-triggers/form-submitted",
+                  "smart-flows/smart-flows-triggers/page-visited",
+                  "smart-flows/smart-flows-triggers/event",
+                  "smart-flows/smart-flows-triggers/date-and-time-schedule",
+                  "smart-flows/smart-flows-triggers/email-activity",
+                  "smart-flows/smart-flows-triggers/text-sms-sent",
+                  "smart-flows/smart-flows-triggers/text-sms-received",
+                  "smart-flows/smart-flows-triggers/email-unsubscribed",
+                  "smart-flows/smart-flows-triggers/api-call",
+                  "smart-flows/smart-flows-triggers/viewed-product",
+                  "smart-flows/smart-flows-triggers/product-added-to-cart",
+                  "smart-flows/smart-flows-triggers/abandoned-cart",
+                  "smart-flows/smart-flows-triggers/order-placed",
+                  "smart-flows/smart-flows-triggers/order-fulfilled",
+                  "smart-flows/smart-flows-triggers/order-cancelled",
+                  "smart-flows/smart-flows-triggers/order-refunded",
+                  "smart-flows/smart-flows-triggers/back-in-stock",
+                  "smart-flows/smart-flows-triggers/waiting-on-stock",
+                  "smart-flows/smart-flows-triggers/price-dropped",
+                  "smart-flows/smart-flows-triggers/product-added-to-wishlist"
+                ]
+              },
+              {
+                "group": "Smart Flows Conditions",
+                "pages": [
+                  "smart-flows/smart-flows-conditions/branch",
+                  "smart-flows/smart-flows-conditions/check-email-status",
+                  "smart-flows/smart-flows-conditions/has-visited-page",
+                  "smart-flows/smart-flows-conditions/is-in-list",
+                  "smart-flows/smart-flows-conditions/timing-check",
+                  "smart-flows/smart-flows-conditions/whatsapp-delivery-status"
+                ]
+              },
+              {
+                "group": "Smart Flows Actions",
+                "pages": [
+                  "smart-flows/smart-flows-actions/create-record",
+                  "smart-flows/smart-flows-actions/update-record",
+                  "smart-flows/smart-flows-actions/find-records",
+                  "smart-flows/smart-flows-actions/delete-record",
+                  "smart-flows/smart-flows-actions/create-note",
+                  "smart-flows/smart-flows-actions/open-ai",
+                  "smart-flows/smart-flows-actions/send-flow-email",
+                  "smart-flows/smart-flows-actions/send-text",
+                  "smart-flows/smart-flows-actions/date-time-operations",
+                  "smart-flows/smart-flows-actions/numeric-operations",
+                  "smart-flows/smart-flows-actions/stringtext-operations",
+                  "smart-flows/smart-flows-actions/update-subscription-preference-action",
+                  "smart-flows/smart-flows-actions/send-a-slack-message",
+                  "smart-flows/smart-flows-actions/data-operations",
+                  "smart-flows/smart-flows-actions/enroll-to-sequence",
+                  "smart-flows/smart-flows-actions/unenroll-from-sequence",
+                  "smart-flows/smart-flows-actions/send-text-via-dialpad",
+                  "smart-flows/smart-flows-actions/send-internal-email",
+                  "smart-flows/smart-flows-actions/send-whatsapp-message",
+                  "smart-flows/smart-flows-actions/loop",
+                  "smart-flows/smart-flows-actions/assign",
+                  "smart-flows/smart-flows-actions/wait",
+                  "smart-flows/smart-flows-actions/ab-split",
+                  "smart-flows/smart-flows-actions/change-score",
+                  "smart-flows/smart-flows-actions/sub-flow",
+                  "smart-flows/smart-flows-actions/exit-flow",
+                  "smart-flows/smart-flows-actions/exit-from-selected-flow",
+                  "smart-flows/smart-flows-actions/api-call-webhook",
+                  "smart-flows/smart-flows-actions/parse-json",
+                  "smart-flows/smart-flows-actions/add-to-list",
+                  "smart-flows/smart-flows-actions/remove-from-list"
+                ]
+              },
+              {
+                "group": "Smart Flow Insights",
+                "pages": [
+                  "smart-flows/smart-flow-insights/smart-flow-healthboard",
+                  "smart-flows/smart-flow-insights/smart-flow-settings",
+                  "smart-flows/smart-flow-insights/smart-flow-version-history",
+                  "smart-flows/smart-flow-insights/smart-flow-enrollment-logs",
+                  "smart-flows/smart-flow-insights/smart-flow-live-view",
+                  "smart-flows/smart-flow-insights/smart-flow-insights"
+                ]
+              },
+              {
+                "group": "FAQs",
+                "pages": [
+                  "smart-flows/faqs/managing-activity-start-dates-in-smart-flow",
+                  "smart-flows/faqs/smart-flow-faqs"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Conversation Reports",
+            "pages": [
+              "conversation-reports/total-closed-conversations-by-user",
+              "conversation-reports/time-to-reply-conversation-by-user",
+              "conversation-reports/time-to-reply-conversation-by-the-team-over-time",
+              "conversation-reports/time-to-close-the-conversation-by-user",
+              "conversation-reports/remarks-from-contacts",
+              "conversation-reports/ratings-over-time",
+              "conversation-reports/conversation-performance",
+              "conversation-reports/conversation-leaderboard",
+              "conversation-reports/conversation-count-by-source-url",
+              "conversation-reports/conversation-count-by-referral-url",
+              "conversation-reports/overview-of-chats-by-os-operating-system",
+              "conversation-reports/overview-of-chats-by-devices",
+              "conversation-reports/overview-of-chats-by-browsers",
+              "conversation-reports/chat-journey-insights"
+            ]
+          },
+          {
+            "group": "Duplicate Management",
+            "pages": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "duplicate-management/overview/introduction-duplicate-management"
+                ]
+              },
+              {
+                "group": "Working with Duplicate Management",
+                "pages": [
+                  "duplicate-management/working-with-duplicate-management/how-to-create-duplicate-rules",
+                  "duplicate-management/working-with-duplicate-management/activatingdeactivating-duplicate-rule",
+                  "duplicate-management/working-with-duplicate-management/manage-duplicate-rule",
+                  "duplicate-management/working-with-duplicate-management/potential-duplicate-widget"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Import 3.0",
+            "pages": [
+              "import-30/learn-more-about-import-using-a-file",
+              "import-30/import-data-from-pipedrive-crm",
+              "import-30/import-data-from-hubspot-crm",
+              "import-30/salesmate-import-faqs"
             ]
           },
           {

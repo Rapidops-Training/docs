@@ -1,0 +1,41 @@
+---
+title: "How To Add Custom Greetings In the Email Template?"
+description: "You can add custom greetings like Good Morning or Good Night in your Emails automatically via Email Template."
+---
+
+You can add custom greetings like Good Morning or Good Night in your Emails automatically via Email Template.
+
+To create an email template:
+
+- Navigate to**More Icons**on left menu bar
+
+- Click on**Email Templates\*** Click on**\+ New Email Template**to create a template.
+
+![](./How To Add Custom Greetings In the Email Template\_ – Salesmate_files/mceclip0.png)
+
+- Select**Simple Text**type of Email Template.
+
+- Paste the following Code in the starting of the template.
+
+```liquid
+{% assign day = "00:00" | convert: "date" %}
+ \{% assign end\_day = "12:00" | convert: "date" \%}
+ \{% assign night= "20:00" | convert: "date" \%}
+ \{% assign end\_night= "23:59" | convert: "date" \%}
+\\{% capture now_time %\} \\{{'now' | date: "%H:%M" }\}\\{% endcapture %\}
+\{% if now\_time > end\_day and now\_time < end\_night\%}
+ Good Night
+\{% else \%}  Good Morning! \{% endif \%}
+```
+
+![mceclip0.png](./How To Add Custom Greetings In the Email Template\_ – Salesmate_files/mceclip0(1).png)
+
+- Add the Template**Name.\*\*\***Create/Select\*\*the folder where you would like to store this email template.
+
+- Mention the**Subject**Line of the Email. You can also insert dynamic attributes to send personalized emails and Hit**Next.\*** Hit on Update and update the email template.
+
+![mceclip1.png](./How To Add Custom Greetings In the Email Template\_ – Salesmate_files/mceclip1.png)
+
+```
+
+```
