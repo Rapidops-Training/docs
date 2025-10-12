@@ -1,0 +1,78 @@
+---
+title: "Formula Fields Functions and Operators"
+description: "Here is a list of supported operators and functions that you can utilize within the platform in order to create various different formulae or expressi..."
+---
+
+Here is a list of supported operators and functions that you can utilize within the platform in order to create various different formulae or expressions.**Operators**| Operator | Description | Example |
+| --- | --- | --- |
+| + | Adds two fields | 10+2 is 12 |
+| - | Subtracts two fields | 10-3 is 7 |
+| * | Multiplies two fields | 5*20 is 100 |
+| / | Divides two fields | 20/5 is 4 |
+| % | Calculates the remainder | 20%3 is 2 |
+| ( | Used to define mathematical formulas or conditional operations | (10+2)*3 |
+| ) | Used to define mathematical formulas or conditional operations | (10-2)*4 |
+| ! | Condition is negated | !{`{Contact.billingcountry}`}='USA' |
+| != | Not equal to operator | {`{Contact.billingCountry}`}!='USA' |
+| = | equal to operator | {`{Contact.billingCountry}`}='USA' |
+| &lt; | less than operator | {`{Deal.value}`}&lt;1000 |
+| &gt; | greater than operator | {`{Deal.value}`}&gt;1000 |
+| &lt;= | greater than or equal to the operator | {`{Deal.value}`}&gt;=1000 |
+| &gt;= | less than or equal to the operator | {`{Deal.value}`}&lt;=1000 |
+
+## Functions| Function | Description |
+| --- | --- |
+| abs | Returns the absolute value |
+| ceil | Rounds a value to the nearest higher value integer |
+| floor | Rounds a value to the nearest lower value integer |
+| max | Returns the greater of two values |
+| min | Returns the smaller of two values |
+| sqrt | Returns the square root of the input number |
+| if | Returns one of two values depending on the logical condition |
+| len | Returns the number of characters in the provided text |
+| dayofmonth | Returns the day of the month for the given date |
+| hour | Returns the hour for the given date |
+| minute | Returns the minute for the given date |
+| month | Returns the month for the given date |
+| year | Returns the year for the given date |
+| weekday | Returns the day of the week(1-7) corresponding to the input date, where 1 is Sunday, 2 is Monday, and so on. |
+| && | Returns true when both conditions match |
+| \|\| | Returns true when any condition matches |
+| lower | Converts all characters in a text to lower case |
+| upper | Converts all characters in a text to upper case |
+| trim | Removes extra spaces before and after the text |
+| subsubstring | Returns the part of text from the start position to the given length |
+| tostring | Returns string representation of the object |
+| replace | Replaces a character every time it appears in the text |
+| newdate | Create a date from the year, month, day, and time |
+| datepart | Returns just the date for the DateTime value |
+| timepart | Returns just the time for the DateTime value |
+| adddate | Returns a new date by adding (year/day/month/hour/min) to the given date |
+| subdate | Returns a new date by subtracting (year/day/month/hour/min) to the given date |
+| now | Returns a date/time representing the current time |
+| datecomp | Compares two dates and returns the difference of days in minutes |
+| tonumber | Returns number from the given string |
+
+
+### Date Time Functions
+
+| Function | Internal | Help Tooltip |
+| --- | --- | --- |
+| newdate | newdate(year, month, day, hour, minute, am/pm) | Creates a date from the year, month, day, and time. e.g. newdate( 2020 ,02 ,01 ,06 ,30 ,'PM' ) gives result as 01/02/2020 06:30 PM |
+| datepart | datepart(date-time) | Returns just the date for the DateTime value. e.g. datepart(newdate(2020,02,03,06,30,'PM')) returns "03/02/2020" |
+| timepart | timepart(date-time) | Returns just the time for the DateTime value. e.g. datepart(newdate(2020,02,03,06,30,'PM')) returns "06:30 PM" |
+| adddate | adddate(datetime,number, 'date period') | Returns a new date by adding (year/day/month/hour/min) to the given date. e.g. adddate( newdate(2020,02,03,06,30,'PM'), 2, 'month') returns 03/04/2020 06:30 PM. |
+| subdate | subdate(datetime,number, 'date period') | Returns a new date by subscracting (year/day/month/hour/min) to the given date. e.g. subdate( newdate(2020,02,03,06,30,'PM'), 2, 'month') returns 03/12/2019 06:30 PM. |
+| now | now() | Returns a date/time representing the current time. |
+| datecomp | datecomp(date time 1, date time 2) | Compares two dates and returns the difference of days in minutes. |
+| dayofmonth | dayofmonth(Datetime) | Returns the day of the month for the given date. e.g. dayofmonth( newdate(2020,02,03,06,30,'PM')) returns 03. |
+| hour | hour(Datetime) | Returns the hour for the given date. e.g. hour( newdate(2020,02,03,06,30,'PM') ) returns 18. |
+| minute | minute(datetime) | Returns the minute for the given date. e.g. minute( newdate(2020,02,03,06,30,'PM')) returns 30. |
+| month | month(datetime) | Returns the month for the given date. e.g. minute( newdate(2020,02,03,06,30,'PM')) returns 02. |
+| year | year(datetime) | Returns the year for the given date. e.g. year( newdate(2020,02,03,06,30,'PM')) returns 2020. |
+| weeday | weekday(datetime) | Returns the day of the week (1-7) corresponding to the input date, where 1 is Monday, 2 is Tuesday and so on. (Ex: Friday returns '5') |
+| Function | Internal | usage | Help Tooltip |
+| --- | --- | --- | --- |
+| if |   | If(logical_condition, value_if_true, value_if_false) | Returns one of two values depending on the logical condition. e.g if( {`{ Contact.billingCountry }`} = 'USA', 'Yes' , 'No' ), returns Yes if the country is USA. |
+| && | and operator |   | Returns true when both conditions match. e.g. ( {`{ Contact.billingCountry }`} == 'USA' && {`{ Deal.value }`} > 5000 ) |
+| \|\| | or operator |   | Returns true when any condition matches. e.g. ( {`{ Contact.billingCountry }`} == 'USA' \|\| {`{ Contact.billingCountry }`} == 'Canada' ) |

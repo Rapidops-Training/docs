@@ -33,6 +33,7 @@ Spintax uses curly brackets {} to group different variations of words or phrases
 
 `{Hello | Hi | Howdy}` John,I hope you're having a `{great|wonderful|fantastic}` day!I wanted to reach out regarding `{our new product|an exciting opportunity|a potential collaboration}`. Looking forward to your thoughts!Best,
 James
+spintax.isCorrect("A[Red|2 [+\\++Whi|Te] `{1|2}`|Blue]"); //false
 
 #### Example: 2
 
@@ -68,7 +69,8 @@ const spintax \= require('spintax-extended');
 //simple:
 spintax.unspin("`{Red|White|Blue}` water"); //#"Red water" or "Blue water" or "White water"
 //with permutation:
-spintax.unspin("\[Red|White|Blue\]"); //#"RedBlueWhite" or "BlueRedWhite" etc.
+spintax.isCorrect("[Red|{White|Blue}]"); //false
+
 //permutations with separator(s):
 spintax.unspin("\[+\_+Red|White|Blue\]"); //#"Red_Blue_White" ...
 spintax.unspin("\[+`{\_|-}`+Red|White|Blue `{1|2}`\]"); //#"White-Blue 2-Red" ...
@@ -106,6 +108,6 @@ To check correction of spintax text use `isCorrect` function:
 const spintax \= require('spintax-extended');
 spintax.isCorrect("\[+`{\_|-}`+Red|White|Blue `{1|2}`\]"); //true
 spintax.isCorrect("\[+\\\\++Red|\\\\\[White\\\\\]|Blue\]"); //true
-spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\]}`{ {1|2}`|Blue\]"); //false
-spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\] `{1|\[2}`\]|Blue\]"); //false
-spintax.isCorrect("\[Red|\\{White|Blue\]"); //false
+spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\] `{1|2}`|Blue\]"); //false
+spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\] `{1|2}`|Blue\]"); //false
+spintax.isCorrect("[Red|{White}|Blue]"); //false

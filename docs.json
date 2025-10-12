@@ -969,6 +969,151 @@
             ]
           },
           {
+            "group": "Setup",
+            "pages": [
+              {
+                "group": "Customizations",
+                "pages": [
+                  "setup/customizations/how-to-customize-the-sidebar",
+                  "setup/customizations/customize-the-system-modules",
+                  "setup/customizations/customize-the-page-layout-in-salesmate",
+                  "setup/customizations/custom-text-widget-in-detail-view",
+                  "setup/customizations/enabling-sorting-filtering-for-widgets-in-page-layout",
+                  "setup/customizations/customize-the-module-create-forms",
+                  "setup/customizations/how-to-create-new-section-for-module-create-forms",
+                  "setup/customizations/how-to-create-custom-fields",
+                  "setup/customizations/how-to-move-custom-fields-to-unused-section",
+                  "setup/customizations/how-to-set-field-permission",
+                  "setup/customizations/how-to-set-field-required-rule",
+                  "setup/customizations/how-to-set-field-visibility-rule",
+                  "setup/customizations/how-do-i-edit-delete-custom-fields",
+                  "setup/customizations/how-to-add-dependancy-fields-in-salesmate",
+                  "setup/customizations/setting-up-lookup-fields-relationship-fields",
+                  "setup/customizations/understanding-auto-increment-field",
+                  "setup/customizations/how-to-create-rating-fields",
+                  "setup/customizations/what-are-formula-fields-and-managing-them",
+                  "setup/customizations/formula-fields-functions-and-operators",
+                  "setup/customizations/formula-case-studies",
+                  "setup/customizations/tag-management",
+                  "setup/customizations/creating-custom-activity-type",
+                  "setup/customizations/deal-pipeline-and-stage-customization",
+                  "setup/customizations/tag-color-customization"
+                ]
+              },
+              {
+                "group": "Validation Rules",
+                "pages": [
+                  "setup/validation-rules/introduction-to-validation-rules",
+                  "setup/validation-rules/how-to-create-validation-rule",
+                  "setup/validation-rules/validation-condition-using-regular-expression-regex",
+                  "setup/validation-rules/display-error-message-action",
+                  "setup/validation-rules/how-to-edit-validation-rule",
+                  "setup/validation-rules/how-to-delete-validation-rule",
+                  "setup/validation-rules/validation-rule-listing"
+                ]
+              },
+              {
+                "group": "Data Administration",
+                "pages": [
+                  "setup/data-administration/how-to-avoid-duplicates-and-merge-records",
+                  "setup/data-administration/exporting-data-from-salesmate",
+                  "setup/data-administration/exporting-multilingual-records-from-salesmate"
+                ]
+              },
+              {
+                "group": "Voice & Text",
+                "pages": [
+                  "setup/voice-text/calling-integrations-with-salesmate"
+                ]
+              },
+              {
+                "group": "User Management",
+                "pages": [
+                  "setup/user-management/track-seats",
+                  "setup/user-management/managing-seats",
+                  "setup/user-management/salesmate-seats",
+                  "setup/user-management/overview-of-users-security",
+                  "setup/user-management/managing-users-in-salesmate",
+                  "setup/user-management/managing-profile-permissions-in-salesmate",
+                  "setup/user-management/managing-security-roles-in-salesmate",
+                  "setup/user-management/how-to-change-or-update-your-login-credentials"
+                ]
+              },
+              {
+                "group": "Security",
+                "pages": [
+                  "setup/security/password-policy",
+                  "setup/security/2fa-two-factor-authentication",
+                  "setup/security/introduction-to-single-sign-on-sso-and-saml",
+                  "setup/security/how-to-setup-single-sign-on-sso-using-saml",
+                  "setup/security/how-can-i-reset-my-login-password",
+                  "setup/security/security-monitor"
+                ]
+              },
+              {
+                "group": "Teams",
+                "pages": [
+                  "setup/teams/teams",
+                  "setup/teams/how-to-create-a-team",
+                  "setup/teams/how-to-deactivate-a-team",
+                  "setup/teams/how-to-delete-a-team",
+                  "setup/teams/how-to-edit-a-team",
+                  "setup/teams/how-to-filter-records-by-teams",
+                  "setup/teams/how-to-reactivate-a-team"
+                ]
+              },
+              {
+                "group": "Account/Organization Management",
+                "pages": [
+                  "setup/accountorganization-management/manage-organization-details",
+                  "setup/accountorganization-management/brand-book"
+                ]
+              },
+              {
+                "group": "Calculated Fields",
+                "pages": [
+                  "setup/calculated-fields/introduction-to-calculated-fields",
+                  "setup/calculated-fields/calculated-fields-plans-limitations",
+                  "setup/calculated-fields/how-to-create-calculated-fields",
+                  "setup/calculated-fields/general-rules-for-calculated-fields",
+                  "setup/calculated-fields/how-to-delete-calculated-fields",
+                  "setup/calculated-fields/calculated-fields-faqs"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Contact and Companies",
+            "pages": [
+              {
+                "group": "Contacts",
+                "pages": [
+                  "contacts-and-companies/contacts/what-are-contacts",
+                  "contacts-and-companies/contacts/how-to-add-a-contact",
+                  "contacts-and-companies/contacts/contact-types",
+                  "contacts-and-companies/contacts/how-to-merge-duplicate-contacts",
+                  "contacts-and-companies/contacts/adding-google-contacts",
+                  "contacts-and-companies/contacts/how-to-delete-contacts",
+                  "contacts-and-companies/contacts/navigation-between-the-records"
+                ]
+              },
+              {
+                "group": "Company",
+                "pages": ["contacts-and-companies/company/how-to-add-a-company"]
+              },
+              {
+                "group": "Contacts & Company FAQ's",
+                "pages": [
+                  "contacts-and-companies/contacts-company-faqs/can-i-disable-the-company-module",
+                  "contacts-and-companies/contacts-company-faqs/how-to-edit-or-delete-contact-type-inside-salesmate",
+                  "contacts-and-companies/contacts-company-faqs/how-to-add-new-contact-company-types-inside-salesmate",
+                  "contacts-and-companies/contacts-company-faqs/how-to-avoid-contact-duplication",
+                  "contacts-and-companies/contacts-company-faqs/why-does-salesmate-not-offer-google-contact-sync"
+                ]
+              }
+            ]
+          },
+          {
             "group": "Customization",
             "pages": ["essentials/settings", "essentials/navigation"]
           },

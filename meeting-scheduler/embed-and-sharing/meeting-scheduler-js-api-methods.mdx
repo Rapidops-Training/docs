@@ -16,6 +16,7 @@ window.addEventListener("SM_MEETING_SUBMITTED", function (event) {
 
 - If you add a code like displayed above on your website, then you will get a similar output as shown below.
 
+```html
 <script>
 ! function() {
 var MEETING_DATA = {
@@ -26,29 +27,36 @@ meetingURL: 'https://meetings.salesmate.io/meetings/#/salesmateio/scheduler/call
 initData: {},
 divId: '_sm_meetings_'
 };
-if ("undefined" == typeof SM\_Meetings) {
+if ("undefined" == typeof SM_Meetings) {
 let e = document.createElement("script"); e.setAttribute("src", "https://meetings.salesmate.io/meetings.js"),
 e.onload = function() {
-SM\_Meetings.loadMeeting(MEETING_DATA)
+SM_Meetings.loadMeeting(MEETING_DATA)
 },
 document.head.appendChild(e)
-} else SM\_Meetings.loadMeeting(MEETING_DATA)
-window.addEventListener("SM\_MEETING\_SUBMITTED", function(event) {
+} else SM_Meetings.loadMeeting(MEETING_DATA)
+window.addEventListener("SM_MEETING_SUBMITTED", function(event) {
 console.log('meetingName:' , event.detail.meetingName);
 console.log('meetingDate:' , event.detail.meetingDate);
 });
 }();
 </script>
+```
 
 <div id="_sm_meetings_">
-<br>
-</div>**Result****:**{
+<br />
+</div>
+
+**Result:**
+
+```json
+{
 "meetingName": "Demo for New Feature",
-"meetingDate": "`2021-12-18T10:30:00.000Z`", //ISO format
+"meetingDate": "2021-12-18T10:30:00.000Z", //ISO format
 "meetingData": {
 "Contact.name": "Damon",
 "Contact.email": "damon@example.com",
 "Contact.mobile": "98765XXXXX" }
 }
+```
 
 - As shown in the above example, you can easily get the data that has been submitted by your customer, now you can manipulate this data and use it as per your requirement or perform any operations on it. [Refer events emitted when a webform is submitted](https://support.salesmate.io/hc/en-us/articles/4408683937305).
