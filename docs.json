@@ -178,8 +178,21 @@
             ]
           },
           {
-            "group": "Tickets",
+            "group": "Ticket Management & SLA's",
             "pages": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "tickets/overview/introduction-to-ticketing-system",
+                  "tickets/overview/how-to-customize-ticket-form",
+                  "tickets/overview/how-to-view-the-ticket-details",
+                  "tickets/overview/how-to-set-a-ticket-pipeline-type",
+                  "tickets/overview/customize-the-ticket-layout",
+                  "tickets/overview/how-to-create-a-ticket-via-email",
+                  "tickets/overview/configure-outgoing-email-settings-for-ticket-emails",
+                  "tickets/overview/how-to-create-a-ticket"
+                ]
+              },
               {
                 "group": "Manage Tickets",
                 "pages": [
@@ -194,16 +207,11 @@
                 ]
               },
               {
-                "group": "Overview",
+                "group": "Ticket Notifications",
                 "pages": [
-                  "tickets/overview/introduction-to-ticketing-system",
-                  "tickets/overview/how-to-customize-ticket-form",
-                  "tickets/overview/how-to-view-the-ticket-details",
-                  "tickets/overview/how-to-set-a-ticket-pipeline-type",
-                  "tickets/overview/customize-the-ticket-layout",
-                  "tickets/overview/how-to-create-a-ticket-via-email",
-                  "tickets/overview/configure-outgoing-email-settings-for-ticket-emails",
-                  "tickets/overview/how-to-create-a-ticket"
+                  "tickets/ticket-notifications/how-to-set-ticket-notifications",
+                  "tickets/ticket-notifications/how-to-customize-ticket-notification-templates",
+                  "tickets/ticket-notifications/send-test-email-for-notification-templates"
                 ]
               },
               {
@@ -219,14 +227,7 @@
                   "tickets/slaservice-level-agreement/sla-listing"
                 ]
               },
-              {
-                "group": "Ticket Notifications",
-                "pages": [
-                  "tickets/ticket-notifications/how-to-set-ticket-notifications",
-                  "tickets/ticket-notifications/how-to-customize-ticket-notification-templates",
-                  "tickets/ticket-notifications/send-test-email-for-notification-templates"
-                ]
-              },
+              
               {
                 "group": "Tickets & SLA FAQ's",
                 "pages": ["tickets/tickets-sla-faqs/tickets-faqs"]
