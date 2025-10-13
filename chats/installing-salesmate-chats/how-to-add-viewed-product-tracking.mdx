@@ -10,7 +10,7 @@ Viewed Product snippet tracks when customers view specific products on your site
 - First, you need to ensure that web tracking is enabled for your BigCommerce website and to do that you need to install the main script on all web pages.
 - Navigate to **Storefront > My Themes** from your BigCommerce dashboard.
 - From the current theme, click the **Advanced Settings** dropdown and click **Edit Theme Files.** This opens the web editor.
-- Navigate to **t\*\***emplates > pages** and scroll down to open any page and the bottom of the page, paste the below code, and then click **Save & apply all files\*\*.
+- Navigate to **templates > pages** and scroll down to open any page and the bottom of the page, paste the below code, and then click **Save & apply all files**.
 - For this snippet to work correctly, repeat step 4 and add it to all of your product pages.
 
 ```html
@@ -60,21 +60,26 @@ Viewed Product snippet tracks when customers view specific products on your site
 
 - Navigate to **Conversations Icon** on the left menu bar
 - Click on **Chats**
-- Head to **Inbox** **Settings** on bottom left**.**
+- Head to **Inbox** **Settings** on bottom left.
 
-![](./How to Add Viewed Product Tracking – Salesmate_files/mceclip0.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/50772241567513" alt="Salesmate chat settings navigation" />
 - Here, click on **Channel** and then locate the **Salesmate Chat** channel. From the **Actions** menu, select **Edit**.
 - Navigate to the **Installation** section
 - Copy the **workspace_id**, **app_key**, & **tenant_id** from the code snippet of the web installation.
 
-![](./How to Add Viewed Product Tracking – Salesmate_files/mceclip1.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/50772263974553" alt="Salesmate chat installation settings" />
 - From your BigCommerce admin, navigate to **templates > pages** and click to open the product.html page.
 - Scroll down to the bottom of this page, and paste the below code.
 
 ```javascript
-<script type="text/javascript">window.addEventListener('__SM_ANALYTICS_READY__', () => {SALESMATE.productViewed({productId: "{{product.id}}",storeId: "{{settings.store_hash}}"});});</script>
+<script type="text/javascript">
+window.addEventListener('__SM_ANALYTICS_READY__', () => {
+SALESMATE.productViewed({
+productId: "{{product.id}}",
+storeId: "{{settings.store_hash}}"
+});
+});
+</script>
 ```
 
 Optional:
@@ -82,4 +87,6 @@ Optional:
 1.  You can also track if a customer viewed the product through a quick view card, but for this an extra step is required.
 2.  From your BigCommerce admin, navigate to **templates > components > products** and open **card.html**, and add the below attribute to the quick view button element.
 
+```html
 data-product-viewed="{{id}}"
+```

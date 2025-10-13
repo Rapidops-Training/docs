@@ -19,23 +19,19 @@ We’ll show you how to send push notifications and/or push messages to your cus
 - If you already have a Firebase project with notifications enabled you can skip to the next step. Otherwise, go to the [FCM Console page](https://console.firebase.google.com/) and create a new project following these steps:
 - Give the project a name and click ‘Create Project’.
 
-![2ce6fe5-FCM_Setup_1.png](./Android SDK - Push Notifications (FCM) – Salesmate_files/2ce6fe5-FCM_Setup_1.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009268287641" alt="Create Firebase Project"/>
 - Once your project is set up, scroll down and select the ‘Cloud Messaging’’ card.
 
-![8683d17-FCM_Setup_2.png](./Android SDK - Push Notifications (FCM) – Salesmate_files/8683d17-FCM_Setup_2.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009252534297" alt="Select Cloud Messaging"/>
 - Click on the Android icon to continue the setup.
 - Enter your app’s package name and click ‘Register App’.
 
-![Screenshot_from_2022-08-09_16-15-43.png](./Android SDK - Push Notifications (FCM) – Salesmate_files/Screenshot from 2022-08-09 16-15-43.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009307437977" alt="Register App"/>
 ### Set Up Client to Receive Push
 
 - Click the button "Download google-services.json" to download the config file. You’ll need to move that file into the same directory as your application level `` `build.gradle` ``.
 
-![5d1b176-FCM_Setup_5.png](./Android SDK - Push Notifications (FCM) – Salesmate_files/5d1b176-FCM_Setup_5.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009307097753" alt="Download google-services.json"/>
 - Click "next" and then in your apps `` `build.gradle` `` you will need to add the following lines to your dependencies:
 
 ```gradle
@@ -54,17 +50,14 @@ dependencies {
 
 - Finally, click the settings cog and select ‘Project settings’, then ‘Cloud Messaging tab’ then Cloud Messaging tab.
 
-![](./Android SDK - Push Notifications (FCM) – Salesmate_files/b42d4db520b9d2271e43913588e058c058bc5a8f8a783b4343801b6707bf208a.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/35524153104025" alt="Project Settings"/>
 - For new FCM projects, Firebase Cloud Messaging API v1 is enabled by default. If it's disabled in an older project, you can enable it in Google Cloud Console by clicking the three dots icon, selecting Manage API, and then clicking the Enable button.
 - Under the Project settings page, select the Service Accounts tab and under Firebase Admin SDK, ensure that Node.js is selected and then click on Generate new private key
 
-![](./Android SDK - Push Notifications (FCM) – Salesmate_files/453a1a4d857349f3f5f63193bdc2ee731d60e58e7df49e89bb25595c6119cec7.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/35524136173337" alt="Generate new private key"/>
 - Open your Salesmate Messenger settings and select ‘Installation → Android’. Then find the ‘Enable Push Notifications’ section. Here you'll be able to paste and save your Server API key.
 
-![](./Android SDK - Push Notifications (FCM) – Salesmate_files/mceclip0.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/35523620113305" alt="Enable Push Notifications"/>
 ### Disable Push on Logout
 
 - To stop users from receiving push messages when they have logged out of the app make sure to call:

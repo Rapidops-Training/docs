@@ -31,22 +31,18 @@ Add as following Swift Package Repository in Xcode and follow the instructions t
 
 https://github.com/salesmate/salesmate-chat-ios
 
-![Screenshot_2022-08-09_at_3-2.jpeg](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-09 at 3-2.jpeg)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009369292825" alt="Swift Package Manager"/>
 #### **Install Salesmate Chat SDK manually**
 
 - [Download SalesmateChat for iOS and extract the zip.](https://github.com/salesmate/SalesmateChat-iOS/archive/refs/heads/main.zip)
 
-![Screenshot_2022-08-04_at_2.30.40_PM.png](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-04 at 2.30.40 PM.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009369102745" alt="Download Salesmate Chat SDK"/>
 - Drag `SalesmateChatSDK.xcframework` into your project. Make sure "Copy items if needed" is selected and click Finish.
 
-![Screenshot_2022-08-02_at_5.56.55_PM.png](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-02 at 5.56.55 PM.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009352533145" alt="Add Salesmate Chat SDK to your project"/>
 - In the target settings for your app, set the `SalesmateChatSDK.xcframework` to “Embed & Sign”. This can be found in the “Frameworks, Libraries, and Embedded Content” section of the “General” tab.
 
-![Screenshot_2022-08-02_at_5.47.23_PM.png](./iOS SDK - Installation – Salesmate_files/Screenshot 2022-08-02 at 5.47.23 PM.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009394372761" alt="Embed Salesmate Chat SDK"/>
 ### Update Info.plist
 
 Photo Library usage:  
@@ -58,19 +54,19 @@ For apps that support iOS 13, this is required by Apple to access the photo libr
 
 First, you'll need to get your Salesmate Chat SDK **App key, Workspace Id** and **Tenant Id**. To find these, just select the 'iOS Tab' option in your Salesmate CRM Messenger Settings Installation section.
 
-![](./iOS SDK - Installation – Salesmate_files/mceclip0.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/50774166959257" alt="iOS App Key, Workspace Id and Tenant Id"/>
 Then initialize Salesmate Chat SDK by importing `SalesmateChatSDK` and adding the following to your application delegate:
 
 **Objective-C**
 
-`@import` ` SalesmateChatSDK``;    `  
-`-` ` (``BOOL``)``application``:(``UIApplication ` ` *)``application didFinishLaunchingWithOptions``:(``NSDictionary ` ` *)``launchOptions ` `{`
+```objc
+@import SalesmateChatSDK;
 
-    `Configuration` `*``config` `=` `[[``Configuration` `alloc``]` `initWithWorkspaceID``:@``"<Your iOS Workspace Id>"` `appKey``:@``"<Your iOS App Key>"` `tenantID``:@``"<Your iOS tenantID>"` `environment``:` `2``];`
-    `[``SalesmateChat` `setSalesmateChatWithConfiguration``:` `config``];`
-
-`}`
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    Configuration *config = [[Configuration alloc] initWithWorkspaceID:@"<Your iOS Workspace Id>" appKey:@"<Your iOS App Key>" tenantID:@"<Your iOS tenantID>" environment: 2];
+    [SalesmateChat setSalesmateChatWithConfiguration: config];
+}
+```
 
 **Note**:- For environments, 0 for Dev, 1 for Staging, and 2 for Production.
 
@@ -97,9 +93,11 @@ You’ll now need to log in to your users before communicating with them and tra
 - If you have an app with logged-in (identified) users only (like Facebook, Instagram or Slack) follow these instructions:
 - You’ll also need to log in to your user anywhere they sign in. Just call:
 
-`let` `email` `=` `"user's email address"`  
-`let` `firstName` `=` `"user's first name"`  
-`let` `lastName` `=` `"user's last name"`
+```swift
+let email = "user's email address"
+let firstName = "user's first name"
+let lastName = "user's last name"
+```
 
 ```swift
 let userId = "user's user id" // Unique id recommended
@@ -119,14 +117,18 @@ When users want to log out of your app, simply call:
 
 **Objective-C**
 
-// This clears the SalesmateChat SDK's cache of your user's data  
-`-` ` (``void``)``logout ` `{`  
- ` [``SalesmateChat ` ` logout``]; `  
-`}`
+```objc
+// This clears the SalesmateChat SDK's cache of your user's data
+- (void)logout {
+    [SalesmateChat logout];
+}
+```
 
 **Swift**
 
-// This clears the SalesmateChat SDK's cache of your user's data  
-func logout() {  
- SalesmateChat.logout()  
+```swift
+// This clears the SalesmateChat SDK's cache of your user's data
+func logout() {
+    SalesmateChat.logout()
 }
+```

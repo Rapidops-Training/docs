@@ -162,6 +162,10 @@
                 ]
               },
               {
+                "group": "Insights",
+                "pages": ["chats/insights/view-canned-response-insights"]
+              },
+              {
                 "group": "Additional Information",
                 "pages": [
                   "chats/additional-information/website-tracking-in-salesmate",
@@ -170,10 +174,6 @@
                   "chats/additional-information/how-to-blockunblock-a-contact-in-salesmate",
                   "chats/additional-information/what-is-contact-impersonation"
                 ]
-              },
-              {
-                "group": "Insights",
-                "pages": ["chats/insights/view-canned-response-insights"]
               }
             ]
           },

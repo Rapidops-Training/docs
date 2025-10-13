@@ -23,60 +23,46 @@ Now let's understand each of the processes in detail.
 
 - **Log in** to your **BigCommerce Store**
 
-_[Screenshot: BigCommerce Store Login]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265449259545" alt="BigCommerce Login" />
 - Select the account
 
-_[Screenshot: Account Selection]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265482479001" alt="BigCommerce Account Selection" />
 - Select the right store from the drop-down in case if you have multiple stores.
 
-_[Screenshot: Store Selection]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265449267737" alt="BigCommerce Store Selection" />
 - Navigate to the **Channel Manager** from the left panel
 
-_[Screenshot: Channel Manager Navigation]_
+<img src="https://support.salesmate.io/hc/article_attachments/19265482491801" alt="BigCommerce Channel Manager" />
+- Under that, click on **Scripts.**
 
-- Under that, click on **Scripts.  
-  **
-
-_[Screenshot: Scripts Section]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265449275417" alt="BigCommerce Scripts" />
 - Now click on **Create a Script** button.
 
-_[Screenshot: Create Script Button]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265449280153" alt="BigCommerce Create a Script" />
 - Add the **Name** and **Description** of the Script
 
-_[Screenshot: Script Name and Description]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265449282457" alt="BigCommerce Script Name and Description" />
 - Keep the location of the page as **Footer**.
 
-_[Screenshot: Footer Location Setting]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265482505881" alt="BigCommerce Footer Selection" />
 - Select the pages where the script will be added as **All Pages**.
 
-_[Screenshot: All Pages Selection]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265482511001" alt="BigCommerce All Pages Selection" />
 - Keep the script category as **Essential**.
 
-_[Screenshot: Essential Category Setting]_
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265482511513" alt="BigCommerce Essential Selection" />
 - Select script type as **Script**.
 
-![Screen](./How to do website tracking in Salesmate\_ – Salesmate_files/Screen Shot 2023-06-05 at 5.23.22 PM.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/19265449290137" alt="BigCommerce Script Type Selection" />
 Please follow the below steps to locate Messenger Code and **Copy** it:
 
 - Navigate to the **Chats** from left menu bar
 - Click on **Chat Settings**
 
-![](./How to do website tracking in Salesmate\_ – Salesmate_files/mceclip0.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/31912520572313" alt="Salesmate chat settings navigation" />
 - Go to the **Installation** section from the left panel and **Copy** the code.
 
-![](./How to do website tracking in Salesmate\_ – Salesmate_files/mceclip0(1).png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/31912510121625" alt="Salesmate messenger installation" />
 <Note>
 
 **Note:** This access is subject to the user’s profile permission relating to Manage Messenger Settings assigned by the Admin user.
@@ -84,63 +70,70 @@ Please follow the below steps to locate Messenger Code and **Copy** it:
 </Note>
 
 - **Paste** your Messenger Code along with the below code i.e. **Add one line of the script below tenant_id:"salesmateio.salesmate.io"** and **Save it**. This code hides the launcher icon yet keeps the tracking on. Please take a look at the image below:
-
+```
 hide_default_launcher: true
-
-![messenger_code_placement.png](./How to do website tracking in Salesmate\_ – Salesmate_files/messenger code placement.png)
-
+```
+<img src="https://support.salesmate.io/hc/article_attachments/11002471658521" alt="BigCommerce Paste Code" />
 - You can also refer to the installation process for BigCommerce below:
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/1_7w1TfdNwU"
+  title="YouTube video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
 
 #### Installing Messenger Code From WordPress Admin Panel
 
 - **Login** to the WP admin.
 
-![Screen](./How to do website tracking in Salesmate\_ – Salesmate_files/Screen Shot 2023-06-05 at 5.56.10 PM.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/19266428815641" alt="WordPress Login" />
 - Navigate to the **Plugins** section and Click on **Add New**.
 
-![Screen](./How to do website tracking in Salesmate\_ – Salesmate_files/Screen Shot 2023-06-05 at 5.57.10 PM.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/19266428819993" alt="WordPress Plugins" />
 - Search for **Salesmate Messenger** from the search bar and **Install**.
 
-![wp_messenger_install.png](./How to do website tracking in Salesmate\_ – Salesmate_files/wp messenger install.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11002994751001" alt="WordPress Salesmate Messenger Plugin" />
 - Now click on **Activate**.
 
-![wp_activate.png](./How to do website tracking in Salesmate\_ – Salesmate_files/wp activate.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11003015919257" alt="WordPress Activate Plugin" />
 - Now click on **Salesmate Messenger** and enter the **Workspace ID, AppKey, and Tenant ID** from the Messenger code.
 - You will get these details from your Salesmate Account. It will be available under the Chat icon, followed by the Messenger Settings and Installation.
 
-![workspaceid_appkey_tenant_id.png](./How to do website tracking in Salesmate\_ – Salesmate_files/workspaceid appkey tenant id.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11004472758169" alt="Salesmate messenger installation" />
 - In case you are using the Messenger Service and want to provide chat service only on specific pages, you can disable the launcher icon by adding the page ids with comma-separated values in the “Exclude Text” section.
 
-![exclude_text.png](./How to do website tracking in Salesmate\_ – Salesmate_files/exclude text.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11032403477785" alt="WordPress Messenger Settings" />
 - You can locate the Page Ids in the following ways:
   - Navigate to **Posts** you do not want to display the launcher icon on the blogs published by you. Simply hover on the respective pages, and you will notice the page id getting generated right below. Post is equal to, and the number that you see here is the page id.
 
-![page_id.png](./How to do website tracking in Salesmate\_ – Salesmate_files/page id.png)
+<img src="https://support.salesmate.io/hc/article_attachments/11034192626201" alt="custom_form_post_id.png" />
+- For hiding it on respective website pages, navigate to the Pages section and hover on them to locate the page ids.
 
-- - For hiding it on respective website pages, navigate to the Pages section and hover on them to locate the page ids.
+<img src="https://support.salesmate.io/hc/article_attachments/11035008945433" alt="custom_form_page_id.png" />
+- In case you are either editing the pages or posts, you can fetch the page id from the URL section above.
 
-![custom_form_page_id.png](./How to do website tracking in Salesmate\_ – Salesmate_files/custom form page id.png)
-
-- - In case you are either editing the pages or posts, you can fetch the page id from the URL section above.
-
-![url_page_id.png](./How to do website tracking in Salesmate\_ – Salesmate_files/url page id.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11035426934425" alt="custom_form_page_id_from_url.png" />
 - Check the Hide Launcher Icon if you are not using the Messenger service. It will allow you to track your website visitors without chatting with them.
 
-![hide_launcher.png](./How to do website tracking in Salesmate\_ – Salesmate_files/hide launcher.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11035741687065" alt="WordPress Messenger Settings" />
 - Save Changes.
 
-![save_change.png](./How to do website tracking in Salesmate\_ – Salesmate_files/save change.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11035879083929" alt="WordPress Messenger Settings Save" />
 You can also refer to the installation process for WordPress below:
-
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/ZMCNAzJGmr8"
+  title="YouTube video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
 ### Event-Based Tracking
 
 - Following the Event-Based Tracking method simply collects the data in either of the cases like; while the user is Signing Up, Logging In, Logging Out, Performing any step using the Call-to-Action button, or be it any Custom Event Listener using the JS API Method. You can refer to other events [here](https://support.salesmate.io/hc/en-us/articles/360062373471).
@@ -178,8 +171,7 @@ This is how you can capture the contact details of the visitor without bothering
 
 You can use "Page Visited Trigger" to set up the journey and perform a certain set of actions in the automation journey. This method will initiate the trigger as soon as the visitor lands on any specific page.
 
-![landing_page_based_action.png](./How to do website tracking in Salesmate\_ – Salesmate_files/landing page based action.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11003262473881" alt="Salesmate chat settings navigation" />
 ### FAQs
 
 **Can I track my website visitors without paying any additional cost for Messenger?**
@@ -196,8 +188,7 @@ Ans: These are the ways you can collect the data:
 
 - Ans: In the Contact Detail Page, you will find the details in the Page View section on the right.
 
-![](./How to do website tracking in Salesmate\_ – Salesmate_files/mceclip0(2).png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/31912813993497" alt="Contact Page View" />
 **How can I automate the process once the data is collected?**  
 Ans: Automation Journey and Sequences can be used to make it a non-manual process to stay connected with your customers.
 
@@ -205,16 +196,13 @@ Ans: Automation Journey and Sequences can be used to make it a non-manual proces
   With Automation Journey, you can use the "Event" Trigger to initiate the journey and send automated Emails using Sequences.  
   On Event trigger, you can enroll that Contact to a Sequence.
 
-![instance_1.png](./How to do website tracking in Salesmate\_ – Salesmate_files/instance 1.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/11003423805849" alt="Event Trigger in Automation Journey" />
 - **Instance 2:**  
   If you do not want to enroll the Contacts to Sequence, you can perform Bulk/Mass Operation too. Using the Event trigger in Automation Journey, you can assign Tag to those Contacts and further filter the data to perform Bulk/Mass operation.
   - Step 1: Create Automation Journey to assign Tag to Contact
 
-![instance_2.1.png](./How to do website tracking in Salesmate\_ – Salesmate_files/instance 2.1.png)
+<img src="https://support.salesmate.io/hc/article_attachments/11003642310169" alt="Assign Tag in Automation Journey" />
+- Step 2: Filter the Contacts based on the Tag. Bulk select the Contacts and perform "Send Email" or "Sent Text"
 
-- - Step 2: Filter the Contacts based on the Tag. Bulk select the Contacts and perform "Send Email" or "Sent Text"
-
-![](./How to do website tracking in Salesmate\_ – Salesmate_files/mceclip1.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/31912897496089" alt="Bulk Email or Text" />
 This is how the Contacts created via website tracking can be contacted further for marketing purposes.

@@ -31,8 +31,7 @@ Go to your **Chat Settings** and select **Installation > iOS**. In the **"Enable
 
 To send push notifications through Salesmate Chat SDK, add the .p8 file, Key ID, Bundle ID, and Apple team ID:
 
-![Screenshot_2022-08-08_at_11.17.32_AM.png](./iOS SDK - Push Notifications – Salesmate_files/Screenshot 2022-08-08 at 11.17.32 AM.png)
-
+<img src="https://support.salesmate.io/hc/article_attachments/10009466198425" alt="Enable Push Notifications"/>
 ### Register Device Tokens
 
 To enable your users to receive push notifications from Salesmate Chat via Salesmate Chat SDK for iOS, you must [request permission](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications) to send push notifications and register the device token of your user in your `AppDelegate`.
@@ -64,8 +63,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 At this stage, you should also ensure that you have enabled the Push Notifications and Background Modes capability and enabled Remote notifications in Xcode.
 
-![](./iOS SDK - Push Notifications – Salesmate_files/Screenshot 2022-08-08 at 12.10.33 PM.png)
-
+<img src="https://quip.com/blob/YcQAAAL46hk/9wepshljJeXC413jSesrDQ?a=DyPlaIinld2WnJIiSsiD4aRanBuHReykCzMMgTSjEg0a" alt="Enable Push Notifications and Background Modes"/>
 ### Handling Salesmate Chat Push Notifications
 
 Handle Salesmate Chat SDK push notifications manually in `didReceiveNotificationResponse` in your `UNUserNotificationCenterDelegate`:

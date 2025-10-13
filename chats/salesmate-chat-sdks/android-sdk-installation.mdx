@@ -75,7 +75,7 @@ jcenter() // if required
 
 - First, you'll need to get your Salesmate Chat **App key, Workspace Id, and Tenant Id**. To find these, just select the 'Android Tab' option in your Salesmate CRM Messenger Settings Installation section.
 
-![Messenger-Settings-Mushroom-bistro.png](./Android SDK - Installation – Salesmate_files/Messenger-Settings-Mushroom-bistro.png)
+<img src="https://support.salesmate.io/hc/article_attachments/9809140921881" alt="Android App Key, Workspace Id and Tenant Id"/>
 
 - Then, initialize Salesmate Chat SDK by calling the following in the `onCreate()` method of your application class:
 
@@ -124,29 +124,31 @@ SalesmateChatSDK.initialize(this, salesmateChatSettings)
 - If you have an app with logged-in (identified) users only (like Facebook, Instagram or Slack), follow these instructions:
 - You’ll also need to log in to your user anywhere they sign in. Just call:
 
-`// Prepare a user's detail object`  
-`val userDetail` `=` ` UserDetails``.``create``() `
+```kotlin
+// Prepare a user's detail object  
+val userDetail= UserDetails.create() 
 
-`val email` `=` `"user's email address"`  
-`val firstName` `=` `"user's first name"`  
-`val lastName` `=` `"user's last name"`  
-`val userId` `=` `"user's user id"` `// Unique id recommended`  
-` userDetail``.``withEmail``(``email``) `  
-` .``withFirstName``(``firstName``) `  
-` .``withLastName``(``lastName``) `
+val email="user's email address"  
+val firstName="user's first name" 
+val lastName="user's last name"
+val userId="user's user id"// Unique id recommended 
+ userDetail.withEmail(email) 
+ .withFirstName(firstName)   
+ .withLastName(lastName) 
 
-` SalesmateChatSDK``.``getInstance``().``login``(``userId``, ` ` userDetail``, ` `object` `:` `LoginListener` `{`  
-`override` ` fun onLogin``() ` `{`  
-`// Login successfully`  
-`}`
+ SalesmateChatSDK.getInstance().login(userId,  userDetail, object:LoginListener{  
+override fun onLogin() {  
+// Login successfully  
+}
 
-`override` ` fun onError``(``salesmateException``: ` ` SalesmateException``) ` `{`  
-// Login error `}`  
-`})`
-
+override fun onError(salesmateException:  SalesmateException) {  
+// Login error } 
+})
+```
 ### How to Logout a User
 
 - When users want to log out of your app, simply call logout like so:
-
-`// This clears the SalesmateChat SDK's cache of your user's data`  
-` SalesmateChatSDK``.``getInstance``().``logout``() `
+```kotlin
+// This clears the SalesmateChat SDK's cache of your user's data
+ SalesmateChatSDK.getInstance().logout()
+```
