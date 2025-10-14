@@ -6,8 +6,8 @@ description: "Single sign-on (SSO) is an authentication method that enables user
 Single sign-on (SSO) is an authentication method that enables users to securely authenticate with multiple applications and websites by using just one set of credentials. If you have a Salesmate _Enterprise_ account and have SSO set up for your business, you can require users to log in to Salesmate using their SSO credentials.
 
 <Note>
-**Note:***   Available in Pro and above Plans (For Legacy Accounts: Growth and above Plans)
-
+**Note:**
+*   Available in Pro and above Plans (For Legacy Accounts: Growth and above Plans)
 *   This setup process should be done by an IT administrator with experience creating applications in your identity provider account.
 
 </Note>
@@ -15,38 +15,54 @@ Single sign-on (SSO) is an authentication method that enables users to securely 
 To enable SSO inside Salesmate,
 
 
-*   Navigate to the**Profile Icon**on the top right corner
+*   Navigate to the **Profile Icon** on the top right corner
 
-*   Click on the**Setup***   Head over to**Users & Security***   Click on**Single Sign On (SSO)**![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip0.png)
+*   Click on the **Setup**
+*   Head over to **Users & Security**
+*   Click on **Single Sign On (SSO)**
+
+![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip0.png)
 
 
-*   Click on the**Configure**option
+*   Click on the **Configure** option
 
 ![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip1.png)
 
 
-*   Find the**SAML configuration's values**on the screen and paste them into your identity provider account where required.
+*   Find the **SAML configuration's values** on the screen and paste them into your identity provider account where required.
 
-*   Copy the**identified or issuer URL**, the single-sign-on URL, and the certificate from your identity provider and paste them into the Salesmate panel.
+*   Copy the **identified or issuer URL**, the single-sign-on URL, and the certificate from your identity provider and paste them into the Salesmate panel.
 
-*   Click on**Test***   Once the test is successful, you can come back to the SSO screen and**enable**it for your workspace
+*   Click on **Test**
+*   Once the test is successful, you can come back to the SSO screen and **enable** it for your workspace
 
 ![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip2.png)(If you want every user to log in via SSO only, then you can follow these steps.)
 
 
-*   Navigate to the**Profile Icon**on the top right corner
+*   Navigate to the **Profile Icon** on the top right corner
 
-*   Click on the**Setup***   Head over to**Users & Security***   Click on**Single Sign On (SSO)**![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip0.png)
+*   Click on the **Setup**
+*   Head over to **Users & Security**
+*   Click on **Single Sign On (SSO)**
+
+![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip0.png)
 
 
-*   Enable the**"Force SSO login"**option
+*   Enable the **"Force SSO login"** option
 
-*   Click**Save**![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip3.png)**Once the SSO is enabled, you can add the Profiles that you want to exclude from SSO.**![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip4.png)
+*   Click **Save**
 
-<Note>**What will happen when you enable SSO login?***   If forced SSO login is enabled then you can log in only via your identity provider
+![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip3.png)
 
+* **Once the SSO is enabled, you can add the Profiles that you want to exclude from SSO.**
+
+![](./How to Setup Single Sign-On (SSO) using SAML – Salesmate_files/mceclip4.png)
+
+<Note>
+
+**What will happen when you enable SSO login?**
+*   If forced SSO login is enabled then you can log in only via your identity provider
 *   If forced SSO scenario, Your login via password or 2FA or Google will not work
-
 *   If SSO is enabled but not forced, you can log in via password, 2FA, and Google.
 
 </Note>
@@ -55,11 +71,14 @@ To enable SSO inside Salesmate,
 ### In Azure Active Directory:
 
 
-*   Login to your**Azure Active Directory***   Go to**Enterprise Applications**in the left sidebar
+*   Login to your **Azure Active Directory**
+*   Go to **Enterprise Applications** in the left sidebar
+*   Click on **+** **Create your application**
+*   Type **Salesmate** in the What's the name of your app? text box
 
-*   Click on**+****Create your application***   Type**Salesmate**in the What's the name of your app? text box
-
-*   Select the option:**Integrate any other application you don't find in the gallery (Non-gallery)***   Once added it will show the**Application Name, ID, and Object ID.***   Additionally, it will give options to:
+*   Select the option: **Integrate any other application you don't find in the gallery (Non-gallery)**
+*   Once added it will show the **Application Name, ID, and Object ID.**
+*   Additionally, it will give options to:
     *   Assign users and groups
     *   Set up single sign-on
     *   Provision User Accounts
@@ -70,24 +89,39 @@ To enable SSO inside Salesmate,
 *   Under Set up single sign-on, go to SAML
 
 *   Under Set up Single Sign-on with SAML configure:
-    ***Basic SAML configuration***   *   Click Edit and copy the information from the Salesmate SSO page here
-            *   Copy the**Identifier ID (Issuer / Service Provider Issuer ID)**and**Reply URL (Assertion Consumer Service URL / ACS URL)*****User Attributes & Claims***   Click Edit and**Add new claim***   Name:**Email***   Source attribute:**user.mail*****Note**: email is the only required claim. Other claims are optional and can be added to provide more trackable information in case of any connection failures.
-    ***SAML Signing Certificate***   Download the**Federation Metadata XML***   Open it in**Notepad***   Search for <X509Certificate>
-        *   Copy the key value between the attribute <X509Certificate> & </X509Certificate>
-        *   Paste it to the**Security Certificate Finger Finge**field on the SSO page in Salesmate
-    ***Set up Salesmate***   Copy the**Login URL**to the**SAML Login URL**field on the SSO page in Salesmate
-        *   Copy the**Logout URL**to the**Logout URL**field on the SSO page in Salesmate
+    * **Basic SAML configuration**
+    * Click Edit and copy the information from the Salesmate SSO page here
+            *   Copy the **Identifier ID (Issuer / Service Provider Issuer ID) **and** Reply URL (Assertion Consumer Service URL / ACS URL)**
+            * **User Attributes & Claims**
+            *   Click Edit and **Add new claim**
+            *   Name: **Email**
+            *   Source attribute: **user.mail**
+            
+            * **Note**: email is the only required claim. Other claims are optional and can be added to provide more trackable information in case of any connection failures.
+            
+            
+    * **SAML Signing Certificate**
+    *   Download the **Federation Metadata XML**
+    *   Open it in **Notepad**
+    *   Search for `<X509Certificate>`
+        * Copy the key value between `<X509Certificate>` and `</X509Certificate>`
+        *   Paste it to the **Security Certificate Finger Finge** field on the SSO page in Salesmate
+    * **Set up Salesmate**
+    *   Copy the **Login URL** to the **SAML Login URL** field on the SSO page in Salesmate
+        *   Copy the **Logout URL** to the **Logout URL** field on the SSO page in Salesmate
 
 *   Once completed click on the "Save & Verify" button on the SSO page in Salesmate to verify the setup.
 
-*   You can also test this by clicking on the**Test button**from Azure's Single Sign-on page under section
+*   You can also test this by clicking on the **Test button** from Azure's Single Sign-on page under section
 
-***Test single sign-on with Salesmate**### Known Errors & Solution:
+* **Test single sign-on with Salesmate**
+
+### Known Errors & Solution:
 
 
 *   Malformed request detected!!!
 
-    *   Check if the**Certificate key**is correctly entered
+    *   Check if the **Certificate key** is correctly entered
 
 *   Cannot find a user with the same email address
-    *   Check if the correct claim with the name**email**and mapped to the source attribute**user.mail**In case you still facing any issues feel free to reach out to our support team on chat or email us at [support@salesmate.io](mailto:support@salesmate.io)
+    *   Check if the correct claim with the name **email** and mapped to the source attribute **user.mail** In case you still facing any issues feel free to reach out to our support team on chat or email us at [support@salesmate.io](mailto:support@salesmate.io)
