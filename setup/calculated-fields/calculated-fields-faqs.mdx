@@ -7,43 +7,14 @@ description: "To display the total amount of deals associated with a single cont
 
 To display the total amount of deals associated with a single contact in a single column, follow the step-by-step process below:
 
-
 #### Step 1: Create a Multi-Lookup Field in the Contact Module
 
-
-1.  Navigate to**Setup > Modules > Contacts.**2.  Click on**All Detail Form Fields**and select**Add New Field.**3.  Choose**Multi-Lookup Field**as the field type.
-
-
-4.  Set**Deals**as the associated module.
-
-
-5.  Click**Save.****Note:**Multi-lookup fields allow multiple deals to be linked to a single contact. You can learn more about**Multi-Lookup Fields**[here](https://support.salesmate.io/hc/en-us/articles/360043520171).
-
+Navigate to**Setup > Modules > Contacts.**Click on**All Detail Form Fields**and select**Add New Field.**Choose**Multi-Lookup Field**as the field type.Set**Deals**as the associated module.Click**Save.****Note:**Multi-lookup fields allow multiple deals to be linked to a single contact. You can learn more about**Multi-Lookup Fields**[here](https://support.salesmate.io/hc/en-us/articles/360043520171).
 
 #### Step 2: Create a Calculated Field to Sum the Deal Value
 
+Stay in the**Contacts Module**and click**Add New Field.**Select**Calculated Field**as the field type.The**Parent Module**will automatically be set as**Contacts.**Set the**Child Module**as**Deals.**Under**Define Relationship,**select the multi-lookup field created in Step 1.Choose**Field to Aggregate:**Select**Deal Value.**Set the**Operation**to**SUM.**Choose the**Calculation Mode:****Real-Time:**Updates immediately when changes occur.**Scheduled:**Updates once every 24 hours.(Optional) Apply a**Filter**on either the**Parent (Contacts) or Child (Deals) Module**to refine which records are included in the calculation.Click**Save.**#### Step 3: View the Total Deal Value on the Contact Record
 
-1.  Stay in the**Contacts Module**and click**Add New Field.**2.  Select**Calculated Field**as the field type.
-
-
-3.  The**Parent Module**will automatically be set as**Contacts.**4.  Set the**Child Module**as**Deals.**5.  Under**Define Relationship,**select the multi-lookup field created in Step 1.
-
-
-6.  Choose**Field to Aggregate:**Select**Deal Value.**7.  Set the**Operation**to**SUM.**8.  Choose the**Calculation Mode:*****Real-Time:**Updates immediately when changes occur.
-
-    ***Scheduled:**Updates once every 24 hours.
-
-
-9.  (Optional) Apply a**Filter**on either the**Parent (Contacts) or Child (Deals) Module**to refine which records are included in the calculation.
-
-
-10.  Click**Save.**#### Step 3: View the Total Deal Value on the Contact Record
-
-
-1.  Open any**Contact Record.**2.  In the**Multi-Lookup Field**, associate the relevant deals.
-
-
-3.  The**Calculated Field**will now automatically display the total value of all linked deals.
-
+Open any**Contact Record.**In the**Multi-Lookup Field**, associate the relevant deals.The**Calculated Field**will now automatically display the total value of all linked deals.
 
 Outcome: Each contact will have a dedicated column displaying the total deal value, eliminating the need for manual calculations.
