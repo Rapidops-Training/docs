@@ -3,55 +3,33 @@ title: "How to create a DKIM record for your domains?"
 description: "The emails that you send to your contacts via Workflows might have via salesmate.io OR salesmatemail.com appear in the from address when they receive"
 ---
 
-The emails that you send to your contacts via Workflows might have via salesmate.io OR salesmatemail.com appear in the from address when they receive it. If you’d like to hide this in your emails, it is highly recommended that you add DKIM records to your domain.
+The emails that you send to your contacts via Workflows might have via salesmate.io OR salesmatemail.com appear in the from address when they receive it. If you’d like to hide this in your emails, it is highly recommended that you add DKIM records to your domain.Different mailboxes require different configuration steps to be followed.If your host is GoDaddy, [check this article.](https://support.salesmate.io/hc/en-us/articles/360006687772)
 
-Different mailboxes require different configuration steps to be followed.
+Navigate to the**Profile Icon**on the top leftClick on**Setup**Head over to**Email & Delivery**Click on the**Email Sending options**
 
-If your host is GoDaddy, [check this article.](https://support.salesmate.io/hc/en-us/articles/360006687772)
+![mceclip0.png](./images/mceclip0-5.png)
 
+Enter the domain name you wish to verify and hit**Add**
 
-*   Navigate to the**Profile Icon**on the top left
+![mceclip0(1).png](./images/mceclip01-2.png)
 
-*   Click on**Setup***   Head over to**Email & Delivery***   Click on the**Email Sending options**![](./How to create a DKIM record for your domains_ – Salesmate_files/mceclip0.png)
+You will be presented with three CNAME entries to be added to your domain DNS records
 
+![mceclip3.png](./images/mceclip3-2.png)
 
-*   Enter the domain name you wish to verify and hit**Add**![](./How to create a DKIM record for your domains_ – Salesmate_files/mceclip0(1).png)
+Now, Go to your domain registrar's website. You can find your DNS provider using [Whois](https://www.whois.com/) serviceLog in to the domain control panel.Open your DNS configuration settings.Find the page for updating your domain's DNS records. You can find it under DNS records, DNS Zone file, Advanced DNS or something similar.Add the DNS records as you find them under the DKIM Settings for the added domain.The records to add are**CNAME**
 
-
-*   You will be presented with three CNAME entries to be added to your domain DNS records
-
-![](./How to create a DKIM record for your domains_ – Salesmate_files/mceclip3.png)
-
-
-*   Now, Go to your domain registrar's website. You can find your DNS provider using [Whois](https://www.whois.com/) service
-
-*   Log in to the domain control panel.
-
-*   Open your DNS configuration settings.
-
-*   Find the page for updating your domain's DNS records. You can find it under DNS records, DNS Zone file, Advanced DNS or something similar.
-
-*   Add the DNS records as you find them under the DKIM Settings for the added domain.
-
-*   The records to add are**CNAME**![DKIM_2.png](./How to create a DKIM record for your domains_ – Salesmate_files/DKIM 2.png)
+![DKIM_2.png](./images/DKIM-2-2.png)
 
 | Type | Host | Points to | TTL |
 | --- | --- | --- | --- |
 | CNAME | em5497 | u7797592.wl093.sendgrid.net | 1 Hour |
 | CNAME | s1._domainkey | s1.domainkey.u7797592.wl093.sendgrid.net | 1 Hour |
 | CNAME | s2._domainkey | s2.domainkey.u7797592.wl093.sendgrid.net | 1 Hour |
-| Note: Some domains need you to specify the complete Host thus enter:em5497.demo.io, s1._domainkey.demo.io & s2._domainkey.demo.io respectively |
+| Note: Some domains need you to specify the complete Host thus enter:em5497.demo.io, s1._domainkey.demo.io & s2._domainkey.demo.io respectively |**Save**your changes when you’re done. After you’ve published the records in your Domain Name System, log into your Salesmate account as AdministratorWait for about 30 minutes ( This could take as long as 24 - 48 hours depending on your service provider )In Salesmate, navigate to**Setup > Sales Automation >  Outgoing Email Setting**Hit the**verify**button to verify your domain nameOnce verified the domain will be tagged as**verified.**
 
+![mceclip2.png](./images/mceclip2-5.png)
 
-***Save**your changes when you’re done.
+**Note:**You can expect a propagation time from 30 minutes up to 24 hours. This is because it takes time for the DNS to take effect across the internet. The actual time of propagation may vary in some locations based on your network setup.
 
-*   After you’ve published the records in your Domain Name System, log into your Salesmate account as Administrator
-
-*   Wait for about 30 minutes ( This could take as long as 24 - 48 hours depending on your service provider )
-
-*   In Salesmate, navigate to**Setup > Sales Automation >  Outgoing Email Setting***   Hit the**verify**button to verify your domain name
-
-*   Once verified the domain will be tagged as**verified.**![](./How to create a DKIM record for your domains_ – Salesmate_files/mceclip2.png)**Note:**You can expect a propagation time from 30 minutes up to 24 hours. This is because it takes time for the DNS to take effect across the internet. The actual time of propagation may vary in some locations based on your network setup.
-
-
-*   In case of any errors refer to the possible reasons for [DKIM verification failure](https://support.salesmate.io/hc/en-us/articles/360006677972-DKIM-Verification-Failure-Possible-Reasons).
+In case of any errors refer to the possible reasons for [DKIM verification failure](https://support.salesmate.io/hc/en-us/articles/360006677972-DKIM-Verification-Failure-Possible-Reasons).

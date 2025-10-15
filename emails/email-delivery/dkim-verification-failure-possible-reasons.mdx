@@ -5,20 +5,38 @@ description: "After completing the steps (adding CNAME) of Domain Verification, 
 
 After completing the steps (adding CNAME) of Domain Verification, if you still get an error on verification, check the following:
 
+---
+
 #### DNS Provider - Registrar conflict
 
-When you register the domain with one provider, but change the Name Servers or host your DNS with another provider, the CNAME records added in your Domain Registrar is not considered valid. You may have changed the DNS Provider for hosting your website or for your previous email provider configuration or based on your choice.
+When you register the domain with one provider but change the Name Servers or host your DNS with another provider, the CNAME records added in your Domain Registrar are not considered valid.  
+You may have changed the DNS Provider for hosting your website, your previous email provider configuration, or based on your choice.  
 
-The CNAME records added in the DNS hosting provider will only be effective and valid. Hence do a 'NameServer' Lookup for your domain, to check where your DNS is hosted. You may also check with your Domain Registrar or the technical contact for your domain on where the name servers are pointed to if you are not sure.
+The CNAME records added in the DNS hosting provider will only be effective and valid.  
+Hence, do a **NameServer Lookup** for your domain to check where your DNS is hosted.  
+You may also check with your Domain Registrar or the technical contact for your domain on where the name servers are pointed if you are not sure.
+
+---
 
 #### Longer TTL
 
-TTL (Time To Live) is the time specified in your DNS for each change in your DNS to be effective. If you have a huge TTL value (24 hrs/ 48 hrs), then the CNAME Records might not be provided during the verification process. It might take up to 12 - 24 hours for DNS changes to take effect, based on the TTL set. Please check the TTL value and try verifying after a while.
+**TTL (Time To Live)** is the time specified in your DNS for each change in your DNS to take effect.  
+If you have a large TTL value (24 hrs / 48 hrs), the CNAME Records might not propagate during the verification process.  
+It might take up to **12–24 hours** for DNS changes to take effect based on the TTL set.  
+Please check the TTL value and try verifying after a while.
+
+---
 
 #### Incorrect Values
 
-The way the CNAME needs to be added often varies with different DNS Providers. Some DNS Providers expect the domain name also to be added in the hostname (sm\*\*\*\*\*.`<yourdomain.com>`), whereas some domain providers ask you to fill just the hostname part (sm\*\*\*\*\*) and append the hostname from their end. Hence it is recommended to check the help pages or instruction manuals or reach out to the support team of your DNS provider, to add the respective CNAME records.
+The way the CNAME needs to be added often varies with different DNS Providers.  
+Some DNS Providers expect the domain name also to be added in the hostname (for example: `sm*****.yourdomain.com`), whereas some expect you to fill only the hostname part (`sm*****`) and append the domain automatically.  
 
-#### Typos/ Spelling Mistakes
+Hence, it is recommended to check the help pages or instruction manuals or reach out to the support team of your DNS provider to ensure the CNAME records are added correctly.
 
-Check if you have added the correct domain name (without any typing errors) in Salesmate. In case you have deleted the domain and re-added it, you will need to verify it again.
+---
+
+#### Typos / Spelling Mistakes
+
+Check if you have added the correct domain name (without any typing errors) in Salesmate.  
+In case you have deleted the domain and re-added it, you will need to verify it again.

@@ -1,6 +1,6 @@
 ---
 title: "Spintax Email"
-description: 'Spintax (short for "spinning syntax") is a method used to create multiple variations of an email by using a specific format that allows for randomizat...'
+description: "Spintax (short for \"spinning syntax\") is a method used to create multiple variations of an email by using a specific format that allows for randomization."
 ---
 
 Spintax (short for "spinning syntax") is a method used to create multiple variations of an email by using a specific format that allows for randomization. This technique is commonly used in email marketing, cold outreach, and automation tools to personalize messages while avoiding spam filters.
@@ -9,51 +9,26 @@ Spintax (short for "spinning syntax") is a method used to create multiple variat
 
 Spintax uses curly brackets {} to group different variations of words or phrases, separated by a vertical bar |. When processed by an email automation tool, one random variation is selected for each instance.
 
-#### You can use Spintax within
+#### You can use Spintax within :
 
-- Email Template
+Email TemplateJourney EmailsCampaigns TemplatesSequences
 
-- Journey Emails
+#### Operations where Spintax can be applied :
 
-- Campaigns Templates
-
-- Sequences
-
-#### Operations where Spintax can be applied
-
-- Bulk Email
-
-- Email Sequences
-
-- Email Campaign
-
-- Smart Flows
+Bulk EmailEmail SequencesEmail CampaignSmart Flows
 
 #### Example: 1
 
-`{Hello | Hi | Howdy}` John,I hope you're having a `{great|wonderful|fantastic}` day!I wanted to reach out regarding `{our new product|an exciting opportunity|a potential collaboration}`. Looking forward to your thoughts!Best,
+&#123;Hello | Hi | Howdy&#125; John,I hope you're having a &#123;great|wonderful|fantastic&#125; day!I wanted to reach out regarding &#123;our new product|an exciting opportunity|a potential collaboration&#125;. Looking forward to your thoughts!Best,
 James
-spintax.isCorrect("A[Red|2 [+\\++Whi|Te] `{1|2}`|Blue]"); //false
 
 #### Example: 2
 
-`{Hi | Hello | Hey}` `{`{Contact.firstName}`}` ,
-
-I hope you're having a `{great | productive | fantastic}` `{day | week}`!
-
-I'm reaching out because I noticed `{you're scaling your team | your company is growing | you've been expanding in your industry}`, and I thought `{Salesmate | our CRM platform | our smart automation tools}` could `{be a good fit | help streamline your workflows | support your sales process}`.
-
-With `{Salesmate | our platform}`, you can:
-\- `{Automate repetitive sales tasks | Run personalized outreach at scale | Track your entire sales pipeline effortlessly}`
-\- `{Boost response rates with Spintax-powered emails | Personalize communication without extra effort | Get higher engagement on cold emails}`
-\- `{Integrate seamlessly with your existing stack | Connect with your favorite tools | Work smarter, not harder}`
-
-`{Would it make sense to schedule a quick call this week? | Open to a quick 15-min chat sometime this week? | Let me know if you'd be up for a short call – happy to show you around.}`
-
-`{Looking forward to hearing from you | Hope to connect soon | Let me know what works best for you}`,
-
-`{Best | Cheers | Warm regards}`,
-` {``{Owner.name}``} `
+&#123;Hi | Hello | Hey&#125; &#123;&#123;Contact.firstName&#125;&#125; ,I hope you're having a &#123;great | productive | fantastic&#125; &#123;day | week&#125;!I'm reaching out because I noticed &#123;you’re scaling your team | your company is growing | you’ve been expanding in your industry&#125;, and I thought &#123;Salesmate | our CRM platform | our smart automation tools&#125; could &#123;be a good fit | help streamline your workflows | support your sales process&#125;.With &#123;Salesmate | our platform&#125;, you can:
+\- &#123;Automate repetitive sales tasks | Run personalized outreach at scale | Track your entire sales pipeline effortlessly&#125;
+\- &#123;Boost response rates with Spintax-powered emails | Personalize communication without extra effort | Get higher engagement on cold emails&#125;
+\- &#123;Integrate seamlessly with your existing stack | Connect with your favorite tools | Work smarter, not harder&#125;&#123;Would it make sense to schedule a quick call this week? | Open to a quick 15-min chat sometime this week? | Let me know if you'd be up for a short call – happy to show you around.&#125;&#123;Looking forward to hearing from you | Hope to connect soon | Let me know what works best for you&#125;,&#123;Best | Cheers | Warm regards&#125;,
+&#123;&#123;Owner.name&#125;&#125;
 
 Each time this email is generated, it will create a unique version by randomly selecting one option from each set.
 
@@ -65,49 +40,62 @@ Efficiency: Automates email variation creation without manually rewriting each m
 
 #### Examples
 
+```
 const spintax \= require('spintax-extended');
 //simple:
-spintax.unspin("`{Red|White|Blue}` water"); //#"Red water" or "Blue water" or "White water"
+spintax.unspin("&#123;Red|White|Blue&#125; water"); //#"Red water" or "Blue water" or "White water"
 //with permutation:
-spintax.isCorrect("[Red|{White|Blue}]"); //false
-
+spintax.unspin("\[Red|White|Blue\]"); //#"RedBlueWhite" or "BlueRedWhite" etc.
 //permutations with separator(s):
-spintax.unspin("\[+\_+Red|White|Blue\]"); //#"Red_Blue_White" ...
-spintax.unspin("\[+`{\_|-}`+Red|White|Blue `{1|2}`\]"); //#"White-Blue 2-Red" ...
+spintax.unspin("\[+\_+Red|White|Blue\]"); //#"Red\_Blue\_White" ...
+spintax.unspin("\[+&#123;\_|-&#125;+Red|White|Blue &#123;1|2&#125;\]"); //#"White-Blue 2-Red" ...
+```
 
 You may escape special characters if you need:
 
+```
 const spintax \= require('spintax-extended');
 spintax.unspin("\[+\\\\++Red|\\\\\[White\\\\\]|Blue\]"); //#"\[White\]+Red+Blue" ...
+```
 
 You can count all possible variations:
 
+```
 const spintax \= require('spintax-extended');
-spintax.countVariations("\[+`{\_|-}`+Red|White|Blue `{1|2}`\]"); //24
-spintax.countVariations("A\[Red|2 \[+\\\\++Whi|Te\] `{1|2}`|Blue\]"); //24
+spintax.countVariations("\[+&#123;\_|-&#125;+Red|White|Blue &#123;1|2&#125;\]"); //24
+spintax.countVariations("A\[Red|2 \[+\\\\++Whi|Te\] &#123;1|2&#125;|Blue\]"); //24
+```
 
 You can get the full unspin list:
 
+```
 const spintax \= require('spintax-extended');
-spintax.fullUnspinList("\[+`{\_|-}`+Red|White|Blue `{1|2}`\]");
-spintax.fullUnspinList("A\[Red|2 \[+\\\\++Whi|Te\] `{1|2}`|Blue\]");
+spintax.fullUnspinList("\[+&#123;\_|-&#125;+Red|White|Blue &#123;1|2&#125;\]");
+spintax.fullUnspinList("A\[Red|2 \[+\\\\++Whi|Te\] &#123;1|2&#125;|Blue\]");
+```
 
 or random unspin list (unique or not):
 
+```
 const spintax \= require('spintax-extended');
-spintax.randomUnspinList("A\[Red|2 \[+\\\\++Whi|Te\] `{1|2}`|Blue\]",10); //not unique
-spintax.randomUnspinList("\[+`{\_|-}`+Red|White|Blue `{1|2}`\]",10,true); //unique (true as a third argument)
+spintax.randomUnspinList("A\[Red|2 \[+\\\\++Whi|Te\] &#123;1|2&#125;|Blue\]",10); //not unique
+spintax.randomUnspinList("\[+&#123;\_|-&#125;+Red|White|Blue &#123;1|2&#125;\]",10,true); //unique (true as a third argument)
+```
 
 You can get unspin text by index:
 
+```
 const spintax \= require('spintax-extended');
-spintax.unspinByIndex("Oh, look, `{Red|White|Blue}` `{water|star|color}`!",1); //for index 1 - "Oh, look, White water!"
+spintax.unspinByIndex("Oh, look, &#123;Red|White|Blue&#125; &#123;water|star|color&#125;!",1); //for index 1 - "Oh, look, White water!"
+```
 
 To check correction of spintax text use `isCorrect` function:
 
+```
 const spintax \= require('spintax-extended');
-spintax.isCorrect("\[+`{\_|-}`+Red|White|Blue `{1|2}`\]"); //true
+spintax.isCorrect("\[+&#123;\_|-&#125;+Red|White|Blue &#123;1|2&#125;\]"); //true
 spintax.isCorrect("\[+\\\\++Red|\\\\\[White\\\\\]|Blue\]"); //true
-spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\] `{1|2}`|Blue\]"); //false
-spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\] `{1|2}`|Blue\]"); //false
-spintax.isCorrect("[Red|{White}|Blue]"); //false
+spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\]&#125;&#123; &#123;1|2&#125;|Blue\]"); //false
+spintax.isCorrect("A\[Red|2 \[+\\\\++Whi|Te\] &#123;1|\[2&#125;\]|Blue\]"); //false
+spintax.isCorrect("\[Red|&#123;White|Blue\]"); //false
+```

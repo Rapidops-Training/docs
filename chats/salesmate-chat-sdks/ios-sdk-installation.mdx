@@ -31,18 +31,18 @@ Add as following Swift Package Repository in Xcode and follow the instructions t
 
 https://github.com/salesmate/salesmate-chat-ios
 
-<img src="https://support.salesmate.io/hc/article_attachments/10009369292825" alt="Swift Package Manager"/>
+<img src="images/001-swift-package-manager-10009369292825.jpg" alt="Swift Package Manager" />
 #### **Install Salesmate Chat SDK manually**
 
 - [Download SalesmateChat for iOS and extract the zip.](https://github.com/salesmate/SalesmateChat-iOS/archive/refs/heads/main.zip)
 
-<img src="https://support.salesmate.io/hc/article_attachments/10009369102745" alt="Download Salesmate Chat SDK"/>
+<img src="images/002-download-salesmate-chat-sdk-10009369102745.png" alt="Download Salesmate Chat SDK" />
 - Drag `SalesmateChatSDK.xcframework` into your project. Make sure "Copy items if needed" is selected and click Finish.
 
-<img src="https://support.salesmate.io/hc/article_attachments/10009352533145" alt="Add Salesmate Chat SDK to your project"/>
+<img src="images/003-add-salesmate-chat-sdk-to-your-project-10009352533145.png" alt="Add Salesmate Chat SDK to your project" />
 - In the target settings for your app, set the `SalesmateChatSDK.xcframework` to “Embed & Sign”. This can be found in the “Frameworks, Libraries, and Embedded Content” section of the “General” tab.
 
-<img src="https://support.salesmate.io/hc/article_attachments/10009394372761" alt="Embed Salesmate Chat SDK"/>
+<img src="images/004-embed-salesmate-chat-sdk-10009394372761.png" alt="Embed Salesmate Chat SDK" />
 ### Update Info.plist
 
 Photo Library usage:  
@@ -54,7 +54,7 @@ For apps that support iOS 13, this is required by Apple to access the photo libr
 
 First, you'll need to get your Salesmate Chat SDK **App key, Workspace Id** and **Tenant Id**. To find these, just select the 'iOS Tab' option in your Salesmate CRM Messenger Settings Installation section.
 
-<img src="https://support.salesmate.io/hc/article_attachments/50774166959257" alt="iOS App Key, Workspace Id and Tenant Id"/>
+<img src="images/005-ios-app-key-workspace-id-and-tenant-id-50774166959257.png" alt="iOS App Key, Workspace Id and Tenant Id" />
 Then initialize Salesmate Chat SDK by importing `SalesmateChatSDK` and adding the following to your application delegate:
 
 **Objective-C**
