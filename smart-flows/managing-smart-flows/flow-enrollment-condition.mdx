@@ -3,57 +3,34 @@ title: "Flow Enrollment Condition"
 description: "To ensure that records are not enrolled in an automation flow more than necessary, Salesmate allows you to set specific enrollment conditions. This he..."
 ---
 
-To ensure that records are not enrolled in an automation flow more than necessary, Salesmate allows you to set specific enrollment conditions. This helps prevent errors and gives you better control over your processes.**Topics Covered:***   [How to Set Enrollment Conditions](https://support.salesmate.io/hc/en-us/articles/36752140029209-Flow-Enrollment-Condition#h_01J7FS52CE66MM950605CYD8R8)
-
-*   [Practical Examples](https://support.salesmate.io/hc/en-us/articles/36752140029209-Flow-Enrollment-Condition#h_01J7FWPX5ZYSVHKP3VW8E4K5C7)
-
+To ensure that records are not enrolled in an automation flow more than necessary, Salesmate allows you to set specific enrollment conditions. This helps prevent errors and gives you better control over your processes.**Topics Covered:**[How to Set Enrollment Conditions](https://support.salesmate.io/hc/en-us/articles/36752140029209-Flow-Enrollment-Condition#h_01J7FS52CE66MM950605CYD8R8)[Practical Examples](https://support.salesmate.io/hc/en-us/articles/36752140029209-Flow-Enrollment-Condition#h_01J7FWPX5ZYSVHKP3VW8E4K5C7)
 
 ### How to Set Enrollment Conditions
 
 To Set the Enrollment Conditions,
 
+Access**Smart Flows**feature from left menu bar.
 
-*   Access **Smart Flows** feature from left menu bar.
+![mceclip0.png](./images/mceclip0.png)
 
-![](./Flow Enrollment Condition – Salesmate_files/mceclip0.png)
+Choose an existing Flow to set the Enrollment Condition, or you can create variables as you set up a new Flow.Expand the Flow Settings Click on the Enrollment Conditions
 
+![Screen Shot 2024-11-28 at 1.31.26 AM.png](./images/Screen-Shot-2024-11-28-at-1.31.26-AM.png)
 
-*   Choose an existing Flow to set the Enrollment Condition, or you can create variables as you set up a new Flow.
+Here, you can choose to select how many times a record can be in a flow,**Only Once:**A record can only enter this flow once in its lifetime.**More Than Once, but Single Active Instance:**A record can enroll in this flow whenever the conditions are met, provided that they are not running through the same flow.**More Than Once, Whenever the Conditions Are Met:**A record can enter this flow each time the trigger conditions are met.
 
-*   Expand the Flow Settings
-
-*   Click on the Enrollment Conditions
-
-![Screen Shot 2024-11-28 at 1.31.26 AM.png](./Flow Enrollment Condition – Salesmate_files/Screen Shot 2024-11-28 at 1.31.26 AM.png)
-
-
-*   Here, you can choose to select how many times a record can be in a flow,
-    * **Only Once:** A record can only enter this flow once in its lifetime.
-
-    * **More Than Once, but Single Active Instance:** A record can enroll in this flow whenever the conditions are met, provided that they are not running through the same flow.
-
-    * **More Than Once, Whenever the Conditions Are Met:** A record can enter this flow each time the trigger conditions are met.
-
-
-![Screen Shot 2024-11-28 at 1.33.01 AM.png](./Flow Enrollment Condition – Salesmate_files/Screen Shot 2024-11-28 at 1.33.01 AM.png)
-
+![Screen Shot 2024-11-28 at 1.33.01 AM.png](./images/Screen-Shot-2024-11-28-at-1.33.01-AM.png)
 
 ### Practical Examples:
 
-
 #### Welcome Email for new users
 
-
-*   The "Only Once" enrollment condition ensures that each user receives this welcome email only once, preventing them from getting multiple welcome emails if they sign up again.
-
+The "Only Once" enrollment condition ensures that each user receives this welcome email only once, preventing them from getting multiple welcome emails if they sign up again.
 
 #### Customer Feedback Request for ongoing support tickets
 
-
-*   The "More Than Once, but Single Active Instance" condition allows sending a feedback request each time a ticket is closed, but ensures that only one feedback request flow is active for each ticket at any given time.
-
+The "More Than Once, but Single Active Instance" condition allows sending a feedback request each time a ticket is closed, but ensures that only one feedback request flow is active for each ticket at any given time.
 
 #### Daily Sales Reports
 
-
-*   The "More Than Once, Whenever the Conditions Are Met" condition allows the report generation flow to run daily, ensuring that a new sales report is created and sent out every day.
+The "More Than Once, Whenever the Conditions Are Met" condition allows the report generation flow to run daily, ensuring that a new sales report is created and sent out every day.
