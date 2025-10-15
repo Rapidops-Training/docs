@@ -1,0 +1,341 @@
+---
+title: "Formula Fields Functions and Operators"
+description: "Here is a list of supported operators and functions that you can utilize within the platform in order to create various different formulae or expressions."
+---
+
+Here is a list of supported operators and functions that you can utilize within the platform in order to create various different formulae or expressions.
+
+### **Operators**
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>+</code></td>
+      <td>Adds two fields</td>
+      <td><code>10+2</code> is 12</td>
+    </tr>
+    <tr>
+      <td><code>-</code></td>
+      <td>Subtracts two fields</td>
+      <td><code>10-3</code> is 7</td>
+    </tr>
+    <tr>
+      <td><code>&#42;</code></td>
+      <td>Multiplies two fields</td>
+      <td><code>5&#42;20</code> is 100</td>
+    </tr>
+    <tr>
+      <td><code>/</code></td>
+      <td>Divides two fields</td>
+      <td><code>20/5</code> is 4</td>
+    </tr>
+    <tr>
+      <td><code>%</code></td>
+      <td>Calculates the remainder</td>
+      <td><code>20%3</code> is 2</td>
+    </tr>
+    <tr>
+      <td><code>(</code></td>
+      <td>Used to define mathematical formulas or conditional operations</td>
+      <td><code>(10+2)&#42;3</code></td>
+    </tr>
+    <tr>
+      <td><code>)</code></td>
+      <td>Used to define mathematical formulas or conditional operations</td>
+      <td><code>(10-2)&#42;4</code></td>
+    </tr>
+    <tr>
+      <td><code>!</code></td>
+      <td>Condition is negated</td>
+      <td><code>!&#123;&#123;Contact.billingcountry&#125;&#125;='USA'</code></td>
+    </tr>
+    <tr>
+      <td><code>!=</code></td>
+      <td>Not equal to operator</td>
+      <td><code>&#123;&#123;Contact.billingCountry&#125;&#125;!='USA'</code></td>
+    </tr>
+    <tr>
+      <td><code>=</code></td>
+      <td>Equal to operator</td>
+      <td><code>&#123;&#123;Contact.billingCountry&#125;&#125;='USA'</code></td>
+    </tr>
+    <tr>
+      <td><code>&lt;</code></td>
+      <td>Less than operator</td>
+      <td><code>&#123;&#123;Deal.value&#125;&#125;&lt;1000</code></td>
+    </tr>
+    <tr>
+      <td><code>&gt;</code></td>
+      <td>Greater than operator</td>
+      <td><code>&#123;&#123;Deal.value&#125;&#125;&gt;1000</code></td>
+    </tr>
+    <tr>
+      <td><code>&lt;=</code></td>
+      <td>Less than or equal to operator</td>
+      <td><code>&#123;&#123;Deal.value&#125;&#125;&lt;=1000</code></td>
+    </tr>
+    <tr>
+      <td><code>&gt;=</code></td>
+      <td>Greater than or equal to operator</td>
+      <td><code>&#123;&#123;Deal.value&#125;&#125;&gt;=1000</code></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### **Functions**
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>abs</code></td>
+      <td>Returns the absolute value</td>
+    </tr>
+    <tr>
+      <td><code>ceil</code></td>
+      <td>Rounds a value to the nearest higher integer</td>
+    </tr>
+    <tr>
+      <td><code>floor</code></td>
+      <td>Rounds a value to the nearest lower integer</td>
+    </tr>
+    <tr>
+      <td><code>max</code></td>
+      <td>Returns the greater of two values</td>
+    </tr>
+    <tr>
+      <td><code>min</code></td>
+      <td>Returns the smaller of two values</td>
+    </tr>
+    <tr>
+      <td><code>sqrt</code></td>
+      <td>Returns the square root of the input number</td>
+    </tr>
+    <tr>
+      <td><code>if</code></td>
+      <td>Returns one of two values depending on the logical condition</td>
+    </tr>
+    <tr>
+      <td><code>len</code></td>
+      <td>Returns the number of characters in the provided text</td>
+    </tr>
+    <tr>
+      <td><code>dayofmonth</code></td>
+      <td>Returns the day of the month for the given date</td>
+    </tr>
+    <tr>
+      <td><code>hour</code></td>
+      <td>Returns the hour for the given date</td>
+    </tr>
+    <tr>
+      <td><code>minute</code></td>
+      <td>Returns the minute for the given date</td>
+    </tr>
+    <tr>
+      <td><code>month</code></td>
+      <td>Returns the month for the given date</td>
+    </tr>
+    <tr>
+      <td><code>year</code></td>
+      <td>Returns the year for the given date</td>
+    </tr>
+    <tr>
+      <td><code>weekday</code></td>
+      <td>Returns the day of the week (1-7) corresponding to the input date, where 1 is Sunday, 2 is Monday, and so on.</td>
+    </tr>
+    <tr>
+      <td><code>&amp;&amp;</code></td>
+      <td>Returns true when both conditions match</td>
+    </tr>
+    <tr>
+      <td><code>||</code></td>
+      <td>Returns true when any condition matches</td>
+    </tr>
+    <tr>
+      <td><code>lower</code></td>
+      <td>Converts all characters in a text to lowercase</td>
+    </tr>
+    <tr>
+      <td><code>upper</code></td>
+      <td>Converts all characters in a text to uppercase</td>
+    </tr>
+    <tr>
+      <td><code>trim</code></td>
+      <td>Removes extra spaces before and after the text</td>
+    </tr>
+    <tr>
+      <td><code>substring</code></td>
+      <td>Returns the part of text from the start position to the given length</td>
+    </tr>
+    <tr>
+      <td><code>tostring</code></td>
+      <td>Returns string representation of the object</td>
+    </tr>
+    <tr>
+      <td><code>replace</code></td>
+      <td>Replaces a character every time it appears in the text</td>
+    </tr>
+    <tr>
+      <td><code>newdate</code></td>
+      <td>Creates a date from the year, month, day, and time</td>
+    </tr>
+    <tr>
+      <td><code>datepart</code></td>
+      <td>Returns just the date for the DateTime value</td>
+    </tr>
+    <tr>
+      <td><code>timepart</code></td>
+      <td>Returns just the time for the DateTime value</td>
+    </tr>
+    <tr>
+      <td><code>adddate</code></td>
+      <td>Returns a new date by adding (year/day/month/hour/min) to the given date</td>
+    </tr>
+    <tr>
+      <td><code>subdate</code></td>
+      <td>Returns a new date by subtracting (year/day/month/hour/min) from the given date</td>
+    </tr>
+    <tr>
+      <td><code>now</code></td>
+      <td>Returns a date/time representing the current time</td>
+    </tr>
+    <tr>
+      <td><code>datecomp</code></td>
+      <td>Compares two dates and returns the difference of days in minutes</td>
+    </tr>
+    <tr>
+      <td><code>tonumber</code></td>
+      <td>Returns a number from the given string</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### **Date Time Functions**
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Internal</th>
+      <th>Help Tooltip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>newdate</code></td>
+      <td><code>newdate(year, month, day, hour, minute, am/pm)</code></td>
+      <td>Creates a date from the year, month, day, and time. e.g. <code>newdate(2020, 02, 01, 06, 30, 'PM')</code> gives <code>01/02/2020 06:30 PM</code></td>
+    </tr>
+    <tr>
+      <td><code>datepart</code></td>
+      <td><code>datepart(date-time)</code></td>
+      <td>Returns just the date for the DateTime value. e.g. <code>datepart(newdate(2020,02,03,06,30,'PM'))</code> returns <code>"03/02/2020"</code></td>
+    </tr>
+    <tr>
+      <td><code>timepart</code></td>
+      <td><code>timepart(date-time)</code></td>
+      <td>Returns just the time for the DateTime value. e.g. <code>timepart(newdate(2020,02,03,06,30,'PM'))</code> returns <code>"06:30 PM"</code></td>
+    </tr>
+    <tr>
+      <td><code>adddate</code></td>
+      <td><code>adddate(datetime, number, 'date period')</code></td>
+      <td>Returns a new date by adding (year/day/month/hour/min) to the given date. e.g. <code>adddate(newdate(2020,02,03,06,30,'PM'), 2, 'month')</code> returns <code>03/04/2020 06:30 PM</code></td>
+    </tr>
+    <tr>
+      <td><code>subdate</code></td>
+      <td><code>subdate(datetime, number, 'date period')</code></td>
+      <td>Returns a new date by subtracting (year/day/month/hour/min) from the given date. e.g. <code>subdate(newdate(2020,02,03,06,30,'PM'), 2, 'month')</code> returns <code>03/12/2019 06:30 PM</code></td>
+    </tr>
+    <tr>
+      <td><code>now</code></td>
+      <td><code>now()</code></td>
+      <td>Returns a date/time representing the current time.</td>
+    </tr>
+    <tr>
+      <td><code>datecomp</code></td>
+      <td><code>datecomp(date time 1, date time 2)</code></td>
+      <td>Compares two dates and returns the difference of days in minutes.</td>
+    </tr>
+    <tr>
+      <td><code>dayofmonth</code></td>
+      <td><code>dayofmonth(datetime)</code></td>
+      <td>Returns the day of the month. e.g. <code>dayofmonth(newdate(2020,02,03,06,30,'PM'))</code> returns <code>03</code>.</td>
+    </tr>
+    <tr>
+      <td><code>hour</code></td>
+      <td><code>hour(datetime)</code></td>
+      <td>Returns the hour for the given date. e.g. <code>hour(newdate(2020,02,03,06,30,'PM'))</code> returns <code>18</code>.</td>
+    </tr>
+    <tr>
+      <td><code>minute</code></td>
+      <td><code>minute(datetime)</code></td>
+      <td>Returns the minute for the given date. e.g. <code>minute(newdate(2020,02,03,06,30,'PM'))</code> returns <code>30</code>.</td>
+    </tr>
+    <tr>
+      <td><code>month</code></td>
+      <td><code>month(datetime)</code></td>
+      <td>Returns the month. e.g. <code>month(newdate(2020,02,03,06,30,'PM'))</code> returns <code>02</code>.</td>
+    </tr>
+    <tr>
+      <td><code>year</code></td>
+      <td><code>year(datetime)</code></td>
+      <td>Returns the year. e.g. <code>year(newdate(2020,02,03,06,30,'PM'))</code> returns <code>2020</code>.</td>
+    </tr>
+    <tr>
+      <td><code>weekday</code></td>
+      <td><code>weekday(datetime)</code></td>
+      <td>Returns the day of the week (1–7) corresponding to the input date, where 1 is Monday, 2 is Tuesday, and so on. (Ex: Friday returns '5')</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### **Conditional & Logical Operators**
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Internal</th>
+      <th>Usage</th>
+      <th>Help Tooltip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>if</code></td>
+      <td>Conditional</td>
+      <td><code>if(logical_condition, value_if_true, value_if_false)</code></td>
+      <td>Returns one of two values depending on the logical condition. e.g. <code>if(&#123;&#123;Contact.billingCountry&#125;&#125;='USA','Yes','No')</code> returns <code>Yes</code> if the country is USA.</td>
+    </tr>
+    <tr>
+      <td><code>&amp;&amp;</code></td>
+      <td>And operator</td>
+      <td><code>( &#123;&#123;Contact.billingCountry&#125;&#125; == 'USA' &amp;&amp; &#123;&#123;Deal.value&#125;&#125; &gt; 5000 )</code></td>
+      <td>Returns true when both conditions match.</td>
+    </tr>
+    <tr>
+      <td><code>||</code></td>
+      <td>Or operator</td>
+      <td><code>( &#123;&#123;Contact.billingCountry&#125;&#125; == 'USA' || &#123;&#123;Contact.billingCountry&#125;&#125; == 'Canada' )</code></td>
+      <td>Returns true when any condition matches.</td>
+    </tr>
+  </tbody>
+</table>

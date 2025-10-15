@@ -1,0 +1,52 @@
+---
+title: "Use Amazon Simple Email Service (SES) to send emails"
+description: "Amazon Simple Email Service (Amazon SES) allows you to send transactional emails, marketing messages, or any other type of high-quality content to you..."
+---
+
+Amazon Simple Email Service (Amazon SES) allows you to send transactional emails, marketing messages, or any other type of high-quality content to your users.Topics Covered:
+
+[Create SMTP Credentials](https://support.salesmate.io/hc/en-us/articles/4407427564569#step-1-create-smtp-credentials)[Verify An Email Address](https://support.salesmate.io/hc/en-us/articles/4407427564569#step-2-verify-an-email-address)[Request Removal Of Amazon SES Restrictions](https://support.salesmate.io/hc/en-us/articles/4407427564569#h_01HS89HZ8MN0NN82EEPNJY5B8S)[Add The Account In Salesmate To Use Amazon SES](https://support.salesmate.io/hc/en-us/articles/4407427564569#step-4-configure-your-application-to-use-amazon-ses)
+
+### Create SMTP Credentials
+
+To send emails through the Amazon SES SMTP interface, begin by creating SMTP credentials - a username and a password - as shown below:
+
+Log into the [AWS Management Console](https://console.aws.amazon.com/console/home).Click the “SES Email Sending Service” option.
+
+![use-ses-1.png](./images/use-ses-1.png)
+
+In the left navigation bar, click the “SMTP Settings” option.Click the “Create My SMTP Credentials” button.
+
+![use-ses-2.png](./images/use-ses-2.png)
+
+Copy your credentials or click the “Download Credentials” button as the password will not be shown again.
+
+### Verify An Email Address
+
+Add and verify your email address following these steps:
+
+Log into the [Amazon SES Console](https://console.aws.amazon.com/ses).Click the “Verify a New Email Address” link.In the “Verify a New Email Address” dialog, enter the email address you wish to send messages from and click the “Verify This Email Address” button.
+
+![use-ses-3.png](./images/use-ses-3.png)
+
+You should now receive a verification message from Amazon SES asking you to confirm that you are the owner of the email address. Click the verification link in the message.
+
+> NOTE: The verification link is only valid for 24 hours after your original request.
+
+Check the status of the email address in the Amazon SES Console. The status of the email address should change from “pending verification” to “verified”.You can now use Amazon SES to send email messages from this address. To send a test email, check the box next to the verified email address, and then click the “Send a Test Email” button. Refer to the [Amazon SES documentation](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html) for more information.
+
+### Request Removal Of Amazon SES Restrictions
+
+To protect customers from fraud and abuse, Amazon SES does not immediately grant unlimited Amazon SES usage to new users. A number of restrictions are initially in effect, such as only being able to send email to and from verified email addresses and being limited to a maximum of 200 messages in every 24-hour period.To remove these restriction on recipient addresses and increase the sending limits, [request a higher level of access in the Amazon Support Center](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html).
+
+### Add The Account In Salesmate To Use Amazon SES
+
+Navigate to the**Profile Icon**the top right cornerClick on**"Go to My Account"**Head over to**"Email Settings" >>  "SMTP & Bcc"**Click**"Add Email Account"**Select**"Custom SMTP"**
+
+![mceclip2.png](./images/mceclip2-4.png)
+
+Enter the SMTP connection details, as:
+
+User Name:**USERNAME**Password:**PASSWORD**From Name:**NAME**From Email:**EMAIL\_ADDRESS**Host:**email-smtp.us-east-1.amazonaws.com \[ Replace based on your SMTP Settings page value for Server Name \]**Port:**465**Secure:**SSL**USERNAME and PASSWORD placeholders should be replaced with the correct values from the credentials created in Step 1, while the EMAIL\_ADDRESS placeholder should be replaced with the SES-verified email address. HOST will change based on LOCATION you are at. Thus, verify it on your SMTP Settings
+
+![mceclip0.png](./images/mceclip0-11.png)

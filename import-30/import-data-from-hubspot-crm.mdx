@@ -1,0 +1,175 @@
+---
+title: "Import data from HubSpot CRM"
+description: "It could be a painful task to import/migrate data from CRMs, but**Salesmate**has eased this process by providing you with an easy, click-to-go Import"
+---
+
+It could be a painful task to import/migrate data from CRMs, but**Salesmate**has eased this process by providing you with an easy, click-to-go Import feature.
+
+You can directly import data from CRM with a few clicks.**Salesmate**not only allows you to import the**Companies**or**Contacts**but also the**Deals, Activities,**and**Notes**associated with them.
+
+### Salesmate-supported CRMs:
+
+* **[** Pipedrive ](https://support.salesmate.io/hc/en-us/articles/360050914871-Import-data-from-Pipedrive-CRM)
+
+***HubSpot****Pre-requisite for HubSpot import**### Please keep the following pre-requisite list in mind before importing data from HubSpot
+
+* Create all the users that are present in HubSpot (active or inactive) in Salesmate.
+
+* Create all the pipelines & stages present in HubSpot in Salesmate.
+
+## Please follow the below steps to import your data from**HubSpot**:
+
+* **Navigate to the** Profile Icon at the top right corner
+
+* **Click on** Setup
+
+* Head over to the**Manage****Data**category
+
+* **Select** Import Or Migrate
+
+![](./images/mceclip0.png)
+
+* **Select** Import from other CRM
+
+![](./images/mceclip01.png)
+
+* **Select** HubSpot **
+
+![Screenshot_2023-05-04_at_11.31.41_AM.png](./images/Screenshot-2023-05-04-at-11.31.41-AM.png)
+
+*** Here, you need to enter your**HubSpot API Key**to connect to HubSpot.
+
+![Screenshot_2023-05-04_at_1.32.47_PM.png](./images/Screenshot-2023-05-04-at-1.32.47-PM.png)
+
+**To find your HubSpot API key,*** Log in to your**HubSpot account**.
+
+* **Go to** Settings on the top left.
+
+* **Navigate to** Account SetUp >> Integrations >> Private Apps
+
+* Here, you'll be redirected to the page where you'll need to create a**Private app**.
+
+* **Click on** the Create a Private App option or Create One Now
+
+![](./images/mceclip1.png)
+
+* **Add In the** Basic Info . Give an appropriate
+
+* **App Name, Add the Logo,**and Mention the**Description**for the app.
+
+![Screenshot_2023-05-23_at_5.47.18_PM.png](./images/Screenshot-2023-05-23-at-5.47.18-PM.png)
+
+* **Next go to** Scopes , here you'll be presented with the list of Scopes to select from before you start the Import.
+
+<Note>
+**NOTE:**
+
+</Note>
+
+<Note>
+Please note that below mentioned Scopes are required to be selected to be able to successfully authenticate the Apps:
+</Note>
+
+<Note>
+**Under Standard**
+
+</Note>
+
+<Note>
+"oauth",
+"files",
+
+"files.ui\_hidden.read",**Under CRM**"crm.objects.contacts.read",
+"crm.objects.companies.read",
+"crm.objects.deals.read",
+
+"crm.schemas.contacts.read",
+"crm.schemas.companies.read",
+"crm.schemas.deals.read",
+"crm.objects.owners.read"
+</Note>
+
+* **Click on** Create App
+
+![Screenshot_2023-05-23_at_5.55.00_PM.png](./images/Screenshot-2023-05-23-at-5.55.00-PM.png)
+
+***Continue Creating App**.
+
+![Screenshot_2023-05-23_at_5.59.00_PM.png](./images/Screenshot-2023-05-23-at-5.59.00-PM.png)
+
+* That's it, your API key is now generated
+
+![Screenshot_2023-05-23_at_6.01.46_PM.png](./images/Screenshot-2023-05-23-at-6.01.46-PM.png)
+
+* Copy the key and paste it to Salesmate.
+
+![Screenshot_2023-05-04_at_1.35.06_PM.png](./images/Screenshot-2023-05-04-at-1.35.06-PM.png)
+
+* **Click on** Connect .
+
+* **Once the Account is successfully connected, you can select the** modules from which you would like to migrate the data.
+
+![Screenshot_2023-05-04_at_1.39.43_PM.png](./images/Screenshot-2023-05-04-at-1.39.43-PM.png)
+
+* **Now click on** Continue .
+
+* You will now get an option to Map the HubSpot fields with Salesmate fields.
+
+* Map the HubSpot fields of all the selected modules to Salesmate.
+
+![Screenshot_2023-05-04_at_2.19.55_PM.png](./images/Screenshot-2023-05-04-at-2.19.55-PM.png)
+
+* **If any HubSpot field does not exist in the system, then you can directly create it by clicking “Create New Field” at the bottom of the** Select Field and a popup will open with the field name and data type pre-filled into it.
+
+![Screenshot_2023-05-04_at_2.22.18_PM.png](./images/Screenshot-2023-05-04-at-2.22.18-PM.png)
+
+* **If fields are mapped with different data types, a** warning icon will be displayed with the message as you hover on it.
+
+![Screenshot_2023-05-04_at_2.28.24_PM.png](./images/Screenshot-2023-05-04-at-2.28.24-PM.png)
+
+* If the fields are not mapped correctly the below error would pop up on the screen.
+
+![Screenshot_2023-05-04_at_2.34.21_PM.png](./images/Screenshot-2023-05-04-at-2.34.21-PM.png)
+
+* On the Next screen, you can assign an Owner
+
+* you could assign a Tag to the newly created records or add them to the list in Salesmate which will help you to track the records.
+
+![Screenshot_2023-05-04_at_2.41.28_PM_1.png](./images/Screenshot-2023-05-04-at-2.41.28-PM-1.png)
+
+* **You will be able to** Preview the import and start the import.
+
+* Preview of mapping columns by the module.
+
+![Screenshot_2023-05-04_at_2.44.34_PM.png](./images/Screenshot-2023-05-04-at-2.44.34-PM.png)
+
+* You could assign a Tag to the newly created records or add them to the list in Salesmate which will help you to track the records.
+
+* By clicking on the I have verified, start the import will start the import process.
+
+![Screenshot_2023-05-04_at_2.53.42_PM.png](./images/Screenshot-2023-05-04-at-2.53.42-PM.png)
+
+<Note>
+**NOTE:**Two simultaneous imports are not allowed in a single link to manage data concurrency. So if you have scheduled one import, you or any other user from your link has to wait until the import/revert finishes.
+
+</Note>
+
+* Now, you can view the import progress on this page.
+
+![](./images/mceclip02.png)
+
+* **Once Imported, the details of the Import will be visible for your reference under "** Details "
+
+![](./images/mceclip11.png)
+
+**Previous Import:*****Import Date**\- Gives you the status of the day the file was imported
+
+***File**\- It helps you identify if the records were imported through a**CRM**system or**Excel**/**CSV**Files
+
+***Owner:**This will show the details of the User that imported the records
+
+***Module**\- The icons help you identify the**module**in which the records that were imported
+
+***Actions**\- With Actions, you check the**details**of the import or**Revert**the import which is available up to 48 hours after the import is completed.
+
+![Screenshot_2023-05-04_at_3.37.20_PM.png](./images/Screenshot-2023-05-04-at-3.37.20-PM.png)

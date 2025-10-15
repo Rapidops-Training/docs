@@ -1,0 +1,16 @@
+---
+title: "The caller IDs of the incoming calls I receive are incorrect. Why is that?"
+description: "Caller IDs are passed from carrier to carrier when a call is transmitted. When we receive an incoming call, we perform basic normalization to display"
+---
+
+Caller IDs are passed from carrier to carrier when a call is transmitted. When we receive an incoming call, we perform basic normalization to display the incoming caller ID using standard E.164 formatting.Unfortunately, different carriers vary in their preferred caller ID formatting. Since, calls may traverse through several networks before reaching us, the caller ID information may be altered along the way. In this situation, we will pass along the caller ID (From) information exactly as we receive it from the calling party. It is currently not possible to discover the real caller ID once it has been altered by carriers.There are three main circumstances that cause a caller ID to be displayed incorrectly:
+
+The originating carrier may have incorrectly formatted or not transmitted the original "From" number. This usually results in a missing caller ID, or a "translated" number code.A caller ID may be modified along the way by any intermediary carriers.The caller ID may be lost or replaced when crossing international borders.**Notice**: For international calls, local regulations sometimes dictate that a caller ID be modified. We see this especially often with calls from Australia, for instance. Another example of this modification occurs when calls are initiated outside of the USA to the toll-free numbers.
+
+# Local Caller ID (CLI) international compatibility
+
+Local Caller ID (CLI) refers to the Caller-ID when making in-country calls. For example, when you call from a German number to a German mobile number, the local Caller ID is the number that the recipient of the call sees as the caller.We only can guarantee local Caller ID (CLI) for calls made to:
+
+United States, Canada and Caribbean Islands with +1 prefix.All European Countries.
+
+We can not guarantee local Caller ID in other countries around the world.
