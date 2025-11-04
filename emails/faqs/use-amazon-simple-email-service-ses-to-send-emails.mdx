@@ -1,11 +1,12 @@
 ---
 title: "Use Amazon Simple Email Service (SES) to send emails"
-description: "Amazon Simple Email Service (Amazon SES) allows you to send transactional emails, marketing messages, or any other type of high-quality content to you..."
 ---
-
 Amazon Simple Email Service (Amazon SES) allows you to send transactional emails, marketing messages, or any other type of high-quality content to your users.Topics Covered:
 
-[Create SMTP Credentials](https://support.salesmate.io/hc/en-us/articles/4407427564569#step-1-create-smtp-credentials)[Verify An Email Address](https://support.salesmate.io/hc/en-us/articles/4407427564569#step-2-verify-an-email-address)[Request Removal Of Amazon SES Restrictions](https://support.salesmate.io/hc/en-us/articles/4407427564569#h_01HS89HZ8MN0NN82EEPNJY5B8S)[Add The Account In Salesmate To Use Amazon SES](https://support.salesmate.io/hc/en-us/articles/4407427564569#step-4-configure-your-application-to-use-amazon-ses)
+- [Create SMTP Credentials](#create-smtp-credentials)
+- [Verify An Email Address](#verify-an-email-address)
+- [Request Removal Of Amazon SES Restrictions](#request-removal-of-amazon-ses-restrictions)
+- [Add The Account In Salesmate To Use Amazon SES](#add-the-account-in-salesmate-to-use-amazon-ses)
 
 ### Create SMTP Credentials
 
@@ -41,12 +42,21 @@ To protect customers from fraud and abuse, Amazon SES does not immediately grant
 
 ### Add The Account In Salesmate To Use Amazon SES
 
-Navigate to the**Profile Icon**the top right cornerClick on**"Go to My Account"**Head over to**"Email Settings" >>  "SMTP & Bcc"**Click**"Add Email Account"**Select**"Custom SMTP"**
+Navigate to the **Profile Icon** the top right cornerClick on **"Go to My Account"** Head over to **"Email Settings" >> "SMTP & Bcc"** Click **"Add Email Account"** Select **"Custom SMTP"**
 
 ![mceclip2.png](./images/mceclip2-4.png)
 
 Enter the SMTP connection details, as:
 
-User Name:**USERNAME**Password:**PASSWORD**From Name:**NAME**From Email:**EMAIL\_ADDRESS**Host:**email-smtp.us-east-1.amazonaws.com \[ Replace based on your SMTP Settings page value for Server Name \]**Port:**465**Secure:**SSL**USERNAME and PASSWORD placeholders should be replaced with the correct values from the credentials created in Step 1, while the EMAIL\_ADDRESS placeholder should be replaced with the SES-verified email address. HOST will change based on LOCATION you are at. Thus, verify it on your SMTP Settings
+User Name:**USERNAME-**Password:** PASSWORD
+
+- **From Name:** NAME
+
+- **From Email:** EMAIL_ADDRESS
+
+- **Host:** email-smtp.us-east-1.amazonaws.com \[ Replace based on your SMTP Settings page value for Server Name \]
+- **Port:** 465
+
+- **Secure:** SSL** USERNAME and PASSWORD placeholders should be replaced with the correct values from the credentials created in Step 1, while the EMAIL_ADDRESS placeholder should be replaced with the SES-verified email address. HOST will change based on LOCATION you are at. Thus, verify it on your SMTP Settings
 
 ![mceclip0.png](./images/mceclip0-11.png)

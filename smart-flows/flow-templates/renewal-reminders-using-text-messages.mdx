@@ -1,11 +1,15 @@
 ---
 title: "Renewal Reminders using Text Messages"
-description: "This flow takes the hassle out of managing renewal reminders. It automatically sends timely text messages to clients, letting them know about upcoming..."
 ---
-
 This flow takes the hassle out of managing renewal reminders. It automatically sends timely text messages to clients, letting them know about upcoming renewals and encouraging them to act. This results in fewer missed renewals, happier customers, and less time spent chasing follow-ups.Topics Covered
 
-[Business Type](https://support.salesmate.io/hc/en-us/articles/42344042725785-Renewal-Reminders-using-Text-Messages#h_01JHR927DFJGRWCPBAEHG4YJ5V)[Template Type](https://support.salesmate.io/hc/en-us/articles/42344042725785-Renewal-Reminders-using-Text-Messages#h_01JHR927DFZM7JBEKSED1GME80)[Use Case](https://support.salesmate.io/hc/en-us/articles/42344042725785-Renewal-Reminders-using-Text-Messages#h_01JHR927DFDHTGV8S7DZHDRPVG)[Key Features of the Flow](https://support.salesmate.io/hc/en-us/articles/42344042725785-Renewal-Reminders-using-Text-Messages#h_01JHR927DFKAW3FVNQ6X1132CQ)[Steps Used in Creating the Flow](https://support.salesmate.io/hc/en-us/articles/42344042725785-Renewal-Reminders-using-Text-Messages#h_01JHR927DFRBH32C3GWZHSQE64)[Breakup of Items Used in the Flow](https://support.salesmate.io/hc/en-us/articles/42344042725785-Renewal-Reminders-using-Text-Messages#h_01JHR927DFRQX2MV5JHHZ1HGH7)[Benefits](https://support.salesmate.io/hc/en-us/articles/42344042725785-Renewal-Reminders-using-Text-Messages#h_01JHR927DFB0Q7SC8A6A9ZW5VG)
+- [Business Type](#business-type)
+- [Template Type](#template-type)
+- [Use Case](#use-case)
+- [Key Features of the Flow](#key-features-of-the-flow)
+- [Steps Used in Creating the Flow](#breakup-of-items-used-in-the-flow-trigger-1identifies-records-with-a-subscription-end-date-5-days-from-today-initiating-the-flow)
+- [Breakup of Items Used in the Flow](#breakup-of-items-used-in-the-flow-trigger-1identifies-records-with-a-subscription-end-date-5-days-from-today-initiating-the-flow)
+- [Benefits](#benefits)
 
 ### Business Type
 
@@ -19,18 +23,60 @@ Designed for teams focused on customer retention and renewals. It automatically 
 
 This flow tracks clients with approaching renewal dates, sends automated text reminders, and handles follow-ups. If clients renew, the process ends; if they don’t respond, it keeps nudging them until the deadline.
 
-### Key Features of the Flow**On-Time Reminders:**Sends text messages to clients about their upcoming renewals.**Better Engagement:**Keeps customers in the loop, reducing missed renewals.**Boosted Retention:**Encourages timely renewals to minimize revenue loss.
+### Key Features of the Flow
+
+- **On-Time Reminders:** Sends text messages to clients about their upcoming renewals.
+
+- **Better Engagement:** Keeps customers in the loop, reducing missed renewals.
+
+- **Boosted Retention:** Encourages timely renewals to minimize revenue loss.
 
 ### Detailed Steps of the Flow
 
-You can [click here](https://support.salesmate.io/hc/en-us/articles/36752706603929-How-to-Create-New-Smart-Flow) to learn how to create a new Smart Flow or access the Flow Templates.**Trigger: [Date Match](https://support.salesmate.io/hc/en-us/articles/37775415806105-Date-Match)****Description**: The flow begins with a date/time trigger, identifying records with a subscription end date exactly 5 days from today.**Practical Use Case**: Ensures only relevant records are targeted for renewal reminders.**Find the relevant records: [Find Records](https://support.salesmate.io/hc/en-us/articles/38138036610201-Find-Records)****Description**: Searches the database to locate client records that match the criteria defined by the trigger.**Practical Use Case**: Focuses reminders on clients with active subscriptions nearing expiration.**Send Texts to contacts: [Send Text](https://support.salesmate.io/hc/en-us/articles/38138168474905-Send-Text)****Description**: Sends a personalized text message to clients, informing them of their upcoming renewal deadline.**Practical Use Case**: Encourages timely client action to avoid service interruptions
+You can [click here](https://support.salesmate.io/hc/en-us/articles/36752706603929-How-to-Create-New-Smart-Flow) to learn how to create a new Smart Flow or access the Flow Templates.
+
+- **Trigger: [Date Match](#breakup-of-items-used-in-the-flow-trigger-1identifies-records-with-a-subscription-end-date-5-days-from-today-initiating-the-flow)**Description**: The flow begins with a date/time trigger, identifying records with a subscription end date exactly 5 days from today.
+
+- **Practical Use Case**: Ensures only relevant records are targeted for renewal reminders.
+
+- **Find the relevant records: [Find Records](#breakup-of-items-used-in-the-flow-trigger-1identifies-records-with-a-subscription-end-date-5-days-from-today-initiating-the-flow)**Description **: Searches the database to locate client records that match the criteria defined by the trigger.
+
+- ** Practical Use Case **: Focuses reminders on clients with active subscriptions nearing expiration.
+
+- ** Send Texts to contacts: [Send Text](https://support.salesmate.io/hc/en-us/articles/38138168474905-Send-Text)**Description**: Sends a personalized text message to clients, informing them of their upcoming renewal deadline.
+
+- ** Practical Use Case **: Encourages timely client action to avoid service interruptions
 
 ![mceclip0.png](./images/mceclip0-12.png)
 
-**Branching Based on Conditions: [Branch](https://support.salesmate.io/hc/en-us/articles/37780627045657-Branch)****Description**: Splits the flow into different paths based on conditions like whether the renewal has been completed.**Practical Use Case**: Ensures only necessary follow-ups are sent to clients who haven’t yet renewed.**Wait for a certain time period: [Wait](https://support.salesmate.io/hc/en-us/articles/38138356545433-Wait)****Description**: Introduces a pause to align reminder messages with the ideal time for client engagement.**Practical Use Case**: Ensures reminders are sent at strategic intervals.**Exit the Flow: [Exit Flow](https://support.salesmate.io/hc/en-us/articles/38138458679577-Exit-Flow)****Description**: Ends the flow for records where the renewal has been completed or further follow-ups are unnecessary.
+- * Branching Based on Conditions: [Branch](#breakup-of-items-used-in-the-flow-trigger-1identifies-records-with-a-subscription-end-date-5-days-from-today-initiating-the-flow)***Description**: Splits the flow into different paths based on conditions like whether the renewal has been completed.
+
+- **Practical Use Case**: Ensures only necessary follow-ups are sent to clients who haven’t yet renewed.
+
+- **Wait for a certain time period: [Wait](#breakup-of-items-used-in-the-flow-trigger-1identifies-records-with-a-subscription-end-date-5-days-from-today-initiating-the-flow)**Description **: Introduces a pause to align reminder messages with the ideal time for client engagement.
+
+- ** Practical Use Case **: Ensures reminders are sent at strategic intervals.
+
+- ** Exit the Flow: [Exit Flow](https://support.salesmate.io/hc/en-us/articles/38138458679577-Exit-Flow)**Description **: Ends the flow for records where the renewal has been completed or further follow-ups are unnecessary.
 
 ![mceclip1.png](./images/mceclip1-10.png)
 
-### Breakup of Items Used in the Flow**Trigger (1)**Identifies records with a subscription end date 5 days from today, initiating the flow.**Find Records (1)**Searches the database to locate relevant client records.**Exit Flow (2)**Removes records from the flow when renewal is completed or no further action is required.**Send Text (3)**Sends personalized renewal reminders to clients via text messages.**Wait (2)**Pauses the flow to ensure reminders are sent at the right time.**Branching (2)**Splits the flow into paths based on payment status.
+### Breakup of Items Used in the Flow **Trigger (1)**Identifies records with a subscription end date 5 days from today, initiating the flow.
 
-### Benefits**Efficiency:**Reduces manual effort in managing renewal reminders.**Customer Engagement:**Keeps clients informed and improves their experience with timely communication.**Revenue Assurance:**Helps maintain consistent revenue by reducing missed renewals.
+- **Find Records (1)**Searches the database to locate relevant client records.
+
+- **Exit Flow (2)**Removes records from the flow when renewal is completed or no further action is required.
+
+- **Send Text (3)**Sends personalized renewal reminders to clients via text messages.
+
+- **Wait (2)**Pauses the flow to ensure reminders are sent at the right time.
+
+- **Branching (2)**Splits the flow into paths based on payment status.
+
+### Benefits
+
+- **Efficiency:** Reduces manual effort in managing renewal reminders.
+
+- **Customer Engagement:** Keeps clients informed and improves their experience with timely communication.
+
+- **Revenue Assurance:** Helps maintain consistent revenue by reducing missed renewals.

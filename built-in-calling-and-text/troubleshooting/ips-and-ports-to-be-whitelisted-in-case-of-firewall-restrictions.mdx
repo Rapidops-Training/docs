@@ -1,13 +1,11 @@
 ---
 title: "IP’s and Port’s to be Whitelisted in case of Firewall restrictions"
-description: "**IP whitelisting**(allowlisting) entails creating a list of trusted IP addresses (dedicated static IP addresses are required), assigning them to a us..."
 ---
+- **IP whitelisting**(allowlisting) entails creating a list of trusted IP addresses (dedicated static IP addresses are required), assigning them to a user or group of users as a unique identifier, and allowing the IP address to be used only on the target server.
 
-**IP whitelisting**(allowlisting) entails creating a list of trusted IP addresses (dedicated static IP addresses are required), assigning them to a user or group of users as a unique identifier, and allowing the IP address to be used only on the target server.
+### Typically, IP whitelisting is handled on:**Edge routers**- typically set up to block undesired traffic on router's TCP and UDP port in order to protect internal LAN from the public internet threats **Firewall**- configured to grant access to the network only to specific users/devices/LANs ** Business VPN gateway **Web serve** r - typically to manage incoming requests and prevent extensive malicious requests (brute force attacks)**Application layer**- incoming queries can be evaluated and blocked/allowed by design in the code of the application ** SaaS application **- SaaS apps usually allow setting up IP whitelists to harden security measures.
 
-### Typically, IP whitelisting is handled on:**Edge routers**- typically set up to block undesired traffic on router's TCP and UDP port in order to protect internal LAN from the public internet threats**Firewall**- configured to grant access to the network only to specific users/devices/LANs**Business VPN gateway****Web serve**r - typically to manage incoming requests and prevent extensive malicious requests (brute force attacks)**Application layer**- incoming queries can be evaluated and blocked/allowed by design in the code of the application**SaaS application**- SaaS apps usually allow setting up IP whitelists to harden security measures.
-
-The firewall should allow outgoing UDP to the public internet from the browsers that use**Salesmate Calling**, and allow return traffic in response.
+The firewall should allow outgoing UDP to the public internet from the browsers that use **Salesmate Calling**, and allow return traffic in response.
 
 | Component | Address | Server-side port used | Protocol |
 | --- | --- | --- | --- |
@@ -16,7 +14,7 @@ The firewall should allow outgoing UDP to the public internet from the browsers 
 | RTP | Static IP range * | 10,000 - 20,000 | UDP |
 | Insights | eventgw.twilio.com | 443 | TCP |
 
-For the**static IP range for UDP**, please open up the traffic to the following**CIDRs**. You have to open up traffic to all the CIDRs mentioned below. Twilio will dynamically connect to one of these IP ranges depending on the browser location.
+For the **static IP range for UDP**, please open up the traffic to the following **CIDRs**. You have to open up traffic to all the CIDRs mentioned below. Twilio will dynamically connect to one of these IP ranges depending on the browser location.
 
 | Region ID | Location | Media Server IP Address Range | CIDR notation |
 | --- | --- | --- | --- |

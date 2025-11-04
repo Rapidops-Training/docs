@@ -1,41 +1,35 @@
 ---
 title: "Chats - JS API Methods"
-description: "Salesmate provides you with JavaScript API methods for your website to help you control and customize your Chats widget behavior. You can use these me..."
 ---
-
 Salesmate provides you with JavaScript API methods for your website to help you control and customize your Chats widget behavior. You can use these methods in your website code to get the desired behavior.
 
-## **Methods**
+# **Methods**
 
-**The following methods can be used by the developers, in your code to customize the behavior of the Chats as per requirement.**
+- *The following methods can be used by the developers, in your code to customize the behavior of the Chats as per requirement.
 
-## login
+### login
 
 This method will initiate the Salesmate Chats with the information provided by you as a form of an object. You can call this method in the situation where contact/visitor is not logged in when the page is loaded. You can also use this method to update the information of the contact that is logged in.
 
 Verify your contact by calling this method and passing the email in user_id, for example in your customer's login page call this method when the login button is clicked.
 
-```javascript
-SALESMATE.login({
-user_id: '<< user id | string | We recommend to pass user's email id to generate unique key >>',
-email: '<< email | string | pass a valid email address >>',
-first_name: '<< first name of contact | string >>',
-last_name: '<< last name of contact | string >>',
+````javascript
+SALESMATE.login({}
+| user_id: '<< user id | string | We recommend to pass user's email id to generate unique key >>', |
+| email: '<< email | string | pass a valid email address >>', |
+| first_name: '<< first name of contact | string >>', |
+| last_name: '<< last name of contact | string >>', |
 });
-```
-
-**Example:**
-
-```javascript
-SALESMATE.login({
-  user_id: "john.doe@example.com",
-  email: "john.doe@example.com",
-  first_name: "John",
-  last_name: "Doe",
+```**Example:**```javascript
+SALESMATE.login({}
+ user_id: "john.doe@example.com",
+ email: "john.doe@example.com",
+ first_name: "John",
+ last_name: "Doe",
 });
-```
+````
 
-## logout
+# logout
 
 This method clears the Salesmate Chats session of the contact/visitor. Call this method when the user logs out from your application. Otherwise, the cookies will keep tracking new events for the user who was logged in before from the specific machine.
 
@@ -43,7 +37,7 @@ This method clears the Salesmate Chats session of the contact/visitor. Call this
 SALESMATE.logout();
 ```
 
-## update
+# update
 
 This method is used to update the data of existing contact, which is logged in from the widget side. You can update the name, email, or any other data of contact fields that Salesmate provides, but you must provide the user_id with the data you wish to update.
 
@@ -52,7 +46,7 @@ SALESMATE.update();
 SALESMATE.update({ user_id: "samual@example.com", first_name: "Samual" });
 ```
 
-## hideChatWidget
+# hideChatWidget
 
 This method hides the Chats if it's open. It will not hide the Chats launcher button. For example, you can configure your page in such a way that when the user clicks outside the Chats, this method is called.
 
@@ -60,7 +54,7 @@ This method hides the Chats if it's open. It will not hide the Chats launcher bu
 SALESMATE.hideChatWidget();
 ```
 
-## showChatWidget
+# showChatWidget
 
 This method shows the Chats. It will try to open Chats last available state; otherwise, it will open the home screen. For example, you can call this method when the page reloads or when a certain button is clicked to open the Chats for promoting your visitors to chat.
 
@@ -68,7 +62,7 @@ This method shows the Chats. It will try to open Chats last available state; oth
 SALESMATE.showChatWidget();
 ```
 
-## showMessages
+# showMessages
 
 This method opens up Salesmate Chats and displays the conversation list.
 
@@ -76,7 +70,7 @@ This method opens up Salesmate Chats and displays the conversation list.
 SALESMATE.showMessages();
 ```
 
-## showNewMessage
+# showNewMessage
 
 This method opens up Salesmate Chats and displays the screen to start a new conversation. Also if you provide a message as a parameter then the editor will come up preloaded with your message.
 
@@ -86,7 +80,7 @@ SALESMATE.showNewMessage();
 SALESMATE.showNewMessage("Hello there");
 ```
 
-## trackEvent
+# trackEvent
 
 This method helps you to track new events which visitor/contact performs on your website. You can also add further information to this event which will be visible inside your Salesmate app. Read more about how to [track events](https://support.salesmate.io/hc/en-us/articles/360062373191) inside Salesmate.
 
@@ -94,7 +88,7 @@ This method helps you to track new events which visitor/contact performs on your
 SALESMATE.trackEvent("your_event_name", {});
 ```
 
-## displayLauncher
+# displayLauncher
 
 This method is used to hide or show the Chats launcher button on your website. If you need to hide or show the launcher on some specific pages of your site then this method can be used.
 
@@ -102,7 +96,7 @@ This method is used to hide or show the Chats launcher button on your website. I
 SALESMATE.displayLauncher(false);
 ```
 
-## customLauncherSelector
+# customLauncherSelector
 
 This method enables you to define any custom id or class of the HTML elements where, if your website visitor clicks then it will open the Chats launcher.
 
@@ -112,36 +106,36 @@ SALESMATE.customLauncherSelector("#id_name");
 SALESMATE.customLauncherSelector(".class_name");
 ```
 
-## **Events Emitted**
+##**Events Emitted**
 
-**Listen to the following events emitted by the Chats for executing any additional code that's required.**
+- *Listen to the following events emitted by the Chats for executing any additional code that's required.**
 
-## SALESMATE_ON_WIDGET_HIDE
+# SALESMATE_ON_WIDGET_HIDE
 
 You can listen to the Chats widget's hide event and execute additional code on your website whenever Chats is closed.
 
 ```javascript
-window.addEventListener("SALESMATE_ON_WIDGET_HIDE", function () {
-  // Your code here
+window.addEventListener("SALESMATE_ON_WIDGET_HIDE", function () {}
+ // Your code here
 });
 ```
 
-## SALESMATE_ON_WIDGET_SHOW
+# SALESMATE_ON_WIDGET_SHOW
 
 You can listen to the Chats widget's show event and execute additional code on your website whenever the Chats is opened.
 
 ```javascript
-window.addEventListener("SALESMATE_ON_WIDGET_SHOW", function () {
-  // Your code here
+window.addEventListener("SALESMATE_ON_WIDGET_SHOW", function () {}
+ // Your code here
 });
 ```
 
-## SALESMATE_ON_WIDGET_COUNT_CHANGE
+# SALESMATE_ON_WIDGET_COUNT_CHANGE
 
 You can listen to the Chats widget's count change event and execute additional code on your website whenever the count of unread message changes.
 
 ```javascript
-window.addEventListener("SALESMATE_ON_WIDGET_COUNT_CHANGE", function () {
-  // Your code here
+window.addEventListener("SALESMATE_ON_WIDGET_COUNT_CHANGE", function () {}
+ // Your code here
 });
 ```

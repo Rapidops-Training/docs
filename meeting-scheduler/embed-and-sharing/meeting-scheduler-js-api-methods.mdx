@@ -1,11 +1,9 @@
 ---
 title: "Meeting Scheduler - JS API Methods"
-description: "When a meeting form is submitted by your customer to schedule a meeting with you or your team, the system emits an event called 'SM\_MEETING\_SUBMITTE..."
 ---
+When a meeting form is submitted by your customer to schedule a meeting with you or your team, the system emits an event called 'SM_MEETING_SUBMITTED'. You can add a listener in your code for this specific event and execute any additional code that is required.
 
-When a meeting form is submitted by your customer to schedule a meeting with you or your team, the system emits an event called 'SM\_MEETING\_SUBMITTED'. You can add a listener in your code for this specific event and execute any additional code that is required.
-
-## SM\_MEETING\_SUBMITTED**Add Listener****:**For example,
+# SM_MEETING_SUBMITTED **Add Listener **:** For example,
 
 ```
 window.addEventListener("SM\_MEETING\_SUBMITTED", function(event) &#123;
@@ -16,8 +14,8 @@ console.log('meetingDate:' , event.detail.meetingDate);
 
 If you add a code like displayed above on your website, then you will get a similar output as shown below.
 
-```
-&lt;script&gt;
+````
+&lt;script & gt;
 ! function() &#123;
 var MEETING\_DATA = &#123;
 backgroundColor: "#FFFFFF",
@@ -39,11 +37,11 @@ console.log('meetingName:' , event.detail.meetingName);
 console.log('meetingDate:' , event.detail.meetingDate);
 &#125;);
 &#125;();
-&lt;/script&gt;
+&lt;/script & gt;
 &lt;div id="\_sm\_meetings\_"&gt;
-&lt;br&gt;
-&lt;/div&gt;
-```**Result****:**```
+&lt;br & gt;
+&lt;/div & gt;
+```**Result**:**```
 &#123;
 "meetingName": "Demo for New Feature",
 "meetingDate": "`2021-12-18T10:30:00.000Z`", //ISO format
@@ -52,6 +50,6 @@ console.log('meetingDate:' , event.detail.meetingDate);
 "Contact.email": "damon@example.com",
 "Contact.mobile": "98765XXXXX" &#125;
 &#125;
-```
+````
 
 As shown in the above example, you can easily get the data that has been submitted by your customer, now you can manipulate this data and use it as per your requirement or perform any operations on it. [Refer events emitted when a webform is submitted](https://support.salesmate.io/hc/en-us/articles/4408683937305).

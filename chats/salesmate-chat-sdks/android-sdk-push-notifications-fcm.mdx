@@ -1,18 +1,21 @@
 ---
 title: "Android SDK - Push Notifications (FCM)"
-description: "We’ll show you how to send push notifications and/or push messages to your customers, with Firebase Cloud Messaging (FCM) in Salesmate Chat...."
 ---
-
 We’ll show you how to send push notifications and/or push messages to your customers, with Firebase Cloud Messaging (FCM) in Salesmate Chat.
 
-**Topics Covered:**
+- **Topics covered:**
 
-- [Enable Google Services For Your App](https://support.salesmate.io/hc/en-us/articles/9810725938713-Android-SDK-Push-Notifications-FCM#temp:C:Hdf274a09f32dda350e9c7d8ce6b)
-- [Set Up Client to Receive Push](https://support.salesmate.io/hc/en-us/articles/9810725938713-Android-SDK-Push-Notifications-FCM#temp:C:Hdf105336643e4c710fc7db18837)
-- [Enable Push Notification in Salesmate](https://support.salesmate.io/hc/en-us/articles/9810725938713-Android-SDK-Push-Notifications-FCM#temp:C:Hdfdff5e7d9277838de9534055f7)
-- [Disable Push on Logout](https://support.salesmate.io/hc/en-us/articles/9810725938713-Android-SDK-Push-Notifications-FCM#temp:C:Hdfcf162d0c2f19ca08d926aaadf)
-- [Using Salesmate Chat with FCM - Setup](https://support.salesmate.io/hc/en-us/articles/9810725938713-Android-SDK-Push-Notifications-FCM#temp:C:Hdf7d57fd7ed010ec458a515a98d)
-- [Trouble Shooting Tips](https://support.salesmate.io/hc/en-us/articles/9810725938713-Android-SDK-Push-Notifications-FCM#temp:C:Hdf47dd567d93b1a06ae99a02db5)
+- [Enable Google Services For Your App](#enable-google-services-for-your-app)
+
+- [Set Up Client to Receive Push](#set-up-client-to-receive-push)
+
+- [Enable Push Notification in Salesmate](#enable-push-notification-in-salesmate)
+
+- [Disable Push on Logout](#disable-push-on-logout)
+
+- [Using Salesmate Chat with FCM - Setup](#using-salesmate-chat-with-fcm-setup)
+
+- [Trouble Shooting Tips](#trouble-shooting-tips)
 
 ### Enable Google Services For Your App
 
@@ -20,29 +23,32 @@ We’ll show you how to send push notifications and/or push messages to your cus
 - Give the project a name and click ‘Create Project’.
 
 <img src="images/008-create-firebase-project-10009268287641.png" alt="Create Firebase Project" />
-- Once your project is set up, scroll down and select the ‘Cloud Messaging’’ card.
+- Once your project is set up, scroll down and select the ‘Cloud Messaging’’
+card.
 
 <img src="images/009-select-cloud-messaging-10009252534297.png" alt="Select Cloud Messaging" />
-- Click on the Android icon to continue the setup.
-- Enter your app’s package name and click ‘Register App’.
+- Click on the Android icon to continue the setup. - Enter your app’s package
+name and click ‘Register App’.
 
-<img src="images/010-register-app-10009307437977.png" alt="Register App" />
+<img src="images/010-register-app-10009307437977.png" alt="Register App" />#
+
 ### Set Up Client to Receive Push
 
 - Click the button "Download google-services.json" to download the config file. You’ll need to move that file into the same directory as your application level `` `build.gradle` ``.
 
 <img src="images/011-download-google-servicesjson-10009307097753.png" alt="Download google-services.json" />
-- Click "next" and then in your apps `` `build.gradle` `` you will need to add the following lines to your dependencies:
+- Click "next" and then in your apps `` `build.gradle` `` you will need to add
+the following lines to your dependencies:
 
 ```gradle
-dependencies {
-    implementation 'Comming Soon'
-    implementation 'com.google.firebase:firebase-messaging:20.2.+'
+dependencies {}
+ implementation 'Comming Soon'
+ implementation 'com.google.firebase:firebase-messaging:20.2.+'
 }
 ```
 
-- At the bottom of your `` `build.gradle` `` you must add:  
-  `apply plugin: 'com.google.gms.google-services'`
+- At the bottom of your `` `build.gradle` `` you must add:
+ `apply plugin: 'com.google.gms.google-services'`
 - It is important that this is at the very end of the file.
 - Click the Next button and then skip the verification step.
 
@@ -51,13 +57,20 @@ dependencies {
 - Finally, click the settings cog and select ‘Project settings’, then ‘Cloud Messaging tab’ then Cloud Messaging tab.
 
 <img src="images/012-project-settings-35524153104025.png" alt="Project Settings" />
-- For new FCM projects, Firebase Cloud Messaging API v1 is enabled by default. If it's disabled in an older project, you can enable it in Google Cloud Console by clicking the three dots icon, selecting Manage API, and then clicking the Enable button.
-- Under the Project settings page, select the Service Accounts tab and under Firebase Admin SDK, ensure that Node.js is selected and then click on Generate new private key
+- For new FCM projects, Firebase Cloud Messaging API v1 is enabled by default.
+If it's disabled in an older project, you can enable it in Google Cloud Console
+by clicking the three dots icon, selecting Manage API, and then clicking the
+Enable button. - Under the Project settings page, select the Service Accounts
+tab and under Firebase Admin SDK, ensure that Node.js is selected and then click
+on Generate new private key
 
 <img src="images/013-generate-new-private-key-35524136173337.png" alt="Generate new private key" />
-- Open your Salesmate Messenger settings and select ‘Installation → Android’. Then find the ‘Enable Push Notifications’ section. Here you'll be able to paste and save your Server API key.
+- Open your Salesmate Messenger settings and select ‘Installation → Android’.
+Then find the ‘Enable Push Notifications’ section. Here you'll be able to paste
+and save your Server API key.
 
 <img src="images/014-enable-push-notifications-35523620113305.png" alt="Enable Push Notifications" />
+
 ### Disable Push on Logout
 
 - To stop users from receiving push messages when they have logged out of the app make sure to call:
@@ -70,33 +83,33 @@ SalesmateChatSDK.getInstance().logout()
 - You should have a class that extends `` `FirebaseMessagingService.` `` That service is where you get the device token to send to your backend to register for the push. To register for Salesmate Chat push set it up like this:
 
 ```kotlin
-override fun onNewToken(token: String) {
+override fun onNewToken(token: String) {}
  super.onNewToken(token)
  SalesmatePushClient.getInstance().sendTokenToSalesmate(token)
 }
 
-override fun onMessageReceived(remoteMessage: RemoteMessage) {
+override fun onMessageReceived(remoteMessage: RemoteMessage) {}
  super.onMessageReceived(remoteMessage)
  val valueMap: MutableMap<String, String> = remoteMessage.data
 
-    if (SalesmatePushClient.getInstance().isSalesmateChatSDKPush(valueMap)) {
+ if (SalesmatePushClient.getInstance().isSalesmateChatSDKPush(valueMap)) {}
 
-        SalesmatePushClient.getInstance().handleSalesmateChatSDKPush(valueMap)
-        return
-    }
+ SalesmatePushClient.getInstance().handleSalesmateChatSDKPush(valueMap)
+ return
+ }
 
 }
 ```
 
-> 📘 **Important**
-
-> The recommendation of **sendTokenToSalesmate()** is to call it on the initial launch of an app to update the fresh firebase token into Salesmate
+> 📘**Important**> The recommendation of **sendTokenToSalesmate()**is to call it on the initial launch of an app to update the fresh firebase token into Salesmate
 
 ### Trouble Shooting Tips
 
 If you’re having trouble getting FCM to work in your app, here's a list of things you should check:
 
-- Check that the notifications are not disabled for your app on your test device. **Settings > Sound & Notification > App notifications**_._ This may differ depending on the Android version.
+- Check that the notifications are not disabled for your app on your test device.
+
+- **Settings > Sound & Notification > App notifications** _._ This may differ depending on the Android version.
 - Did you specify the correct Push Server API key?
 - Make sure you added your `` `google-services.json` `` file in the correct directory.
 

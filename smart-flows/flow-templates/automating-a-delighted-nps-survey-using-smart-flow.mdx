@@ -1,17 +1,23 @@
 ---
 title: "Automating a Delighted NPS Survey Using Smart Flow"
-description: "This flow streamlines the process of collecting customer feedback through an NPS survey 30 days post-onboarding. It automates key actions such as send..."
 ---
-
 This flow streamlines the process of collecting customer feedback through an NPS survey 30 days post-onboarding. It automates key actions such as sending surveys, tracking responses, and updating records. By leveraging customer insights, it enables proactive follow-ups, enhances engagement, and drives improvements in satisfaction and retention.
 
-### Topics Covered
+### **Topics covered:**
 
-[Business Type](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#01JHZZKQ0ZK00B75RPGXWBD1GQ)[Template Type](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#01JHZXFD9EJGR7QCB6A5RHB5HZ)[Use Case](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#01JHZXFD9EJGR7QCB6A5RHB5HZ)[Key Features of the Flow](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#01JHZXHG6TY8S1SZ57BH3G6T6D)[Steps Used In Creating the Flow](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#01JJ16DWTSS5K9N8FHHVYRJMY1)[Break Up of Items Used In the Flow](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#h_01JHT979E2NZ3VK5JH7FTYRVYV)[Benefits](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#01JJ18J2Y6RQSVV8BEFB76BPFJ)
+- [Business Type](#business-type)
+- [Template Type](#template-type)
+- [Use Case](#use-case)
+- [Key Features of the Flow](#key-features-of-flow-timed-feedback-collection-sends-nps-surveys-30-days-post-onboarding-for-timely-insights-into-customer-satisfaction)
+- [Steps Used In Creating the Flow](#break-up-of-items-used-in-the-flow-trigger-this-flow-is-automatically-triggered-when-a-new-contact-is-created-after-30-days-an-nps-survey-is-initiated-to-assess-customer-satisfaction)
+- [Break Up of Items Used In the Flow](#break-up-of-items-used-in-the-flow-trigger-this-flow-is-automatically-triggered-when-a-new-contact-is-created-after-30-days-an-nps-survey-is-initiated-to-assess-customer-satisfaction)
+- [Benefits](https://support.salesmate.io/hc/en-us/articles/42556840496665-Automating-a-Delighted-NPS-Survey-Using-Smart-Flow#01JJ18J2Y6RQSVV8BEFB76BPFJ)
 
 ### Business Type
 
-This flow suits industries like**SaaS, e-commerce, and professional services, or teams like customer success and support.**It's ideal for businesses focused on customer feedback, retention, and experience improvement post-onboarding.
+This flow suits industries like **SaaS, e-commerce, and professional services, or teams like customer success and support.
+
+- ** It's ideal for businesses focused on customer feedback, retention, and experience improvement post-onboarding.
 
 ### Template Type
 
@@ -21,44 +27,70 @@ Perfect for teams aiming to collect customer feedback efficiently. This template
 
 A SaaS company uses this flow to gather feedback 30 days after onboarding new customers. The automated NPS survey helps gauge satisfaction, identify pain points, and improve retention. Insights drive tailored follow-ups, ensuring proactive customer support and enhancing user experiences.
 
-### Key Features of Flow**Timed Feedback Collection:**Sends NPS surveys 30 days post-onboarding for timely insights into customer satisfaction.**Automated Actions:**Executes follow-ups based on record parameters, ensuring personalized engagement.**Data Integration:**Updates external systems via API calls for seamless feedback management.**Custom Branching:**Adjusts workflows based on customer feedback, enhancing retention strategies.**Centralized Tracking:**Adds contacts to lists and creates records to streamline feedback analysis and reporting.
+### Key Features of Flow- **Timed Feedback Collection:** Sends NPS surveys 30 days post-onboarding for timely insights into customer satisfaction.
 
-### Flow Process Breakdown**Trigger: [Record Creation](https://support.salesmate.io/hc/en-us/articles/36763966875289-Record-Created) (Contact)****Description:**The flow is triggered automatically when a new contact is created. This process initiates an NPS survey 30 days after the contact’s creation, allowing for a timely and systematic collection of customer feedback.**Practical Use Case:**For instance, after a new customer is added to the system, the flow waits for 30 days to assess their satisfaction level through the NPS survey.
+- **Automated Actions:** Executes follow-ups based on record parameters, ensuring personalized engagement.
+
+- **Data Integration:** Updates external systems via API calls for seamless feedback management.
+
+- **Custom Branching:** Adjusts workflows based on customer feedback, enhancing retention strategies.
+
+- **Centralized Tracking:** Adds contacts to lists and creates records to streamline feedback analysis and reporting.
+
+### Flow Process Breakdown **Trigger: [Record Creation](#flow-process-breakdown-trigger-record-creationhttpssupportsalesmateiohcen-usarticles36763966875289-record-created-contact-description-the-flow-is-triggered-automatically-when-a-new-contact-is-created-this-process-initiates-an-nps-survey-30-days-after-the-contacts-creation-allowing-for-a-timely-and-systematic-collection-of-customer-feedback) (Contact)**- **Description:** The flow is triggered automatically when a new contact is created. This process initiates an NPS survey 30 days after the contact’s creation, allowing for a timely and systematic collection of customer feedback.
+
+- **Practical Use Case:** For instance, after a new customer is added to the system, the flow waits for 30 days to assess their satisfaction level through the NPS survey.
 
 ![mceclip0.png](./images/mceclip0-3.png)
 
-**Action 1: [Wait](https://support.salesmate.io/hc/en-us/articles/38138356545433-Wait) - 30 Days****Description:**This step introduces a 30-day waiting period post-contact creation. The delay ensures that customers have had enough time to experience the service, resulting in more accurate and meaningful feedback for the NPS survey.**Practical Use Case:**After the customer is added, the flow pauses for 30 days, allowing the customer to engage with the service before the survey is sent.
+- *Action 1: [Wait](#flow-process-breakdown-trigger-record-creationhttpssupportsalesmateiohcen-usarticles36763966875289-record-created-contact-description-the-flow-is-triggered-automatically-when-a-new-contact-is-created-this-process-initiates-an-nps-survey-30-days-after-the-contacts-creation-allowing-for-a-timely-and-systematic-collection-of-customer-feedback) - 30 Days**- **Description:** This step introduces a 30-day waiting period post-contact creation. The delay ensures that customers have had enough time to experience the service, resulting in more accurate and meaningful feedback for the NPS survey.
+
+- **Practical Use Case:** After the customer is added, the flow pauses for 30 days, allowing the customer to engage with the service before the survey is sent.
 
 ![mceclip1.png](./images/mceclip1-3.png)
 
-**Condition 1: [Branch](https://support.salesmate.io/hc/en-us/articles/37780627045657-Branch) (Check Customer Status)****Description:**This condition checks if the contact is marked as an Outbound Prospect. If the customer is not an Outbound Prospect, the flow continues, ensuring that only qualified contacts proceed with further actions or campaigns.**Practical Use Case:**For instance, if the contact is a lead from an outbound campaign, the flow ensures that they are not included in the NPS survey until they qualify as a customer.
+- *Condition 1: [Branch](#flow-process-breakdown-trigger-record-creationhttpssupportsalesmateiohcen-usarticles36763966875289-record-created-contact-description-the-flow-is-triggered-automatically-when-a-new-contact-is-created-this-process-initiates-an-nps-survey-30-days-after-the-contacts-creation-allowing-for-a-timely-and-systematic-collection-of-customer-feedback) (Check Customer Status)**- **Description:** This condition checks if the contact is marked as an Outbound Prospect. If the customer is not an Outbound Prospect, the flow continues, ensuring that only qualified contacts proceed with further actions or campaigns.
+
+- **Practical Use Case:** For instance, if the contact is a lead from an outbound campaign, the flow ensures that they are not included in the NPS survey until they qualify as a customer.
 
 ![mceclip2.png](./images/mceclip2-3.png)
 
-**Condition 2: [Is in a List](https://support.salesmate.io/hc/en-us/articles/37780752141209-Is-in-List) (Check NPS Survey List)****Description:**This step verifies whether the contact is part of the NPS survey list. If the contact is listed, they are eligible for the survey; otherwise, the flow takes alternative actions like creating a task to check eligibility.**Practical Use Case:**For example, contacts who are in the NPS survey list are automatically sent the survey, while others are added to a task list for follow-up.
+- *Condition 2: [Is in a List](#flow-process-breakdown-trigger-record-creationhttpssupportsalesmateiohcen-usarticles36763966875289-record-created-contact-description-the-flow-is-triggered-automatically-when-a-new-contact-is-created-this-process-initiates-an-nps-survey-30-days-after-the-contacts-creation-allowing-for-a-timely-and-systematic-collection-of-customer-feedback) (Check NPS Survey List)**- **Description:** This step verifies whether the contact is part of the NPS survey list. If the contact is listed, they are eligible for the survey; otherwise, the flow takes alternative actions like creating a task to check eligibility.
+
+- **Practical Use Case:** For example, contacts who are in the NPS survey list are automatically sent the survey, while others are added to a task list for follow-up.
 
 ![mceclip3.png](./images/mceclip3-3.png)
 
-**Action 2: [API Call/Webhook](https://support.salesmate.io/hc/en-us/articles/38138525618969-API-Call-Webhook) (Send to Delight for Paid Clients)****Description:**This action uses an API call or webhook to send paid clients to the "Delight" stage. Here, they receive personalized content and engagement that enhance their experience, promoting long-term loyalty.**Practical Use Case:**For example, once a paid client completes the NPS survey, they receive tailored engagement that reflects their customer status, improving their overall satisfaction.
+- *Action 2: [API Call/Webhook](#flow-process-breakdown-trigger-record-creationhttpssupportsalesmateiohcen-usarticles36763966875289-record-created-contact-description-the-flow-is-triggered-automatically-when-a-new-contact-is-created-this-process-initiates-an-nps-survey-30-days-after-the-contacts-creation-allowing-for-a-timely-and-systematic-collection-of-customer-feedback) (Send to Delight for Paid Clients)**- **Description:** This action uses an API call or webhook to send paid clients to the "Delight" stage. Here, they receive personalized content and engagement that enhance their experience, promoting long-term loyalty.
+
+- **Practical Use Case:** For example, once a paid client completes the NPS survey, they receive tailored engagement that reflects their customer status, improving their overall satisfaction.
 
 ![mceclip4.png](./images/mceclip4-3.png)
 
-**Action 3: [Add to List](https://support.salesmate.io/hc/en-us/articles/38138553100185-Add-to-List) (NPS Survey Done List)****Description:**Once the survey is completed, the contact is added to a list called "NPS Survey Done." This ensures that those who have completed the survey are tracked for any follow-up actions.**Practical Use Case:**After a customer completes the NPS survey, they are automatically added to the "NPS Survey Done" list for record-keeping and follow-up tasks.
+- *Action 3: [Add to List](#flow-process-breakdown-trigger-record-creationhttpssupportsalesmateiohcen-usarticles36763966875289-record-created-contact-description-the-flow-is-triggered-automatically-when-a-new-contact-is-created-this-process-initiates-an-nps-survey-30-days-after-the-contacts-creation-allowing-for-a-timely-and-systematic-collection-of-customer-feedback) (NPS Survey Done List)**- **Description:** Once the survey is completed, the contact is added to a list called "NPS Survey Done." This ensures that those who have completed the survey are tracked for any follow-up actions.
 
-### Break Up of Items Used in The Flow**Trigger**This flow is automatically triggered when a new contact is created. After 30 days, an NPS survey is initiated to assess customer satisfaction.
+- **Practical Use Case:** After a customer completes the NPS survey, they are automatically added to the "NPS Survey Done" list for record-keeping and follow-up tasks.
 
-####**Wait**Following the contact creation, the flow enters a 30-day waiting period before proceeding with the NPS survey.
+### Break Up of Items Used in The Flow **Trigger** This flow is automatically triggered when a new contact is created. After 30 days, an NPS survey is initiated to assess customer satisfaction.
 
-####**Branching**At this stage, the flow splits into two paths based on specific conditions:
+####**Wait** Following the contact creation, the flow enters a 30-day waiting period before proceeding with the NPS survey.
 
-The first branch checks if the contact type is "Customer" and does**not**have the tag "Outbound Prospect."If the conditions are met, the flow continues as intended. Otherwise, an alternate course of action is followed (Exit Flow).
+####**Branching** At this stage, the flow splits into two paths based on specific conditions:
 
-####**Condition****Is in List**: The system verifies whether the contact is included in the NPS list.**If False**– An activity is created for the user to review the customer’s eligibility for the NPS survey.**If True**– A webhook is triggered to send the NPS survey via Delighted.
+The first branch checks if the contact type is "Customer" and does **not** have the tag "Outbound Prospect."If the conditions are met, the flow continues as intended. Otherwise, an alternate course of action is followed (Exit Flow).
 
-####**Action****API Call/Webhook**– Qualified paid clients are moved to the "Delight" stage, where they receive personalized engagement and content to enhance their experience and drive long-term loyalty.**Webhook URL:**[https://api.delightsurvey.com/webhooks/feedback](https://api.delightsurvey.com/webhooks/feedback)**Add To List**- Once a survey is successfully sent, the contact is added to the "NPS Survey Completed" list for easy segmentation and record-keeping.
+####**Condition **Is in List**: The system verifies whether the contact is included in the NPS list.
+
+- **If False**– An activity is created for the user to review the customer’s eligibility for the NPS survey.
+
+- ** If True **– A webhook is triggered to send the NPS survey via Delighted.
+
+####** Action **API Call/Webhook**– Qualified paid clients are moved to the "Delight" stage, where they receive personalized engagement and content to enhance their experience and drive long-term loyalty.
+
+- **Webhook URL:**[https://api.delightsurvey.com/webhooks/feedback](#key-features-of-flow-timed-feedback-collection-sends-nps-surveys-30-days-post-onboarding-for-timely-insights-into-customer-satisfaction)** Add To List **- Once a survey is successfully sent, the contact is added to the "NPS Survey Completed" list for easy segmentation and record-keeping.
 
 ### Flow Diagram
 
 ![mceclip10.png](./images/mceclip10.png)
 
-##**Benefits**The Delighted NPS survey helps businesses gather valuable customer feedback, measure satisfaction, and identify areas for improvement. It provides insights into customer loyalty, enabling businesses to proactively address concerns, enhance engagement, and drive long-term retention by understanding customer needs and expectations.
+##**Benefits** The Delighted NPS survey helps businesses gather valuable customer feedback, measure satisfaction, and identify areas for improvement. It provides insights into customer loyalty, enabling businesses to proactively address concerns, enhance engagement, and drive long-term retention by understanding customer needs and expectations.

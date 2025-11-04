@@ -1,28 +1,27 @@
 ---
 title: "Managing Activity Start Dates in Smart Flow"
-description: "**Add the Assign Interaction**Insert an**Assign interaction**into your flow.Assign the Date & Time variable and add the desired number of days.Example..."
 ---
+####**How to Set the Start Date of an Activity in Smart Flow** You can customize the **Start Date** of an activity using either the **Assign interaction** or the **Data Operation interaction** in Smart Flow. Below are the detailed steps for both methods:**Method 1: Using the Assign Interaction **Select a Trigger** Choose a trigger based on your requirement.Example: Trigger the Smart Flow when a new contact is created in Salesmate.
 
-####**How to Set the Start Date of an Activity in Smart Flow**You can customize the**Start Date**of an activity using either the**Assign interaction**or the**Data Operation interaction**in Smart Flow. Below are the detailed steps for both methods:**Method 1: Using the Assign Interaction****Select a Trigger**Choose a trigger based on your requirement.Example: Trigger the Smart Flow when a new contact is created in Salesmate.**Create a Variable**Create a variable of type**Date & Time**. Refer to this for guidance on [creating variables](https://support.salesmate.io/hc/en-us/articles/36669777739417).Since the Start Date field is of type Date & Time, this variable will be used for calculations.
+- **Create a Variable** Create a variable of type** Date & Time **. Refer to this for guidance on [creating variables](https://support.salesmate.io/hc/en-us/articles/36669777739417).Since the Start Date field is of type Date & Time, this variable will be used for calculations.
 
 ![Screenshot 2025-09-16 at 3.50.08 AM.png](./images/Screenshot-2025-09-16-at-3.50.08-AM.png)
 
-**Add the Assign Interaction**Insert an**Assign interaction**into your flow.Assign the Date & Time variable and add the desired number of days.Example: Set it to “5 days from the flow trigger date” or “5 days from the activity creation date.”
+- *Add the Assign Interaction** Insert an **Assign interaction** into your flow.Assign the Date & Time variable and add the desired number of days.Example: Set it to “5 days from the flow trigger date” or “5 days from the activity creation date.”
 
 ![Screenshot 2025-09-16 at 3.51.17 AM.png](./images/Screenshot-2025-09-16-at-3.51.17-AM.png)
 
-**Create the Activity Record**Add a**Create Record action**to generate the activity.For the**Start Date**field, select**Attribute**and choose the variable you created earlier.
+- *Create the Activity Record** Add a **Create Record action** to generate the activity.For the **Start Date** field, select **Attribute** and choose the variable you created earlier.
 
 ![Screenshot 2025-09-16 at 3.52.17 AM.png](./images/Screenshot-2025-09-16-at-3.52.17-AM.png)
 
-**Using the Data Operation Interaction****Follow Steps 1 & 2 Above**Create a trigger and a**Date & Time variable**with a default value (e.g., Flow Start Date & Time or Current Date & Time).
+- * Using the Data Operation Interaction ***Follow Steps 1 & 2 Above** Create a trigger and a** Date & Time variable ** with a default value (e.g., Flow Start Date & Time or Current Date & Time).
 
 ![Screenshot 2025-09-16 at 3.45.15 AM.png](./images/Screenshot-2025-09-16-at-3.45.15-AM.png)
-
-**Add the Data Operation Interaction**Insert a**Data Operation interaction**instead of Assign.Select your Date & Time variable in the field**“Choose the field to perform the operation.”**Set the**operation type**to**Add an amount of time**. Specify the number of days (e.g., 5 days).
+- *Add the Data Operation Interaction** Insert a **Data Operation interaction** instead of Assign.Select your Date & Time variable in the field **“Choose the field to perform the operation.”** Set the **operation type** to **Add an amount of time**. Specify the number of days (e.g., 5 days).
 
 ![Screenshot 2025-09-16 at 3.13.41 AM.png](./images/Screenshot-2025-09-16-at-3.13.41-AM.png)
 
-**Create the Activity Record**Use the**Create Record action**. For the**Start Date**, choose**Attribute**and select the updated variable.
+- *Create the Activity Record** Use the **Create Record action**. For the **Start Date**, choose **Attribute** and select the updated variable.
 
 ![Screenshot 2025-09-16 at 3.15.10 AM.png](./images/Screenshot-2025-09-16-at-3.15.10-AM.png)

@@ -1,18 +1,32 @@
 ---
-title: "Variables"
-description: "**Variables**are internal data holders used by [**AI Pilots**](https://support.salesmate.io/hc/en-us/articles/45803043910937) to temporarily store and..."
+title: "Variables\\"
 ---
+- *Variables** are internal data holders used by [**AI Pilots**](https://support.salesmate.io/hc/en-us/articles/45803043910937) to temporarily store and manipulate information during a conversation. Unlike entities, which capture data directly from the user (e.g., name, email, or query), variables are updated internally using flows, actions, or API calls.They play a critical role in AI Pilots by allowing you to store, manage, and utilize dynamic data during conversations. Whether you're fetching data from an API, calculating values, or referencing previous user inputs, variables make it possible.
 
-**Variables**are internal data holders used by [**AI Pilots**](https://support.salesmate.io/hc/en-us/articles/45803043910937) to temporarily store and manipulate information during a conversation. Unlike entities, which capture data directly from the user (e.g., name, email, or query), variables are updated internally using flows, actions, or API calls.They play a critical role in AI Pilots by allowing you to store, manage, and utilize dynamic data during conversations. Whether you're fetching data from an API, calculating values, or referencing previous user inputs, variables make it possible.
+### **Topics covered:**
 
-### Topics Covered
-
-[Components of a Variable](https://support.salesmate.io/hc/en-us/articles/45878701962265-Variables#01JWVFZT67DQFNDQB7N3C1QRXC)[System Default Variables](https://support.salesmate.io/hc/en-us/articles/45878701962265-Variables#01JWVFZZAGPSJ75C4RDF7EXHMX)[Create a Variable](https://support.salesmate.io/hc/en-us/articles/45878701962265-Variables#h_01JW76YDBS3RRRZW4768Z4Y028)[View Variables](https://support.salesmate.io/hc/en-us/articles/45878701962265-Variables#h_01JW77FJF31F3X17B8NJKKZR9M)[Edit a Variable](https://support.salesmate.io/hc/en-us/articles/45878701962265-Variables#h_01JW77MQZ36X0K3A381C9DN9Q2)[Delete a Variable](https://support.salesmate.io/hc/en-us/articles/45878701962265-Variables#h_01JW77V733BRXEEFT51XB52XFM)[Practical Use Case](https://support.salesmate.io/hc/en-us/articles/45878701962265-Variables#h_01JW78AAKN99CDE0E0RVYQK06A)
+- [Components of a Variable](#components-of-a-variable)
+- [System Default Variables](#system-default-variables)
+- [Create a Variable](#create-a-variable)
+- [View Variables](#view-variables)
+- [Edit a Variable](#edit-a-variable)
+- [Delete a Variable](#delete-a-variable)
+- [Practical Use Case](#practical-use-case)
 
 ### Components of a Variable
 
-Each variable includes the following attributes**Name:**The name number must be unique across all AI Pilots, and it allows alphanumeric values and underscores.**Variable Name:**This name will be visible in the execution flows.**Description (****Optional):**Provide a brief explanation of the variable's function for reference.**Type:**You can choose a type from the drop-down menu. It will have the following types:
-Text: Stores strings (e.g., names, emails)Number: Stores numeric values (e.g., price, quantity)Date: Stores date valuesDateTime: Stores both date and time**Default Value (Optional):**You can provide a default value for the variable.**Note:**Variables in AI Pilots are global and distinct from SmartFlow’s local variables.
+Each variable includes the following attributes
+
+- **Name:** The name number must be unique across all AI Pilots, and it allows alphanumeric values and underscores.
+
+- **Variable Name:** This name will be visible in the execution flows.
+
+- ** Description (**Optional):** Provide a brief explanation of the variable's function for reference.
+
+- **Type:** You can choose a type from the drop-down menu. It will have the following types:
+ Text: Stores strings (e.g., names, emails)Number: Stores numeric values (e.g., price, quantity)Date: Stores date valuesDateTime: Stores both date and time **Default Value (Optional):** You can provide a default value for the variable.
+
+- **Note:** Variables in AI Pilots are global and distinct from SmartFlow’s local variables.
 
 ### System Default Variables
 
@@ -30,25 +44,27 @@ These pre-defined variables are available in every AI Pilot and cannot be edited
 
 To create a new Variable, you will need to follow the steps below:
 
-Navigate to**AI Pilots**under**More.**
+Navigate to **AI Pilots** under **More.
 
 ![mceclip0.png](./images/mceclip0-3.png)
 
-Select the correct AI Pilot.Click on**Variables**. Click on**New**.
+Select the correct AI Pilot.Click on **Variables**. Click on **New**.
 
 ![mceclip1.png](./images/mceclip1-5.png)
 
-Fill in the fields like**Name, Description, Type, and Default Value**.
+Fill in the fields like **Name, Description, Type, and Default Value**.
 
 ![mceclip3.png](./images/mceclip3-5.png)
 
-Click**Save**.**Note:**An entity name and a variable name cannot be the same.These variables will be accessible only in the flows, intents, & prompts created within the AI Pilot.
+Click **Save**.
+
+- **Note:**An entity name and a variable name cannot be the same.These variables will be accessible only in the flows, intents, & prompts created within the AI Pilot.
 
 ### View Variables
 
 To view the variables for an AI Pilot, please follow the steps below:
 
-Navigate to**AI Pilot**under**More**. Select the correct AI Pilot.Click on**Variables**. The variable list will show:**Name, Variable Name, Description (shown on hover), Default Value, Last Modified By / Date**You can sort the variables based on Name and Last Modified Date.You can search the variable by name or variable name (internal name).
+Navigate to **AI Pilot** under **More**. Select the correct AI Pilot.Click on **Variables**. The variable list will show:**Name, Variable Name, Description (shown on hover), Default Value, Last Modified By / Date** You can sort the variables based on Name and Last Modified Date.You can search the variable by name or variable name (internal name).
 
 ![mceclip6.png](./images/mceclip6-4.png)
 
@@ -56,7 +72,9 @@ Navigate to**AI Pilot**under**More**. Select the correct AI Pilot.Click on**Vari
 
 To edit a variable, please follow the steps below:
 
-Navigate to**AI Pilot**under**More**. Select the correct AI Pilot.Click on**Variables**. Click on the**Variable name**from the list.You can update:**Name, Description, and Default Value.**Click**Save**.
+Navigate to **AI Pilot** under **More**. Select the correct AI Pilot.Click on **Variables**. Click on the **Variable name** from the list.You can update:**Name, Description, and Default Value.
+
+- **Click **Save**.
 
 ![mceclip5.png](./images/mceclip5-4.png)
 
@@ -64,7 +82,7 @@ Navigate to**AI Pilot**under**More**. Select the correct AI Pilot.Click on**Vari
 
 To delete a variable, please follow the steps below:
 
-Navigate to**AI Pilot**under**More**. Select the correct AI Pilot.Click on**Variables**. Hover over on the Variable name.Click on**Actions**. Click on**Delete**.
+Navigate to **AI Pilot** under **More**. Select the correct AI Pilot.Click on **Variables**. Hover over on the Variable name.Click on **Actions**. Click on **Delete**.
 
 ![mceclip7.png](./images/mceclip7-5.png)
 
@@ -72,7 +90,9 @@ A confirmation window will pop up.
 
 ![mceclip6(1).png](./images/mceclip61-2.png)
 
-Click on**Yes**.**Note:**If the variable is used anywhere, then it will give you the error message and block you from deleting it.
+Click on **Yes**.
+
+- **Note:**If the variable is used anywhere, then it will give you the error message and block you from deleting it.
 
 ### Practical Use Case
 
