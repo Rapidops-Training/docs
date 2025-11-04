@@ -41,9 +41,9 @@ name and click ‘Register App’.
 the following lines to your dependencies:
 
 ```gradle
-dependencies {}
- implementation 'Comming Soon'
- implementation 'com.google.firebase:firebase-messaging:20.2.+'
+dependencies {
+    // implementation 'Coming Soon'
+    implementation 'com.google.firebase:firebase-messaging:20.2.'
 }
 ```
 
@@ -86,7 +86,6 @@ SalesmateChatSDK.getInstance().logout()
 override fun onNewToken(token: String) {}
  super.onNewToken(token)
  SalesmatePushClient.getInstance().sendTokenToSalesmate(token)
-}
 
 override fun onMessageReceived(remoteMessage: RemoteMessage) {}
  super.onMessageReceived(remoteMessage)
@@ -96,9 +95,6 @@ override fun onMessageReceived(remoteMessage: RemoteMessage) {}
 
  SalesmatePushClient.getInstance().handleSalesmateChatSDKPush(valueMap)
  return
- }
-
-}
 ```
 
 > 📘**Important**> The recommendation of **sendTokenToSalesmate()**is to call it on the initial launch of an app to update the fresh firebase token into Salesmate
@@ -113,6 +109,3 @@ If you’re having trouble getting FCM to work in your app, here's a list of thi
 - Did you specify the correct Push Server API key?
 - Make sure you added your `` `google-services.json` `` file in the correct directory.
 
-```
-
-```

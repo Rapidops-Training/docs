@@ -12,15 +12,18 @@ You can insert text functions in the Email Template to append, prepend, uppercas
 
 This function appends the text mentioned by you along with the value of the field.
 
-- **Input:** ```highlight
-| Append Example :&#123;&#123;Contact.name | append:", Hope you are doing well"!&#125;&#125; |
+- **Input:** 
 
-````
+```highlight
+| Append Example :&#123;&#123;Contact.name | append:", Hope you are doing well"!&#125;&#125; |
+```
 
 ![Screenshot](./images/Screenshot-2023-06-05-at-3.29.44-PM.png)
-- **Output:** ```text highlighter-rouge
+- **Output:** 
+
+```text highlighter-rouge
 Append Example: &#123;Lina Westminster, Hope you are doing well!&#125;
-````
+```
 
 ![Screenshot](./images/Screenshot-2023-06-05-at-3.31.02-PM.png)
 
@@ -28,15 +31,17 @@ Append Example: &#123;Lina Westminster, Hope you are doing well!&#125;
 
 This function prepends the text mentioned by you along with the value of the field.
 
-- **Input:** ```highlight
+- **Input:** 
+```highlight
 | Prepend Example : &#123;&#123;Contact.name | prepend : "Hello"&#125;&#125; |
 
-````
+```
 
 ![Screenshot](./images/Screenshot-2023-06-05-at-3.34.31-PM.png)
-- **Output:** ```highlight
+- **Output:** 
+```highlight
 Prepend Example: Hello Lina Westminster
-````
+```
 
 ![Screenshot](./images/Screenshot-2023-06-05-at-3.40.28-PM.png)
 
@@ -44,15 +49,17 @@ Prepend Example: Hello Lina Westminster
 
 This function converts each character of the word in uppercase. Note: It has no effect on strings that are already all uppercase.
 
-- **Input:** ```highlight
+- **Input:** 
+```highlight
 | Uppercase : &#123;&#123;"Contact.name" | upcase&#125;&#125; |
 
-````
+```
 
 ![mceclip4.png](./images/mceclip4-3.png)
-- **Output:** ```highlight
+- **Output:** 
+```highlight
 Uppercase: ABIE HANBY
-````
+```
 
 ![mceclip3.png](./images/mceclip3-3.png)
 
@@ -60,14 +67,16 @@ Uppercase: ABIE HANBY
 
 This function converts each character of the word in lowercase.Note: It has no effect on words that are already all lowercase.
 
-- **Input:** ```highlight
+- **Input:** 
+```highlight
 | LowerCase: &#123;&#123;"Contact.name" | downcase&#125;&#125; |
 
-````
+```
 
 ![mceclip0.png](./images/mceclip0-4.png)
-- **Output:** ```text highlighter-rouge
+- **Output:** 
+```text highlighter-rouge
 LowerCase: abie hanby
-````
+```
 
 ![mceclip1.png](./images/mceclip1-5.png)

@@ -15,41 +15,43 @@ Viewed Product snippet tracks when customers view specific products on your site
 
 ```html
 <script>
- window.salesmateSettings = {}
- workspace_id: "{{workspaceId}}",
- app_key: "{{appKey}}",
- tenant_id: "demomessenger.salesmate.io",
- hide_default_launcher: true,
- is_include_bigcommerce_tracking_file: true,
- email: "{{customer.email}}",
- name: "{{customer.name}}",
- bigcommerce_store_id: "{{settings.store_hash}}",
- };
+window.salesmateSettings = {
+  workspace_id: "{{workspaceId}}",
+  app_key: "{{appKey}}",
+  tenant_id: "demomessenger.salesmate.io",
+  hide_default_launcher: true,
+  is_include_bigcommerce_tracking_file: true,
+  email: "{{customer.email}}",
+  name: "{{customer.name}}",
+  bigcommerce_store_id: "{{settings.store_hash}}",
+};
 </script>
+
 <script>
- (!(function (e, t, a, i, d, n, o) {}
- ((e.Widget = i),
- (e[i] =
-| e[i] |
- function () {}
-| (e[i].q = e[i].q |  | []).push(arguments); |
- }),
- (n = t.createElement(a)),
- (o = t.getElementsByTagName(a)[0]),
- (n.id = i),
- (n.src = d),
- (window._salesmate_widget_script_url = d),
- (n.async = 1),
- o.parentNode.insertBefore(n, o));
- })(
- window,
- document,
- "script",
- "loadwidget",
- "https://demomessenger.salesmate.io/messenger-platform/messenger-platform-main.js",
- ),
- loadwidget("init", {}),
- loadwidget("load_widget", "Widget Loading...!"));
+!(function (e, t, a, i, d, n, o) {
+  (e.Widget = i),
+  (e[i] =
+    e[i] ||
+    function () {
+      (e[i].q = e[i].q || []).push(arguments);
+    }),
+  (n = t.createElement(a)),
+  (o = t.getElementsByTagName(a)[0]),
+  (n.id = i),
+  (n.src = d),
+  (window._salesmate_widget_script_url = d),
+  (n.async = 1),
+  o.parentNode.insertBefore(n, o);
+})(
+  window,
+  document,
+  "script",
+  "loadwidget",
+  "https://demomessenger.salesmate.io/messenger-platform/messenger-platform-main.js"
+);
+
+loadwidget("init", {});
+loadwidget("load_widget", "Widget Loading...!");
 </script>
 ```
 
@@ -76,11 +78,11 @@ the below code.
 
 ```javascript
 <script type="text/javascript">
-window.addEventListener('__SM_ANALYTICS_READY__', () => {}
-SALESMATE.productViewed({}
-productId: "{{product.id}}",
-storeId: "{{settings.store_hash}}"
-});
+window.addEventListener('__SM_ANALYTICS_READY__', () => {
+  SALESMATE.productViewed({
+    productId: "{{product.id}}",
+    storeId: "{{settings.store_hash}}"
+  });
 });
 </script>
 ```

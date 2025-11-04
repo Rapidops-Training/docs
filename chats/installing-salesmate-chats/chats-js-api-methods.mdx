@@ -13,21 +13,24 @@ This method will initiate the Salesmate Chats with the information provided by y
 
 Verify your contact by calling this method and passing the email in user_id, for example in your customer's login page call this method when the login button is clicked.
 
-````javascript
-SALESMATE.login({}
-| user_id: '<< user id | string | We recommend to pass user's email id to generate unique key >>', |
-| email: '<< email | string | pass a valid email address >>', |
-| first_name: '<< first name of contact | string >>', |
-| last_name: '<< last name of contact | string >>', |
+```javascript
+SALESMATE.login({
+  user_id: "<< user id | string | We recommend passing the user's email id to generate a unique key >>",
+  email: "<< email | string | pass a valid email address >>",
+  first_name: "<< first name of contact | string >>",
+  last_name: "<< last name of contact | string >>"
 });
-```**Example:**```javascript
-SALESMATE.login({}
- user_id: "john.doe@example.com",
- email: "john.doe@example.com",
- first_name: "John",
- last_name: "Doe",
+
+```
+**Example:**
+```javascript
+SALESMATE.login({
+  user_id: "john.doe@example.com",
+  email: "john.doe@example.com",
+  first_name: "John",
+  last_name: "Doe"
 });
-````
+```
 
 # logout
 
@@ -106,7 +109,7 @@ SALESMATE.customLauncherSelector("#id_name");
 SALESMATE.customLauncherSelector(".class_name");
 ```
 
-##**Events Emitted**
+## **Events Emitted**
 
 - *Listen to the following events emitted by the Chats for executing any additional code that's required.**
 

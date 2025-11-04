@@ -29,17 +29,20 @@ If you’re new to Salesmate Chat, you’ll need to [Configure the Salesmate Cha
 Add the following dependency to your app's `build.gradle` file:
 
 ```gradle
-dependencies {}
-implementation 'Comming Soon'
-implementation 'com.google.firebase:firebase-messaging:20.2.+'
+dependencies {
+    // Salesmate Chat SDK (Firebase-enabled version – Coming soon)
+    implementation 'com.salesmate:salesmate-chat-android-sdk:COMING_SOON'
+
+    // Firebase Cloud Messaging (required for push notifications)
+    implementation 'com.google.firebase:firebase-messaging:20.2.+'
 }
 ```
 
 - Option 2: Install Salesmate Chat SDK without Push Messaging
 
 ```gradle
-dependencies {}
-implementation 'com.github.salesmate:salesmate-chat-android-sdk:1.0.5'
+dependencies {
+    implementation 'com.github.salesmate:salesmate-chat-android-sdk:1.0.5'
 }
 ```
 
@@ -50,18 +53,20 @@ implementation 'com.github.salesmate:salesmate-chat-android-sdk:1.0.5'
 
 </Note>
 
-####**Jitpack** Salesmate Chat SDK is hosted on jitpack. You will need to add jitpack.io to your root build.gradle file.
+#### **Jitpack** Salesmate Chat SDK is hosted on jitpack. You will need to add jitpack.io to your root build.gradle file.
 
 ```gradle
-allprojects {}
-repositories {}
-maven { url 'https://jitpack.io' }
-jcenter() // if required
-}
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        jcenter() // optional, only if needed for older dependencies
+    }
 }
 ```
 
-####**Permissions**- We include the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) permission by default as we need it to make network requests:
+#### **Permissions**- We include the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) permission by default as we need it to make network requests:
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -86,28 +91,36 @@ jcenter() // if required
 `SalesmateChatSettings``(``workspaceId``,` `appKey``,` `tenantId``,` `BuildType``.``DEVELOPMENT``) // Initialization Salesmate Chat SalesmateChatSDK.initialize(this, salesmateChatSettings)`
 
 <Note>
-
-- **Note:**If you don't currently implement a custom application, you’ll need
+**Note:** If you don't currently implement a custom application, you’ll need
  to create one. A custom application looks like this:
-
 </Note>
 
 ```kotlin
-class CustomApplication : Application() {}
-override fun onCreate() {}
-super.onCreate()
+import android.app.Application
+import com.salesmate.chat.sdk.SalesmateChatSDK
+import com.salesmate.chat.sdk.model.SalesmateChatSettings
+import com.salesmate.chat.sdk.model.BuildType
 
-val workspaceId = "your Workspace ID"
-val appKey = "your app key"
-val tenantId = "your Tenant ID"
+class CustomApplication : Application() {
 
-// Configuration
-val salesmateChatSettings =
-SalesmateChatSettings(workspaceId, appKey, tenantId, BuildType.DEVELOPMENT)
+    override fun onCreate() {
+        super.onCreate()
 
-// Initialization Salesmate Chat
-SalesmateChatSDK.initialize(this, salesmateChatSettings)
-}
+        val workspaceId = "your Workspace ID"
+        val appKey = "your app key"
+        val tenantId = "your Tenant ID"
+
+        // Configuration
+        val salesmateChatSettings = SalesmateChatSettings(
+            workspaceId,
+            appKey,
+            tenantId,
+            BuildType.DEVELOPMENT // or PRODUCTION
+        )
+
+        // Initialize Salesmate Chat
+        SalesmateChatSDK.initialize(this, salesmateChatSettings)
+    }
 }
 ```
 
@@ -128,23 +141,25 @@ SalesmateChatSDK.initialize(this, salesmateChatSettings)
 
 ```kotlin
 // Prepare a user's detail object
-val userDetail= UserDetails.create()
+val userDetail = UserDetails.create()
 
-val email="user's email address"
-val firstName="user's first name"
-val lastName="user's last name"
-val userId="user's user id"// Unique id recommended
- userDetail.withEmail(email)
- .withFirstName(firstName)
- .withLastName(lastName)
+val email = "user's email address"
+val firstName = "user's first name"
+val lastName = "user's last name"
+val userId = "user's user id" // Unique id recommended
 
- SalesmateChatSDK.getInstance().login(userId, userDetail, object:LoginListener{}
-override fun onLogin() {}
-// Login successfully
-}
+userDetail.withEmail(email)
+    .withFirstName(firstName)
+    .withLastName(lastName)
 
-override fun onError(salesmateException: SalesmateException) {}
-// Login error }
+SalesmateChatSDK.getInstance().login(userId, userDetail, object : LoginListener {
+    override fun onLogin() {
+        // Login successful
+    }
+
+    override fun onError(salesmateException: SalesmateException) {
+        // Login error
+    }
 })
 ```
 

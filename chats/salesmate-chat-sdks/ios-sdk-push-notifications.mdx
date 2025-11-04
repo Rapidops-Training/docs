@@ -35,30 +35,32 @@ Go to your **Chat Settings** and select **Installation > iOS**. In the **"Enable
 
 To enable your users to receive push notifications from Salesmate Chat via Salesmate Chat SDK for iOS, you must [request permission](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications) to send push notifications and register the device token of your user in your `AppDelegate`.
 
-- **Objective-C**
+**Objective-C**
 
 ```objc
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {}
+- (void)application:(UIApplication *)application 
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
- NSString *deviceTokenString = [[[[deviceToken description]
- stringByReplacingOccurrencesOfString: @"<" withString: @""]
- stringByReplacingOccurrencesOfString: @">" withString: @""]
- stringByReplacingOccurrencesOfString: @" " withString: @""];
+    NSString *deviceTokenString = [[[[deviceToken description]
+        stringByReplacingOccurrencesOfString:@"<" withString:@""]
+        stringByReplacingOccurrencesOfString:@">" withString:@""]
+        stringByReplacingOccurrencesOfString:@" " withString:@""];
 
- [SalesmateChat sendDeviceTokenWith:deviceTokenString];
+    [SalesmateChat sendDeviceTokenWith:deviceTokenString];
 }
 ```
 
-- *Swift**
+**Swift**
 
 ```swift
-func application(\_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {}
+func application(_ application: UIApplication,
+                 didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 
-let deviceTokenString = deviceToken.reduce("") { $0 + String(format: "%02X", $1) }
+    let deviceTokenString = deviceToken.reduce("") { $0 + String(format: "%02X", $1) }
 
-SalesmateChat.sendDeviceToken(with: strGlobalDeviceToken)
+    SalesmateChat.sendDeviceToken(with: deviceTokenString)
 }
-````
+```
 
 At this stage, you should also ensure that you have enabled the Push Notifications and Background Modes capability and enabled Remote notifications in Xcode.
 
@@ -66,67 +68,80 @@ At this stage, you should also ensure that you have enabled the Push Notificatio
 
 ### Handling Salesmate Chat Push Notifications
 
-Handle Salesmate Chat SDK push notifications manually in `didReceiveNotificationResponse` in your `UNUserNotificationCenterDelegate`:**Objective-C**
+Handle Salesmate Chat SDK push notifications manually in `didReceiveNotificationResponse` in your `UNUserNotificationCenterDelegate`:
+
+**Objective-C**
+```objc
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center 
+ didReceiveNotificationResponse:(UNNotificationResponse *)response 
+          withCompletionHandler:(void (^)(void))completionHandler {
+
+    NSDictionary *userInfo = response.notification.request.content.userInfo;
+
+    if (userInfo != nil) {
+        if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo:userInfo]) {
+            [SalesmateChat handlePushNotificationWithUserInfo:userInfo];
+            return;
+        }
+    }
+
+    completionHandler();
+}
+```
+
+**Swift**
+```swift
+func userNotificationCenter(_ center: UNUserNotificationCenter,
+                            didReceive response: UNNotificationResponse,
+                            withCompletionHandler completionHandler: @escaping () -> Void) {
+
+    let dict = response.notification.request.content.userInfo as! [String: AnyObject]
+
+    if SalesmateChat.isSalesmateChatSDKPushNotification(userInfo: dict) {
+        SalesmateChat.handlePushNotification(userInfo: dict)
+        return
+    }
+
+    completionHandler()
+}
+```
+
+Handle Salesmate Chat SDK push notifications manually in `willPresentNotification` in your `UNUserNotificationCenterDelegate`:
+
+**Objective-C**
 
 ```objc
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {}
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center 
+       willPresentNotification:(UNNotification *)notification 
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
 
- NSDictionary *userInfo = response.notification.request.content.userInfo;
+    NSDictionary *userInfo = notification.request.content.userInfo;
 
- if (userInfo != nil) {}
- if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo: userInfo]) {}
- [SalesmateChat handlePushNotificationWithUserInfo: userInfo];
- return;
- }
- }
+    if (userInfo != nil) {
+        if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo:userInfo]) {
+            [SalesmateChat handlePushNotificationWithUserInfo:userInfo];
+            return;
+        }
+    }
 
- completionHandler(UIBackgroundFetchResultNoData);
-
+    completionHandler(UNNotificationPresentationOptionAlert);
 }
 ````
 
-- *Swift**```swift
-func userNotificationCenter(\_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {}
-
-let dict = response.notification.request.content.userInfo as! [String : AnyObject]
-
-if SalesmateChat.isSalesmateChatSDKPushNotification(userInfo: dict) {}
-SalesmateChat.handlePushNotification(userInfo: dict)
-return
-}
-completionHandler()
-
-}
-
-````
-
-Handle Salesmate Chat SDK push notifications manually in `willPresentNotification` in your `UNUserNotificationCenterDelegate`:**Objective-C**
-
-```objc
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {}
-
- NSDictionary *userInfo = notification.request.content.userInfo;
-
- if (userInfo != nil) {}
- if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo: userInfo]) {}
- [SalesmateChat handlePushNotificationWithUserInfo: userInfo];
- return;
- }
- }
-
-}
-````
-
-- *Swift**
+**Swift**
 
 ```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {}
+func userNotificationCenter(_ center: UNUserNotificationCenter,
+                            willPresent notification: UNNotification,
+                            withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 
- let dict = notification.request.content.userInfo as! [String : AnyObject]
+    let dict = notification.request.content.userInfo as! [String: AnyObject]
 
- if SalesmateChat.isSalesmateChatSDKPushNotification(userInfo: dict) {}
- SalesmateChat.handlePushNotification(userInfo: dict)
- return
- }
+    if SalesmateChat.isSalesmateChatSDKPushNotification(userInfo: dict) {
+        SalesmateChat.handlePushNotification(userInfo: dict)
+        return
+    }
+
+    completionHandler([.alert, .sound, .badge])
 }
 ```

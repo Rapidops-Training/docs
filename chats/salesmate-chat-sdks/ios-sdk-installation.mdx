@@ -61,29 +61,45 @@ First, you'll need to get your Salesmate Chat SDK **App key, Workspace Id** and 
 Then initialize Salesmate Chat SDK by importing `SalesmateChatSDK` and adding
 the following to your application delegate:
 
-- *Objective-C**
+**Objective-C**
 
 ```objc
 @import SalesmateChatSDK;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {}
- Configuration *config = [[Configuration alloc] initWithWorkspaceID:@"<Your iOS Workspace Id>" appKey:@"<Your iOS App Key>" tenantID:@"<Your iOS tenantID>" environment: 2];
- [SalesmateChat setSalesmateChatWithConfiguration: config];
+- (BOOL)application:(UIApplication *)application 
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    Configuration *config = [[Configuration alloc] initWithWorkspaceID:@"<Your iOS Workspace Id>"
+                                                                appKey:@"<Your iOS App Key>"
+                                                              tenantID:@"<Your iOS Tenant ID>"
+                                                           environment:2];
+    
+    [SalesmateChat setSalesmateChatWithConfiguration:config];
+    
+    return YES;
 }
 ```
 
-- *Note**:- For environments, 0 for Dev, 1 for Staging, and 2 for Production.
+- **Note**:- For environments, 0 for Dev, 1 for Staging, and 2 for Production.
 
-- *Swift**```swift
+**Swift**
+
+```swift
 import SalesmateChatSDK
 
-func application(\_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {}
+func application(_ application: UIApplication,
+                 didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-let config = Configuration(workspaceID: "Your iOS Workspace Id",appKey: "Your iOS App Key",tenantID: "Your iOS tenantID")
-SalesmateChat.setSalesmateChat(configuration: config)
+    let config = Configuration(workspaceID: "Your iOS Workspace Id",
+                               appKey: "Your iOS App Key",
+                               tenantID: "Your iOS Tenant ID",
+                               environment: 2) // 2 = Development
+
+    SalesmateChat.setSalesmateChat(configuration: config)
+
+    return true
 }
-
-````
+```
 
 ### Login a User
 
@@ -103,29 +119,35 @@ let lastName = "user's last name"
 ```swift
 let userId = "user's user id" // Unique id recommended
 
-SalesmateChat.loginWith(userId: userId, email: email, firstName: firstName, lastName: lastName, completion: { (success, error) in}
-if error == nil {}
-// Login successfully
-} else {}
-// Login error
+SalesmateChat.loginWith(userId: userId,
+                        email: email,
+                        firstName: firstName,
+                        lastName: lastName) { success, error in
+    if error == nil {
+        // Login successfully
+    } else {
+        // Login error
+        print("Login error: \(error!.localizedDescription)")
+    }
 }
-})
 ```
 
 ### Log Out
 
-When users want to log out of your app, simply call:**Objective-C**```objc
+When users want to log out of your app, simply call:
+
+**Objective-C**
+```objc
 // This clears the SalesmateChat SDK's cache of your user's data
-
-- (void)logout {}
+- (void)logout {
  [SalesmateChat logout];
- }
+}
+```
 
-````**Swift**
-
+**Swift**
 ```swift
 // This clears the SalesmateChat SDK's cache of your user's data
-func logout() {}
- SalesmateChat.logout()
+func logout() {
+    SalesmateChat.logout()
 }
-````
+```
