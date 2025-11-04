@@ -9,16 +9,17 @@ for details.
 
 ###  **Topics covered:**
 
-- [Throughput overview](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FSRW046QKH6SVAJRBGDWW3)
-- [What is a Trust Score?](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FSS2XXBR7147JNY9TMAJVM)
-- [How is throughput (MPS) allocated for A2P 10DLC?](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FSSASG0Z3JSXQK8QAR7VGY)
-- [Current status of message throughput in A2P 10DLC](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FSV17XEDZ64PNR0GH7YEMJ)
-- [Declared Use Cases: Message Throughput](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FSVCBY2S4FRRXSCKMNM4MS)
-- [Mixed / Marketing Use Cases: Message Throughput](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FT5S7YZV4QNPYTGZJ6EGGQ)
-- [Starter Use Cases: Message Throughput](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FT6F6HTTZGPZK3QED2CWXM)
-- [Special Use Cases](https://support.salesmate.io/hc/en-us/articles/22586169596441-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US#h_01H9FT6Q5X2RZY23P4XPF04BPD)
+- [Throughput overview](#throughput-overview)
+- [What is a Trust Score?](#what-is-a-trust-score)
+- [How is throughput (MPS) allocated for A2P 10DLC?](#how-is-throughput-mps-allocated-for-a2p-10dlc)
+- [Current status of message throughput in A2P 10DLC](#current-status-of-message-throughput-in-a2p-10dlc)
+- [Declared Use Cases: Message Throughput](#declared-use-cases-message-throughput)
+- [Mixed / Marketing Use Cases: Message Throughput](#mixed--marketing-use-cases-message-throughput)
+- [Sole Proprietor Use Cases: Message Throughput](#sole-proprietor-use-cases-message-throughput)
+- [Special Use Cases](#special-use-cases)
 
-### **Throughput overview** Message sending throughput for SMS is measured in message segments per second (MPS). Each message segment consists of up to 160 [GSM-7 encoded characters](https://www.twilio.com/docs/glossary/what-is-gsm-7-character-encoding), so an SMS with more characters and/or different character encoding can be comprised of multiple segments. In the past, Twilio’s MPS for US long code numbers was set at a standard 1 MPS per number, shared across all mobile carriers. This rate is changing under the new A2P 10DLC service. Going forward, MPS throughput will be determined based on the sender's Brand type, Campaign type (use case), and Trust Score (for Standard Brands).
+### **Throughput overview** 
+Message sending throughput for SMS is measured in message segments per second (MPS). Each message segment consists of up to 160 [GSM-7 encoded characters](https://www.twilio.com/docs/glossary/what-is-gsm-7-character-encoding), so an SMS with more characters and/or different character encoding can be comprised of multiple segments. In the past, Twilio’s MPS for US long code numbers was set at a standard 1 MPS per number, shared across all mobile carriers. This rate is changing under the new A2P 10DLC service. Going forward, MPS throughput will be determined based on the sender's Brand type, Campaign type (use case), and Trust Score (for Standard Brands).
 
 ### **What is a Trust Score?
 
@@ -48,9 +49,11 @@ In general, smaller organizations and those with less business presence will rec
 
 - ** No.
 
-### **Current status of message throughput in A2P 10DLC** The Trust Score you receive (for Standard Brands), and the Campaign type you select, will dictate the throughput of your long code numbers toward AT & T, Verizon, and T-Mobile. Please review the respective table below based on your selected Campaign type for specific MPS information.
+### **Current status of message throughput in A2P 10DLC** 
+The Trust Score you receive (for Standard Brands), and the Campaign type you select, will dictate the throughput of your long code numbers toward AT & T, Verizon, and T-Mobile. Please review the respective table below based on your selected Campaign type for specific MPS information.
 
-### **Declared Use Cases: Message Throughput** A Declared use case means you have chosen one specific non-marketing use case (examples: 2FA, Account Notifications, etc.). For a full list, see [List of Campaign Types and Use Cases](https://support.salesmate.io/knowledge/articles/22591695054105/en-us?brand_id=1467849).
+### **Declared Use Cases: Message Throughput** 
+A Declared use case means you have chosen one specific non-marketing use case (examples: 2FA, Account Notifications, etc.). For a full list, see [List of Campaign Types and Use Cases](https://support.salesmate.io/knowledge/articles/22591695054105/en-us?brand_id=1467849).
 
 | Trust Score | Total SMS MPS toward major* US networks | AT & T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
 | --- | --- | --- | --- | --- |
@@ -61,7 +64,8 @@ In general, smaller organizations and those with less business presence will rec
 
 *Your messages toward all minor US carriers (small independent carriers comprising less than 5% of the overall mobile market share) will be based on the MPS rate as you receive toward each major network, with a maximum of 30 MPS.
 
-### **Mixed / Marketing Use Cases: Message Throughput** Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers, or for marketing. Different throughput levels are allocated for Mixed / Marketing use cases than for Declared use cases.
+### **Mixed / Marketing Use Cases: Message Throughput**
+Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers, or for marketing. Different throughput levels are allocated for Mixed / Marketing use cases than for Declared use cases.
 
 Please note, in addition to the "Mixed / Marketing" use case, there is a separate Campaign use case designated as "Low Volume Mixed" – this option has a lower monthly fee than a standard Campaign, but is fixed at the lowest throughput tier below, regardless of your Trust Score.
 
@@ -75,7 +79,8 @@ Please note, in addition to the "Mixed / Marketing" use case, there is a separat
 
 *Your messages toward all minor US carriers (small independent carriers comprising less than 5% of the overall mobile market share) will be based on the MPS rate as you receive toward each major network, with a maximum of 10 MPS.
 
-### **Sole Proprietor Use Cases: Message Throughput** Sole Proprietor Brands are available for individuals or small businesses without a tax ID sending low-volume messaging. Sole proprietor brands are limited to 1 Campaign, 1 phone number per Campaign, and a throughput limit of 1 MPS. Sole Proprietor Campaigns do not have a Trust Score and have a fixed throughput as well as limits of 1000 msg/day (T-Mobile) and 15 msg/minute (AT & T) per Campaign. If more throughput is desired, the business should be registered as a Standard Brand.
+### **Sole Proprietor Use Cases: Message Throughput** 
+Sole Proprietor Brands are available for individuals or small businesses without a tax ID sending low-volume messaging. Sole proprietor brands are limited to 1 Campaign, 1 phone number per Campaign, and a throughput limit of 1 MPS. Sole Proprietor Campaigns do not have a Trust Score and have a fixed throughput as well as limits of 1000 msg/day (T-Mobile) and 15 msg/minute (AT & T) per Campaign. If more throughput is desired, the business should be registered as a Standard Brand.
 
 | Total SMS MPS toward major US networks ** | AT & T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
 | --- | --- | --- | --- |
@@ -85,7 +90,8 @@ Please note, in addition to the "Mixed / Marketing" use case, there is a separat
 
 - ** A Sole Prop Campaign can contain up to 1 Twilio US/Canada long code number. All numbers will share 0.25 MPS toward AT & T, but each number will get 1 MPS toward T-Mobile and 1 MPS toward Verizon. This adds up to a maximum of 2.25 MPS toward the major US networks.
 
-### **Special Use Cases** Special use cases are a distinct category that encompasses specific campaign types. In some cases, these will require special review by carriers. For details, see [Special Use Cases for A2P 10DLC](https://support.twilio.com/hc/en-us/articles/4402972441243-Special-Use-Cases-for-A2P-10DLC).
+### **Special Use Cases** 
+Special use cases are a distinct category that encompasses specific campaign types. In some cases, these will require special review by carriers. For details, see [Special Use Cases for A2P 10DLC](https://support.twilio.com/hc/en-us/articles/4402972441243-Special-Use-Cases-for-A2P-10DLC).
 
 Please note that Trust Score will not impact messages per second (MPS) throughput for Special use cases.
 
