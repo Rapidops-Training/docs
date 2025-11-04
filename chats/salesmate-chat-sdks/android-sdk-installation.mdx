@@ -2,16 +2,16 @@
 title: "Android SDK - Installation"
 ---
 Install Salesmate Chat SDK to communicate with your Customer on your Android app. Salesmate Chat for Android supports API 21 and above.
-
 [Click here to learn about navigation to Android - Installation in Salesmate.](#login-a-user)
 
 <Note>
 
-- **Note:** We recommend using the latest available `compileSdkVersion`.
+**Note:** We recommend using the latest available `compileSdkVersion`.
 
 </Note>
 
-- **Topics covered:** - [Install Salesmate Chat
+###  **Topics covered:** 
+- [Install Salesmate Chat
 SDK](#install-salesmate-chat-sdk)
 - [Initialize Salesmate
 Chat](#initialize-salesmate-chat)
@@ -20,7 +20,7 @@ User](#login-a-user)
 - [How to Logout a
 User](#how-to-logout-a-user)
 
-### Install Salesmate Chat SDK
+###  Install Salesmate Chat SDK
 
 If you’re new to Salesmate Chat, you’ll need to [Configure the Salesmate Chat](https://support.salesmate.io/hc/en-us/articles/360058369732) in your Salesmate account. Then you have three options:
 
@@ -48,12 +48,12 @@ dependencies {
 
 <Note>
 
-- **Important:** If you choose this method you won’t be able to send push
+**Important:** If you choose this method you won’t be able to send push
  messages.
 
 </Note>
 
-#### **Jitpack** Salesmate Chat SDK is hosted on jitpack. You will need to add jitpack.io to your root build.gradle file.
+###  **Jitpack** Salesmate Chat SDK is hosted on jitpack. You will need to add jitpack.io to your root build.gradle file.
 
 ```gradle
 allprojects {
@@ -66,7 +66,7 @@ allprojects {
 }
 ```
 
-#### **Permissions**- We include the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) permission by default as we need it to make network requests:
+###  **Permissions**- We include the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) permission by default as we need it to make network requests:
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -76,7 +76,7 @@ allprojects {
 
 `<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>`
 
-### Initialize Salesmate Chat
+###  Initialize Salesmate Chat
 
 - First, you'll need to get your Salesmate Chat **App key, Workspace Id, and Tenant Id**. To find these, just select the 'Android Tab' option in your Salesmate CRM Messenger Settings Installation section.
 
@@ -84,12 +84,12 @@ allprojects {
 
 - Then, initialize Salesmate Chat SDK by calling the following in the `onCreate()` method of your application class:
 
-`val workspaceId` `=` `"your Workspace ID"`
-`val appKey` `=` `"your app key``"`
-`val tenantId` `=` `"your Tenant ID``"`// Configuration
-`val salesmateChatSettings` `=`
-`SalesmateChatSettings``(``workspaceId``,` `appKey``,` `tenantId``,` `BuildType``.``DEVELOPMENT``) // Initialization Salesmate Chat SalesmateChatSDK.initialize(this, salesmateChatSettings)`
-
+```
+val workspaceId = "your Workspace ID"
+val appKey = "your app key"
+val tenantId = "your Tenant ID"// Configuration
+val salesmateChatSettings = SalesmateChatSettings(workspaceId,appKey,tenantId,BuildType.DEVELOPMENT) // Initialization Salesmate Chat SalesmateChatSDK.initialize(this, salesmateChatSettings)
+```
 <Note>
 **Note:** If you don't currently implement a custom application, you’ll need
  to create one. A custom application looks like this:
@@ -128,7 +128,7 @@ class CustomApplication : Application() {
 
 `<application android:name=".CustomApplication"> </application>`
 
-### Login a User
+###  Login a User
 
 - You’ll now need to log in to users before you can communicate with them and track their activity in your app.
 
@@ -163,7 +163,7 @@ SalesmateChatSDK.getInstance().login(userId, userDetail, object : LoginListener 
 })
 ```
 
-### How to Logout a User
+###  How to Logout a User
 
 - When users want to log out of your app, simply call logout like so:
 

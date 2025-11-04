@@ -5,12 +5,12 @@ Single sign-on (SSO) is an authentication method that enables users to securely 
 
 If you have a Salesmate _Enterprise_ account and have SSO set up for your business, you can require users to log in to Salesmate using their SSO credentials.
 
-- **Note:** Available in Pro and above Plans (For Legacy Accounts: Growth and above Plans).
+**Note:** Available in Pro and above Plans (For Legacy Accounts: Growth and above Plans).
 
 This setup process should be done by an IT administrator with experience creating applications in your identity provider account.
 
 ---
-### Enable SSO inside Salesmate
+###  Enable SSO inside Salesmate
 
 1. Navigate to the **Profile Icon** on the top right corner.
 2. Click on **Setup**.
@@ -31,7 +31,7 @@ This setup process should be done by an IT administrator with experience creatin
 ![mceclip2.png](./images/mceclip2-2.png)
 
 ---
-### Force SSO Login (Optional)
+###  Force SSO Login (Optional)
 
 If you want every user to log in via SSO only, follow these steps:
 
@@ -52,14 +52,14 @@ Once the SSO is enabled, you can add the profiles that you want to exclude from 
 ![mceclip4.png](./images/mceclip4-2.png)
 
 ---
-### What happens when you enable SSO login?
+###  What happens when you enable SSO login?
 
 - If **Forced SSO Login** is enabled, users can log in **only via your identity provider**.
 - If **Forced SSO Login** is enabled, login via **password, 2FA, or Google** will **not work**.
 - If **SSO is enabled but not forced**, users can still log in via **password, 2FA, and Google**.
 
 ---
-### Configure SSO in Azure Active Directory
+###  Configure SSO in Azure Active Directory
 
 1. Log in to your **Azure Active Directory**.
 2. Go to **Enterprise Applications** in the left sidebar.
@@ -76,32 +76,32 @@ Additionally, it provides options to:
 - Enable self-service
 
 ---
-### Assign Users and Groups
+###  Assign Users and Groups
 
 Under **Assign users and groups**, you can specify which users or groups will have access to this application.
 
 ---
-### Set up Single Sign-On (SAML)
+###  Set up Single Sign-On (SAML)
 
 1. Under **Set up single sign-on**, select **SAML**.
 2. Under **Set up Single Sign-on with SAML**, configure the following:
 
-### Basic SAML Configuration
+###  Basic SAML Configuration
 
 - Click **Edit** and copy the information from the Salesmate SSO page.
 - Copy the **Identifier ID (Issuer / Service Provider Issuer ID)**and **Reply URL (Assertion Consumer Service URL / ACS URL)**.
 
-### User Attributes & Claims
+###  User Attributes & Claims
 
 - Click **Edit** and **Add new claim**.
 - - **Name:** Email
 
 - **Source attribute:** user.mail
 
-- **Note:** `email` is the only required claim. Other claims are optional and can be added to provide more information in case of connection failures.
+**Note:** `email` is the only required claim. Other claims are optional and can be added to provide more information in case of connection failures.
 
 ---
-### SAML Signing Certificate
+###  SAML Signing Certificate
 
 1. Download the **Federation Metadata XML**.
 2. Open it in **Notepad**.
@@ -112,7 +112,7 @@ Under **Assign users and groups**, you can specify which users or groups will ha
 > 💡 Tip: To avoid MDX parsing issues, do not remove the backticks around tags.
 
 ---
-### Set up Salesmate
+###  Set up Salesmate
 
 1. Copy the **Login URL** to the **SAML Login URL** field on the SSO page in Salesmate.
 2. Copy the **Logout URL** to the **Logout URL** field on the SSO page in Salesmate.
@@ -120,7 +120,7 @@ Under **Assign users and groups**, you can specify which users or groups will ha
 4. You can also test this by clicking on the **Test** button from Azure’s Single Sign-on page under **Test single sign-on with Salesmate**.
 
 ---
-### Known Errors & Solutions
+###  Known Errors & Solutions
 
 - **Error:** _Malformed request detected!!!_
 - **Solution:** Check if the **Certificate key** is correctly entered.

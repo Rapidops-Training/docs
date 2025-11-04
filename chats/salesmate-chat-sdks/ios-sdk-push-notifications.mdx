@@ -3,35 +3,31 @@ title: "iOS SDK - Push Notifications"
 ---
 To enable Salesmate Chat SDK push notifications, you first need to create a private key, upload it to the Salesmate **(Web app >> Chat >> Chat Settings >> Installation >> iOS)**, and enter details about your app.
 
-### **Topics covered:**
+###  **Topics covered:**
 
 - [Create a Private Key](#create-a-private-key)
-
 - [Enable in Salesmate Chat SDK](#enable-in-salesmate-chat-sdk)
-
 - [Register Device Tokens](#register-device-tokens)
-
 - [Handling Salesmate Chat Push Notifications](#handling-salesmate-chat-push-notifications)
 
-### Create a Private Key
+###  Create a Private Key
 
 Using these [instructions](#enable-in-salesmate-chat-sdk), create and download a private key with APNs enabled. Note the Key ID for the next step.
 Alternatively, use an existing private key with APNs enabled.
 
-### Enable in Salesmate Chat SDK
+###  Enable in Salesmate Chat SDK
 
 Go to your **Chat Settings** and select **Installation > iOS**. In the **"Enable Push Notifications"** section:
 
 - Upload the .p8 file you just created
 - Enter the Key ID from Step 1
 - Enter the [Bundle ID](https://developer.apple.com/account/resources/identifiers) for the app you want to send notifications to
-- Enter the
-- [Apple team ID](#create-a-private-key)
+- Enter the [Apple team ID](#create-a-private-key)
 - Click Save **Enable Push Notifications** To send push notifications through Salesmate Chat SDK, add the .p8 file, Key ID, Bundle ID, and Apple team ID:
 
 <img src="images/007-enable-push-notifications-10009466198425.png" alt="Enable Push Notifications" />
 
-### Register Device Tokens
+###  Register Device Tokens
 
 To enable your users to receive push notifications from Salesmate Chat via Salesmate Chat SDK for iOS, you must [request permission](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications) to send push notifications and register the device token of your user in your `AppDelegate`.
 
@@ -66,7 +62,7 @@ At this stage, you should also ensure that you have enabled the Push Notificatio
 
 <img src="https://quip.com/blob/YcQAAAL46hk/9wepshljJeXC413jSesrDQ?a=DyPlaIinld2WnJIiSsiD4aRanBuHReykCzMMgTSjEg0a" alt="Enable Push Notifications and Background Modes"/>
 
-### Handling Salesmate Chat Push Notifications
+###  Handling Salesmate Chat Push Notifications
 
 Handle Salesmate Chat SDK push notifications manually in `didReceiveNotificationResponse` in your `UNUserNotificationCenterDelegate`:
 

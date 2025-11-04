@@ -1,15 +1,14 @@
 ---
 title: "How to Add Viewed Product Tracking"
 ---
-- *Note**: In order to track analytics, it is necessary to have the Chat add-on included in your plan.
+**Note**: In order to track analytics, it is necessary to have the Chat add-on included in your plan.
 
 Viewed Product snippet tracks when customers view specific products on your site, and to enable this tracking you must add a code snippet to your BigCommerce Theme file. Instructions for installing this snippet are described below.
-
 - First, you need to ensure that web tracking is enabled for your BigCommerce website and to do that you need to install the main script on all web pages.
 - Navigate to **Storefront > My Themes** from your BigCommerce dashboard.
 - From the current theme, click the **Advanced Settings** dropdown and click **Edit Theme Files.
 
-- **This opens the web editor.
+- **This opens the web editor**.
 - Navigate to **templates > pages** and scroll down to open any page and the bottom of the page, paste the below code, and then click **Save & apply all files**.
 - For this snippet to work correctly, repeat step 4 and add it to all of your product pages.
 
@@ -63,18 +62,18 @@ loadwidget("load_widget", "Widget Loading...!");
 </Note>
 
 - Navigate to **Conversations Icon** on the left menu bar
-- Click on **Chats**- Head to **Inbox** **Settings** on bottom left.
+- Click on **Chats**
+- Head to **Inbox** **Settings** on bottom left.
 
 <img src="images/001-salesmate-chat-settings-navigation-50772241567513.png" alt="Salesmate chat settings navigation" />
 - Here, click on **Channel** and then locate the **Salesmate Chat** channel.
-From the **Actions** menu, select **Edit**. - Navigate to the **
-Installation **section - Copy the** workspace_id **,** app_key **, &**
-tenant_id** from the code snippet of the web installation.
+From the **Actions** menu, select **Edit**. 
+- Navigate to the **Installation** section 
+- Copy the **workspace_id ,app_key** & **tenant_id** from the code snippet of the web installation.
 
 <img src="images/002-salesmate-chat-installation-settings-50772263974553.png" alt="Salesmate chat installation settings" />
-- From your BigCommerce admin, navigate to **templates > pages** and click to
-open the product.html page. - Scroll down to the bottom of this page, and paste
-the below code.
+- From your BigCommerce admin, navigate to **templates > pages** and click to open the product.html page. 
+- Scroll down to the bottom of this page, and paste the below code.
 
 ```javascript
 <script type="text/javascript">

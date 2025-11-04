@@ -2,37 +2,31 @@
 title: "iOS SDK - Installation"
 ---
 Install Salesmate Chat SDK to communicate with your Customer on your iOS app. The SalesmateChat for iOS library supports iOS 13+ and requires Xcode 13 to build.
-[Click here to learn about navigation to iOS - Installation](https://support.salesmate.io/hc/en-us/articles/7972525508633)
+[Click here to learn about navigation to iOS - Installation](/chats/installing-salesmate-chats/installing-chats-on-your-ios-app)
 .
 
-- **Topics covered:**
+###  **Topics covered:**
 
 - [Install Salesmate Chat](#install-salesmate-chat)
-
 - [Update Info.plist](#update-infoplist)
-
 - [Initialize Salesmate Chat](#initialize-salesmatechat)
-
 - [Login a User](#login-a-user)
-
 - [Log Out](#log-out)
 
-### Install Salesmate Chat
+# Install Salesmate Chat
 
-####**CocoaPods** Cocoapods 1.10 is required to install Salesmate Chat SDK.
-Add Salesmate Chat SDK to your Podfile and run `pod install`
-
+**CocoaPods** Cocoapods 1.10 is required to install Salesmate Chat SDK.
+- Add Salesmate Chat SDK to your Podfile and run `pod install`
 ```
 target
 ```
 
-####**Swift Package Manager** Add as following Swift Package Repository in Xcode and follow the instructions to add Salesmate Chat SDK as a Swift Package.
+**Swift Package Manager** Add as following Swift Package Repository in Xcode and follow the instructions to add Salesmate Chat SDK as a Swift Package.
 
 https://github.com/salesmate/salesmate-chat-ios
 
 <img src="images/001-swift-package-manager-10009369292825.jpg" alt="Swift Package Manager" />
-####**Install Salesmate Chat SDK manually**- [Download SalesmateChat for iOS
-and extract the
+**Install Salesmate Chat SDK manually** - [Download SalesmateChat for iOS and extract the
 zip.](https://github.com/salesmate/SalesmateChat-iOS/archive/refs/heads/main.zip)
 
 <img src="images/002-download-salesmate-chat-sdk-10009369102745.png" alt="Download Salesmate Chat SDK" />
@@ -46,14 +40,14 @@ Content” section of the “General” tab.
 
 <img src="images/004-embed-salesmate-chat-sdk-10009394372761.png" alt="Embed Salesmate Chat SDK" />
 
-### Update Info.plist
+###  Update Info.plist
 
 Photo Library usage:
 With the exception of apps that only support iOS 14+, when installing Salesmate Chat SDK, you'll need to make sure that you have a **NSPhotoLibraryUsageDescription** entry in your **Info.plist**.
 
 For apps that support iOS 13, this is required by Apple to access the photo library. It is necessary when installing Salesmate Chat SDK due to the image upload functionality. Users will only be prompted for photo library permission when they tap the image upload button.
 
-### Initialize SalesmateChat
+###  Initialize SalesmateChat
 
 First, you'll need to get your Salesmate Chat SDK **App key, Workspace Id** and **Tenant Id**. To find these, just select the 'iOS Tab' option in your Salesmate CRM Messenger Settings Installation section.
 
@@ -101,7 +95,7 @@ func application(_ application: UIApplication,
 }
 ```
 
-### Login a User
+###  Login a User
 
 You’ll now need to log in to your users before communicating with them and tracking their activity in your app.
 
@@ -132,7 +126,7 @@ SalesmateChat.loginWith(userId: userId,
 }
 ```
 
-### Log Out
+###  Log Out
 
 When users want to log out of your app, simply call:
 

@@ -3,13 +3,13 @@ title: "Adding MCP Client Integration in AI Pilots\\"
 ---
 Salesmate allows you to connect with third-party **MCP (Model Context Protocol)** servers to extend tool capabilities within your AI Pilots dynamically. These integrations enable secure, real-time, and server-based tool execution, either through predefined providers or custom connections.An **MCP Integration** lets your AI Pilots call external tools hosted on remote servers via a standard protocol. Once connected, the MCP server makes available one or more tools (via metadata or capabilities endpoints) that you can use in your AI workflows without needing to define every input/output manually.
 
-### **Topics covered:**
+###  **Topics covered:**
 
 - [Adding a New MCP Integration](#adding-a-new-mcp-integration)
 - [Using Tools from an MCP Integration](#using-tools-from-an-mcp-integration)
 - [Removing an MCP Integration](#removing-an-mcp-integration)
 
-### Adding a New MCP Integration
+###  Adding a New MCP Integration
 
 Follow the steps below to connect your custom MCP server:
 
@@ -28,7 +28,7 @@ A pop-up will appear asking for **New Integration**:
 
 ![mceclip0.png](./images/mceclip0-4.png)
 
-### Custom MCP
+###  Custom MCP
 
 - **Thumbnail:** Upload an image representing the brand you're integrating with. The image validations are similar to function or pilot avatars.
 
@@ -52,7 +52,7 @@ A pop-up will appear asking for **New Integration**:
 
 Once done, click **Save**.
 
-### Shopify:
+###  Shopify:
 
 Shopify will help you to integrate your online store with Salesmate AI Pilot. You need to provide the Store URL to connect your Shopify account in AI Pilots.
 
@@ -66,7 +66,7 @@ Once it gets connected, you can get the following capabilities:- **Product Disco
 
 - **Order Management:** Let customers track their order status and initiate return or refund requests with ease.
 
-### Stripe:
+###  Stripe:
 
 Use natural language commands to manage payments, customers, and refunds seamlessly via the Stripe MCP server. You need to provide the **API Key (Secret key)**from the Stripe to connect in Salesmate.
 
@@ -110,7 +110,7 @@ Once it gets connected, you can get the following capabilities:**Create Customer
 
 - **List Coupons**: Retrieves a list of all created coupons in Stripe.
 
-### Using Tools from an MCP Integration
+###  Using Tools from an MCP Integration
 
 Once connected:
 
@@ -126,7 +126,7 @@ By clicking on the Integrations, you will be able to see the MCP servers that we
 
 - *Once done, hit** Save **.
 
-### Removing an MCP Integration
+###  Removing an MCP Integration
 
 To remove an MCP server:
 
@@ -136,4 +136,4 @@ Go to **AI Pilots > Integrations (MCP)**. Use the search bar to find your MCP in
 
 ![mceclip4.png](./images/mceclip4-4.png)
 
-- **Note:**If any agent is using a tool from this integration, deletion will be blocked: “You cannot remove the integration \[MCP Server Name\]. Its tools are being used in the following places. Please remove the dependencies to proceed with the removal.”
+**Note:**If any agent is using a tool from this integration, deletion will be blocked: “You cannot remove the integration \[MCP Server Name\]. Its tools are being used in the following places. Please remove the dependencies to proceed with the removal.”

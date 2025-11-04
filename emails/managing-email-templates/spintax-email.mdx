@@ -3,24 +3,24 @@ title: "Spintax Email"
 ---
 Spintax (short for "spinning syntax") is a method used to create multiple variations of an email by using a specific format that allows for randomization. This technique is commonly used in email marketing, cold outreach, and automation tools to personalize messages while avoiding spam filters.
 
-### How Spintax Works
+###  How Spintax Works
 
 | Spintax uses curly brackets {} to group different variations of words or phrases, separated by a vertical bar | . When processed by an email automation tool, one random variation is selected for each instance. |
 
-### You can use Spintax within :
+###  You can use Spintax within :
 
 Email TemplateJourney EmailsCampaigns TemplatesSequences
 
-### Operations where Spintax can be applied :
+###  Operations where Spintax can be applied :
 
 Bulk EmailEmail SequencesEmail CampaignSmart Flows
 
-### Example: 1
+###  Example: 1
 
 | &#123;Hello | Hi | Howdy&#125; John,I hope you're having a &#123;great | wonderful | fantastic&#125; day!I wanted to reach out regarding &#123;our new product | an exciting opportunity | a potential collaboration&#125;. Looking forward to your thoughts!Best, |
 James
 
-### Example: 2
+###  Example: 2
 
 | &#123;Hi | Hello | Hey&#125; &#123;&#123;Contact.firstName&#125;&#125; ,I hope you're having a &#123;great | productive | fantastic&#125; &#123;day | week&#125;!I'm reaching out because I noticed &#123;you’re scaling your team | your company is growing | you’ve been expanding in your industry&#125;, and I thought &#123;Salesmate | our CRM platform | our smart automation tools&#125; could &#123;be a good fit | help streamline your workflows | support your sales process&#125;.With &#123;Salesmate | our platform&#125;, you can: |
 | \- &#123;Automate repetitive sales tasks | Run personalized outreach at scale | Track your entire sales pipeline effortlessly&#125; |
@@ -30,13 +30,13 @@ James
 
 Each time this email is generated, it will create a unique version by randomly selecting one option from each set.
 
-### Why Use Spintax?
+###  Why Use Spintax?
 
 Personalization: Each recipient receives a slightly different version of the email.
 Avoiding Spam Filters: Reduces the risk of being flagged as spam due to repetitive content.
 Efficiency: Automates email variation creation without manually rewriting each message.
 
-### Examples
+###  Examples
 
 ```
 const spintax \= require('spintax-extended');

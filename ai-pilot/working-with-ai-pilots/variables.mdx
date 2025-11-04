@@ -3,7 +3,7 @@ title: "Variables\\"
 ---
 - *Variables** are internal data holders used by [**AI Pilots**](https://support.salesmate.io/hc/en-us/articles/45803043910937) to temporarily store and manipulate information during a conversation. Unlike entities, which capture data directly from the user (e.g., name, email, or query), variables are updated internally using flows, actions, or API calls.They play a critical role in AI Pilots by allowing you to store, manage, and utilize dynamic data during conversations. Whether you're fetching data from an API, calculating values, or referencing previous user inputs, variables make it possible.
 
-### **Topics covered:**
+###  **Topics covered:**
 
 - [Components of a Variable](#components-of-a-variable)
 - [System Default Variables](#system-default-variables)
@@ -13,7 +13,7 @@ title: "Variables\\"
 - [Delete a Variable](#delete-a-variable)
 - [Practical Use Case](#practical-use-case)
 
-### Components of a Variable
+###  Components of a Variable
 
 Each variable includes the following attributes
 
@@ -26,9 +26,9 @@ Each variable includes the following attributes
 - **Type:** You can choose a type from the drop-down menu. It will have the following types:
  Text: Stores strings (e.g., names, emails)Number: Stores numeric values (e.g., price, quantity)Date: Stores date valuesDateTime: Stores both date and time **Default Value (Optional):** You can provide a default value for the variable.
 
-- **Note:** Variables in AI Pilots are global and distinct from SmartFlow’s local variables.
+**Note:** Variables in AI Pilots are global and distinct from SmartFlow’s local variables.
 
-### System Default Variables
+###  System Default Variables
 
 These pre-defined variables are available in every AI Pilot and cannot be edited or deleted
 
@@ -40,7 +40,7 @@ These pre-defined variables are available in every AI Pilot and cannot be edited
 | conversation_user_id | Unique user identifier | abc123xyz456 |
 | conversation_history | Stores the last 10 user-AI messages | AI Pilot: How can I help?" user: What's the weather today?" AI Pilot: The weather is sunny and 25°C. |
 
-### Create a Variable
+###  Create a Variable
 
 To create a new Variable, you will need to follow the steps below:
 
@@ -58,9 +58,9 @@ Fill in the fields like **Name, Description, Type, and Default Value**.
 
 Click **Save**.
 
-- **Note:**An entity name and a variable name cannot be the same.These variables will be accessible only in the flows, intents, & prompts created within the AI Pilot.
+**Note:**An entity name and a variable name cannot be the same.These variables will be accessible only in the flows, intents, & prompts created within the AI Pilot.
 
-### View Variables
+###  View Variables
 
 To view the variables for an AI Pilot, please follow the steps below:
 
@@ -68,7 +68,7 @@ Navigate to **AI Pilot** under **More**. Select the correct AI Pilot.Click on **
 
 ![mceclip6.png](./images/mceclip6-4.png)
 
-### Edit a Variable
+###  Edit a Variable
 
 To edit a variable, please follow the steps below:
 
@@ -78,7 +78,7 @@ Navigate to **AI Pilot** under **More**. Select the correct AI Pilot.Click on **
 
 ![mceclip5.png](./images/mceclip5-4.png)
 
-### Delete a Variable
+###  Delete a Variable
 
 To delete a variable, please follow the steps below:
 
@@ -92,9 +92,9 @@ A confirmation window will pop up.
 
 Click on **Yes**.
 
-- **Note:**If the variable is used anywhere, then it will give you the error message and block you from deleting it.
+**Note:**If the variable is used anywhere, then it will give you the error message and block you from deleting it.
 
-### Practical Use Case
+###  Practical Use Case
 
 You can use Variables to store the delivery address provided by the customer within the chat conversation.Here are the steps on how you can do that.
 

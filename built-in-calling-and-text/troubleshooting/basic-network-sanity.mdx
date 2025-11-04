@@ -14,7 +14,7 @@ Unable to initiate a call from Salesmate.Lack of audio or only one-way audio.Ca
 
 There could be multiple reasons for all the above scenarios to hinder a clean call experience. The below step by step troubleshooting cues can help you weed out the most basic issues instantly.
 
-### Network Connectivity Test
+###  Network Connectivity Test
 
 This helps you identify and troubleshoot all network-related concerns proactively.
 
@@ -25,7 +25,7 @@ Go to [https://networktest.twilio.com/](#network-connectivity-test). Run Twilio
 
 - **ICE error:**Next is the ICE error which is the most common issue that you might encounter. (In this scenario, your call will be disconnected within 10 secs. The possible solution for this is to Whitelist the IPs and to open up the respective ports.Next step is to check the **number of simultaneous Twilio connections** that Twilio can support within your network. For example, if a team of 20 users use Salesmate calling at the same time and if the result shows that Twilio supports only 12 simultaneous calls, there would be time lags, call quality issues, one-way audio issues and high possibility of call drops.Ensure that the network test is run on every agent’s local machine, and specifically make it mandatory for ones who report facing call quality issuesYou also need to check if the local machine is connected through **LAN or the wireless channel**(LAN is always the preferred option).Please **increase** the **network bandwidth** if needed. This is a crucial step that would solve most of your call quality issuesAlso, please do check if there are other applications(of lesser priority like Youtube, Chrome, etc.) consuming the available bandwidth. If that’s the case, please ask your network/IT team to **deprioritize the other applications and give maximum priority to call and call related activities** to have a smooth call experience.Check for possible **Jitter and Packet loss** issues( Ideally, there should be zero packet loss and jitter should be less than 3s). Understand how to solve this in detail from [here](https://support.twilio.com/hc/en-us/articles/223133127-What-are-Twilio-Client-s-Deployment-Best-Practices-).While all the above-mentioned precautions are to be considered important, you can ignore “Group Room failed errors” since they are common and not a big issue.The test will also ask you to enable your microphone. If you don’t allow your microphone to be tested, an error message will be thrown by the test.
 
-### Network Speed Test
+###  Network Speed Test
 
 Check the network speed with [speedtest.net](#network-connectivity-test) and send a screenshot of the findings to **support@salesmate.io** or over **chat**.
 
@@ -61,7 +61,7 @@ For the static IP range for UDP, please open up the traffic to the following CID
 | us2-ix | US West Coast (Oregon) over Interconnect exchange in San Jose | 67.213.136.64 - 67.213.136.127 | 67.213.136.64/26 | 443 (Signaling), 10,000 - 20,000 (Media) |
 | ie1-ix | Ireland over Interconnect exchange in London | 185.187.132.64 - 185.187.132.127 | 185.187.132.64/26 | 443 (Signaling), 10,000 - 20,000 (Media) |
 
-### Best practices to have a great call experience
+###  Best practices to have a great call experience
 
 - **Browser preference:** Use a Chrome/Firefox browser
 

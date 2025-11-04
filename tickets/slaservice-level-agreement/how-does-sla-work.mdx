@@ -19,12 +19,12 @@ title: "How does SLA work"
 
 - [SLA time Increases](#sla-time-increases)
 
-### SLA time Decreases
+###  SLA time Decreases
 
 - For example, if a ticket with a creation timestamp of 12 December at 2 PM is initially set to HIGH priority with a resolution time target of 1 hour (by 3 PM), and the priority is later updated to URGENT at 2:35 PM, the SLA is recalculated with a new resolution time of 12 December at 2:30 PM
 - As this recalculation places the ticket's resolution time in the past, indicating a violation of the SLA, an email notification will be promptly triggered to address the violation.
 
-### SLA time Increases
+###  SLA time Increases
 
 - In the described SLA configuration, updating the ticket priority to Normal triggers a recalculation, setting the new SLA deadline to 12 December at 4 PM. Subsequently, an email notification for SLA violation will be dispatched at 4 PM if the issue remains unresolved
 - If the priority is updated before 3 PM, no violation email is sent for the initial 3 PM SLA, but it will be dispatched for the 4 PM SLA if not resolved. If the priority is changed at 3:30 PM after the initial violation, a subsequent violation email will be sent for the 4 PM SLA if the ticket persists unresolved.
