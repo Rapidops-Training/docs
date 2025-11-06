@@ -1,50 +1,50 @@
 ---
 title: "Sending Transactional Emails using Journey Emails"
-description: "Transactional emails are system-triggered communications sent to contacts based on a specific action, such as order confirmations, password resets, or..."
 ---
-
 Transactional emails are system-triggered communications sent to contacts based on a specific action, such as order confirmations, password resets, or alerts. Here's how you can create and send them effectively in your Smart Flow.
 
-### Topics covered:
+###  **Topics covered:**
 
-[Difference between Transactional and Non Transactional Emails](https://support.salesmate.io/hc/en-us/articles/48071913159449-Sending-Transactional-Emails-using-Journey-Emails#h_01K06XE95E30JM87QZQAX3X7GY)[How to Create a Transactional Email Template](https://support.salesmate.io/hc/en-us/articles/48071913159449-Sending-Transactional-Emails-using-Journey-Emails#h_01JZBBB1WT1X8M4KEJ0KA5PMZ2)[How to Send Transactional Emails via Smart Flow](https://support.salesmate.io/hc/en-us/articles/48071913159449-Sending-Transactional-Emails-using-Journey-Emails#h_01JZBBB1WTW5T66YG27MSGWGH3)
+- [Difference between Transactional and Non Transactional Emails](#difference-between-transactional-and-non-transactional-emails)
+- [How to Create a Transactional Email Template](#how-to-create-a-transactional-email-template)
+- [How to Send Transactional Emails via Smart Flow](#how-to-send-transactional-emails-via-smart-flow)
 
-### Difference between Transactional and Non Transactional Emails
+###  Difference between Transactional and Non Transactional Emails
 
 Examples of transactional emails include order confirmations, password reset links, shipping updates, and invoice or payment receipts. These emails are sent directly to individuals based on a specific action they’ve taken, making them one-to-one communications. They are strictly functional in nature, focused on completing or confirming a transaction, and do not require the recipient’s marketing consent. Since they are not promotional, an unsubscribe link is not required.Non-transactional emails are promotional in nature and are typically sent to a larger audience to drive engagement or sales. Examples include newsletters, limited-time offers, product announcements, and event invitations. These emails are not triggered by a user action but are instead part of a broader marketing strategy. Because they promote content or services, they require the recipient’s prior consent and must include an option to unsubscribe, as mandated by email compliance regulations.
 
-### How to Create a Transactional Email Template
+###  How to Create a Transactional Email Template
 
-Navigate to the**Outreach**section from the left menu bar.Click on Journey Emails.
+Navigate to the **Outreach** section from the left menu bar.Click on Journey Emails.
 
 ![mceclip0.png](./images/mceclip0-5.png)
 
 Just like creating a Journey Email, begin the setup process—but with a few key modifications mentioned below
 
-#### Email Type Selection
+###  Email Type Selection
 
-In the**Email Type**field, choose whether the email is**Transactional**or**Non-Transactional**. Please select "**Transactional**" under Email Type.If**Transactional**is selected,**Subscription Type**will not be required.
+In the **Email Type** field, choose whether the email is **Transactional** or **Non-Transactional**. Please select "**Transactional**" under Email Type.If **Transactional** is selected,**Subscription Type** will not be required.
 
 ![mceclip1.png](./images/mceclip1-3.png)
 
-**Template Setup**Choose an existing template or create one from scratch.Provide sender information:**From Name****From Email****Subject****Reply-To Email****
+- **Template Setup** Choose an existing template or create one from scratch.Provide sender information:** From Name **From Email **Subject **Reply-To Email **![mceclip2.png](./images/mceclip2-3.png)
 
-![mceclip2.png](./images/mceclip2-3.png)
-
-****Footer Behavior in Transactional Emails**If the template**includes footer variables**and a footer is selected, the selected footer will**replace**the existing variables.If the template**does not include footer variables**but a footer is selected, the footer will**not**be applied.
+**Footer Behavior in Transactional Emails **If the template** includes footer variables **and a footer is selected, the selected footer will** replace **the existing variables.If the template** does not include footer variables **but a footer is selected, the footer will** not ** be applied.
 
 ![mceclip3.png](./images/mceclip3-3.png)
 
-### How to Send Transactional Emails via Smart Flow
+###  How to Send Transactional Emails via Smart Flow
 
-Go to**Smart Flow**under**Outreach**section and create a new**Smart Flow**.
+Go to **Smart Flow** under **Outreach** section and create a new **Smart Flow**.
 
 ![mceclip4.png](./images/mceclip4-2.png)
 
-Use the action**Send Flow Email**. Choose the transactional template you created under the action.
+Use the action **Send Flow Email**. Choose the transactional template you created under the action.
 
 ![mceclip5.png](./images/mceclip5-2.png)
 
-The email will be delivered to all contacts entering this flow—**regardless of their subscription preferences**.**Note**:
+The email will be delivered to all contacts entering this flow—**regardless of their subscription preferences**.
 
-Transactional emails**do not require**a footer. No warning will appear if footer variables are missing.If you'd like to include an unsubscribe link, you’ll need to**manually add**it to the template.
+- **Note**:
+
+Transactional emails **do not require** a footer. No warning will appear if footer variables are missing.If you'd like to include an unsubscribe link, you’ll need to **manually add** it to the template.

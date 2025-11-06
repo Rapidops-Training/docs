@@ -1,50 +1,46 @@
 ---
 title: "iOS SDK - Push Notifications"
-description: "To enable Salesmate Chat SDK push notifications, you first need to create a private key, upload it to the Salesmate **(Web app >> Chat >>  Chat Settin..."
 ---
+To enable Salesmate Chat SDK push notifications, you first need to create a private key, upload it to the Salesmate **(Web app >> Chat >> Chat Settings >> Installation >> iOS)**, and enter details about your app.
 
-To enable Salesmate Chat SDK push notifications, you first need to create a private key, upload it to the Salesmate **(Web app >> Chat >>  Chat Settings >>  Installation >>  iOS)**, and enter details about your app.
+###  **Topics covered:**
 
-**Topics Covered:**
+- [Create a Private Key](#create-a-private-key)
+- [Enable in Salesmate Chat SDK](#enable-in-salesmate-chat-sdk)
+- [Register Device Tokens](#register-device-tokens)
+- [Handling Salesmate Chat Push Notifications](#handling-salesmate-chat-push-notifications)
 
-- [Create a Private Key](https://support.salesmate.io/hc/en-us/articles/9811651396121#temp:C:YcQ196c36e6be494807960b95f90)
-- [Enable in Salesmate Chat SDK](https://support.salesmate.io/hc/en-us/articles/9811651396121#temp:C:YcQc0c006bac0cf40ee8b1dfa5d5)
-- [Register Device Tokens](https://support.salesmate.io/hc/en-us/articles/9811651396121#temp:C:YcQ030576142b284870a1aa8a4cf)
-- [Handling Salesmate Chat Push Notifications](https://support.salesmate.io/hc/en-us/articles/9811651396121#temp:C:YcQ18c3eda1388d46ef862c6d1ba)
+###  Create a Private Key
 
-### Create a Private Key
-
-Using these [instructions](https://help.apple.com/developer-account/#/devcdfbb56a3), create and download a private key with APNs enabled. Note the Key ID for the next step.  
+Using these [instructions](#enable-in-salesmate-chat-sdk), create and download a private key with APNs enabled. Note the Key ID for the next step.
 Alternatively, use an existing private key with APNs enabled.
 
-### Enable in Salesmate Chat SDK
+###  Enable in Salesmate Chat SDK
 
 Go to your **Chat Settings** and select **Installation > iOS**. In the **"Enable Push Notifications"** section:
 
 - Upload the .p8 file you just created
 - Enter the Key ID from Step 1
 - Enter the [Bundle ID](https://developer.apple.com/account/resources/identifiers) for the app you want to send notifications to
-- Enter the [Apple team ID](https://developer.apple.com/account/#/membership)
-- Click Save
-
-**Enable Push Notifications**
-
-To send push notifications through Salesmate Chat SDK, add the .p8 file, Key ID, Bundle ID, and Apple team ID:
+- Enter the [Apple team ID](#create-a-private-key)
+- Click Save **Enable Push Notifications** To send push notifications through Salesmate Chat SDK, add the .p8 file, Key ID, Bundle ID, and Apple team ID:
 
 <img src="images/007-enable-push-notifications-10009466198425.png" alt="Enable Push Notifications" />
-### Register Device Tokens
+
+###  Register Device Tokens
 
 To enable your users to receive push notifications from Salesmate Chat via Salesmate Chat SDK for iOS, you must [request permission](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications) to send push notifications and register the device token of your user in your `AppDelegate`.
 
 **Objective-C**
 
 ```objc
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+- (void)application:(UIApplication *)application 
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
     NSString *deviceTokenString = [[[[deviceToken description]
-                             stringByReplacingOccurrencesOfString: @"<" withString: @""]
-                            stringByReplacingOccurrencesOfString: @">" withString: @""]
-                           stringByReplacingOccurrencesOfString: @" " withString: @""];
+        stringByReplacingOccurrencesOfString:@"<" withString:@""]
+        stringByReplacingOccurrencesOfString:@">" withString:@""]
+        stringByReplacingOccurrencesOfString:@" " withString:@""];
 
     [SalesmateChat sendDeviceTokenWith:deviceTokenString];
 }
@@ -53,54 +49,57 @@ To enable your users to receive push notifications from Salesmate Chat via Sales
 **Swift**
 
 ```swift
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+func application(_ application: UIApplication,
+                 didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 
-     let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+    let deviceTokenString = deviceToken.reduce("") { $0 + String(format: "%02X", $1) }
 
-     SalesmateChat.sendDeviceToken(with: strGlobalDeviceToken)
+    SalesmateChat.sendDeviceToken(with: deviceTokenString)
 }
 ```
 
 At this stage, you should also ensure that you have enabled the Push Notifications and Background Modes capability and enabled Remote notifications in Xcode.
 
 <img src="https://quip.com/blob/YcQAAAL46hk/9wepshljJeXC413jSesrDQ?a=DyPlaIinld2WnJIiSsiD4aRanBuHReykCzMMgTSjEg0a" alt="Enable Push Notifications and Background Modes"/>
-### Handling Salesmate Chat Push Notifications
+
+###  Handling Salesmate Chat Push Notifications
 
 Handle Salesmate Chat SDK push notifications manually in `didReceiveNotificationResponse` in your `UNUserNotificationCenterDelegate`:
 
 **Objective-C**
-
 ```objc
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center 
+ didReceiveNotificationResponse:(UNNotificationResponse *)response 
+          withCompletionHandler:(void (^)(void))completionHandler {
 
     NSDictionary *userInfo = response.notification.request.content.userInfo;
 
     if (userInfo != nil) {
-        if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo: userInfo]) {
-            [SalesmateChat handlePushNotificationWithUserInfo: userInfo];
+        if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo:userInfo]) {
+            [SalesmateChat handlePushNotificationWithUserInfo:userInfo];
             return;
         }
     }
 
-    completionHandler(UIBackgroundFetchResultNoData);
-
+    completionHandler();
 }
 ```
 
 **Swift**
-
 ```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+func userNotificationCenter(_ center: UNUserNotificationCenter,
+                            didReceive response: UNNotificationResponse,
+                            withCompletionHandler completionHandler: @escaping () -> Void) {
 
-        let dict = response.notification.request.content.userInfo as! [String : AnyObject]
+    let dict = response.notification.request.content.userInfo as! [String: AnyObject]
 
-        if SalesmateChat.isSalesmateChatSDKPushNotification(userInfo: dict) {
-            SalesmateChat.handlePushNotification(userInfo: dict)
-            return
-        }
-        completionHandler()
-
+    if SalesmateChat.isSalesmateChatSDKPushNotification(userInfo: dict) {
+        SalesmateChat.handlePushNotification(userInfo: dict)
+        return
     }
+
+    completionHandler()
+}
 ```
 
 Handle Salesmate Chat SDK push notifications manually in `willPresentNotification` in your `UNUserNotificationCenterDelegate`:
@@ -108,30 +107,37 @@ Handle Salesmate Chat SDK push notifications manually in `willPresentNotificatio
 **Objective-C**
 
 ```objc
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center 
+       willPresentNotification:(UNNotification *)notification 
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
 
     NSDictionary *userInfo = notification.request.content.userInfo;
 
     if (userInfo != nil) {
-        if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo: userInfo]) {
-            [SalesmateChat handlePushNotificationWithUserInfo: userInfo];
+        if ([SalesmateChat isSalesmateChatSDKPushNotificationWithUserInfo:userInfo]) {
+            [SalesmateChat handlePushNotificationWithUserInfo:userInfo];
             return;
         }
     }
 
+    completionHandler(UNNotificationPresentationOptionAlert);
 }
-```
+````
 
 **Swift**
 
 ```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+func userNotificationCenter(_ center: UNUserNotificationCenter,
+                            willPresent notification: UNNotification,
+                            withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 
-    let dict = notification.request.content.userInfo as! [String : AnyObject]
+    let dict = notification.request.content.userInfo as! [String: AnyObject]
 
     if SalesmateChat.isSalesmateChatSDKPushNotification(userInfo: dict) {
         SalesmateChat.handlePushNotification(userInfo: dict)
         return
     }
+
+    completionHandler([.alert, .sound, .badge])
 }
 ```

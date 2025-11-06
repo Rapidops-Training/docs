@@ -1,20 +1,31 @@
 ---
 title: "How to Add Today's Date in an Email Template?"
-description: "To add today's date in an email template, You can use special word \"today\" with date function. Add the following attribute in the email template:**Inp..."
 ---
+To add today's date in an email template, You can use special word "today" with date function. Add the following attribute in the email template:
 
-To add today's date in an email template, You can use special word "today" with date function. Add the following attribute in the email template:**Input**```highlight
+**Input**
+
+```highlight
 This page was last updated at &#123;&#123; "today" | date: "%Y-%m-%d" &#125;&#125;
-```**Output**```highlight
+```
+
+**Output**
+```highlight
 This page was last updated at 2024-03-12
 ```
 
-![](./How to AddToday)
+![AddToday1.png](./images/AddToday1.png)
 
-You can also add the current time with the date.**Input:**```highlight
+
+You can also add the current time with the date.
+
+- **Input:** 
+```highlight
 This page was last updated at &#123;&#123; "today" | date: "%Y-%m-%d %H: %M" &#125;&#125;
-```**Output:**```highlight
-This page was last updated at 2024-03-12 19:06
 ```
 
-![](./How to AddToday)
+- **Output:** 
+```highlight
+ This page was last updated at 2024-03-12 19:06
+```
+![AddToday2.png](./images/AddToday2.png)

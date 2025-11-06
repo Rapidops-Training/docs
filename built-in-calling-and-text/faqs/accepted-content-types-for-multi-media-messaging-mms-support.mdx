@@ -1,28 +1,34 @@
 ---
 title: "Accepted Content Types for Multi Media Messaging - MMS Support"
-description: "To send a media message, you must validate MediaUrl type when making a request to the Salesmate Programmable SMS.Salesmate checks the type of file try..."
 ---
+To send a media message, you must validate MediaUrl type when making a request to the Salesmate Programmable SMS.Salesmate checks the type of file trying to associate while texting to validate the content type of the media file. If the content-type does not match that of the media file, Salesmate will reject the request.
 
-To send a media message, you must validate MediaUrl type when making a request to the Salesmate Programmable SMS.Salesmate checks the type of file trying to associate while texting to validate the content type of the media file. If the content-type does not match that of the media file, Salesmate will reject the request.**Topics Covered:**[Media Size Limits](https://support.salesmate.io/hc/en-us/articles/4415536547353#h_01HTBZ3S6THZ258Z5GV51GV7YM)[Number of Attachments Supported](https://support.salesmate.io/hc/en-us/articles/4415536547353#h_01HTBZ3S6TAW6CD75TPNPYC8X0)[Supported File Types](https://support.salesmate.io/hc/en-us/articles/4415536547353#h_01HTBZ3S6T4VMXSX436M42TJB8)
+###  **Topics covered:**
 
-### Media Size Limits
+- [Media Size Limits](#media-size-limits)
+- [Number of Attachments Supported](#number-of-attachments-supported)
+- [Supported File Types](#supported-file-types)
+
+###  Media Size Limits
 
 When you send an outbound message, the total message size must be under the maximum size limit as described below. A request with media or a collection of media larger than the size limit will fail with an error. For a media message, the maximum size limit is 5MB.
 
-### Number of Attachments Supported
+###  Number of Attachments Supported
 
 Twilio supports up to 10 MediaUrl attachments, as long as the total size of the message body text and all attachments is less than 5 MB. An MMS message body can be up to 1600 characters long, which equals 4.8KB or roughly 1% of the total size limit.If your message (including body text and media) is larger than 5 MB, your message request will fail.
 
-### Supported File Types
+###  Supported File Types
 
 Salesmate MMS supports MediaUrl attachments with the following image file formats:
 
-####**Images**jpegjpgpnggif
+### **Images** jpegjpgpnggif
 
-These image file types are supported by Salesmate and will be formatted for delivery on destination devices.**Note:**As of May 2021, there is an issue with Toll-Free MMS file size support; for these numbers, you must ensure that any attachments (including images) are 600kb or smaller.The following types of content are accepted by the Salesmate messaging service for Media. Requests will not be rejected, but the content will be modified for device compatibility.
+These image file types are supported by Salesmate and will be formatted for delivery on destination devices.
 
-####**Audio**audio/basicaudio/L24audio/mp4audio/mpegaudio/oggaudio/vnd.rn-realaudioaudio/vnd.waveaudio/3gppaudio/3gpp2audio/ac3audio/webmaudio/amr-nbaudio/amr
+**Note:**As of May 2021, there is an issue with Toll-Free MMS file size support; for these numbers, you must ensure that any attachments (including images) are 600kb or smaller.The following types of content are accepted by the Salesmate messaging service for Media. Requests will not be rejected, but the content will be modified for device compatibility.
 
-####**Video**video/mpegvideo/mp4video/quicktimevideo/webmvideo/3gppvideo/3gpp2video/3gpp-ttvideo/H261video/H263video/H263-1998video/H263-2000video/H264
+### **Audio** audio/basicaudio/L24audio/mp4audio/mpegaudio/oggaudio/vnd.rn-realaudioaudio/vnd.waveaudio/3gppaudio/3gpp2audio/ac3audio/webmaudio/amr-nbaudio/amr
 
-####**Application**application/pdfapplication/vcard
+### **Video** video/mpegvideo/mp4video/quicktimevideo/webmvideo/3gppvideo/3gpp2video/3gpp-ttvideo/H261video/H263video/H263-1998video/H263-2000video/H264
+
+### **Application** application/pdfapplication/vcard

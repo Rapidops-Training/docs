@@ -1,8 +1,20 @@
 ---
 title: "General rules for Calculated Fields"
-description: "Calculated Fields in Salesmate let you automatically generate values based on other field data, making it easier to keep records accurate and up-to-da..."
 ---
+Calculated Fields in Salesmate let you automatically generate values based on other field data, making it easier to keep records accurate and up-to-date. Here are some important rules and limitations for using calculated fields effectively:**No Double Calculations**: One calculated field can’t be used to create another calculated field. This keeps calculations clear and prevents any confusion between fields.
 
-Calculated Fields in Salesmate let you automatically generate values based on other field data, making it easier to keep records accurate and up-to-date. Here are some important rules and limitations for using calculated fields effectively:**No Double Calculations**: One calculated field can’t be used to create another calculated field. This keeps calculations clear and prevents any confusion between fields.**Field Type Can't Be Changed**: After a calculated field is created, you can’t change its field type. If you need a different type, create a new calculated field with the type you want, and then delete the original one.**No Lookup Fields in Filters**: You can’t use lookup fields in the filter conditions for calculated fields.**Automatic Updates on Change**: Calculated fields automatically recalculate whenever a related field is changed, so they reflect new values based on updates to the base field (the “Field to Aggregate”).**Where Calculated Fields Can Be Used**:
-ReportsExportWorkflow ConditionsReport ConditionsAutomation ConditionsAutomation Triggers (specifically in Field Match, Smart Segment)Calculated fields can also be used as dynamic variables in automation workflows and other places where variables are supported.**Note:**These fields won’t appear as selectable variables in the UI.**Limits on Calculated Fields**:
-The calculated field type cannot be updatedThey can’t be updated manually or through Workflow or Automation actions.**Filter Application**: You can apply filters to calculated fields based on their data types, just like with regular fields.
+- **Field Type Can't Be Changed**: After a calculated field is created, you can’t change its field type. If you need a different type, create a new calculated field with the type you want, and then delete the original one.
+
+- **No Lookup Fields in Filters**: You can’t use lookup fields in the filter conditions for calculated fields.
+
+- **Automatic Updates on Change**: Calculated fields automatically recalculate whenever a related field is changed, so they reflect new values based on updates to the base field (the “Field to Aggregate”).
+
+- **Where Calculated Fields Can Be Used**:
+ReportsExportWorkflow ConditionsReport ConditionsAutomation ConditionsAutomation Triggers (specifically in Field Match, Smart Segment)Calculated fields can also be used as dynamic variables in automation workflows and other places where variables are supported.
+
+**Note:**These fields won’t appear as selectable variables in the UI.
+
+- **Limits on Calculated Fields**:
+The calculated field type cannot be updatedThey can’t be updated manually or through Workflow or Automation actions.
+
+- **Filter Application**: You can apply filters to calculated fields based on their data types, just like with regular fields.

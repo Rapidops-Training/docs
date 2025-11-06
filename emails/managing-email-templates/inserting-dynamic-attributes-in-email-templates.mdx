@@ -1,51 +1,46 @@
 ---
 title: "Inserting Dynamic Attributes in Email Templates"
-description: "Salesmate supports [Liquid JS](https://liquidjs.com/) which uses a combination of [objects](https://shopify.github.io/liquid/basics/introduction/#obje..."
 ---
+Salesmate supports
+[Liquid JS](https://liquidjs.com/)
+which uses a combination of
+[objects](https://shopify.github.io/liquid/basics/introduction/#objects)
+,
+[tags](https://shopify.github.io/liquid/basics/introduction/#tags)
+, and
+[filters](https://shopify.github.io/liquid/basics/introduction/#filters)
+inside email templates to display dynamic content and can also be used in workflows, and automation journeys to calculate field values based on different fields.
 
-Salesmate supports [Liquid JS](https://liquidjs.com/) which uses a combination of [objects](https://shopify.github.io/liquid/basics/introduction/#objects), [tags](https://shopify.github.io/liquid/basics/introduction/#tags), and [filters](https://shopify.github.io/liquid/basics/introduction/#filters) inside email templates to display dynamic content and can also be used in workflows, and automation journeys to calculate field values based on different fields.
-
-You can insert attributes along with functions to dynamically replace values by clicking on {} in the template.  Select the field that you want to replace.
+You can insert attributes along with functions to dynamically replace values by clicking on {} in the template. Select the field that you want to replace.
 
 ![mceclip0.png](./images/mceclip0-3.png)
 
-Add "|" in the attribute to apply the function.
+| Add " | " in the attribute to apply the function. |
 
 ![mceclip1.png](./images/mceclip1-3.png)
 
-**How to auto-replace the last name when the last name is not mentioned in any contact?**
+- **How to auto-replace the last name when the last name is not mentioned in any contact?
 
-**SM:** To auto-replace the last name with a default word when the last name does not exist in contact, you can use the "default" function in an email template. It allows you to specify a fallback in case a value does not exist.  In this example, the Last Name is not defined, so the default value is used.
+- **SM:** To auto-replace the last name with a default word when the last name does not exist in contact, you can use the "default" function in an email template. It allows you to specify a fallback in case a value does not exist. In this example, the Last Name is not defined, so the default value is used.
+| - **Input:** `{{ Contact.lastName | default: "there"}}` |
+- **Output:** ![mceclip2.png](./images/mceclip2-2.png)
 
-**Input:** `{{ Contact.lastName | default: "there"}}`
+- *How to update the date format in the attribute?
 
-**Output:**
-
-![mceclip2.png](./images/mceclip2-2.png)
-
-**How to update the date format in the attribute?**
-
-**SM:** To update the date format in the attribute, you can use the "Date" function.  In this example, the value of the custom field is updated in YYYY-MM-DD format.
-
-**Input:** Your Due Date is: `{{Contact.dateCustomField1 | date: "%Y-%m-%d"}}`
-
-**Output:** Your Due Date is: 2020-12-23
+- **SM:** To update the date format in the attribute, you can use the "Date" function. In this example, the value of the custom field is updated in YYYY-MM-DD format.
+| - **Input:** Your Due Date is: `{{Contact.dateCustomField1 | date: "%Y-%m-%d"}}` |
+- **Output:** Your Due Date is: 2020-12-23
 
 ![mceclip3.png](./images/mceclip3-2.png)
 
-**How can I multiply the value by the existing field in Salesmate?**
+- *How can I multiply the value by the existing field in Salesmate?
 
-**SM:** To multiply a specific number with a field value you can use the "times" function.  In this example, we are multiplying the field "Commission" with integer 5.
-
-**Input:** Your Commission is $`{{Contact.dateCustomField1 | times: 5}}`
-
-**Output:** Your Commission is $1000
-
-**Available Date-Time Syntaxes:**
-
-| specifier | Replaced by | Example |
-| --- | --- | --- |
-| %a | Abbreviated weekday name * | Thu |
+- **SM:** To multiply a specific number with a field value you can use the "times" function. In this example, we are multiplying the field "Commission" with integer 5.
+| - **Input:** Your Commission is $`{{Contact.dateCustomField1 | times: 5}}` |
+- **Output:** Your Commission is $1000
+| --- | **Available Date-Time Syntaxes:** | specifier | Replaced by | Example |
+| --- | --- | --- | --- | --- |
+| %a | Abbreviated weekday name* | Thu |
 | %A | Full weekday name * | Thursday |
 | %b | Abbreviated month name * | Aug |
 | %B | Full month name * | August |

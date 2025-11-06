@@ -1,59 +1,65 @@
 ---
 title: "iOS SDK - Configuration"
-description: "Track who your users are and what they do in your mobile app and customize the Salesmate Messenger. Here’s how to configure Salesmate Chat for iOS:..."
 ---
+Track who your users are and what they do in your mobile app and customize the Salesmate Messenger. 
 
-Track who your users are and what they do in your mobile app and customize the Salesmate Messenger. Here’s how to configure Salesmate Chat for iOS:
+Here’s how to configure Salesmate Chat for iOS:
+- [Update your User](#update-your-user)
+- [Submit an Event](#submit-an-event)
+- [Create a Custom Launcher](#create-a-custom-launcher)
 
-- [Update your User](https://support.salesmate.io/hc/en-us/articles/9811244877977#temp:C:TZEe96b02bb7f4d407eafc98d2fb)
-- [Submit an Event](https://support.salesmate.io/hc/en-us/articles/9811244877977#temp:C:TZEdf13f7e676a8465fb1dbbf0b3)
-- [Create a Custom Launcher](https://support.salesmate.io/hc/en-us/articles/9811244877977#temp:C:TZE4e86d68c6d494433bfa8dd97d)
-
-### Update your User
+###  Update your User
 
 - When you call a login method we create a user with his basic detail, if you want to change his basic detail then you can use update user functionality as per the below code snippet:
 
-let email = "user's email address"  
-let firstName = "user's first name"  
-let lastName = "user's last name"
-
 ```swift
-let userId = "user's user id" // Unique id recommended
+let email = "user@example.com"
+let firstName = "John"
+let lastName = "Doe"
+let userId = "unique-user-id" // Unique ID recommended
 
-SalesmateChat.update(userId: userId, email: email, firstName: firstName, lastName: lastName, completion: { (success, error) in
- if error == nil {
- // Update successfully
- } else {
- // Update error
+SalesmateChat.update(userId: userId, email: email, firstName: firstName, lastName: lastName) { success, error in
+    if error == nil {
+        // Update successfully
+    } else {
+        // Update error
+    }
 }
-})
 ```
 
-### Submit an Event
+###  Submit an Event
 
 - You can log events in Salesmate Chat SDK that record what users do in your app and when they do it. For example, you could record the item a user contact from your mobile app, and when they contact it.
 
-**Objective-C**
 
+**Objective-C**
 ```objc
-[SalesmateChat logEventWithEventName: @"contact_item" withData:@{
- @"created_date": @1260016272,
- @"contact_id": @"011",
- @"contact_detail": @{
- @"first_name": @"John",
- @"last_name": @"Smith"
- }
- }];
+[SalesmateChat logEventWithEventName:@"contact_item" 
+                            withData:@{
+    @"created_date": @1260016272,
+    @"contact_id": @"011",
+    @"contact_detail": @{
+        @"first_name": @"John",
+        @"last_name": @"Smith"
+    }
+}];
+```
+**Swift** 
+```
+SalesmateChat.logEventWith(
+    eventName: "contact_item",
+    withData: [
+        "created_date": 1260016272,
+        "contact_id": "011",
+        "contact_detail": [
+            "first_name": "John",
+            "last_name": "Smith"
+        ]
+    ]
+)
 ```
 
-**Swift**
-
-SalesmateChat.logEventWith(eventName: "contact_item", withData: \[  
- "created_date": 1260016272,  
- "contact_id": "011", "contact_detail":\[ "first_name": "John-3434", "last_name": "Smith" \]  
-\]);
-
-### Create a Custom Launcher
+###  Create a Custom Launcher
 
 - However, if you’d like Messenger to open from another location in your mobile app, you can create a custom launcher. This allows you to specify a button, link, or element that opens Messenger. For example, you can trigger the launcher to open when a customer clicks on your ‘Ask for support’ button.
 
@@ -61,17 +67,15 @@ SalesmateChat.logEventWith(eventName: "contact_item", withData: \[
 - If you have a custom launcher, you can call:
 
 **Objective-C**
-
 ```objc
 - (IBAction)presentMessenger:(id)sender {
-    [SalesmateChat presentMessengerFrom: self];
+    [SalesmateChat presentMessengerFrom:self];
 }
 ```
-
 **Swift**
-
 ```swift
 @IBAction func presentMessenger(_ sender: UIButton) {
     SalesmateChat.presentMessenger(from: self)
 }
 ```
+

@@ -1,95 +1,93 @@
 ---
 title: "Website Tracking in Salesmate"
-description: "Website Tracking in Salesmate allows you to monitor the behaviour of visitors on your website. By tracking page views, clicks, and other interactions,..."
 ---
-
 Website Tracking in Salesmate allows you to monitor the behaviour of visitors on your website. By tracking page views, clicks, and other interactions, you can gain insights into how prospects and customers engage with your content. This data helps you understand visitor intent, identify high-interest leads, and personalize your follow-up efforts, ultimately improving your sales and marketing strategies.
 
 <Note>
-  **Prerequisite:** Subscribe to Unified Inbox and thereafter Install the Chat
-  Script to your website. [Learn
-  More](https://support.salesmate.io/hc/en-us/articles/360058369732-Activating-the-Salesmate-Chats#h_01GK3KF0FQVYHYRX93C2MJ0V95)
+
+- **Prerequisite:** Subscribe to Unified Inbox and thereafter Install the Chat
+ Script to your website. [Learn
+ More](https://support.salesmate.io/hc/en-us/articles/360058369732-Activating-the-Salesmate-Chats#h_01GK3KF0FQVYHYRX93C2MJ0V95)
+
 </Note>
 
-### Steps for Activating Website Tracking
+###  Steps for Activating Website Tracking
 
 - Install the Salesmate Chat via the Salesmate Messenger Plugin for WordPress or via the Chat Installation Code within Salesmate.
 - Select options to show or hide the messenger widget through the plugin or by adjusting the code.
 - If you’ve hidden the messenger but still want to track website visitors linked to specific contacts, you’ll need to add the JS API method, tracking code, or custom events for the following:
 
-  - [Email campaigns you’ve sent](https://support.salesmate.io/hc/en-us/articles/37057741761945-Website-Tracking-in-Salesmate#h_01J6H4GKWKYGWS0P0B1P5G11VK)
-  - [Web Form Submissions](https://support.salesmate.io/hc/en-us/articles/37057741761945-Website-Tracking-in-Salesmate#h_01J6H4JZZP1QHCD81X79XN834D)
-  - [Meeting Scheduler Form Submissions](https://support.salesmate.io/hc/en-us/articles/37057741761945-Website-Tracking-in-Salesmate#h_01J6H4KV4QQ8V2FCY7Q39D0XMQ)
-  - [Gravity Form Submissions](https://support.salesmate.io/hc/en-us/articles/37057741761945-Website-Tracking-in-Salesmate#h_01J6H4N3Q7M3SDECWJBFNXKDEP)
+- [Email campaigns you’ve sent](#email-campaigns-youve-sent)
 
-#### Email Campaigns you’ve sent
+- [Web Form Submissions](#web-form-submissions)
+
+- [Meeting Scheduler Form Submissions](#meeting-scheduler-form-submissions)
+
+- [Gravity Form Submissions](#gravity-form-submissions)
+
+###  Email Campaigns you’ve sent
 
 ```html
 <script>
-  <?php If(isset($_GET['email'])){ ?>
+<?php if (isset($_GET['email'])) { ?>
   window.addEventListener('SALESMATE_READY', function() {
+    SALESMATE.login({
+      user_id: "<?php echo $_GET['email']; ?>",
+      email: "<?php echo $_GET['email']; ?>",
+      first_name: "<?php echo $_GET['fname']; ?>",
+      last_name: "<?php echo $_GET['lname']; ?>"
+    });
+  });
+<?php } ?>
+</script>
+```
+
+###  Web Form Submissions
+
+```html
+<script>
+window.addEventListener("SM_FORM_SUBMITTED", function (e) {
   SALESMATE.login({
-  user_id: "<?php echo $_GET['email'] ?>",
-  email: "<?php echo $_GET['email'] ?>",
-  first_name: "<?php echo $_GET['fname'] ?>",
-  last_name: "<?php echo $_GET['lname'] ?>",
+    user_id: e.detail.formData["Contact.email"],
+    email: e.detail.formData["Contact.email"],
+    first_name: e.detail.formData["Contact.firstName"],
+    last_name: e.detail.formData["Contact.lastName"]
   });
-  });
-
-  <?php } ?>
+});
 </script>
 ```
 
-#### Web Form Submissions
+###  Meeting Scheduler Form Submissions
 
 ```html
 <script>
-  window.addEventListener("SM_FORM_SUBMITTED", function (e) {
-    SALESMATE.login({
-      user_id: e.detail.formData["Contact.email"],
-      email: e.detail.formData["Contact.email"],
-      first_name: e.detail.formData["Contact.firstName"],
-      last_name: e.detail.formData["Contact.lastName"],
-    });
+window.addEventListener("SM_MEETING_SUBMITTED", function (e) {
+  SALESMATE.login({
+    user_id: e.detail.formData["Contact.email"],
+    email: e.detail.formData["Contact.email"],
+    first_name: e.detail.formData["Contact.firstName"],
+    last_name: e.detail.formData["Contact.lastName"]
   });
+});
 </script>
 ```
 
-#### Meeting Scheduler Form Submissions
-
-```html
-<script>
-  window.addEventListener("SM_MEETING_SUBMITTED", function (e) {
-    SALESMATE.login({
-      user_id: e.detail.formData["Contact.email"],
-      email: e.detail.formData["Contact.email"],
-      first_name: e.detail.formData["Contact.firstName"],
-      last_name: e.detail.formData["Contact.lastName"],
-    });
-  });
-</script>
-```
-
-#### Gravity Form Submissions
+###  Gravity Form Submissions
 
 ```php
 function ti_custom_javascript() {
-if(isset($_GET['email'])) {
-?>
-
-<script type="text/javascript">
-window.addEventListener('SALESMATE_READY', function() {
-SALESMATE.login({
-user_id: "<?php echo $_GET['email'] ?>",
-email: "<?php echo $_GET['email'] ?>",
-first_name: "<?php echo $_GET['fname'] ?>",
-last_name: "<?php echo $_GET['lname'] ?>",
-});
-});
-</script>
-
-<?php
-}
+  if (isset($_GET['email'])) { ?>
+    <script type="text/javascript">
+      window.addEventListener('SALESMATE_READY', function() {
+        SALESMATE.login({
+          user_id: "<?php echo $_GET['email']; ?>",
+          email: "<?php echo $_GET['email']; ?>",
+          first_name: "<?php echo $_GET['fname']; ?>",
+          last_name: "<?php echo $_GET['lname']; ?>"
+        });
+      });
+    </script>
+  <?php }
 }
 add_action('wp_head', 'ti_custom_javascript');
 ```

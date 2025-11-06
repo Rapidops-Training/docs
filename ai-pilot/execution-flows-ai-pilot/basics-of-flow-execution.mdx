@@ -1,30 +1,38 @@
 ---
 title: "Basics of Flow Execution"
-description: "AI Pilot Flows empower you to automate customer interactions effectively. To ensure optimal performance, it's crucial to understand the foundational r..."
 ---
+AI Pilot Flows empower you to automate customer interactions effectively. To ensure optimal performance, it's crucial to understand the foundational rules and behaviors governing these flows.
 
-AI Pilot Flows empower you to automate customer interactions effectively. To ensure optimal performance, it's crucial to understand the foundational rules and behaviors governing these flows.**Topics covered:**[Flow Structure & Triggers](https://support.salesmate.io/hc/en-us/articles/45879772372505-Basics-of-Flow-Execution#01JVVFDXX8V702FA4P2H1G26H8)[Flow Initiation & Execution](https://support.salesmate.io/hc/en-us/articles/45879772372505-Basics-of-Flow-Execution#01JVVFEQVWQJV69JB2KMZT2FE5)[Inbox & Messaging Behavior](https://support.salesmate.io/hc/en-us/articles/45879772372505-Basics-of-Flow-Execution#01JVVFFXVXJZ3RVRAN53GNVRDR)[Flow Continuity & Error Handling](https://support.salesmate.io/hc/en-us/articles/45879772372505-Basics-of-Flow-Execution#01JVVFG3KG18VQ24J3PSEK9N0F)[Inbox & Messaging Behavior](https://support.salesmate.io/hc/en-us/articles/45879772372505-Basics-of-Flow-Execution#01JVVFFXVXJZ3RVRAN53GNVRDR)[Flow Continuity & Error Handling](https://support.salesmate.io/hc/en-us/articles/45879772372505-Basics-of-Flow-Execution#01JVVFG3KG18VQ24J3PSEK9N0F)[Time & Condition Checks](https://support.salesmate.io/hc/en-us/articles/45879772372505-Basics-of-Flow-Execution#01JVVFG9PP70DDVBXYC8977Z7C)
+###  **Topics covered:**
 
-### Flow Structure & Triggers
+- [Flow Structure & Triggers](#flow-structure-triggers)
+- [Flow Initiation & Execution](#flow-initiation-execution)
+- [Inbox & Messaging Behavior](#inbox-messaging-behavior)
+- [Flow Continuity & Error Handling](#flow-continuity-error-handling)
+- [Inbox & Messaging Behavior](#inbox-messaging-behavior)
+- [Flow Continuity & Error Handling](#flow-continuity-error-handling)
+- [Time & Condition Checks](#time-condition-checks)
 
-Each flow must have**only one trigger**. Supported variables include:**Smart Flow variables**(excluding record triggers)**AI Pilot variables**(global and local)**Custom variables**created by usersNote: System default variables are read-only and cannot be edited.If multiple flows match a trigger, the one with the**highest priority**(lowest numerical value) will execute.
+###  Flow Structure & Triggers
 
-### Flow Initiation & Execution
+Each flow must have **only one trigger**. Supported variables include:**Smart Flow variables**(excluding record triggers)**AI Pilot variables**(global and local)**Custom variables** created by usersNote: System default variables are read-only and cannot be edited.If multiple flows match a trigger, the one with the **highest priority**(lowest numerical value) will execute.
 
-Flows commence when a visitor performs an action, such as opening a page or clicking a message.A flow starts**only when the visitor clicks**on the message, not merely upon receipt.Flows can be configured to run**once or multiple times**per visitor.
+###  Flow Initiation & Execution
 
-### Inbox & Messaging Behavior
+Flows commence when a visitor performs an action, such as opening a page or clicking a message.A flow starts **only when the visitor clicks** on the message, not merely upon receipt.Flows can be configured to run **once or multiple times** per visitor.
 
-AI Pilot conversations appear in the inbox**only if “Include Bot Messages” is enabled**. Interactive elements (like cards or carousels) must be displayed in**both the widget and inbox**. AI Pilot conversations are**excluded from the “Recent Conversations” widget**.
+###  Inbox & Messaging Behavior
 
-### Flow Continuity & Error Handling
+AI Pilot conversations appear in the inbox **only if “Include Bot Messages” is enabled**. Interactive elements (like cards or carousels) must be displayed in **both the widget and inbox**. AI Pilot conversations are **excluded from the “Recent Conversations” widget**.
 
-If no input is received and there's no backup step, the flow remains inactive until the visitor responds.If a step expecting input is deleted, the flow restarts from the beginning upon the visitor's reply.If there's no subsequent step and no input expected, the flow concludes.If a flow doesn't save any data, a**"Restart Flow" option**becomes available to the visitor.Deleting a flow during an active conversation removes the chat.
+###  Flow Continuity & Error Handling
 
-### User Interaction & Data Management
+If no input is received and there's no backup step, the flow remains inactive until the visitor responds.If a step expecting input is deleted, the flow restarts from the beginning upon the visitor's reply.If there's no subsequent step and no input expected, the flow concludes.If a flow doesn't save any data, a **"Restart Flow" option** becomes available to the visitor.Deleting a flow during an active conversation removes the chat.
 
-Always collect the visitor's**email or phone number**to prevent errors when creating new contacts.If a team member responds during a flow, it terminates the ongoing flow.Visitor activity logs display generic names like “Visitor 001” with a link to view the chat.
+###  User Interaction & Data Management
 
-### Time & Condition Checks
+Always collect the visitor's **email or phone number** to prevent errors when creating new contacts.If a team member responds during a flow, it terminates the ongoing flow.Visitor activity logs display generic names like “Visitor 001” with a link to view the chat.
 
-If a visitor's system time is incorrect, Salesmate adjusts timestamps for consistency.Before displaying a flow message, the system verifies its active status, timing, and condition matches. The message is shown**only after the visitor replies**.
+###  Time & Condition Checks
+
+If a visitor's system time is incorrect, Salesmate adjusts timestamps for consistency.Before displaying a flow message, the system verifies its active status, timing, and condition matches. The message is shown **only after the visitor replies**.
