@@ -14,18 +14,24 @@ To display the total amount of deals associated with a single contact in a singl
 4. Set **Deals** as the associated module.
 5. Click **Save.**
 
-**Note:** Multi-lookup fields allow multiple deals to be linked to a single contact. You can learn more about**Multi-Lookup Fields**  [here](https://support.salesmate.io/hc/en-us/articles/360043520171).
+**Note:** Multi-lookup fields allow multiple deals to be linked to a single contact. You can learn more about**Multi-Lookup Fields** [here](https://support.salesmate.io/hc/en-us/articles/360043520171).
 
 ### Step 2: Create a Calculated Field to Sum the Deal Value
 
-Stay in the **Contacts Module** and click \*\*Add New Field.
+- Stay in the **Contacts Module** and click **Add New Field.**
+- Select **Calculated Field** as the field type.
+- The **Parent Module** will automatically be set as Contacts.
+- Set the **Child Module** as **Deals**.
+- Under **Define Relationship**, select the multi-lookup field created in Step 1.
+- Choose **Field to Aggregate:** Select**Deal Value.** 
+- \*\*Set the **Operation** to **SUM**.
+- \*\*Choose the **Calculation Mode:**
 
-- \*\*Select **Calculated Field** as the field type.The **Parent Module** will automatically be set as \*\*Contacts.
-- \*\*Set the **Child Module** as \*\*Deals.
-- \*\*Under \*\*Define Relationship,\*\*select the multi-lookup field created in Step 1.Choose \*\*Field to Aggregate:\*\*Select \*\*Deal Value.
-- \*\*Set the **Operation** to \*\*SUM.
-- \*\*Choose the **Calculation Mode:**- **Real-Time:** Updates immediately when changes occur.
-- **Scheduled:** Updates once every 24 hours.(Optional) Apply a **Filter** on either the **Parent (Contacts) or Child (Deals) Module** to refine which records are included in the calculation.Click \*\*Save.
+  **Real-Time:** Updates immediately when changes occur.
+
+  **Scheduled:** Updates once every 24 hours.
+- (Optional) Apply a **Filter** on either the **Parent (Contacts) or Child (Deals) Module** to refine which records are included in the calculation.
+- Click **Save.**
 
 ### Step 3: View the Total Deal Value on the Contact Record
 
