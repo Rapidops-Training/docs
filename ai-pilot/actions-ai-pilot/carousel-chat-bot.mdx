@@ -10,9 +10,8 @@ The **Carousel** component in your **Chat/Bot flow** allows you to display a swi
 - [Types of Carousel](#types-of-carousel)
 - [Practical Use Case](#practical-use-case)
 
-### Components of Carousel- 
+### Components of Carousel- **Name:** It is the identifier of the step.
 
-- **Name:** It is the identifier of the step.
 - **Description:** It is optional to display internal notes for context.
 - **Carousel Type:** You can choose between Fixed or Dynamic.
 - **Cards:** You can add one or more cards with an image, title, description, and buttons.
@@ -44,17 +43,13 @@ You will need to add at least one card:
 
 ![mceclip2.png](./images/mceclip2-2.png)
 
-- Use the **Add Card button** to duplicate or create new cards.
+Use the **Add Card button** to duplicate or create new cards.Additional Settings:- **No Match:** This triggers a fallback when the user's input doesn't match the button options. Sends reprompts and ends the flow if exhausted.
 
-  **Additional Settings:-**
-- **No Match:** This triggers a fallback when the user's input doesn't match the button options. Sends reprompts and ends the flow if exhausted.
 - **No Reply:** This triggers an alternative path when no response is received.
 
 ![mceclip3.png](./images/mceclip3.png)
 
 Click on **Save**. Configure the Actions for each Button.
-
-![mceclip0.png](./images/mceclip0-5.png)
 
 **Note:** You must have at least one card.Buttons stay active even after interaction.Output ports = Number of cards × Number of buttons.
 
@@ -78,22 +73,17 @@ While setting up an Execution flow, select the Carousel Action.
 
 ![mceclip5.png](./images/mceclip5.png)
 
-**Additional Settings:-**
+Additional Settings:- **No Match:** This triggers a fallback when the user's input doesn't match the button options. Sends reprompts and ends the flow if exhausted.
 
-- **No Match:** This triggers a fallback when the user's input doesn't match the button options. Sends reprompts and ends the flow if exhausted.
 - **No Reply:** This triggers an alternative path when no response is received.Click on **Save**. Configure the Actions for each Button.
 
 ![mceclip4.png](./images/mceclip4.png)
 
-<Note>
-  \*\*Note: \*\*Maximum 10 cards and 10 buttons per carousel.All dynamic cards use the same structure and buttons.
-</Note>
+\*\*Note:\*\*Maximum 10 cards and 10 buttons per carousel.All dynamic cards use the same structure and buttons.
 
 ### Practical Use Case
 
-- The Carousel can be used to display the top 5 products you offer when an intent is detected. You can show the product images, name, and price with buttons like Purchase or Details.The triggers and Actions used in this example:
-- **Trigger**: [Intent Detected](https://support.salesmate.io/hc/en-us/articles/45879968714009)
-- **Actions:** [Find Records](https://support.salesmate.io/hc/en-us/articles/38138036610201-Find-Records)[ Carousel ](#components-of-carousel-name-it-is-the-identifier-of-the-step)
+The Carousel can be used to display the top 5 products you offer when an intent is detected. You can show the product images, name, and price with buttons like Purchase or Details.The triggers and Actions used in this example:\*\* Trigger:\*\* [Intent Detected](https://support.salesmate.io/hc/en-us/articles/45879968714009) **Actions:** [Find Records](https://support.salesmate.io/hc/en-us/articles/38138036610201-Find-Records) \*\* [\*\* Carousel \*\*](#components-of-carousel-name-it-is-the-identifier-of-the-step)
 
 Here is an example of how your execution flow will look:
 
