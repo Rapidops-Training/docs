@@ -6,7 +6,7 @@ title: "Calculated Fields FAQ's"
 
 To display the total amount of deals associated with a single contact in a single column, follow the step-by-step process below:
 
-### Step 1: Create a Multi-Lookup Field in the Contact Module
+Step 1: Create a Multi-Lookup Field in the Contact Module
 
 1. Navigate to **Setup \> Modules \> Contacts.**
 2. Click on **All Detail Form Fields** and select **Add New Field.**
@@ -15,8 +15,8 @@ To display the total amount of deals associated with a single contact in a singl
 5. Click **Save.**
 
 <Note>
-**Note:** Multi-lookup fields allow multiple deals to be linked to a single contact. You can learn more about**Multi-Lookup Fields** [here](https://support.salesmate.io/hc/en-us/articles/360043520171).
-<Note>
+  **Note:** Multi-lookup fields allow multiple deals to be linked to a single contact. You can learn more about **Multi-Lookup Fields** [here](https://support.salesmate.io/hc/en-us/articles/360043520171).
+</Note>
 
 ### Step 2: Create a Calculated Field to Sum the Deal Value
 
@@ -25,7 +25,7 @@ To display the total amount of deals associated with a single contact in a singl
 - The **Parent Module** will automatically be set as Contacts.
 - Set the **Child Module** as **Deals**.
 - Under **Define Relationship**, select the multi-lookup field created in Step 1.
-- Choose **Field to Aggregate:** Select**Deal Value.**
+- Choose **Field to Aggregate:** Select **Deal Value.**
 - Set the **Operation** to **SUM**.
 - Choose the **Calculation Mode:**
 
@@ -37,7 +37,7 @@ To display the total amount of deals associated with a single contact in a singl
 
 ### Step 3: View the Total Deal Value on the Contact Record
 
-1. Open any \*\*Contact Record.
+1. Open any **Contact Record.**
 2. In the **Multi-Lookup Field**, associate the relevant deals.
 3. The **Calculated Field** will now automatically display the total value of all linked deals.
 
