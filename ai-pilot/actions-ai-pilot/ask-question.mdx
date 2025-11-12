@@ -2,7 +2,9 @@
 title: "Ask Question"
 ---
 
-RThe **Ask Question** action allows you to collect structured responses from users during bot interactions by presenting a question and a list of options. This ensures your chatbot can guide users down the right path based on their selections—be it capturing preferences, routing to specific intents, or simply collecting input.The Ask Question action is a part of the [**agent execution flow**](https://support.salesmate.io/hc/en-us/articles/45879772372505) that enables you to prompt users with clear and guided questions, offer multiple-choice options, and route the user based on the responses.
+RThe **Ask Question** action allows you to collect structured responses from users during bot interactions by presenting a question and a list of options. This ensures your chatbot can guide users down the right path based on their selections—be it capturing preferences, routing to specific intents, or simply collecting input. 
+
+The Ask Question action is a part of the [**agent execution flow**](https://support.salesmate.io/hc/en-us/articles/45879772372505) that enables you to prompt users with clear and guided questions, offer multiple-choice options, and route the user based on the responses.
 
 ### **Topics covered:**
 
@@ -11,19 +13,17 @@ RThe **Ask Question** action allows you to collect structured responses from use
 
 ### How to Configure Ask Question
 
-While setting up an Execution Flow, select the **Ask Question** action.
+- While setting up an Execution Flow, select the **Ask Question** action.
 
 ![mceclip0.png](./images/mceclip0.png)
 
-Once the action is selected, configure it by providing the following details:
-
-Name:It is the identifier of the step.
-
-- Description: It is optional to display internal notes for context.
-- Question: Type the question that you want to ask the users.
-- Options: You can provide choices so that the user can pick one from them.
-- Allow Open Responses: Let the users type their response through a text box reply.
-- No Reply: It handles situations where the user doesn't respond within a certain timeframe. Timeout Duration: You can mention the time you want to wait before the no-response message. The time has to be in seconds. Reprompts: You can add different variations of the no-response message. You can use AI to generate different variations after adding the first one.Follow-Up path: You can configure the follow-up actions after the no-response message has been sent.
+- Once the action is selected, configure it by providing the following details:
+- **Name: **It is the identifier of the step.
+- **Description: **It is optional to display internal notes for context.
+- **Question:** Type the question that you want to ask the users.
+- **Options:** You can provide choices so that the user can pick one from them.
+- **Allow Open Responses:** Let the users type their response through a text box reply.
+- **No Reply:** It handles situations where the user doesn't respond within a certain timeframe. Timeout Duration: You can mention the time you want to wait before the no-response message. The time has to be in seconds. Reprompts: You can add different variations of the no-response message. You can use AI to generate different variations after adding the first one.Follow-Up path: You can configure the follow-up actions after the no-response message has been sent.
 
 ![mceclip2.png](./images/mceclip2.png)
 
@@ -40,7 +40,7 @@ Imagine you want the system to update the delivery address automatically. You ca
 
 [New Conversation](#the-triggers-and-actions-used-in-this-example-trigger-new-conversationhttpssupportsalesmateiohcen-usarticles45879946769177)
 
-- **Actions:** 
+- **Actions:**
 - [**Welcome Message**](https://support.salesmate.io/hc/en-us/articles/45880357236249) Ask Question: You can ask the users a generic question, "Hi, how may I help you?" and provide the choices "Update Delivery Address" and "Update Phone Number".
 
 Update Delivery Address: You can configure another Ask Question "What is the new Delivery Address", which will have Allow Open Response enabled.Update Phone Number: You can configure another Ask Question "What is the new Phone Number", which will have Allow Open Response enabled.
