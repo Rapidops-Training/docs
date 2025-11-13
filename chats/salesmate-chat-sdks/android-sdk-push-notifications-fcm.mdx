@@ -1,38 +1,41 @@
 ---
 title: "Android SDK - Push Notifications (FCM)"
 ---
-We’ll show you how to send push notifications and/or push messages to your customers, with Firebase Cloud Messaging (FCM) in Salesmate Chat.
 
-###  **Topics covered:**
+We’ll show you how to send push notifications and/or push messages to your customers, with Firebase Cloud Messaging (FCM) in Skara Chat.
+
+### **Topics covered:**
+
 - [Enable Google Services For Your App](#enable-google-services-for-your-app)
 - [Set Up Client to Receive Push](#set-up-client-to-receive-push)
-- [Enable Push Notification in Salesmate](#enable-push-notification-in-salesmate)
+- [Enable Push Notification in Skara](#enable-push-notification-in-salesmate)
 - [Disable Push on Logout](#disable-push-on-logout)
-- [Using Salesmate Chat with FCM - Setup](#using-salesmate-chat-with-fcm-setup)
+- [Using Skara Chat with FCM - Setup](#using-salesmate-chat-with-fcm-setup)
 - [Trouble Shooting Tips](#trouble-shooting-tips)
 
-###  Enable Google Services For Your App
+### Enable Google Services For Your App
 
 - If you already have a Firebase project with notifications enabled you can skip to the next step. Otherwise, go to the [FCM Console page](https://console.firebase.google.com/) and create a new project following these steps:
 - Give the project a name and click ‘Create Project’.
 
-<img src="images/008-create-firebase-project-10009268287641.png" alt="Create Firebase Project" />
-- Once your project is set up, scroll down and select the ‘Cloud Messaging’’
-card.
+![Create Firebase Project](images/008-create-firebase-project-10009268287641.png)
 
-<img src="images/009-select-cloud-messaging-10009252534297.png" alt="Select Cloud Messaging" />
-- Click on the Android icon to continue the setup. 
+- Once your project is set up, scroll down and select the ‘Cloud Messaging’’ card.
+
+![Select Cloud Messaging](images/009-select-cloud-messaging-10009252534297.png)
+
+- Click on the Android icon to continue the setup.
 - Enter your app’s package name and click ‘Register App’.
 
-<img src="images/010-register-app-10009307437977.png" alt="Register App" />#
+<img src="images/010-register-app-10009307437977.png" alt="Register App" />
 
-###  Set Up Client to Receive Push
+### Set Up Client to Receive Push
 
 - Click the button "Download google-services.json" to download the config file. You’ll need to move that file into the same directory as your application level `` `build.gradle` ``.
 
-<img src="images/011-download-google-servicesjson-10009307097753.png" alt="Download google-services.json" />
-- Click "next" and then in your apps `` `build.gradle` `` you will need to add
-the following lines to your dependencies:
+![Download google-services.json](images/011-download-google-servicesjson-10009307097753.png)
+
+- Click "next" and then in your apps `` `build.gradle` `` you will need to add the following lines to your dependencies:
 
 ```gradle
 dependencies {
@@ -41,40 +44,36 @@ dependencies {
 }
 ```
 
-- At the bottom of your `` `build.gradle` `` you must add:
- `apply plugin: 'com.google.gms.google-services'`
+- At the bottom of your `` `build.gradle` `` you must add: `apply plugin: 'com.google.gms.google-services'`
 - It is important that this is at the very end of the file.
 - Click the Next button and then skip the verification step.
 
-###  Enable Push Notification in Salesmate
+### Enable Push Notification in Skara
 
 - Finally, click the settings cog and select ‘Project settings’, then ‘Cloud Messaging tab’ then Cloud Messaging tab.
 
-<img src="images/012-project-settings-35524153104025.png" alt="Project Settings" />
-- For new FCM projects, Firebase Cloud Messaging API v1 is enabled by default.
-If it's disabled in an older project, you can enable it in Google Cloud Console
-by clicking the three dots icon, selecting Manage API, and then clicking the
-Enable button. - Under the Project settings page, select the Service Accounts
-tab and under Firebase Admin SDK, ensure that Node.js is selected and then click
-on Generate new private key
+![Project Settings](images/012-project-settings-35524153104025.png)
 
-<img src="images/013-generate-new-private-key-35524136173337.png" alt="Generate new private key" />
-- Open your Salesmate Messenger settings and select ‘Installation → Android’.
-Then find the ‘Enable Push Notifications’ section. Here you'll be able to paste
-and save your Server API key.
+- For new FCM projects, Firebase Cloud Messaging API v1 is enabled by default. If it's disabled in an older project, you can enable it in Google Cloud Console by clicking the three dots icon, selecting Manage API, and then clicking the Enable button. - Under the Project settings page, select the Service Accounts tab and under Firebase Admin SDK, ensure that Node.js is selected and then click on Generate new private key
 
-<img src="images/014-enable-push-notifications-35523620113305.png" alt="Enable Push Notifications" />
+![Generate new private key](images/013-generate-new-private-key-35524136173337.png)
 
-###  Disable Push on Logout
+- Open your Skara Messenger settings and select ‘Installation → Android’. Then find the ‘Enable Push Notifications’ section. Here you'll be able to paste and save your Server API key.
+
+![Enable Push Notifications](images/014-enable-push-notifications-35523620113305.png)
+
+### Disable Push on Logout
 
 - To stop users from receiving push messages when they have logged out of the app make sure to call:
+
 ```
 SalesmateChatSDK.getInstance().logout()
 ```
-###  Using Salesmate Chat with FCM - Setup
+
+### Using Skara Chat with FCM - Setup
 
 - If your application uses FCM for your own content, or if you use a third-party service for FCM. You’ll need to update your `` `FirebaseMessagingService` ``.
-- You should have a class that extends `` `FirebaseMessagingService.` `` That service is where you get the device token to send to your backend to register for the push. To register for Salesmate Chat push set it up like this:
+- You should have a class that extends `` `FirebaseMessagingService.` `` That service is where you get the device token to send to your backend to register for the push. To register for Skara Chat push set it up like this:
 
 ```kotlin
 override fun onNewToken(token: String) {}
@@ -91,15 +90,15 @@ override fun onMessageReceived(remoteMessage: RemoteMessage) {}
  return
 ```
 
-> 📘**Important**> The recommendation of **sendTokenToSalesmate()**is to call it on the initial launch of an app to update the fresh firebase token into Salesmate
-
-###  Trouble Shooting Tips
+> 
+>
+> <Tip>
+>   📘**Important**\> The recommendation of **sendTokenToSkara()**is to call it on the initial launch of an app to update the fresh firebase token into Skara
+> </Tip>
 
 If you’re having trouble getting FCM to work in your app, here's a list of things you should check:
 
 - Check that the notifications are not disabled for your app on your test device.
-
-- **Settings > Sound & Notification > App notifications** _._ This may differ depending on the Android version.
+- **Settings \> Sound & Notification \> App notifications** _._ This may differ depending on the Android version.
 - Did you specify the correct Push Server API key?
 - Make sure you added your `` `google-services.json` `` file in the correct directory.
-
