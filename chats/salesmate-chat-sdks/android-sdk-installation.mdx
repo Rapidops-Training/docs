@@ -1,27 +1,25 @@
 ---
 title: "Android SDK - Installation"
 ---
-Install Salesmate Chat SDK to communicate with your Customer on your Android app. Salesmate Chat for Android supports API 21 and above.
-[Click here to learn about navigation to Android - Installation in Salesmate.](#login-a-user)
+
+Install Skara Chat SDK to communicate with your Customer on your Android app. Salesmate Chat for Android supports API 21 and above. [Click here to learn about navigation to Android - Installation in Salesmate.](#login-a-user)
 
 <Note>
-
-**Note:** We recommend using the latest available `compileSdkVersion`.
-
+  **Note:** We recommend using the latest available `compileSdkVersion`.
 </Note>
 
-###  **Topics covered:** 
+### **Topics covered:**
 
-- [Install Salesmate Chat SDK](#install-salesmate-chat-sdk)
-- [Initialize Salesmate Chat](#initialize-salesmate-chat)
+- [Install Skara Chat SDK](#install-salesmate-chat-sdk)
+- [Initialize Skara Chat](#initialize-salesmate-chat)
 - [Login a User](#login-a-user)
 - [How to Logout a User](#how-to-logout-a-user)
 
-###  Install Salesmate Chat SDK
+### Install Skara Chat SDK
 
-If you’re new to Salesmate Chat, you’ll need to [Configure the Salesmate Chat](https://support.salesmate.io/hc/en-us/articles/360058369732) in your Salesmate account. Then you have three options:
+If you’re new to Salesmate Chat, you’ll need to [Configure the Skara Chat](https://support.salesmate.io/hc/en-us/articles/360058369732) in your Skara account. Then you have three options:
 
-- Option 1: Install Salesmate Chat SDK with Firebase Cloud Messaging (FCM)
+- Option 1: Install Skara Chat SDK with Firebase Cloud Messaging (FCM)
 
 Add the following dependency to your app's `build.gradle` file:
 
@@ -35,7 +33,7 @@ dependencies {
 }
 ```
 
-- Option 2: Install Salesmate Chat SDK without Push Messaging
+- Option 2: Install Skara Chat SDK without Push Messaging
 
 ```gradle
 dependencies {
@@ -44,13 +42,10 @@ dependencies {
 ```
 
 <Note>
-
-**Important:** If you choose this method you won’t be able to send push
- messages.
-
+  **Important:** If you choose this method you won’t be able to send push messages.
 </Note>
 
-###  **Jitpack** Salesmate Chat SDK is hosted on jitpack. You will need to add jitpack.io to your root build.gradle file.
+### **Jitpack** Salesmate Chat SDK is hosted on jitpack. You will need to add jitpack.io to your root build.gradle file.
 
 ```gradle
 allprojects {
@@ -63,7 +58,7 @@ allprojects {
 }
 ```
 
-###  **Permissions**- We include the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) permission by default as we need it to make network requests:
+### **Permissions**- We include the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) permission by default as we need it to make network requests:
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -73,13 +68,13 @@ allprojects {
 
 `<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>`
 
-###  Initialize Salesmate Chat
+### Initialize Salesmate Chat
 
-- First, you'll need to get your Salesmate Chat **App key, Workspace Id, and Tenant Id**. To find these, just select the 'Android Tab' option in your Salesmate CRM Messenger Settings Installation section.
+- First, you'll need to get your Skara Chat **App key, Workspace Id, and Tenant Id**. To find these, just select the 'Android Tab' option in your Skara CRM Messenger Settings Installation section.
 
-<img src="images/015-android-app-key-workspace-id-and-tenant-id-9809140921881.png" alt="Android App Key, Workspace Id and Tenant Id" />
+![Android App Key, Workspace Id and Tenant Id](images/015-android-app-key-workspace-id-and-tenant-id-9809140921881.png)
 
-- Then, initialize Salesmate Chat SDK by calling the following in the `onCreate()` method of your application class:
+- Then, initialize Skara Chat SDK by calling the following in the `onCreate()` method of your application class:
 
 ```
 val workspaceId = "your Workspace ID"
@@ -87,9 +82,9 @@ val appKey = "your app key"
 val tenantId = "your Tenant ID"// Configuration
 val salesmateChatSettings = SalesmateChatSettings(workspaceId,appKey,tenantId,BuildType.DEVELOPMENT) // Initialization Salesmate Chat SalesmateChatSDK.initialize(this, salesmateChatSettings)
 ```
+
 <Note>
-**Note:** If you don't currently implement a custom application, you’ll need
- to create one. A custom application looks like this:
+  **Note:** If you don't currently implement a custom application, you’ll need to create one. A custom application looks like this:
 </Note>
 
 ```kotlin
@@ -125,14 +120,12 @@ class CustomApplication : Application() {
 
 `<application android:name=".CustomApplication"> </application>`
 
-###  Login a User
+### Login a User
 
 - You’ll now need to log in to users before you can communicate with them and track their activity in your app.
-
 - **Login your users (to talk to them and see their activity)**
-
 - Depending on your app type, you can log in to users. Here are the instructions :
-- Here we will create a user with basic user detail in Salesmate CRM Messenger.
+- Here we will create a user with basic user detail in Skara CRM Messenger.
 - If you have an app with logged-in (identified) users only (like Facebook, Instagram or Slack), follow these instructions:
 - You’ll also need to log in to your user anywhere they sign in. Just call:
 
@@ -160,7 +153,7 @@ SalesmateChatSDK.getInstance().login(userId, userDetail, object : LoginListener 
 })
 ```
 
-###  How to Logout a User
+### How to Logout a User
 
 - When users want to log out of your app, simply call logout like so:
 
