@@ -1,14 +1,14 @@
 ---
 title: "Prompts"
 ---
-- **Prompts** are structured instructions that guide your conversational **AI Pilot** in generating relevant and context-aware responses.
-They act like a playground for training, testing, and fine-tuning AI behavior before using it in live flows.
 
-- **For example:** If a prompt is created for “Flight Booking Inquiry” and a user says, “I want to book a flight to New York,” the AI Pilot identifies the intent and responds:
-“Sure! Please provide your preferred travel dates.”
+**Prompts** are structured instructions that guide your conversational **AI Pilot** in generating relevant and context-aware responses. They act like a playground for training, testing, and fine-tuning AI behavior before using it in live flows.
+
+**For example:** If a prompt is created for “Flight Booking Inquiry” and a user says, “I want to book a flight to New York,” the AI Pilot identifies the intent and responds: “Sure! Please provide your preferred travel dates.”
 
 ---
-###  **Topics covered:**
+
+### **Topics covered:**
 
 - [Components of a Prompt](#components-of-a-prompt)
 - [Creating a New Prompt](#steps-to-create-a-prompt)
@@ -17,83 +17,79 @@ They act like a playground for training, testing, and fine-tuning AI behavior be
 - [Prompt Listing & Actions](#prompt-listing-actions)
 
 ---
-###  Components of a Prompt
+
+### Components of a Prompt
 
 When creating prompts for your AI assistant, it's important to structure them with the right components. Here’s how each part works:
 
-- **System Prompt:** Use this to set the tone, style, and behavior of the AI. Whether you want the assistant to be formal, friendly, concise, or informative, define that here.
- _Example:_ “You are a helpful and empathetic support agent who answers questions clearly and politely.”
-
+- **System Prompt:** Use this to set the tone, style, and behavior of the AI. Whether you want the assistant to be formal, friendly, concise, or informative, define that here. _Example:_ “You are a helpful and empathetic support agent who answers questions clearly and politely.”
 - **User & AI Pilot Messages:** These are sample conversations that show the AI how it should respond. Use them to guide the AI's behavior by providing real-world scenarios and expected replies.
-
-- - **Conversation History:** Include past messages when you want the AI to understand the full context of an ongoing interaction. This helps the AI respond more accurately and maintain continuity.
-
-- **Variables:** Add variables or entities like `{user_name}` or `{product}` to personalize messages dynamically.
- This makes responses more tailored and human-like.
-
-- **Structured Outputs:** Define how you want the AI to format its response — plain text for emails, JSON for APIs, etc.
+- **Conversation History:** Include past messages when you want the AI to understand the full context of an ongoing interaction. This helps the AI respond more accurately and maintain continuity.
+- **Variables:** Add variables or entities like `{user_name}` or `{product}` to personalize messages dynamically. This makes responses more tailored and human-like.
+- **Structured Outputs:** Define how you want the AI to format its response — plain text for emails, JSON for API responses, or other formats depending on your needs.
 
 ---
-###  Steps to Create a Prompt
 
-1. Navigate to **AI Pilots**.
-2. Select your **AI Pilot**.
+### Steps to Create a Prompt
+
+- Navigate to **AI Pilots**.
+- Select your **AI Pilot**.
 
 ![Screen Shot 2025-05-31 at 9.34.43 PM.png](./images/Screen-Shot-2025-05-31-at-9.34.43-PM-3.png)
 
-3. Click on **Prompts**→**New**.
+- Click on **Prompts**
+- Click on **New**.
 
 ![Screenshot 2025-06-03 at 9.24.13 AM.png](./images/Screenshot-2025-06-03-at-9.24.13-AM.png)
 
 ---
-###  Prompt Configuration
 
-- - **Name:** Provide a meaningful name (e.g., “Financial Support”).
+### Prompt Configuration
 
+- **Name:** Provide a meaningful name (e.g., “Financial Support”).
 - **Description:** Describe the objective of the prompt.
-
 - **System Prompt:** Set the tone and instruction style.
-
 - **User Prompt:** The initial user message to start the prompt.
-
 - **Message Pairs:** Add back-and-forth conversations to enrich training.
-
 - **Variables:** Insert dynamic fields using `{}` for personalization.
-
 - **Conversation History:** Insert the `conversation_history` block once for added context.
-
 - **Templates:** Use predefined templates for quick setup.
-
 - **Reordering:** Rearrange blocks except the System Prompt (fixed at the top).
 
 ![Screenshot 2025-06-03 at 9.27.48 AM.png](./images/Screenshot-2025-06-03-at-9.27.48-AM.png)
 
->
-
-**Note:** The last block must be a **User Prompt**.
+<Note>
+  **Note:** The last block must be a **User Prompt**.
+</Note>
 
 ---
-###  Prompt Settings
 
-Click the **Settings** option to modify prompt-level configurations.
+### Prompt Settings
 
-- **Options Available:** -
+Click the **Settings** option to modify prompt-level configurations.These are the Options Available:
 
-- **AI Model:** Choose which LLM your AI will use:
- GPT-3.5 Turbo, GPT-4 Turbo, GPT-4o, GPT-4o mini, Claude 2/3/3.5 (Haiku, Sonnet, Opus), Gemini 1.5 Pro, Grok-2-1212 / Grok-2-vision-1212
+Options Available: 
 
+- **AI Model:** Choose which LLM your AI will use: 
+  - GPT-3.5 Turbo
+  - GPT-4 Turbo
+  - GPT-4o
+  - GPT-4o mini
+  - Claude 2/Claude 3.5 (Haiku, Sonnet) /  Claude 3 (Opus)
+  - Gemini 1.5 Pro 
+  - Grok-2-1212 / Grok-2-vision-1212
 - **Temperature:** Controls creativity (0.00–1.00).
-
 - **Max Tokens:** Range 10–2000.
 
 ![Screenshot 2025-06-03 at 9.28.46 AM.png](./images/Screenshot-2025-06-03-at-9.28.46-AM.png)
 
->
-
-**Note:** These settings apply only to the current prompt.
+<Note>
+  **Note:** These settings apply only to the current prompt.
+</Note>
 
 ---
-###  Testing the Prompt
+
+### Testing the Prompt
 
 You can run a simulation to test your prompt:
 
@@ -103,62 +99,72 @@ You can run a simulation to test your prompt:
 
 The output includes:
 
-- - **Latency:** Time taken for response
-
+- **Latency:** Time taken for response
 - **Tokens:** Total used, with input/output breakdown on hover
 
 ![Screenshot 2025-06-03 at 9.30.10 AM.png](./images/Screenshot-2025-06-03-at-9.30.10-AM.png)
 
 ---
-###  Editing an Existing Prompt
 
-- **How to Edit:** 1. Navigate to **AI Pilots**.
+### Editing an Existing Prompt
 
-2. Select your **AI Pilot**.
+**How to Edit:** 
+
+- Navigate to **AI Pilots**.
+- Select your **AI Pilot**.
 
 ![Screen Shot 2025-05-31 at 9.34.43 PM.png](./images/Screen-Shot-2025-05-31-at-9.34.43-PM-3.png)
 
-3. Hover over the prompt.
-4. Click on **Actions**→**Edit**.
+- Hover over the prompt.
+- Click on **Actions**
+- Select **Edit.**
 
 ![Screenshot 2025-06-04 at 12.17.26 PM.png](./images/Screenshot-2025-06-04-at-12.17.26-PM.png)
 
-After editing, click **Save** to apply changes.
+- After editing
+- Click **Save** to apply changes.
 
 ![mceclip5.png](./images/mceclip5-2.png)
 
 ---
-###  Deleting a Prompt **How to Delete:**1. Navigate to **AI Pilots**.
 
-2. Select your **AI Pilot**.
+**Deleting a Prompt**
+
+**How to Delete:** 
+
+-  Navigate to **AI Pilots**.
+- Select your **AI Pilot**.
 
 ![Screen Shot 2025-05-31 at 9.34.43 PM.png](./images/Screen-Shot-2025-05-31-at-9.34.43-PM-3.png)
 
-3. Hover over the prompt.
-4. Click on **Actions**→**Delete**.
+- Hover over the prompt.
+- Click on **Actions**
+- Select **Delete**.
 
 ![Screenshot 2025-06-04 at 12.19.01 PM.png](./images/Screenshot-2025-06-04-at-12.19.01-PM.png)
 
-A confirmation dialog box will appear:
-_“This action is irreversible. Are you sure you want to delete this prompt?”_
+- A confirmation dialog box will appear: 
 
-Click **Yes**, and the prompt will be deleted permanently.
+  _“This action is irreversible. Are you sure you want to delete this prompt?”_
+- Click **Yes**, and the prompt will be deleted permanently.
 
 ![mceclip7.png](./images/mceclip7-3.png)
 
-> **Note:** You cannot delete the prompt if it is currently in use.
+<Note>
+  **Note:** You cannot delete the prompt if it is currently in use.
+</Note>
 
 ---
-###  Prompt Listing & Actions
 
-- **Access the Prompt List:** 1. Navigate to **AI Pilots**.
+### Prompt Listing & Actions
 
-2. Select your **AI Pilot**.
-3. Click on **Prompts**.
+How to Access the Prompt List: 
 
-The list includes:
-
-- **Name**-**Description**-**Last Modified By**-**Last Modified Date** You can perform actions such as **Edit**, **Clone**, or **Delete**.
- You can also sort prompts by **Name** or **Last Modified Date**, and search by name.
+- 1. Navigate to **AI Pilots**.
+- Select your **AI Pilot**.
+- Click on **Prompts**.
+- The list includes: **Name**-**Description**, **Last Modified By**, **Last Modified Date**
+- You can perform actions such as **Edit**, **Clone**, or **Delete**. 
+- You can also sort prompts by **Name** or **Last Modified Date**, and search by **Name.**
 
 ![Screenshot 2025-06-04 at 12.20.25 PM.png](./images/Screenshot-2025-06-04-at-12.20.25-PM.png)
