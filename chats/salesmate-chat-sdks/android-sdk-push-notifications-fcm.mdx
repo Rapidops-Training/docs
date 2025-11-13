@@ -27,7 +27,7 @@ We’ll show you how to send push notifications and/or push messages to your cus
 - Click on the Android icon to continue the setup.
 - Enter your app’s package name and click ‘Register App’.
 
-<img src="images/010-register-app-10009307437977.png" alt="Register App" />
+![Register App](images/010-register-app-10009307437977.png)
 
 ### Set Up Client to Receive Push
 
@@ -90,10 +90,8 @@ override fun onMessageReceived(remoteMessage: RemoteMessage) {}
  return
 ```
 
-> 
->
 > <Tip>
->   📘**Important**\> The recommendation of **sendTokenToSkara()**is to call it on the initial launch of an app to update the fresh firebase token into Skara
+>   📘**Important**\> The recommendation of  **sendTokenToSkara()** is to call it on the initial launch of an app to update the fresh firebase token into Skara
 > </Tip>
 
 If you’re having trouble getting FCM to work in your app, here's a list of things you should check:
