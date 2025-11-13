@@ -1,13 +1,14 @@
 ---
 title: "Android SDK - Configuration"
 ---
-Track who your users are and what they do in your mobile app and Customize the Salesmate Chat Messenger. Here’s how to configure Salesmate Chat for Android:
+
+Track who your users are and what they do in your mobile app and Customize the Salesmate Chat Messenger. Here’s how to configure Skara Chat for Android:
 
 - [Update your User](#update-your-user)
 - [Submit an Event](#submit-an-event)
 - [Create a Custom Launcher](#create-a-custom-launcher)
 
-###  Update your User
+### Update your User
 
 - When you call a login method we create a user with his basic detail, after if you want to change his basic detail then you can use update user functionality as per below code snippet:
 
@@ -23,7 +24,7 @@ userDetail.withEmail(email)
     .withFirstName(firstName)
     .withLastName(lastName)
 
-SalesmateChatSDK.getInstance().update(userId, userDetail, object : UpdateListener {
+SkaraChatSDK.getInstance().update(userId, userDetail, object : UpdateListener {
     override fun onUpdate() {
         // Update successful
     }
@@ -34,9 +35,9 @@ SalesmateChatSDK.getInstance().update(userId, userDetail, object : UpdateListene
 })
 ```
 
-###  Submit an Event
+### Submit an Event
 
-- You can log events in Salesmate Chat that record what users do in your app and when they do it. For example, you could record the item a user ordered from your mobile app, and when they ordered it.
+- You can log events in Skara Chat that record what users do in your app and when they do it. For example, you could record the item a user ordered from your mobile app, and when they ordered it.
 
 ```kotlin
 // Prepare a record event object
@@ -51,13 +52,15 @@ val eventName = "order_detail"
 SalesmateChatSDK.getInstance().recordEvent(eventName, data)
 ```
 
-###  Create a Custom Launcher
+### Create a Custom Launcher
 
 - However, if you’d like Messenger to open from another location in your mobile app, you can create a custom launcher. This allows you to specify a button, link, or element that opens Messenger. For example, you can trigger the launcher to open when a customer clicks on your ‘Ask for support’ button.
 
-<img src="https://quip.com/blob/fXDAAAqlKfM/ioJmS_q4oPPr_4K0u37iAw?a=pKXa9iPaiNSjJVwNQ4ao70wan7JBqZDkysrIV8FnB48a" alt="Custom Launcher" />
-- If you have a custom launcher, you can call: 
-```kotlin 
+![Custom Launcher](https://quip.com/blob/fXDAAAqlKfM/ioJmS_q4oPPr_4K0u37iAw?a=pKXa9iPaiNSjJVwNQ4ao70wan7JBqZDkysrIV8FnB48a)
+
+- If you have a custom launcher, you can call:
+
+```kotlin
 // To launch messenger
-SalesmateChatSDK.getInstance().startMessenger() 
+SkaraChatSDK.getInstance().startMessenger() 
 ```
