@@ -2,7 +2,7 @@
 title: "Website Tracking in Salesmate"
 ---
 
-Website Tracking in Salesmate allows you to monitor the behaviour of visitors on your website. By tracking page views, clicks, and other interactions, you can gain insights into how prospects and customers engage with your content. This data helps you understand visitor intent, identify high-interest leads, and personalize your follow-up efforts, ultimately improving your sales and marketing strategies.
+Website Tracking in Skara allows you to monitor the behaviour of visitors on your website. By tracking page views, clicks, and other interactions, you can gain insights into how prospects and customers engage with your content. This data helps you understand visitor intent, identify high-interest leads, and personalize your follow-up efforts, ultimately improving your sales and marketing strategies.
 
 <Note>
   - **Prerequisite:** Subscribe to Unified Inbox and thereafter Install the Chat Script to your website. [Learn More](https://support.salesmate.io/hc/en-us/articles/360058369732-Activating-the-Salesmate-Chats#h_01GK3KF0FQVYHYRX93C2MJ0V95)
@@ -10,7 +10,7 @@ Website Tracking in Salesmate allows you to monitor the behaviour of visitors on
 
 ### Steps for Activating Website Tracking
 
-- Install the Salesmate Chat via the Salesmate Messenger Plugin for WordPress or via the Chat Installation Code within Salesmate.
+- Install the Skara Chat via the Salesmate Messenger Plugin for WordPress or via the Chat Installation Code within Salesmate.
 - Select options to show or hide the messenger widget through the plugin or by adjusting the code.
 - If you’ve hidden the messenger but still want to track website visitors linked to specific contacts, you’ll need to add the JS API method, tracking code, or custom events for the following:
 - [Email campaigns you’ve sent](#email-campaigns-youve-sent)
@@ -23,8 +23,8 @@ Website Tracking in Salesmate allows you to monitor the behaviour of visitors on
 ```html
 <script>
 <?php if (isset($_GET['email'])) { ?>
-  window.addEventListener('SALESMATE_READY', function() {
-    SALESMATE.login({
+  window.addEventListener('SKARA_READY', function() {
+    SKARA.login({
       user_id: "<?php echo $_GET['email']; ?>",
       email: "<?php echo $_GET['email']; ?>",
       first_name: "<?php echo $_GET['fname']; ?>",
@@ -40,7 +40,7 @@ Website Tracking in Salesmate allows you to monitor the behaviour of visitors on
 ```html
 <script>
 window.addEventListener("SM_FORM_SUBMITTED", function (e) {
-  SALESMATE.login({
+  SKARA.login({
     user_id: e.detail.formData["Contact.email"],
     email: e.detail.formData["Contact.email"],
     first_name: e.detail.formData["Contact.firstName"],
@@ -55,7 +55,7 @@ window.addEventListener("SM_FORM_SUBMITTED", function (e) {
 ```html
 <script>
 window.addEventListener("SM_MEETING_SUBMITTED", function (e) {
-  SALESMATE.login({
+  SKARA.login({
     user_id: e.detail.formData["Contact.email"],
     email: e.detail.formData["Contact.email"],
     first_name: e.detail.formData["Contact.firstName"],
