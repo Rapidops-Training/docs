@@ -1,86 +1,84 @@
 ---
 title: "How to Build an Agent"
 ---
-In this article, we’ll discuss how **agents** function as dedicated modules that integrate effortlessly into a conversation flow. Agents are equipped to handle **specific user requests** that go beyond the standard capabilities of the assistant.By delegating these complex tasks to agents, your main assistant remains focused on its core interactions, keeping it efficient and responsive. This setup also allows your system to be modular and adaptable, supporting advanced functionalities without adding unnecessary complexity.Once an agent is built, it can be easily **incorporated into an execution flow** using the **Agent action**, expanding your assistant’s range of abilities in just a few steps.
 
-###  **Topics covered:**
+In this article, we’ll discuss how **agents** function as dedicated modules that integrate effortlessly into a conversation flow. Agents are equipped to handle **specific user requests** that go beyond the standard capabilities of the assistant.
+
+By delegating these complex tasks to agents, your main assistant remains focused on its core interactions, keeping it efficient and responsive. This setup also allows your system to be modular and adaptable, supporting advanced functionalities without adding unnecessary complexity.
+
+Once an agent is built, it can be easily **incorporated into an execution flow** using the **Agent action**, expanding your assistant’s range of abilities in just a few steps.
+
+### **Topics covered:**
 
 - [Steps to Create a New Agent](#steps-to-create-a-new-agent)
 - [How to Configure an Agent](#how-to-configure-an-agent)
 - [Editing an Agent](#editing-an-agent)
 
-###  Steps to Create a New Agent
+### Steps to Create a New Agent
 
-Navigate to **AI Pilots** from the left side bar.Choose existing pilot or create New
+- Navigate to **AI Pilots** from the left side bar.
+- Choose existing pilot or create New
 
 ![Screen Shot 2025-06-09 at 4.45.08 PM.png](./images/Screen-Shot-2025-06-09-at-4.45.08-PM.png)
 
-Move to "Agents"**Click:**“New” buttonConfigure **New Agent** in the Popup
+- Move to "Agents"
+- **Click: **“New” button
+- Configure **New Agent** in the Popup
 
 ![Screen Shot 2025-06-10 at 5.23.44 PM.png](./images/Screen-Shot-2025-06-10-at-5.23.44-PM.png)
 
-###  How to Configure an Agent
+### How to Configure an Agent
 
 You will be need to provide below asked details in order configure your new agent.
 
-- ** Agent Details **Name:** Provide the agent’s name.
+**Agent Details **
 
+- **Name:** Provide the agent’s name.
 - **Description (Optional):** Add a brief description of the agent’s purpose or role.
 
-- **[Functions](https://support.salesmate.io/hc/en-us/articles/46626581723545):** Functions allow the agent to perform tasks such as interacting with APIs or processing data.
+[**Functions:**](https://support.salesmate.io/hc/en-us/articles/46626581723545) Functions allow the agent to perform tasks such as interacting with APIs or processing data.
 
-- **Configuration Details:**Add Functions:**Select functions from the library or create new ones.
+**Configuration Details:** 
 
-- **LLM Description (Optional):**Provide a description for each function to specify when and how it should be used.
+- **Add Functions: **Select functions from the library or create new ones.
+- **LLM Description (Optional): **Provide a description for each function to specify when and how it should be used.
+- **Input Variables: **Define LLM descriptions and default values for input variables.
 
-- **Input Variables:**Define LLM descriptions and default values for input variables.
+[Sub-flows](https://support.salesmate.io/hc/en-us/articles/38138439700761): Sub-flows enable the agent to incorporate other flows (optional)-
 
-- **[Sub-flows](https://support.salesmate.io/hc/en-us/articles/38138439700761):**Sub-flows enable the agent to incorporate other flows (optional)-**Add Sub-flows:** Include synchronous sub-flows from Smart Flows.
-
+- **Add Sub-flows:** Include synchronous sub-flows from Smart Flows.
 - **LLM Descriptions:** Provide descriptions for each sub-flow.
-
 - **Configure Variables:** Set variables as needed for the sub-flow.
 
-- **[Paths](#steps-to-create-a-new-agent):** Paths define the conversational routes the agent follows based on different outputs or decisions.
+[**Paths:**](#steps-to-create-a-new-agent) Paths define the conversational routes the agent follows based on different outputs or decisions.
 
 - **Add Output Ports (Optional):** Define output ports for return values.
-
 - **Define Paths:** Assign names, conditions, and variables (with LLM descriptions) for each path.
-
 - **Avoid Duplicate Path Names:** Ensure each path has a unique name.
 
-- **[Knowledge Base](https://support.salesmate.io/hc/en-us/articles/44390956989977) Access** The Knowledge Base (KB) provides additional data the agent can use to provide informed responses.
+[**Knowledge Base Access**](https://support.salesmate.io/hc/en-us/articles/44390956989977) The Knowledge Base (KB) provides additional data the agent can use to provide informed responses.
 
 - **Enable Access (Optional):** Allow the agent to access the KB if needed.
-
 - **LLM Description:** Describe when and how to use the KB.
 
 ![Screen Shot 2025-06-10 at 5.26.44 PM.png](./images/Screen-Shot-2025-06-10-at-5.26.44-PM.png)
 
-- *[Prompt](https://support.salesmate.io/hc/en-us/articles/45878724921369) Settings **Access Prompt Settings:** Click the **“Settings”** button on the **“Create New Agent”** page to access prompt settings.
+[Prompt](https://support.salesmate.io/hc/en-us/articles/45878724921369) **Settings **
 
+- **Access Prompt Settings:** Click the **“Settings”** button on the **“Create New Agent”** page to access prompt settings.
 - **AI Model:** Select the desired AI model for generating responses (e.g.
-
 - **gpt-4.0** or **gpt-4.1**).
-
-- **Temperature:**Use this to adjust the creativity level of AI-generated responses.
-Use the slider to set the value between **0**(least creative) and **1**(most creative).
-
-- **Max Tokens:**This determines the length of each AI-generated response.
-Use the slider to adjust the value from ** 0 to 2000 characters **.
+- **Temperature: **Use this to adjust the creativity level of AI-generated responses. Use the slider to set the value between **0 **(least creative) and **1 **(most creative).
+- **Max Tokens:** This determines the length of each AI-generated response. Use the slider to adjust the value from  **0 to 2000 characters.**
 
 ![Screen Shot 2025-06-10 at 5.28.13 PM.png](./images/Screen-Shot-2025-06-10-at-5.28.13-PM.png)
 
-###  Editing an Agent
+### Editing an Agent
 
-Navigate to **AI Pilots**.
-
+- Navigate to **AI Pilots**.
 - **Choose Your Pilot:** Select the relevant Pilot containing the agent you want to edit.
-
 - **Move to Agents:** Access the **Agents** section under your selected Pilot.
-
 - **Edit an Agent:** Hover over the agent you want to edit and then click actions.
-
 - **Make Changes:** Edit the the agent and then hit "Update"
 
 ![Screen Shot 2025-06-10 at 5.29.07 PM.png](./images/Screen-Shot-2025-06-10-at-5.29.07-PM.png)
