@@ -1,30 +1,26 @@
 ---
 title: "How does SLA work"
 ---
-- Upon ticket creation, the system in Salesmate triggers the execution of the Service Level Agreement (SLA) that best matches the ticket conditions and holds the top position in the SLA order. During this process, the SLA fields, including First Response Due Date (FRDD), Next Response Due Date (NRDD), and Resolution Time Duration (RTD), are automatically calculated and populated.
-- When a ticket undergoes an update, the Salesmate system recalculates the Service Level Agreement (SLA) based on the updated information that aligns with the applied SLA or any other SLA with a higher priority than the existing one
+
+- Upon ticket creation, the system in Skara triggers the execution of the Service Level Agreement (SLA) that best matches the ticket conditions and holds the top position in the SLA order. During this process, the SLA fields, including First Response Due Date (FRDD), Next Response Due Date (NRDD), and Resolution Time Duration (RTD), are automatically calculated and populated.
+- When a ticket undergoes an update, the Skara system recalculates the Service Level Agreement (SLA) based on the updated information that aligns with the applied SLA or any other SLA with a higher priority than the existing one
 - In the absence of a designated ticket priority, the Service Level Agreement (SLA) will not be triggered for that particular ticket. Instead, any relevant automation or automation rules will be applied, ensuring that the ticket is still subject to predefined processes and workflows.
 - The calculation of the first response time and resolution time is based on the ticket creation date and time, providing insights into the efficiency of initial acknowledgment and final resolution
-
-- *Considering the below Configuration**
-
-- SLA configuration for resolution time: Normal (2 hours)
-- SLA configuration for resolution time: High (1 hour)
-- SLA configuration for resolution time: Urgent (30 min)
-- SLA Violation for resolution time: Send immediately
-
-- *There can be two cases when you update a ticke** t:
-
+- _Considering the below Configuration_\*
+  - SLA configuration for resolution time: Normal (2 hours)
+  - SLA configuration for resolution time: High (1 hour)
+  - SLA configuration for resolution time: Urgent (30 min)
+  - SLA Violation for resolution time: Send immediately
+- _There can be two cases when you update a tick_t:
 - [SLA time Decreases](#sla-time-decreases)
-
 - [SLA time Increases](#sla-time-increases)
 
-###  SLA time Decreases
+### SLA time Decreases
 
 - For example, if a ticket with a creation timestamp of 12 December at 2 PM is initially set to HIGH priority with a resolution time target of 1 hour (by 3 PM), and the priority is later updated to URGENT at 2:35 PM, the SLA is recalculated with a new resolution time of 12 December at 2:30 PM
 - As this recalculation places the ticket's resolution time in the past, indicating a violation of the SLA, an email notification will be promptly triggered to address the violation.
 
-###  SLA time Increases
+### SLA time Increases
 
 - In the described SLA configuration, updating the ticket priority to Normal triggers a recalculation, setting the new SLA deadline to 12 December at 4 PM. Subsequently, an email notification for SLA violation will be dispatched at 4 PM if the issue remains unresolved
 - If the priority is updated before 3 PM, no violation email is sent for the initial 3 PM SLA, but it will be dispatched for the 4 PM SLA if not resolved. If the priority is changed at 3:30 PM after the initial violation, a subsequent violation email will be sent for the 4 PM SLA if the ticket persists unresolved.
