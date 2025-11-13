@@ -18,26 +18,26 @@ Follow the steps below to connect your custom MCP server:
 
 - Navigate to **AI Pilots** from the left sidebar.
 
-![image.png](./images/image.png)
+![image.png](/MCP1.png)
 
 - Select Integrations, then click on **\+ New Integration.**
 
-![image(1).png](./images/image1.png)
+![image(1).png](/MCP2.png)
 
-- A pop-up will appear asking for **New Integration**: 
-- [Custom MCP](#custom-mcp) 
-- [Shopify](#shopify) 
+- A pop-up will appear asking for **New Integration**:
+- [Custom MCP](#custom-mcp)
+- [Shopify](#shopify)
 - [Stripe](#stripe)
 
-![mceclip0.png](./images/mceclip0-4.png)
+![mceclip0.png](/MCP3.png)
 
 ### Custom MCP
 
 - **Thumbnail:** Upload an image representing the brand you're integrating with. The image validations are similar to function or pilot avatars.
 - **Name:** Add a label to identify this integration.
 - **Description:** Enter a short description for your reference.
-- **Transport Type:** Choose the type of transport protocol: 
-  - SSE (_default _)
+- **Transport Type:** Choose the type of transport protocol:
+  - SSE (\_default \_)
   - Streamable HTTP
 - **MCP Endpoint:** Enter a valid URL (e.g., https://mcp.example.com/api/mcp).
 - **Authentication:** Select how you want to authenticate with the MCP server:
@@ -45,7 +45,7 @@ Follow the steps below to connect your custom MCP server:
   - **Access Key:** Enter a bearer token for the authorization header.
   - **Custom Headers:** Define key-value pairs to be passed in the request header (at least one pair required).
 
-![mceclip1.png](./images/mceclip1-6.png)
+![mceclip1.png](/MCP4.png)
 
 - Once done, click **Save**.
 
@@ -53,7 +53,7 @@ Follow the steps below to connect your custom MCP server:
 
 Shopify will help you to integrate your online store with Skara AI Pilot. You need to provide the Store URL to connect your Shopify account in AI Pilots.
 
-![mceclip2.png](./images/mceclip2-5.png)
+![mceclip2.png](/MCP5.png)
 
 Once it gets connected, you can get the following capabilities:
 
@@ -66,7 +66,7 @@ Once it gets connected, you can get the following capabilities:
 
 Use natural language commands to manage payments, customers, and refunds seamlessly via the Stripe MCP server. You need to provide the **API Key (Secret key)** from the Stripe to connect in Skara.
 
-![mceclip3.png](./images/mceclip3-6.png)
+![mceclip3.png](/MCP6.png)
 
 Once it gets connected, you can get the following capabilities:
 
@@ -106,22 +106,22 @@ Once connected:
 - By clicking on the Integrations, you will be able to see the MCP servers that were created.
 - Click to add any tool. After that, you can modify the **LLM description, Input variables, and Output variables**
 
-<img src="./images/mceclip31.png" alt="mceclip3(1).png" />
+![mceclip3(1).png](/MCP7.png)
 
-- Once done, hit**Save .** 
+- Once done, hit**Save .**
 
 ### Removing an MCP Integration
 
 To remove an MCP server:
 
-- Go to **AI Pilots \> Integrations (MCP)**. 
+- Go to **AI Pilots \> Integrations (MCP)**.
 - Use the search bar to find your MCP integration.
 - Available actions:
   - **Edit**: Modify any field.
   - **Remove**: Remove the MCP
 
-![mceclip4.png](./images/mceclip4-4.png)
+![mceclip4.png](/MCP8.png)
 
 <Note>
-  **Note: **If any agent is using a tool from this integration, deletion will be blocked: “You cannot remove the integration [MCP Server Name]. Its tools are being used in the following places. Please remove the dependencies to proceed with the removal.”
+  \*\*Note: \*\*If any agent is using a tool from this integration, deletion will be blocked: “You cannot remove the integration [MCP Server Name]. Its tools are being used in the following places. Please remove the dependencies to proceed with the removal.”
 </Note>
