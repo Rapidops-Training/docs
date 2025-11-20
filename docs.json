@@ -19,18 +19,6 @@
               "index"
             ]
           },
-          {
-            "group": "Ai Pilots",
-            "pages": [
-              {
-                "group": "Voice AI Pilot",
-                "pages": [
-                  "ai-pilot/voice-ai-pilot/introduction-to-voice-ai-pilot",
-                  "ai-pilot/voice-ai-pilot/how-to-activate-voice-channel-access-for-ai-pilots",
-                  "ai-pilot/voice-ai-pilot/customizing-voice-chat-settings-for-your-ai-pilot",
-                  "ai-pilot/voice-ai-pilot/faqs-voice-ai-pilot"
-                ]
-              },
               {
                 "group": "Overview",
                 "pages": [
@@ -62,6 +50,18 @@
                   "ai-pilot/execution-flows-ai-pilot/basics-of-flow-execution",
                   "ai-pilot/execution-flows-ai-pilot/set-priority-to-your-execution-flows",
                   "ai-pilot/execution-flows-ai-pilot/execution-settings"
+                ]
+              },
+                    {
+            "group": "Ai Pilots",
+            "pages": [
+              {
+                "group": "Voice AI Pilot",
+                "pages": [
+                  "ai-pilot/voice-ai-pilot/introduction-to-voice-ai-pilot",
+                  "ai-pilot/voice-ai-pilot/how-to-activate-voice-channel-access-for-ai-pilots",
+                  "ai-pilot/voice-ai-pilot/customizing-voice-chat-settings-for-your-ai-pilot",
+                  "ai-pilot/voice-ai-pilot/faqs-voice-ai-pilot"
                 ]
               },
               {
