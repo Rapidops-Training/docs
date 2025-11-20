@@ -17,8 +17,6 @@
             "group": "Getting started",
             "pages": [
               "index",
-              "quickstart",
-              "development",
               "articles/HowToCreateAIPilot",
               "articles/ViewTeammatesAvailability",
               "articles/Bulkoperationsforchatconversations"
@@ -163,7 +161,9 @@
               },
               {
                 "group": "Insights",
-                "pages": ["chats/insights/view-canned-response-insights"]
+                "pages": [
+                  "chats/insights/view-canned-response-insights"
+                ]
               },
               {
                 "group": "Additional Information",
@@ -227,10 +227,11 @@
                   "tickets/slaservice-level-agreement/sla-listing"
                 ]
               },
-              
               {
                 "group": "Tickets & SLA FAQ's",
-                "pages": ["tickets/tickets-sla-faqs/tickets-faqs"]
+                "pages": [
+                  "tickets/tickets-sla-faqs/tickets-faqs"
+                ]
               }
             ]
           },
@@ -497,7 +498,6 @@
                   "built-in-calling-and-text/changeupdate-notifications/sms-messages-to-malaysia-containing-phone-numbers-and-urls-will-be-blocked"
                 ]
               },
-
               {
                 "group": "Built-in Calling or Texting integrations",
                 "pages": [
@@ -715,7 +715,6 @@
                   "email-campaign/campaign-insights/journey-email-insights"
                 ]
               },
-
               {
                 "group": "Email Campaign FAQs",
                 "pages": [
@@ -1100,7 +1099,9 @@
               },
               {
                 "group": "Company",
-                "pages": ["contacts-and-companies/company/how-to-add-a-company"]
+                "pages": [
+                  "contacts-and-companies/company/how-to-add-a-company"
+                ]
               },
               {
                 "group": "Contacts & Company FAQ's",
@@ -1116,7 +1117,10 @@
           },
           {
             "group": "Customization",
-            "pages": ["essentials/settings", "essentials/navigation"]
+            "pages": [
+              "essentials/settings",
+              "essentials/navigation"
+            ]
           },
           {
             "group": "Writing content",
@@ -1142,7 +1146,9 @@
         "groups": [
           {
             "group": "API documentation",
-            "pages": ["api-reference/introduction"]
+            "pages": [
+              "api-reference/introduction"
+            ]
           },
           {
             "group": "Endpoint examples",
