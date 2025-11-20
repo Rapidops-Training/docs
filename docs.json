@@ -168,7 +168,7 @@
               }
             ]
           },
-            {
+          {
             "group": "Chats",
             "pages": [
               {
@@ -381,7 +381,6 @@
               }
             ]
           },
-          
           {
             "group": "Built In Calling and Text",
             "pages": [
@@ -1111,22 +1110,6 @@
                   "contacts-and-companies/contacts-company-faqs/why-does-salesmate-not-offer-google-contact-sync"
                 ]
               }
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
             ]
           },
           {
