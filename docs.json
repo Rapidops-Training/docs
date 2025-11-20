@@ -16,223 +16,7 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "articles/HowToCreateAIPilot",
-              "articles/ViewTeammatesAvailability",
-              "articles/Bulkoperationsforchatconversations"
-            ]
-          },
-          {
-            "group": "Unified Inbox",
-            "pages": [
-              {
-                "group": "Overview of Unified Inbox",
-                "pages": [
-                  "unified-inbox/overview/introduction",
-                  "unified-inbox/overview/activation"
-                ]
-              },
-              {
-                "group": "Channel Installation",
-                "pages": [
-                  "unified-inbox/channels-installation/salesmate-chats",
-                  "unified-inbox/channels-installation/facebook-messenger",
-                  "unified-inbox/channels-installation/instagram-messenger",
-                  "unified-inbox/channels-installation/whatsapp-twilio",
-                  "unified-inbox/channels-installation/whatsapp-vonage"
-                ]
-              },
-              {
-                "group": "Manage Channels",
-                "pages": [
-                  "unified-inbox/manage-channels/add-whatsapp-number",
-                  "unified-inbox/manage-channels/channel-access"
-                ]
-              },
-              {
-                "group": "WhatsApp Message Templates",
-                "pages": [
-                  "unified-inbox/whatsapp-message-templates/create-template",
-                  "unified-inbox/whatsapp-message-templates/send-template",
-                  "unified-inbox/whatsapp-message-templates/edit-template",
-                  "unified-inbox/whatsapp-message-templates/template-variables",
-                  "unified-inbox/whatsapp-message-templates/template-categories",
-                  "unified-inbox/whatsapp-message-templates/delete-template"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Chats",
-            "pages": [
-              {
-                "group": "Introduction to Salesmate Chats",
-                "pages": [
-                  "chats/introduction-to-salesmate-chats/what-is-salesmate-chats",
-                  "chats/introduction-to-salesmate-chats/difference-between-visitor-contact-and-verified-contact",
-                  "chats/introduction-to-salesmate-chats/salesmate-chats-licenses-and-cost"
-                ]
-              },
-              {
-                "group": "Configuring the Salesmate Chats",
-                "pages": [
-                  "chats/configuring-the-salesmate-chats/setting-up-the-welcome-message",
-                  "chats/configuring-the-salesmate-chats/configure-chats-appearance",
-                  "chats/configuring-the-salesmate-chats/setting-up-a-custom-launcher-icon",
-                  "chats/configuring-the-salesmate-chats/configure-your-office-hours-and-availability",
-                  "chats/configuring-the-salesmate-chats/how-to-include-bot-messages-in-the-chat",
-                  "chats/configuring-the-salesmate-chats/manage-who-can-start-a-conversation-via-chats",
-                  "chats/configuring-the-salesmate-chats/prevent-replies-to-a-closed-conversation",
-                  "chats/configuring-the-salesmate-chats/conversation-rating-by-end-users-salesmate-chats",
-                  "chats/configuring-the-salesmate-chats/how-to-configure-email-requirement-to-start-conversation",
-                  "chats/configuring-the-salesmate-chats/how-to-enabledisable-sounds-for-chats"
-                ]
-              },
-              {
-                "group": "Installing Salesmate Chats",
-                "pages": [
-                  "chats/installing-salesmate-chats/activating-the-salesmate-chats",
-                  "chats/installing-salesmate-chats/installing-chats-on-your-ios-app",
-                  "chats/installing-salesmate-chats/installing-chats-on-your-android-app",
-                  "chats/installing-salesmate-chats/how-to-add-viewed-product-tracking",
-                  "chats/installing-salesmate-chats/chats-js-api-methods"
-                ]
-              },
-              {
-                "group": "Salesmate Chat SDKs",
-                "pages": [
-                  "chats/salesmate-chat-sdks/salesmate-chat-sdks",
-                  "chats/salesmate-chat-sdks/ios-sdk-installation",
-                  "chats/salesmate-chat-sdks/ios-sdk-configuration",
-                  "chats/salesmate-chat-sdks/ios-sdk-push-notifications",
-                  "chats/salesmate-chat-sdks/android-sdk-installation",
-                  "chats/salesmate-chat-sdks/android-sdk-configuration",
-                  "chats/salesmate-chat-sdks/android-sdk-push-notifications-fcm"
-                ]
-              },
-              {
-                "group": "Secure your workspace",
-                "pages": [
-                  "chats/secure-your-workspace/whitelist-your-trusted-domain-for-chats",
-                  "chats/secure-your-workspace/configure-if-your-customer-can-send-attachments-via-chats"
-                ]
-              },
-              {
-                "group": "Manage Chat Preferences",
-                "pages": [
-                  "chats/manage-chat-preferences/setup-notification-preferences-for-chat-messages",
-                  "chats/manage-chat-preferences/personalize-assignment-preferences",
-                  "chats/manage-chat-preferences/personalize-chats-inbox"
-                ]
-              },
-              {
-                "group": "Working with Salesmate Chats",
-                "pages": [
-                  "chats/working-with-salesmate-chats/manage-salesmate-chat-licenses",
-                  "chats/working-with-salesmate-chats/chat-permissions",
-                  "chats/working-with-salesmate-chats/allow-users-to-view-chat-conversations-events-read-only-mode",
-                  "chats/working-with-salesmate-chats/chat-filters-and-counts",
-                  "chats/working-with-salesmate-chats/ignore-internal-email-addresses",
-                  "chats/working-with-salesmate-chats/manage-group-conversations",
-                  "chats/working-with-salesmate-chats/share-chat-transcript-with-your-customers",
-                  "chats/working-with-salesmate-chats/download-chat-transcript",
-                  "chats/working-with-salesmate-chats/view-recent-conversations-and-recent-page-views",
-                  "chats/working-with-salesmate-chats/email-forwarding-to-chat-inbox",
-                  "chats/working-with-salesmate-chats/track-custom-events",
-                  "chats/working-with-salesmate-chats/view-associated-conversations-in-company-layout",
-                  "chats/working-with-salesmate-chats/creating-and-managing-canned-responses",
-                  "chats/working-with-salesmate-chats/search-and-filter-the-conversations",
-                  "chats/working-with-salesmate-chats/tagging-the-conversations",
-                  "chats/working-with-salesmate-chats/send-outbound-chat-to-the-contact",
-                  "chats/working-with-salesmate-chats/start-conversations-via-email",
-                  "chats/working-with-salesmate-chats/make-conversations-via-email",
-                  "chats/working-with-salesmate-chats/how-to-link-a-deal-with-the-conversation",
-                  "chats/working-with-salesmate-chats/view-teammates-availability",
-                  "chats/working-with-salesmate-chats/bulk-operations-for-chat-conversations",
-                  "chats/working-with-salesmate-chats/link-or-unlink-contact-from-the-chat-conversation",
-                  "chats/working-with-salesmate-chats/sort-the-conversations",
-                  "chats/working-with-salesmate-chats/snooze-a-conversation",
-                  "chats/working-with-salesmate-chats/prioritize-the-conversations",
-                  "chats/working-with-salesmate-chats/set-away-mode",
-                  "chats/working-with-salesmate-chats/assign-conversation-to-user-or-a-team",
-                  "chats/working-with-salesmate-chats/using-notes-and-mentions-inside-chat-conversations",
-                  "chats/working-with-salesmate-chats/how-to-delete-a-replynote-in-salesmate-chat"
-                ]
-              },
-              {
-                "group": "Insights",
-                "pages": [
-                  "chats/insights/view-canned-response-insights"
-                ]
-              },
-              {
-                "group": "Additional Information",
-                "pages": [
-                  "chats/additional-information/website-tracking-in-salesmate",
-                  "chats/additional-information/how-to-do-website-tracking-in-salesmate",
-                  "chats/additional-information/supported-attachment-types",
-                  "chats/additional-information/how-to-blockunblock-a-contact-in-salesmate",
-                  "chats/additional-information/what-is-contact-impersonation"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Ticket Management & SLA's",
-            "pages": [
-              {
-                "group": "Overview",
-                "pages": [
-                  "tickets/overview/introduction-to-ticketing-system",
-                  "tickets/overview/how-to-customize-ticket-form",
-                  "tickets/overview/how-to-view-the-ticket-details",
-                  "tickets/overview/how-to-set-a-ticket-pipeline-type",
-                  "tickets/overview/customize-the-ticket-layout",
-                  "tickets/overview/how-to-create-a-ticket-via-email",
-                  "tickets/overview/configure-outgoing-email-settings-for-ticket-emails",
-                  "tickets/overview/how-to-create-a-ticket"
-                ]
-              },
-              {
-                "group": "Manage Tickets",
-                "pages": [
-                  "tickets/manage-tickets/tickets-listing-operations",
-                  "tickets/manage-tickets/tickets-board-view",
-                  "tickets/manage-tickets/how-does-reply-work-in-tickets",
-                  "tickets/manage-tickets/how-prevent-replies-on-closed-tickets",
-                  "tickets/manage-tickets/how-to-follow-unfollow-tickets",
-                  "tickets/manage-tickets/related-ticket-widget",
-                  "tickets/manage-tickets/how-to-view-tickets-in-chat-widget",
-                  "tickets/manage-tickets/how-to-delete-a-ticket"
-                ]
-              },
-              {
-                "group": "Ticket Notifications",
-                "pages": [
-                  "tickets/ticket-notifications/how-to-set-ticket-notifications",
-                  "tickets/ticket-notifications/how-to-customize-ticket-notification-templates",
-                  "tickets/ticket-notifications/send-test-email-for-notification-templates"
-                ]
-              },
-              {
-                "group": "SLA(Service Level Agreement)",
-                "pages": [
-                  "tickets/slaservice-level-agreement/what-is-slaservice-level-agreement",
-                  "tickets/slaservice-level-agreement/manage-sla-policies",
-                  "tickets/slaservice-level-agreement/how-does-sla-work",
-                  "tickets/slaservice-level-agreement/how-to-configure-sla-target",
-                  "tickets/slaservice-level-agreement/sla-priorityorder-status",
-                  "tickets/slaservice-level-agreement/how-to-set-business-availability-for-sla",
-                  "tickets/slaservice-level-agreement/sla-reminders-escalations",
-                  "tickets/slaservice-level-agreement/sla-listing"
-                ]
-              },
-              {
-                "group": "Tickets & SLA FAQ's",
-                "pages": [
-                  "tickets/tickets-sla-faqs/tickets-faqs"
-                ]
-              }
+              "index"
             ]
           },
           {
@@ -384,6 +168,220 @@
               }
             ]
           },
+            {
+            "group": "Chats",
+            "pages": [
+              {
+                "group": "Introduction to Salesmate Chats",
+                "pages": [
+                  "chats/introduction-to-salesmate-chats/what-is-salesmate-chats",
+                  "chats/introduction-to-salesmate-chats/difference-between-visitor-contact-and-verified-contact",
+                  "chats/introduction-to-salesmate-chats/salesmate-chats-licenses-and-cost"
+                ]
+              },
+              {
+                "group": "Configuring the Salesmate Chats",
+                "pages": [
+                  "chats/configuring-the-salesmate-chats/setting-up-the-welcome-message",
+                  "chats/configuring-the-salesmate-chats/configure-chats-appearance",
+                  "chats/configuring-the-salesmate-chats/setting-up-a-custom-launcher-icon",
+                  "chats/configuring-the-salesmate-chats/configure-your-office-hours-and-availability",
+                  "chats/configuring-the-salesmate-chats/how-to-include-bot-messages-in-the-chat",
+                  "chats/configuring-the-salesmate-chats/manage-who-can-start-a-conversation-via-chats",
+                  "chats/configuring-the-salesmate-chats/prevent-replies-to-a-closed-conversation",
+                  "chats/configuring-the-salesmate-chats/conversation-rating-by-end-users-salesmate-chats",
+                  "chats/configuring-the-salesmate-chats/how-to-configure-email-requirement-to-start-conversation",
+                  "chats/configuring-the-salesmate-chats/how-to-enabledisable-sounds-for-chats"
+                ]
+              },
+              {
+                "group": "Installing Salesmate Chats",
+                "pages": [
+                  "chats/installing-salesmate-chats/activating-the-salesmate-chats",
+                  "chats/installing-salesmate-chats/installing-chats-on-your-ios-app",
+                  "chats/installing-salesmate-chats/installing-chats-on-your-android-app",
+                  "chats/installing-salesmate-chats/how-to-add-viewed-product-tracking",
+                  "chats/installing-salesmate-chats/chats-js-api-methods"
+                ]
+              },
+              {
+                "group": "Salesmate Chat SDKs",
+                "pages": [
+                  "chats/salesmate-chat-sdks/salesmate-chat-sdks",
+                  "chats/salesmate-chat-sdks/ios-sdk-installation",
+                  "chats/salesmate-chat-sdks/ios-sdk-configuration",
+                  "chats/salesmate-chat-sdks/ios-sdk-push-notifications",
+                  "chats/salesmate-chat-sdks/android-sdk-installation",
+                  "chats/salesmate-chat-sdks/android-sdk-configuration",
+                  "chats/salesmate-chat-sdks/android-sdk-push-notifications-fcm"
+                ]
+              },
+              {
+                "group": "Secure your workspace",
+                "pages": [
+                  "chats/secure-your-workspace/whitelist-your-trusted-domain-for-chats",
+                  "chats/secure-your-workspace/configure-if-your-customer-can-send-attachments-via-chats"
+                ]
+              },
+              {
+                "group": "Manage Chat Preferences",
+                "pages": [
+                  "chats/manage-chat-preferences/setup-notification-preferences-for-chat-messages",
+                  "chats/manage-chat-preferences/personalize-assignment-preferences",
+                  "chats/manage-chat-preferences/personalize-chats-inbox"
+                ]
+              },
+              {
+                "group": "Working with Salesmate Chats",
+                "pages": [
+                  "chats/working-with-salesmate-chats/manage-salesmate-chat-licenses",
+                  "chats/working-with-salesmate-chats/chat-permissions",
+                  "chats/working-with-salesmate-chats/allow-users-to-view-chat-conversations-events-read-only-mode",
+                  "chats/working-with-salesmate-chats/chat-filters-and-counts",
+                  "chats/working-with-salesmate-chats/ignore-internal-email-addresses",
+                  "chats/working-with-salesmate-chats/manage-group-conversations",
+                  "chats/working-with-salesmate-chats/share-chat-transcript-with-your-customers",
+                  "chats/working-with-salesmate-chats/download-chat-transcript",
+                  "chats/working-with-salesmate-chats/view-recent-conversations-and-recent-page-views",
+                  "chats/working-with-salesmate-chats/email-forwarding-to-chat-inbox",
+                  "chats/working-with-salesmate-chats/track-custom-events",
+                  "chats/working-with-salesmate-chats/view-associated-conversations-in-company-layout",
+                  "chats/working-with-salesmate-chats/creating-and-managing-canned-responses",
+                  "chats/working-with-salesmate-chats/search-and-filter-the-conversations",
+                  "chats/working-with-salesmate-chats/tagging-the-conversations",
+                  "chats/working-with-salesmate-chats/send-outbound-chat-to-the-contact",
+                  "chats/working-with-salesmate-chats/start-conversations-via-email",
+                  "chats/working-with-salesmate-chats/make-conversations-via-email",
+                  "chats/working-with-salesmate-chats/how-to-link-a-deal-with-the-conversation",
+                  "chats/working-with-salesmate-chats/view-teammates-availability",
+                  "chats/working-with-salesmate-chats/bulk-operations-for-chat-conversations",
+                  "chats/working-with-salesmate-chats/link-or-unlink-contact-from-the-chat-conversation",
+                  "chats/working-with-salesmate-chats/sort-the-conversations",
+                  "chats/working-with-salesmate-chats/snooze-a-conversation",
+                  "chats/working-with-salesmate-chats/prioritize-the-conversations",
+                  "chats/working-with-salesmate-chats/set-away-mode",
+                  "chats/working-with-salesmate-chats/assign-conversation-to-user-or-a-team",
+                  "chats/working-with-salesmate-chats/using-notes-and-mentions-inside-chat-conversations",
+                  "chats/working-with-salesmate-chats/how-to-delete-a-replynote-in-salesmate-chat"
+                ]
+              },
+              {
+                "group": "Insights",
+                "pages": [
+                  "chats/insights/view-canned-response-insights"
+                ]
+              },
+              {
+                "group": "Additional Information",
+                "pages": [
+                  "chats/additional-information/website-tracking-in-salesmate",
+                  "chats/additional-information/how-to-do-website-tracking-in-salesmate",
+                  "chats/additional-information/supported-attachment-types",
+                  "chats/additional-information/how-to-blockunblock-a-contact-in-salesmate",
+                  "chats/additional-information/what-is-contact-impersonation"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Unified Inbox",
+            "pages": [
+              {
+                "group": "Overview of Unified Inbox",
+                "pages": [
+                  "unified-inbox/overview/introduction",
+                  "unified-inbox/overview/activation"
+                ]
+              },
+              {
+                "group": "Channel Installation",
+                "pages": [
+                  "unified-inbox/channels-installation/salesmate-chats",
+                  "unified-inbox/channels-installation/facebook-messenger",
+                  "unified-inbox/channels-installation/instagram-messenger",
+                  "unified-inbox/channels-installation/whatsapp-twilio",
+                  "unified-inbox/channels-installation/whatsapp-vonage"
+                ]
+              },
+              {
+                "group": "Manage Channels",
+                "pages": [
+                  "unified-inbox/manage-channels/add-whatsapp-number",
+                  "unified-inbox/manage-channels/channel-access"
+                ]
+              },
+              {
+                "group": "WhatsApp Message Templates",
+                "pages": [
+                  "unified-inbox/whatsapp-message-templates/create-template",
+                  "unified-inbox/whatsapp-message-templates/send-template",
+                  "unified-inbox/whatsapp-message-templates/edit-template",
+                  "unified-inbox/whatsapp-message-templates/template-variables",
+                  "unified-inbox/whatsapp-message-templates/template-categories",
+                  "unified-inbox/whatsapp-message-templates/delete-template"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Ticket Management & SLA's",
+            "pages": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "tickets/overview/introduction-to-ticketing-system",
+                  "tickets/overview/how-to-customize-ticket-form",
+                  "tickets/overview/how-to-view-the-ticket-details",
+                  "tickets/overview/how-to-set-a-ticket-pipeline-type",
+                  "tickets/overview/customize-the-ticket-layout",
+                  "tickets/overview/how-to-create-a-ticket-via-email",
+                  "tickets/overview/configure-outgoing-email-settings-for-ticket-emails",
+                  "tickets/overview/how-to-create-a-ticket"
+                ]
+              },
+              {
+                "group": "Manage Tickets",
+                "pages": [
+                  "tickets/manage-tickets/tickets-listing-operations",
+                  "tickets/manage-tickets/tickets-board-view",
+                  "tickets/manage-tickets/how-does-reply-work-in-tickets",
+                  "tickets/manage-tickets/how-prevent-replies-on-closed-tickets",
+                  "tickets/manage-tickets/how-to-follow-unfollow-tickets",
+                  "tickets/manage-tickets/related-ticket-widget",
+                  "tickets/manage-tickets/how-to-view-tickets-in-chat-widget",
+                  "tickets/manage-tickets/how-to-delete-a-ticket"
+                ]
+              },
+              {
+                "group": "Ticket Notifications",
+                "pages": [
+                  "tickets/ticket-notifications/how-to-set-ticket-notifications",
+                  "tickets/ticket-notifications/how-to-customize-ticket-notification-templates",
+                  "tickets/ticket-notifications/send-test-email-for-notification-templates"
+                ]
+              },
+              {
+                "group": "SLA(Service Level Agreement)",
+                "pages": [
+                  "tickets/slaservice-level-agreement/what-is-slaservice-level-agreement",
+                  "tickets/slaservice-level-agreement/manage-sla-policies",
+                  "tickets/slaservice-level-agreement/how-does-sla-work",
+                  "tickets/slaservice-level-agreement/how-to-configure-sla-target",
+                  "tickets/slaservice-level-agreement/sla-priorityorder-status",
+                  "tickets/slaservice-level-agreement/how-to-set-business-availability-for-sla",
+                  "tickets/slaservice-level-agreement/sla-reminders-escalations",
+                  "tickets/slaservice-level-agreement/sla-listing"
+                ]
+              },
+              {
+                "group": "Tickets & SLA FAQ's",
+                "pages": [
+                  "tickets/tickets-sla-faqs/tickets-faqs"
+                ]
+              }
+            ]
+          },
+          
           {
             "group": "Built In Calling and Text",
             "pages": [
