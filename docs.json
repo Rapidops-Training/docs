@@ -9,6 +9,25 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Website",
+          "icon": "globe",
+          "href": "https://www.salesmate.io/ai-agent/"
+        },
+        {
+          "anchor": "Community",
+          "icon": "slack",
+          "href": "https://community.salesmate.io/"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://www.salesmate.io/blog/category/agentic-ai/"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Guides",
@@ -19,40 +38,40 @@
               "index"
             ]
           },
-              {
-                "group": "Overview",
-                "pages": [
-                  "ai-pilot/overview/introduction-to-ai-pilots",
-                  "ai-pilot/overview/ai-pilots-plans-pricing"
-                ]
-              },
-              {
-                "group": "Working With AI Pilots",
-                "pages": [
-                  "ai-pilot/working-with-ai-pilots/how-to-build-an-ai-pilot",
-                  "ai-pilot/working-with-ai-pilots/how-to-build-an-agent",
-                  "ai-pilot/working-with-ai-pilots/execution-flows",
-                  "ai-pilot/working-with-ai-pilots/functions",
-                  "ai-pilot/working-with-ai-pilots/paths",
-                  "ai-pilot/working-with-ai-pilots/prompts",
-                  "ai-pilot/working-with-ai-pilots/intents",
-                  "ai-pilot/working-with-ai-pilots/entities",
-                  "ai-pilot/working-with-ai-pilots/variables",
-                  "ai-pilot/working-with-ai-pilots/adding-mcp-client-integration-in-ai-pilots",
-                  "ai-pilot/working-with-ai-pilots/ai-pilot-settings",
-                  "ai-pilot/working-with-ai-pilots/how-to-delete-an-agent",
-                  "ai-pilot/working-with-ai-pilots/ai-agent-faqs"
-                ]
-              },
-              {
-                "group": "Execution Flows (AI Pilot)",
-                "pages": [
-                  "ai-pilot/execution-flows-ai-pilot/basics-of-flow-execution",
-                  "ai-pilot/execution-flows-ai-pilot/set-priority-to-your-execution-flows",
-                  "ai-pilot/execution-flows-ai-pilot/execution-settings"
-                ]
-              },
-                    {
+          {
+            "group": "Overview",
+            "pages": [
+              "ai-pilot/overview/introduction-to-ai-pilots",
+              "ai-pilot/overview/ai-pilots-plans-pricing"
+            ]
+          },
+          {
+            "group": "Working With AI Pilots",
+            "pages": [
+              "ai-pilot/working-with-ai-pilots/how-to-build-an-ai-pilot",
+              "ai-pilot/working-with-ai-pilots/how-to-build-an-agent",
+              "ai-pilot/working-with-ai-pilots/execution-flows",
+              "ai-pilot/working-with-ai-pilots/functions",
+              "ai-pilot/working-with-ai-pilots/paths",
+              "ai-pilot/working-with-ai-pilots/prompts",
+              "ai-pilot/working-with-ai-pilots/intents",
+              "ai-pilot/working-with-ai-pilots/entities",
+              "ai-pilot/working-with-ai-pilots/variables",
+              "ai-pilot/working-with-ai-pilots/adding-mcp-client-integration-in-ai-pilots",
+              "ai-pilot/working-with-ai-pilots/ai-pilot-settings",
+              "ai-pilot/working-with-ai-pilots/how-to-delete-an-agent",
+              "ai-pilot/working-with-ai-pilots/ai-agent-faqs"
+            ]
+          },
+          {
+            "group": "Execution Flows (AI Pilot)",
+            "pages": [
+              "ai-pilot/execution-flows-ai-pilot/basics-of-flow-execution",
+              "ai-pilot/execution-flows-ai-pilot/set-priority-to-your-execution-flows",
+              "ai-pilot/execution-flows-ai-pilot/execution-settings"
+            ]
+          },
+          {
             "group": "Ai Pilots",
             "pages": [
               {
@@ -1122,26 +1141,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Website",
-          "href": "https://www.salesmate.io/ai-agent/",
-          "icon": "globe"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://community.salesmate.io/",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://www.salesmate.io/blog/category/agentic-ai/",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
